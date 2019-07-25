@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutList from './AboutList';
 import {Jumbotron} from "react-bootstrap";
-import {FaFacebook, FaLinkedin, FaGithub, FaUser} from "react-icons/fa";
+import {FaFacebook, FaLinkedin, FaGithub} from "react-icons/fa";
 
 const About = (props) => {
     const centered={textAlign:"center"};
@@ -9,7 +9,6 @@ const About = (props) => {
         <div id="about">
             <img width="100%" alt="profile" src={props.urls.picture}/>
             <Jumbotron>
-                <h1 style={centered}>About me <FaUser/></h1>
                 <h1>
                     {`${props.firstName} ${props.lastName}`}<br/>
                     <small>{props.quote}</small>

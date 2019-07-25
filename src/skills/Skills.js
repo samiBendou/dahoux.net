@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import SkillsList from './SkillsList';
-import SkillsBestOf from './SkillsBestOf';
-import Button from "react-bootstrap/Button";
+import {Collapse, Button} from "react-bootstrap";
+import './Skills.scss';
 
 export default class Skills extends Component {
     constructor(props) {
@@ -15,11 +15,24 @@ export default class Skills extends Component {
 
     render() {
         const showAllSkills = this.state.showAllSkills;
-        const items = this.props.items;
+        const sortedItems = this.props.items.slice().sort((a, b) => a.level - b.level),
+            bestItems = sortedItems.slice(-1),
+            otherItems = sortedItems.slice(0, -1);
         return (
-            <div id="skills" style={{textAlign: "center", transition: "all 1s"}}>
-                {showAllSkills ? <SkillsList items={items}/> : <SkillsBestOf items={items}/>}
-                <Button type="button" onClick={this.onClick}>Read more</Button>
-            </div>);
+            <div id="skills" style={{textAlign: "center"}}>
+                <SkillsList items={bestItems}/>
+                <Button
+                    onClick={this.onClick}
+                    aria-controls="skills-list"
+                    aria-expanded={showAllSkills}
+                >
+                    Read more</Button>
+                <Collapse in={showAllSkills}>
+                    <div id="skills-list">
+                        <SkillsList items={otherItems} ref="skillsEnd"/>
+                    </div>
+                </Collapse>
+                <div/>
+            </div>)
     }
 };

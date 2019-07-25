@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './normalize.css';
 import './App.css';
 import About from './about/About';
+import Contact from './contact/Contact'
 import Skills from "./skills/Skills";
 
 export default class App extends Component {
@@ -10,6 +11,7 @@ export default class App extends Component {
         this.state = {
             lastName: "Dahoux",
             firstName: "Sami",
+            birthday: new Date(1995, 6, 9),
             quote: "Engineering student",
             urls: {
                 facebook: "https://www.facebook.com/sl.bendahhou",
@@ -26,6 +28,11 @@ export default class App extends Component {
                     {type: "Management", label: "Communication", level: 80},
                     {type: "Technical", label: "Javascript", level: 50},
                 ]
+            },
+            mail: "sbdh75@gmail.com",
+            location: {
+                city:"Gardanne",
+                zip:"13120"
             }
         }
     }
@@ -43,6 +50,11 @@ export default class App extends Component {
 
                 <Skills items={this.state.items.skills}/>
 
+                <Contact
+                    birthday={this.state.birthday}
+                    location={this.state.location}
+                    mail={this.state.mail}
+                />
             </div>
 
         );

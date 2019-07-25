@@ -1,5 +1,5 @@
 import React from 'react';
-import './SkillsItem.scss';
+import './Skills.scss';
 
 /*
 const TypeColors = {
@@ -12,7 +12,7 @@ const TypeColors = {
 
 const SkillsItem = (props) => {
     return (
-        <li
+        <li className="bouncing"
             style={{width: `${props.level}%`}}
         >
             <p>{props.label}<span>{props.level}</span></p>
