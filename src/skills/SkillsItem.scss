@@ -1,0 +1,39 @@
+$backgroundColor: #E9ECEF;
+$labelColor: #22262A;
+$levelColor: #22262A;
+
+.skills {
+  li {
+    background-color: $backgroundColor;
+    display: block;
+    position: relative;
+    color: $labelColor;
+    margin: 20px 0;
+    transition: width 1000ms ease-in-out, color 600ms ease-in-out;
+
+    p {
+      padding: 10px;
+      margin: 0;
+      font-weight: normal;
+      text-align: left;
+    }
+
+    span {
+      position: absolute;
+      right: 10px;
+      display: inline-block;
+      width: 30px;
+      text-align: right;
+      font-weight: bold;
+      font-size: 11pt;
+    }
+
+    .collapsed & {
+      width: 50% !important;
+    }
+
+    .hidden & {
+      color: $backgroundColor !important;
+    }
+  }
+}
