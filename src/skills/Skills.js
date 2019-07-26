@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import SkillsList from './SkillsList';
 import {Collapse, Button} from "react-bootstrap";
-import './Skills.scss';
+import '../scss/Skills.scss';
 
 export default class Skills extends Component {
     constructor(props) {
@@ -28,11 +28,11 @@ export default class Skills extends Component {
                 >
                     Read more</Button>
                 <Collapse in={showAllSkills}>
-                    <div id="skills-list">
-                        <SkillsList items={otherItems} ref="skillsEnd"/>
+                    <div id="skills-list" className="skills">
+                        <SkillsList items={otherItems} />
                     </div>
                 </Collapse>
                 <div/>
             </div>)
     }
-};
+}

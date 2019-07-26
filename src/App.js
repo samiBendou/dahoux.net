@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import './normalize.css';
-import './App.css';
+import './scss/App.scss';
 import About from './about/About';
 import Contact from './contact/Contact'
 import Skills from "./skills/Skills";
+import Timeline from "./timeline/Timeline";
+import {Container} from "react-bootstrap";
 
 export default class App extends Component {
     constructor(props) {
@@ -24,9 +25,25 @@ export default class App extends Component {
                     {title: "Love", text: "Feel the love"},
                     {title: "Peace", text: "Feel the peace"},
                 ],
+
+                timeline: [
+                    {
+                        text: 'Wrote my first React app',
+                        date: 'March 03 2017',
+                        category: {
+                            tag: 'medium',
+                            color: '#018f69'
+                        },
+                        link: {
+                            url:
+                                'https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2',
+                            text: 'Read more'
+                        }
+                    }
+                ],
                 skills: [
-                    {type: "Management", label: "Communication", level: 80},
-                    {type: "Technical", label: "Javascript", level: 50},
+                    {type: "management", label: "Communication", level: 80},
+                    {type: "technical", label: "Javascript", level: 50},
                 ]
             },
             mail: "sbdh75@gmail.com",
@@ -47,14 +64,18 @@ export default class App extends Component {
                     urls={this.state.urls}
                     items={this.state.items.about}
                 />
-
+                <Container>
                 <Skills items={this.state.items.skills}/>
 
+                <Timeline items={this.state.items.timeline}/>
                 <Contact
                     birthday={this.state.birthday}
                     location={this.state.location}
                     mail={this.state.mail}
                 />
+                </Container>
+
+
             </div>
 
         );

@@ -1,8 +1,12 @@
-$backgroundColor: #E9ECEF;
-$labelColor: #22262A;
-$levelColor: #22262A;
+@import 'bootstrap/bootstrap.scss';
 
-#skills {
+$backgroundColor: $blue;
+$labelColor: $white;
+$levelColor: $white;
+
+.skills {
+  padding: 0;
+
   li {
     background-color: $backgroundColor;
     display: block;
@@ -10,10 +14,10 @@ $levelColor: #22262A;
     color: $labelColor;
     margin: 20px 0;
     transition: width 1000ms ease-in-out, color 600ms ease-in-out;
+    border-radius: 10px 10px 10px 10px;
 
     p {
       padding: 10px;
-      margin: 0;
       font-weight: normal;
       text-align: left;
     }

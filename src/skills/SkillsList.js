@@ -8,20 +8,17 @@ export default class SkillsList extends Component {
     }
 
     componentDidMount= () => {
-        this.restartTimers();
-    };
-
-    restartTimers = () => {
         setTimeout(() => this.setState({collapsed: false}), 0);
         setTimeout(() => this.setState({hidden: false}), 700);
     };
 
-    renderListWithItems = (items) => {
+    render() {
+        const item = this.props.items;
         const className = `${this.state.collapsed ? 'collapsed' : ''} ${this.state.hidden ? 'hidden' : ''}`;
         return (
             <div className = {className}>
                 <ul className="skills">
-                    {items.map((item) =>
+                    {item.map((item) =>
                         <SkillsItem
                             label={item.label}
                             level={item.level}
@@ -30,9 +27,5 @@ export default class SkillsList extends Component {
                         />)}
                 </ul>
             </div>);
-    };
-
-    render() {
-        return this.renderListWithItems(this.props.items);
     }
 }
