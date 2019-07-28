@@ -42,6 +42,6 @@ export default class AddressText extends Component {
 
     render() {
         const state = this.state;
-        return <p>{state.city}, {state.county}, {state.country}</p>;
+        return <p>{state.city}, {state.county === state.city ? '' : `${state.county},`} {state.country}</p>;
     }
 }

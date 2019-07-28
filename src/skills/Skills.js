@@ -23,6 +23,7 @@ export default class Skills extends Component {
                     <SkillsList items={items} count={1}/>
                 </div>
                 <Button
+                    size="lg"
                     className="skills-more"
                     onClick={this.onClick}
                     aria-controls="skills-list"
