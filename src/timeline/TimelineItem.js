@@ -1,30 +1,51 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../scss/Timeline.scss'
 import DateText from "../common/DateText";
+import AddressText from "../common/AddressText";
+import {Button, Collapse} from "react-bootstrap";
 
-const TimelineItem = (props) => {
-    return (
-        <div className="timeline-item">
-            <div className="timeline-item-content">
-            <span className="tag" style={{background: props.category.color}}>
+export default class TimelineItem extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {showText: false};
+    }
+
+    onClick = () => {
+        this.setState({showText: !this.state.showText})
+    };
+
+    render() {
+        const props = this.props, showText = this.state.showText;
+        return (
+            <div className="timeline-item">
+                <div className="timeline-item-content">
+            <span className="timeline-tag" style={{background: props.category.color}}>
                 {props.category.tag}
             </span>
-                <DateText date={props.date} duration={props.duration}/>
-                <p>{props.title}</p>
-                <p>{props.text}</p>
-                {props.link && (
-                    <a
-                        href={props.link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        {props.link.text}
-                    </a>
-                )}
-                <span className="circle"/>
-            </div>
-        </div>
-    )
-};
+                    <DateText date={props.date} duration={props.duration}/>
+                    <h4>{props.title}</h4>
+                    <AddressText location={props.location}/>
+                    <a href={props.company.url}>{props.company.name}</a>
 
-export default TimelineItem;
+                    <Button
+                        variant="link"
+                        className="timeline-more"
+                        onClick={this.onClick}
+                        aria-controls="timeline-text"
+                        aria-expanded={showText}
+                    >
+                        Read {showText ? "Less" : "More"}
+                    </Button>
+
+                    <Collapse in={showText}>
+                        <div id="timeline-text">
+                            <p>{props.text}</p>
+                        </div>
+                    </Collapse>
+                    <span className="circle"/>
+                </div>
+            </div>
+        );
+    }
+}

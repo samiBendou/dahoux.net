@@ -7,11 +7,13 @@ const TimelineList = ({items}) => {
         {sortedItems.map((item) => (
             <TimelineItem
                 category={item.category}
+                title={item.title}
                 text={item.text}
                 date={item.date}
                 duration={item.duration}
-                key={item.link.url}
-                link={item.link}
+                key={item.title + "&" + item.date.toUTCString()}
+                company={item.company}
+                location={item.location}
             />
         ))}
     </div>);

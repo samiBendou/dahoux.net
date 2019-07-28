@@ -14,10 +14,10 @@ const SkillsAccordion = (props) => {
     const items = new Map(categories.map(category => [category, []]));
     props.items.forEach(item => items.get(item.category).push(item));
     return (
-        <Accordion defaultActiveKey="0">
+        <Accordion>
             {
                 categories.map((category, index) => (
-                    <Card className="skills-accordion-card">
+                    <Card className="skills-accordion-card" key={category}>
                         <div>
                             <Accordion.Toggle as={Button} variant="link" eventKey={index.toString()}>
                                 {capitalizeFirstLetter(category)}
@@ -25,7 +25,7 @@ const SkillsAccordion = (props) => {
                         </div>
                         <Accordion.Collapse eventKey={index.toString()}>
                             <div>
-                                <SkillsList items={items.get(category)} key={category}/>
+                                <SkillsList items={items.get(category)}/>
                             </div>
                         </Accordion.Collapse>
                     </Card>

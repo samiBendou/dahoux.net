@@ -29,17 +29,21 @@ export default class App extends Component {
 
                 timeline: [
                     {
+                        title: 'ReactJS Developer',
                         text: 'Wrote my first React app',
                         date: new Date(2019, 6, 25),
+                        location: {
+                            country: "FR",
+                            zip: "75019"
+                        },
                         duration: 0,
                         category: {
                             tag: 'medium',
                             color: '#018f69'
                         },
-                        link: {
-                            url:
-                                'https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2',
-                            text: 'Read more'
+                        company: {
+                            url: 'https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2',
+                            name: 'MySelfAction'
                         }
                     }
                 ],

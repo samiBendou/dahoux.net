@@ -23,17 +23,19 @@ export default class Skills extends Component {
                     <SkillsList items={items} count={1}/>
                 </div>
                 <Button
+                    className="skills-more"
                     onClick={this.onClick}
                     aria-controls="skills-list"
                     aria-expanded={showAllSkills}
                 >
-                    More Skills</Button>
-                <Collapse in={showAllSkills}>
-                    <div id="skills-list" className="skills skills-accordion">
-                        <SkillsAccordion items={items}/>
-                    </div>
-                </Collapse>
-                <div/>
+                    {showAllSkills ? "Less" : "More"} Skills</Button>
+                <div>
+                    <Collapse in={showAllSkills}>
+                        <div id="skills-list" className="skills skills-accordion">
+                            <SkillsAccordion items={items}/>
+                        </div>
+                    </Collapse>
+                </div>
             </div>)
     }
 }
