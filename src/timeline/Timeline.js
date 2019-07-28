@@ -1,10 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import TimelineList from './TimelineList'
 
-export default class Timeline extends Component {
+const Timeline = (props) => <TimelineList items={props.items}/>;
 
-    render() {
-        const props = this.props;
-        return <TimelineList items={props.items}/>
-    }
-}
+export default Timeline;
