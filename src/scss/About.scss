@@ -2,33 +2,34 @@
   .about-content {
     display: block;
   }
-
-  .about-icons {
-    text-align-all: center;
-  }
-
   .about-picture {
     display: none;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .about-thumbnail {
+  .about-thumbnail, .about-skills {
     display: none;
+  }
+  .about-icons, .about-list {
+    text-align: center;
   }
 }
 
 .about-content {
   display: flex;
-
 }
 
 .about-text {
   text-align: left;
-  flex-shrink: 0;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-self: center;
 }
 
 .about-thumbnail {
-  width: 100%;
   text-align: right;
+  flex-shrink: 1.67;
 }

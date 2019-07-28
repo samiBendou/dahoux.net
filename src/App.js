@@ -4,7 +4,7 @@ import About from './about/About';
 import Contact from './contact/Contact'
 import Skills from "./skills/Skills";
 import Timeline from "./timeline/Timeline";
-import {Container} from "react-bootstrap";
+import {Container, Jumbotron} from "react-bootstrap";
 
 export default class App extends Component {
     constructor(props) {
@@ -18,7 +18,8 @@ export default class App extends Component {
                 facebook: "https://www.facebook.com/sl.bendahhou",
                 github: "https://github.com/samiBendou",
                 linkedin: "https://www.linkedin.com/in/sami-dahoux-b20386a9/",
-                picture: "/static/sami2.jpg"
+                picture: "/static/sami2.jpg",
+                contact: null
             },
             items: {
                 about: [
@@ -29,7 +30,8 @@ export default class App extends Component {
                 timeline: [
                     {
                         text: 'Wrote my first React app',
-                        date: 'March 03 2017',
+                        date: new Date(2019, 6, 25),
+                        duration: 0,
                         category: {
                             tag: 'medium',
                             color: '#018f69'
@@ -42,40 +44,44 @@ export default class App extends Component {
                     }
                 ],
                 skills: [
-                    {type: "management", label: "Communication", level: 80},
-                    {type: "technical", label: "Javascript", level: 50},
+                    {category: "management", label: "Communication", level: 80},
+                    {category: "technical", label: "Javascript", level: 50},
                 ]
             },
             mail: "sbdh75@gmail.com",
             location: {
-                city:"Gardanne",
-                zip:"13120"
+                country: "FR",
+                zip: "13120"
             }
         }
     }
 
     render() {
+        let urls = this.state.urls;
+        urls.contact = urls.contact || "#contact";
         return (
             <div>
                 <About
                     lastName={this.state.lastName}
                     firstName={this.state.firstName}
                     quote={this.state.quote}
-                    urls={this.state.urls}
-                    items={this.state.items.about}
-                />
-                <Container>
-                <Skills items={this.state.items.skills}/>
-
-                <Timeline items={this.state.items.timeline}/>
-                <Contact
+                    urls={urls}
+                    items={this.state.items}
                     birthday={this.state.birthday}
                     location={this.state.location}
                     mail={this.state.mail}
                 />
+                <Container>
+                    <Skills items={this.state.items.skills}/>
+                    <Timeline items={this.state.items.timeline}/>
+                    <Jumbotron id="contact">
+                        <Contact
+                            birthday={this.state.birthday}
+                            location={this.state.location}
+                            mail={this.state.mail}
+                        />
+                    </Jumbotron>
                 </Container>
-
-
             </div>
 
         );

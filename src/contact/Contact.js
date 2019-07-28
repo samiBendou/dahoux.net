@@ -1,28 +1,30 @@
-import React from 'react';
-import {Col, Jumbotron, Row} from "react-bootstrap";
+import React, {Component} from 'react';
+import {Col, Row} from "react-bootstrap";
 import {FaBirthdayCake, FaMapMarker, FaEnvelope} from "react-icons/fa";
 import '../scss/Contact.scss';
+import BirthdayText from "../common/BirthdayText";
+import AddressText from "../common/AddressText";
+import MailText from "../common/MailText";
 
-const msPerYear = (1000 * 60 * 60 * 24 * 365);
+export default class Contact extends Component {
 
-const Contact = (props) => {
-    const age = Math.floor((new Date() - props.birthday) / msPerYear);
-    return (
-        <Jumbotron id="contact">
-            <Row className="row">
-                <Col xs={2}><FaBirthdayCake/></Col>
-                <Col>{age} years</Col>
-            </Row>
-            <Row className="row">
-                <Col xs={2}><FaMapMarker/></Col>
-                <Col>{props.location.city}, {props.location.zip}</Col>
-            </Row>
-            <Row className="row">
-                <Col xs={2}><FaEnvelope/></Col>
-                <Col>{props.mail}</Col>
-            </Row>
-        </Jumbotron>
-    );
-};
-
-export default Contact;
+    render() {
+        const props = this.props;
+        return (
+            <div>
+                <Row className="row">
+                    <Col xs={2}><FaBirthdayCake/></Col>
+                    <Col><BirthdayText birthday={props.birthday}/></Col>
+                </Row>
+                <Row className="row">
+                    <Col xs={2}><FaMapMarker/></Col>
+                    <Col><AddressText location={props.location}/></Col>
+                </Row>
+                <Row className="row">
+                    <Col xs={2}><FaEnvelope/></Col>
+                    <Col><MailText mail={props.mail}/></Col>
+                </Row>
+            </div>
+        );
+    }
+}

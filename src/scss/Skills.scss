@@ -1,8 +1,14 @@
 @import 'bootstrap/bootstrap.scss';
 
 $backgroundColor: $blue;
-$labelColor: $white;
+$labelColor: $light;
 $levelColor: $white;
+
+@media only screen and (min-width: 767px) {
+  .skills-best {
+    display: none;
+  }
+}
 
 .skills {
   padding: 0;
@@ -23,6 +29,7 @@ $levelColor: $white;
     }
 
     span {
+      color: $levelColor;
       position: absolute;
       right: 10px;
       display: inline-block;
@@ -40,4 +47,12 @@ $levelColor: $white;
       color: $backgroundColor !important;
     }
   }
+}
+
+.skills-accordion {
+  margin-top: 15px;
+}
+
+.card.skills-accordion-card {
+  border:none;
 }
