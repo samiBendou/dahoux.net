@@ -82,6 +82,7 @@ export default class App extends Component {
                             mail={this.state.mail}
                         />
                     </Jumbotron>
+                    <h6 className="copyright-text">© Sami Dahoux 2019, All Rights Reserved</h6>
                 </Container>
             </div>
 

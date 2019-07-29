@@ -43,6 +43,7 @@ export default class AddressText extends Component {
 
     render() {
         const state = this.state;
-        return <h6><FaMapMarker/> {state.city}, {state.county === state.city ? '' : `${state.county},`} {state.country}</h6>;
+        const text = `${state.city}, ${state.county === state.city ? '' : state.county + ", "} ${state.country}`;
+        return <h6><a href={`https://www.google.com/maps/place/${this.props.location.zip}+${this.state.city}/`}><FaMapMarker/></a> {text}</h6>;
     }
 }
