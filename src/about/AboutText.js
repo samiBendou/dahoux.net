@@ -1,15 +1,21 @@
 import React from "react";
 import AboutList from "./AboutList";
-import {FaFacebook, FaLinkedin, FaGithub, FaAddressCard} from "react-icons/fa";
+import {FaFacebook, FaLinkedin, FaGithub, FaEnvelope} from "react-icons/fa";
 import SkillsList from "../skills/SkillsList";
+import BirthdayText from "../common/BirthdayText";
+import AddressText from "../common/AddressText";
 
-const AboutText = (props) => {
-    return (
+const AboutText = (props) =>
+    (
         <div className="about-text">
             <h1>
                 {`${props.firstName} ${props.lastName}`}<br/>
                 <small>{props.quote}</small>
             </h1>
+
+            <BirthdayText birthday={props.birthday}/>
+            <AddressText location={props.location}/>
+
             <div className="about-list">
                 <AboutList items={props.items.about}/>
             </div>
@@ -20,10 +26,9 @@ const AboutText = (props) => {
                 <a href={props.urls.facebook}><FaFacebook/></a>
                 <a href={props.urls.linkedin}><FaLinkedin/></a>
                 <a href={props.urls.github}><FaGithub/></a>
-                <a href={props.urls.contact}><FaAddressCard/></a>
+                <a href={props.urls.contact}><FaEnvelope/></a>
             </h3>
         </div>
     );
-};
 
 export default AboutText;

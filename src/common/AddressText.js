@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {FaMapMarker} from "react-icons/fa";
 
 export default class AddressText extends Component {
     constructor(props) {
@@ -42,6 +43,6 @@ export default class AddressText extends Component {
 
     render() {
         const state = this.state;
-        return <p>{state.city}, {state.county === state.city ? '' : `${state.county},`} {state.country}</p>;
+        return <h6><FaMapMarker/> {state.city}, {state.county === state.city ? '' : `${state.county},`} {state.country}</h6>;
     }
 }

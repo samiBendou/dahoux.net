@@ -15,6 +15,8 @@ const About = (props) => {
                         quote={props.quote}
                         urls={props.urls}
                         items={props.items}
+                        location={props.location}
+                        birthday={props.birthday}
                     />
                     <div className="about-thumbnail">
                         <img width="100%" alt="profile" src={props.urls.picture}/>

@@ -73,15 +73,12 @@ export default class App extends Component {
                     items={this.state.items}
                     birthday={this.state.birthday}
                     location={this.state.location}
-                    mail={this.state.mail}
                 />
                 <Container>
                     <Skills items={this.state.items.skills}/>
                     <Timeline items={this.state.items.timeline}/>
                     <Jumbotron id="contact">
                         <Contact
-                            birthday={this.state.birthday}
-                            location={this.state.location}
                             mail={this.state.mail}
                         />
                     </Jumbotron>
