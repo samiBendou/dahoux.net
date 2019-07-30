@@ -8,7 +8,7 @@ import AddressText from "../common/AddressText";
 const AboutText = (props) =>
     (
         <div className="about-text">
-            <h1>
+            <h1 className="about-head">
                 {`${props.firstName} ${props.lastName}`}<br/>
                 <small>{props.quote}</small>
             </h1>
