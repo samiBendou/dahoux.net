@@ -16,7 +16,7 @@ const sendFormMail = (values) =>
 const MailSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email").required("Required"),
     phone: Yup.string().max(16, "16 characters max").ensure(),
-    text: Yup.string().min(16, "16 characters min").max(255, "255 characters max").required("Required")
+    text: Yup.string().max(255, "255 characters max").required("Required")
 });
 
 const MailForm = () => {

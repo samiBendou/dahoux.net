@@ -11,7 +11,7 @@ const TimelineList = ({items}) => {
                 text={item.text}
                 date={item.date}
                 duration={item.duration}
-                key={item.title + "&" + item.date.toUTCString()}
+                key={item.title + "&" + item.date}
                 company={item.company}
                 location={item.location}
             />
