@@ -12,10 +12,19 @@
   },
   "items": {
     "about": [
-      {"title": "Love", "text": "Feel the love"},
-      {"title": "Peace", "text": "Feel the peace"}
+      {
+        "title": "Computer science",
+        "text": "Passionated of computer science since 11 years old"
+      },
+      {
+        "title": "Electronics",
+        "text": "Studying microelectronics components design"
+      },
+      {
+        "title": "Dynamic",
+        "text": "Enthusiastic about finding creative solutions for tomorrow's technical and societal challenges"
+      }
     ],
-
     "timeline": [
       {
         "title": "ReactJS Developer",
@@ -37,8 +46,16 @@
       }
     ],
     "skills": [
-      {"category": "management", "label": "Communication", "level": 80},
-      {"category": "technical", "label": "Javascript", "level": 50}
+      {
+        "category": "management",
+        "label": "Communication",
+        "level": 80
+      },
+      {
+        "category": "technical",
+        "label": "Javascript",
+        "level": 50
+      }
     ]
   },
   "mail": "sbdh75@gmail.com",
