@@ -14,7 +14,7 @@
     "about": [
       {
         "title": "Computer science",
-        "text": "Passionated of computer science since 11 years old"
+        "text": "Passionated of computer science since I have 11 years old"
       },
       {
         "title": "Electronics",
@@ -47,14 +47,64 @@
     ],
     "skills": [
       {
-        "category": "management",
-        "label": "Communication",
+        "category": "Technology and Tools",
+        "label": "Python/Numpy",
         "level": 80
       },
       {
-        "category": "technical",
-        "label": "Javascript",
-        "level": 50
+        "category": "Technology and Tools",
+        "label": "Javascript/Node.js",
+        "level": 75
+      },
+      {
+        "category": "Tools & Technologies",
+        "label": "C++",
+        "level": 75
+      },
+      {
+        "category": "Tools & Technologies",
+        "label": "Java",
+        "level": 70
+      },
+      {
+        "category": "Tools & Technologies",
+        "label": "Swift",
+        "level": 75
+      },
+      {
+        "category": "Tools & Technologies",
+        "label": "SQL",
+        "level": 70
+      },
+      {
+        "category": "Tools & Technologies",
+        "label": "SQL",
+        "level": 70
+      },
+      {
+        "category": "Industry Knowledge",
+        "label": "Project management",
+        "level": 65
+      },
+      {
+        "category": "Industry Knowledge",
+        "label": "Software development",
+        "level": 80
+      },
+      {
+        "category": "Industry Knowledge",
+        "label": "Mathematical modelling",
+        "level": 75
+      },
+      {
+        "category": "Industry Knowledge",
+        "label": "Electronics",
+        "level": 70
+      },
+      {
+        "category": "Industry Knowledge",
+        "label": "Music production",
+        "level": 75
       }
     ]
   },
