@@ -47,12 +47,12 @@
     ],
     "skills": [
       {
-        "category": "Technology and Tools",
+        "category": "Tools & Technologies",
         "label": "Python/Numpy",
         "level": 80
       },
       {
-        "category": "Technology and Tools",
+        "category": "Tools & Technologies",
         "label": "Javascript/Node.js",
         "level": 75
       },
@@ -70,11 +70,6 @@
         "category": "Tools & Technologies",
         "label": "Swift",
         "level": 75
-      },
-      {
-        "category": "Tools & Technologies",
-        "label": "SQL",
-        "level": 70
       },
       {
         "category": "Tools & Technologies",
