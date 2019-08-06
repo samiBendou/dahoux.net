@@ -8,9 +8,9 @@ const sendFormMail = (values) =>
     Email.send({
         SecureToken: "7ae23154-3d11-4322-bece-03e3b1ae2059",
         To: "sami@dahoux.net",
-        From: "sami@dahoux.net",
+        From: "contact@dahoux.net",
         Subject: `New contact via form`,
-        Body: `Phone number : ${values.phone || "unknown"}<br>Email : ${values.email}<br>Message<br>${values.text}`
+        Body: `Phone : ${values.phone || "unknown"}<br>Email : ${values.email}<br>Message :<br>${values.text}`
     }).then(message => alert(message));
 
 const MailSchema = Yup.object().shape({
