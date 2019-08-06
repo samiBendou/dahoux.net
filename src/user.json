@@ -1,0 +1,49 @@
+{
+  "lastName": "Dahoux",
+  "firstName": "Sami",
+  "birthday": "1995-07-09T00:00:00Z",
+  "quote": "Engineering student",
+  "urls": {
+    "facebook": "https://www.facebook.com/sl.bendahhou",
+    "github": "https://github.com/samiBendou",
+    "linkedin": "https://www.linkedin.com/in/sami-dahoux-b20386a9/",
+    "picture": "/static/sami2.jpg",
+    "contact": null
+  },
+  "items": {
+    "about": [
+      {"title": "Love", "text": "Feel the love"},
+      {"title": "Peace", "text": "Feel the peace"}
+    ],
+
+    "timeline": [
+      {
+        "title": "ReactJS Developer",
+        "text": "Wrote my first React app",
+        "date": "2019-06-25T00:00:00Z",
+        "location": {
+          "country": "FR",
+          "zip": "75019"
+        },
+        "duration": 0,
+        "category": {
+          "tag": "medium",
+          "color": "#018f69"
+        },
+        "company": {
+          "url": "https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2",
+          "name": "MySelfAction"
+        }
+      }
+    ],
+    "skills": [
+      {"category": "management", "label": "Communication", "level": 80},
+      {"category": "technical", "label": "Javascript", "level": 50}
+    ]
+  },
+  "mail": "sbdh75@gmail.com",
+  "location": {
+    "country": "FR",
+    "zip": "13120"
+  }
+}

@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import './scss/App.scss';
-import About from './about/About';
-import Contact from './contact/Contact'
+import React, {Component} from "react";
+import "./scss/App.scss";
+import About from "./about/About";
+import Contact from "./contact/Contact"
 import Skills from "./skills/Skills";
 import Timeline from "./timeline/Timeline";
 import {Container, Jumbotron} from "react-bootstrap";
@@ -10,54 +10,59 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            lastName: "Dahoux",
-            firstName: "Sami",
-            birthday: new Date(1995, 6, 9),
-            quote: "Engineering student",
+            lastName: "Last Name",
+            firstName: "First Name",
+            birthday: new Date(),
+            quote: "Quote",
             urls: {
-                facebook: "https://www.facebook.com/sl.bendahhou",
-                github: "https://github.com/samiBendou",
-                linkedin: "https://www.linkedin.com/in/sami-dahoux-b20386a9/",
-                picture: "/static/sami2.jpg",
+                facebook: "#",
+                github: "#",
+                linkedin: "#",
+                picture: "",
                 contact: null
             },
             items: {
                 about: [
-                    {title: "Love", text: "Feel the love"},
-                    {title: "Peace", text: "Feel the peace"},
+                    {title: "Title", text: "Text"},
                 ],
 
                 timeline: [
                     {
-                        title: 'ReactJS Developer',
-                        text: 'Wrote my first React app',
-                        date: new Date(2019, 6, 25),
+                        title: "Title",
+                        text: "Text",
+                        date: new Date(),
                         location: {
-                            country: "FR",
-                            zip: "75019"
+                            country: "AA",
+                            zip: "00000"
                         },
                         duration: 0,
                         category: {
-                            tag: 'medium',
-                            color: '#018f69'
+                            tag: "Tag",
+                            color: "black"
                         },
                         company: {
-                            url: 'https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2',
-                            name: 'MySelfAction'
+                            url: "#",
+                            name: "Name"
                         }
                     }
                 ],
                 skills: [
-                    {category: "management", label: "Communication", level: 80},
-                    {category: "technical", label: "Javascript", level: 50},
+                    {category: "category", label: "Label", level: 80}
                 ]
             },
-            mail: "sbdh75@gmail.com",
+            mail: "me@domain.dot",
             location: {
-                country: "FR",
-                zip: "13120"
+                country: "AA",
+                zip: "00000"
             }
         }
+    }
+
+    componentWillMount() {
+        const req = new XMLHttpRequest();
+        req.open('GET', 'src/user.json', true);
+        req.send();
+        console.log(req);
     }
 
     render() {
