@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="adding static user data as json">
-      <change afterPath="$PROJECT_DIR$/src/common/scss/Hidder.scss" afterDir="false" />
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/AddressText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/AddressText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/BirthdayText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/BirthdayText.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/MailForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/MailForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline/TimelineList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeline/TimelineList.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,8 +34,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/common/BirthdayText.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+                <state relative-caret-position="273">
+                  <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -67,6 +59,18 @@
       </split-first>
       <split-second>
         <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/common/MailForm.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="188">
+                  <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/common/scss/Hidder.scss">
               <provider selected="true" editor-type-id="text-editor">
@@ -76,7 +80,16 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/common/ms.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="147">
+                  <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/skills/SkillsList.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="246">
@@ -195,7 +208,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.js" />
         <option value="$PROJECT_DIR$/src/timeline/TimelineList.js" />
         <option value="$PROJECT_DIR$/src/skills/SkillsList.js" />
-        <option value="$PROJECT_DIR$/src/common/MailForm.js" />
         <option value="$PROJECT_DIR$/src/scss/App.css" />
         <option value="$PROJECT_DIR$/src/scss/App.scss" />
         <option value="$PROJECT_DIR$/src/App.js" />
@@ -204,10 +216,11 @@
         <option value="$PROJECT_DIR$/src/common/scss/AddressText.scss" />
         <option value="$PROJECT_DIR$/src/common/scss/Hidder.scss" />
         <option value="$PROJECT_DIR$/src/common/BirthdayText.js" />
+        <option value="$PROJECT_DIR$/src/common/MailForm.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="650" />
     <option name="width" value="630" />
     <option name="height" value="800" />
@@ -382,7 +395,7 @@
       <workItem from="1564318917159" duration="18098000" />
       <workItem from="1564394962497" duration="16112000" />
       <workItem from="1564511327558" duration="514000" />
-      <workItem from="1565089964221" duration="9840000" />
+      <workItem from="1565089964221" duration="10663000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1564089577147</created>
@@ -461,11 +474,25 @@
       <option name="project" value="LOCAL" />
       <updated>1565093055342</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="adding hiding effects">
+      <created>1565102468426</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1565102468426</updated>
+    </task>
+    <task id="LOCAL-00013" summary="changing sending mailbox">
+      <created>1565102605375</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1565102605375</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90819000" />
+    <option name="totallyTimeSpent" value="91642000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,10 +504,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18903892" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18903892" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -548,7 +575,9 @@
     <MESSAGE value="cleaning MailForm appearance and adding google maps link to address text" />
     <MESSAGE value="minor fixes on margin and padding" />
     <MESSAGE value="adding static user data as json" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding static user data as json" />
+    <MESSAGE value="adding hiding effects" />
+    <MESSAGE value="changing sending mailbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing sending mailbox" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/react-skillbars/build-module/index.js">
@@ -655,13 +684,6 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/ms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -821,16 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/MailForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/About.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -865,6 +877,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/skills/SkillsList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/AddressText.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-627">
@@ -879,22 +901,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/skills/SkillsList.js">
+    <entry file="file://$PROJECT_DIR$/src/common/ms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="62" />
+        <state relative-caret-position="147">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/BirthdayText.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/BirthdayText.js">
+    <entry file="file://$PROJECT_DIR$/src/common/MailForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state relative-caret-position="188">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

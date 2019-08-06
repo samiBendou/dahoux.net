@@ -9,9 +9,9 @@ const sendFormMail = (values) =>
         SecureToken: "7ae23154-3d11-4322-bece-03e3b1ae2059",
         To: "sami@dahoux.net",
         From: "contact@dahoux.net",
-        Subject: `New contact via form`,
+        Subject: `New message via form`,
         Body: `Phone : ${values.phone || "unknown"}<br>Email : ${values.email}<br>Message :<br>${values.text}`
-    }).then(message => alert(message));
+    }).then(message => alert(message === "OK" ? "Message successfully sent" : "Error while sending message"));
 
 const MailSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email").required("Required"),
