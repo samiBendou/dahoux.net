@@ -3,6 +3,7 @@ import {Accordion, Button} from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import SkillsList from "./SkillsList";
 import '../scss/Skills.scss';
+import SkillsCategory from "./SkillsCategory";
 
 function capitalizeFirstLetter(string) {
     // noinspection JSUnresolvedFunction
@@ -20,7 +21,7 @@ const SkillsAccordion = (props) => {
                     <Card className="skills-accordion-card" key={category}>
                         <div>
                             <Accordion.Toggle as={Button} variant="link" eventKey={index.toString()}>
-                                {capitalizeFirstLetter(category)}
+                                {capitalizeFirstLetter(SkillsCategory[category])}
                             </Accordion.Toggle>
                         </div>
                         <Accordion.Collapse eventKey={index.toString()}>

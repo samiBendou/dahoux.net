@@ -47,87 +47,87 @@
     ],
     "skills": [
       {
-        "category": "Tools & Technologies",
+        "category": 0,
         "label": "HTML/CSS",
         "level": 75
       },
       {
-        "category": "Tools & Technologies",
+        "category": 0,
         "label": "Python/Numpy",
         "level": 80
       },
       {
-        "category": "Tools & Technologies",
+        "category": 0,
         "label": "Javascript/Node.js",
         "level": 75
       },
       {
-        "category": "Tools & Technologies",
+        "category": 0,
         "label": "C++",
         "level": 75
       },
       {
-        "category": "Tools & Technologies",
+        "category": 0,
         "label": "Java",
         "level": 70
       },
       {
-        "category": "Tools & Technologies",
+        "category": 0,
         "label": "Swift",
         "level": 75
       },
       {
-        "category": "Tools & Technologies",
+        "category": 0,
         "label": "SQL",
         "level": 70
       },
       {
-        "category": "Industry Knowledge",
+        "category": 1,
         "label": "Project management",
         "level": 65
       },
       {
-        "category": "Industry Knowledge",
+        "category": 1,
         "label": "Software development",
         "level": 80
       },
       {
-        "category": "Industry Knowledge",
+        "category": 1,
         "label": "Mathematical modelling",
         "level": 75
       },
       {
-        "category": "Industry Knowledge",
+        "category": 1,
         "label": "Electronics",
         "level": 70
       },
       {
-        "category": "Industry Knowledge",
+        "category": 1,
         "label": "Music production",
         "level": 75
       },
       {
-        "category": "Interpersonal Skills",
+        "category": 2,
         "label": "Management",
         "level": 70
       },
       {
-        "category": "Interpersonal Skills",
+        "category": 2,
         "label": "Communication",
         "level": 75
       },
       {
-        "category": "Language",
+        "category": 3,
         "label": "French",
-        "level": 100
+        "level": 99
       },
       {
-        "category": "Language",
+        "category": 3,
         "label": "English",
         "level": 75
       },
       {
-        "category": "Language",
+        "category": 3,
         "label": "Spanish",
         "level": 65
       }
