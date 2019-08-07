@@ -5,6 +5,21 @@ $timelineBackground: $gray-200;
 $moreColor: $primary;
 $moreActiveColor: $primary;
 
+
+.timeline-item {
+  h4 {
+    margin-top: 5px;
+  }
+}
+
+#timeline-text {
+  p {
+  vertical-align: bottom;
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+}
+
 .timeline-container {
   display: flex;
   flex-direction: column;

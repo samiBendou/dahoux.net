@@ -28,7 +28,6 @@ export default class TimelineItem extends Component {
                     <h4>{props.title}</h4>
                     <AddressText location={props.location}/>
                     <a href={props.company.url}>{props.company.name}</a>
-
                     <Button
                         variant="link"
                         className="timeline-more"
@@ -38,7 +37,6 @@ export default class TimelineItem extends Component {
                     >
                         Read {showText ? "Less" : "More"}
                     </Button>
-
                     <Collapse in={showText}>
                         <div id="timeline-text">
                             <p>{props.text}</p>
