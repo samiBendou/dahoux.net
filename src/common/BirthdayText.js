@@ -16,7 +16,7 @@ export default class BirthdayText extends Component {
     render() {
         const birthday = new Date(this.props.birthday);
         return <h6 className="birthday">
-            <FaBirthdayCake/>
+            <FaBirthdayCake style={{verticalAlign:"top"}} />
             <span
                 className={this.state.hidden ? 'birthday-hidden' : ''}> {Math.floor((new Date() - birthday) / ms.year)} years
             </span>

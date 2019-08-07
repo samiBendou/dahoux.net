@@ -48,11 +48,13 @@ export default class AddressText extends Component {
 
     render() {
         const state = this.state;
-        const text = `${state.city}, ${state.county === state.city ? '' : state.county + ", "} ${state.country}`;
+        const text = `${state.city}, ${state.county === state.city || !this.props.county ? '' : state.county + ", "} ${state.country}`;
         return <h6 className="address">
             <a
-                href={`https://www.google.com/maps/place/${this.props.location.zip}+${this.state.city}/`}><FaMapMarker/></a>
-            <span className={this.state.hidden ? 'address-hidden' : ''}>{text}</span>
+                href={`https://www.google.com/maps/place/${this.props.location.zip}+${this.state.city}/`}>
+                <FaMapMarker style={{verticalAlign:"top"}} />
+            </a>
+            <span className={this.state.hidden ? 'address-hidden' : ''}> {text}</span>
         </h6>;
     }
 }

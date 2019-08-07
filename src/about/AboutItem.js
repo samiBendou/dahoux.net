@@ -4,7 +4,7 @@ const AboutItem = (props) => {
         return (
             <div>
                 <h4>{props.title}</h4>
-                <p>{props.text}</p>
+                <p><em>{props.text}</em></p>
             </div>
         );
 };

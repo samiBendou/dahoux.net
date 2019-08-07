@@ -14,7 +14,7 @@ const AboutText = (props) =>
             </h1>
 
             <BirthdayText birthday={props.birthday}/>
-            <AddressText location={props.location}/>
+            <AddressText location={props.location} county={true}/>
 
             <div className="about-list">
                 <AboutList items={props.items.about}/>
