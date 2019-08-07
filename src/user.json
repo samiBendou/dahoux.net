@@ -13,12 +13,12 @@
   "items": {
     "about": [
       {
-        "title": "Computer science",
-        "text": "Passionated of computer science since I have 11 years old"
+        "title": "Passionated",
+        "text": "I love computer science and new technologies"
       },
       {
-        "title": "Electronics",
-        "text": "Studying microelectronics components design"
+        "title": "Implicated",
+        "text": "Achieved many hobby software projects related to science"
       },
       {
         "title": "Dynamic",
@@ -49,12 +49,12 @@
       {
         "category": 0,
         "label": "HTML/CSS",
-        "level": 75
+        "level": 79
       },
       {
         "category": 0,
         "label": "Python/Numpy",
-        "level": 80
+        "level": 79
       },
       {
         "category": 0,
@@ -64,37 +64,42 @@
       {
         "category": 0,
         "label": "C++",
-        "level": 75
+        "level": 78
       },
       {
         "category": 0,
         "label": "Java",
-        "level": 70
+        "level": 73
       },
       {
         "category": 0,
         "label": "Swift",
-        "level": 75
+        "level": 77
       },
       {
         "category": 0,
         "label": "SQL",
-        "level": 70
+        "level": 73
+      },
+      {
+        "category": 0,
+        "label": "Matlab",
+        "level": 71
       },
       {
         "category": 1,
         "label": "Project management",
-        "level": 65
+        "level": 68
       },
       {
         "category": 1,
         "label": "Software development",
-        "level": 80
+        "level": 83
       },
       {
         "category": 1,
-        "label": "Mathematical modelling",
-        "level": 75
+        "label": "Numerical simulation",
+        "level": 78
       },
       {
         "category": 1,
@@ -103,13 +108,18 @@
       },
       {
         "category": 1,
+        "label": "Image processing",
+        "level": 76
+      },
+      {
+        "category": 1,
         "label": "Music production",
-        "level": 75
+        "level": 77
       },
       {
         "category": 2,
         "label": "Management",
-        "level": 70
+        "level": 72
       },
       {
         "category": 2,
@@ -124,12 +134,12 @@
       {
         "category": 3,
         "label": "English",
-        "level": 75
+        "level": 77
       },
       {
         "category": 3,
         "label": "Spanish",
-        "level": 65
+        "level": 68
       }
     ]
   },
