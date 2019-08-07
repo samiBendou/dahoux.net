@@ -1,13 +1,7 @@
 const categories = [
-    {
-        label:"Experience",
-    },
-    {
-        label:"Education",
-    },
-    {
-        label:"Accomplishment",
-    }
+    "Experience",
+    "Education",
+    "Accomplishment"
 ];
 
 export default categories;
