@@ -40,6 +40,21 @@
           "url": "https://www.mines-stetienne.fr/",
           "name": "Mines St-Etienne"
         }
+      },
+      {
+        "title": "Packaging operator",
+        "text": "Internship in banking customization workshop, report about lean optimisation of the workshop.",
+        "date": "2017-01-02T00:00:00Z",
+        "location": {
+          "country": "FR",
+          "zip": "13420"
+        },
+        "duration": 30,
+        "category": 1,
+        "company": {
+          "url": "https://www.gemalto.com/",
+          "name": "Gemalto"
+        }
       }
     ],
     "skills": [
