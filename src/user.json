@@ -48,6 +48,11 @@
     "skills": [
       {
         "category": "Tools & Technologies",
+        "label": "HTML/CSS",
+        "level": 75
+      },
+      {
+        "category": "Tools & Technologies",
         "label": "Python/Numpy",
         "level": 80
       },
@@ -100,6 +105,31 @@
         "category": "Industry Knowledge",
         "label": "Music production",
         "level": 75
+      },
+      {
+        "category": "Interpersonal Skills",
+        "label": "Management",
+        "level": 70
+      },
+      {
+        "category": "Interpersonal Skills",
+        "label": "Communication",
+        "level": 75
+      },
+      {
+        "category": "Language",
+        "label": "French",
+        "level": 100
+      },
+      {
+        "category": "Language",
+        "label": "English",
+        "level": 75
+      },
+      {
+        "category": "Language",
+        "label": "Spanish",
+        "level": 65
       }
     ]
   },
