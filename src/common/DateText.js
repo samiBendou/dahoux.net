@@ -10,14 +10,14 @@ const DateText = (props) => {
     const date = new Date(props.date);
     let string;
     if (props.duration === undefined) {
-        string = `${renderMonth(date.getMonth())}/${date.getFullYear()}`;
+        string = `${date.getFullYear()}/${renderMonth(date.getMonth())}`;
     }
     if (props.duration < 2) {
         string = date.toDateString();
     } else if (props.duration < 60) {
-        string = `${renderMonth(date.getMonth())}/${date.getFullYear()}, ${props.duration} days`;
+        string = `${date.getFullYear()}/${renderMonth(date.getMonth())}, ${props.duration} days`;
     } else if (props.duration < 730) {
-        string = `${renderMonth(date.getMonth())}/${date.getFullYear()}, ${Math.round(props.duration / day.month)} months`;
+        string = `${date.getFullYear()}/${renderMonth(date.getMonth())}, ${Math.round(props.duration / day.month)} months`;
     } else {
         string = `${date.getFullYear()}-${date.getFullYear() + props.duration / day.year}, ${props.duration / day.year} years`;
     }
