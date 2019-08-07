@@ -1,5 +1,5 @@
 import React from "react";
-import ms from "./ms";
+import day from "./day";
 
 const renderMonth = (month) => {
     const shifted = month + 1;
@@ -15,11 +15,11 @@ const DateText = (props) => {
     if (props.duration < 2) {
         string = date.toDateString();
     } else if (props.duration < 60) {
-        string = `${renderMonth(date.getMonth())}/${date.getFullYear()} - ${props.duration} days`;
+        string = `${renderMonth(date.getMonth())}/${date.getFullYear()}, ${props.duration} days`;
     } else if (props.duration < 365) {
-        string = `${date.getFullYear()} - ${props.duration / ms.month} months`;
+        string = `${renderMonth(date.getMonth())}/${date.getFullYear()}, ${props.duration / day.month} months`;
     } else {
-        string = `${date.getFullYear()} - ${props.duration / ms.month} years`;
+        string = `${date.getFullYear()}-${date.getFullYear() + props.duration / day.year}, ${props.duration / day.year} years`;
     }
     return <time>{string}</time>;
 };
