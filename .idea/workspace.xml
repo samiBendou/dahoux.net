@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fixing date text">
-      <change afterPath="$PROJECT_DIR$/src/common/day.js" afterDir="false" />
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/DateText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/DateText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/DateText.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="42">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -30,23 +29,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/MailForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state relative-caret-position="192">
+              <caret line="80" column="10" lean-forward="true" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+              <folding>
+                <element signature="n#!!block;n#urls#0;n#!!top" />
+                <element signature="e#393#763#0" />
+                <element signature="e#1266#3014#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/timeline/TimelineCategory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -222,14 +223,15 @@
         <option value="$PROJECT_DIR$/src/scss/Timeline.scss" />
         <option value="$PROJECT_DIR$/src/timeline/TimelineCategory.js" />
         <option value="$PROJECT_DIR$/src/timeline/TimelineItem.js" />
-        <option value="$PROJECT_DIR$/src/user.json" />
         <option value="$PROJECT_DIR$/src/common/day.js" />
         <option value="$PROJECT_DIR$/src/common/DateText.js" />
+        <option value="$PROJECT_DIR$/src/user.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
+    <option name="x" value="650" />
+    <option name="width" value="630" />
     <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -415,7 +417,7 @@
       <workItem from="1564511327558" duration="514000" />
       <workItem from="1565089964221" duration="11291000" />
       <workItem from="1565108514533" duration="1798000" />
-      <workItem from="1565197985617" duration="6584000" />
+      <workItem from="1565197985617" duration="7315000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1564089577147</created>
@@ -613,11 +615,25 @@
       <option name="project" value="LOCAL" />
       <updated>1565203897752</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fixing date text">
+      <created>1565205213171</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1565205213171</updated>
+    </task>
+    <task id="LOCAL-00030" summary="adding data">
+      <created>1565205455032</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1565205455032</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100652000" />
+    <option name="totallyTimeSpent" value="101383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,10 +645,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="650" y="0" width="630" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18903892" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3908046" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -647,7 +663,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32913166" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.39635855" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32913166" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32913166" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.32913166" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -704,7 +720,6 @@
     <MESSAGE value="changing sending mailbox" />
     <MESSAGE value="minor fixes" />
     <MESSAGE value="adding about data" />
-    <MESSAGE value="adding data" />
     <MESSAGE value="refactor of skills categories" />
     <MESSAGE value="fixing padding" />
     <MESSAGE value="fixing bests skills selection" />
@@ -713,7 +728,8 @@
     <MESSAGE value="cleaning timeline tagging and date deserialization" />
     <MESSAGE value="adding timeline data" />
     <MESSAGE value="fixing date text" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing date text" />
+    <MESSAGE value="adding data" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding data" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/react-skillbars/build-module/index.js">
@@ -981,13 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/timeline/TimelineCategory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/MailForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -1056,19 +1065,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/DateText.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/timeline/TimelineCategory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="80" column="10" lean-forward="true" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+          <folding>
+            <element signature="n#!!block;n#urls#0;n#!!top" />
+            <element signature="e#393#763#0" />
+            <element signature="e#1266#3014#0" />
           </folding>
         </state>
       </provider>

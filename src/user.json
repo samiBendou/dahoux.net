@@ -27,7 +27,7 @@
     ],
     "timeline": [
       {
-        "title": "Graduate school of engineering",
+        "title": "Graduate School of Engineering",
         "text": "Engineers specialized in microelectronics, computer science and new technologies.",
         "date": "2016-09-02T00:00:00Z",
         "location": {
@@ -42,7 +42,7 @@
         }
       },
       {
-        "title": "Packaging operator",
+        "title": "Packaging Operator",
         "text": "Internship in banking customization workshop, report about lean optimisation of the workshop.",
         "date": "2017-01-02T00:00:00Z",
         "location": {
@@ -50,10 +50,40 @@
           "zip": "13420"
         },
         "duration": 30,
-        "category": 1,
+        "category": 0,
         "company": {
           "url": "https://www.gemalto.com/",
           "name": "Gemalto"
+        }
+      },
+      {
+        "title": "Software Engineer",
+        "text": "Design and realization of diagnostic iPhone app for quality checks at the output of the production line.",
+        "date": "2018-01-02T00:00:00Z",
+        "location": {
+          "country": "FR",
+          "zip": "13100"
+        },
+        "duration": 273.75,
+        "category": 0,
+        "company": {
+          "url": "http://www.xrapid-group.com/",
+          "name": "xRapid"
+        }
+      },
+      {
+        "title": "Project Manager Operations",
+        "text": "6 month internship, agile project management in the operation team.",
+        "date": "2019-03-04T00:00:00Z",
+        "location": {
+          "country": "FR",
+          "zip": "75001"
+        },
+        "duration": 91.2501,
+        "category": 0,
+        "company": {
+          "url": "https://www.linkedin.com/company/oyst/",
+          "name": "Oyst"
         }
       }
     ],
