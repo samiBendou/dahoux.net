@@ -14,7 +14,7 @@
     "about": [
       {
         "title": "Passionated",
-        "text": "I love computer science and new technologies"
+        "text": "Love computer science and new technologies"
       },
       {
         "title": "Implicated",
@@ -43,7 +43,7 @@
       },
       {
         "title": "Packaging Operator",
-        "text": "Internship in banking customization workshop, report about lean optimisation of the workshop.",
+        "text": "Internship in banking customization workshop, evaluation of lean potential improvements at the workshop.",
         "date": "2017-01-02T00:00:00Z",
         "location": {
           "country": "FR",
@@ -58,7 +58,7 @@
       },
       {
         "title": "Software Engineer",
-        "text": "Design and realization of diagnostic iPhone app for quality checks at the output of the production line.",
+        "text": "Design and realization of a diagnostic software for quality checks at the output of microscopes production line.",
         "date": "2018-01-02T00:00:00Z",
         "location": {
           "country": "FR",
@@ -73,7 +73,7 @@
       },
       {
         "title": "Project Manager Operations",
-        "text": "6 month internship, agile project management in the operation team.",
+        "text": "Agile project management for software development, continuous improvement, fraud management and merchant relationship",
         "date": "2019-03-04T00:00:00Z",
         "location": {
           "country": "FR",
