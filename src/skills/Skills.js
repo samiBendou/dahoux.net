@@ -20,7 +20,7 @@ export default class Skills extends Component {
         return (
             <div id="skills" style={{textAlign: "center"}}>
                 <div className="skills-best">
-                    <SkillsList items={items} count={1}/>
+                    <SkillsList items={items.filter(item => item.category === 1)} count={3}/>
                 </div>
                 <Button
                     size="lg"

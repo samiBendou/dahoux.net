@@ -20,7 +20,7 @@ const AboutText = (props) =>
                 <AboutList items={props.items.about}/>
             </div>
             <div className="about-skills">
-                <SkillsList items={props.items.skills} count={3}/>
+                <SkillsList items={props.items.skills.filter(item => item.category === 1)} count={3}/>
             </div>
             <h3 className="about-icons">
                 <a href={props.urls.facebook}><FaFacebook/></a>
