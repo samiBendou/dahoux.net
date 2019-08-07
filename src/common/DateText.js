@@ -16,8 +16,8 @@ const DateText = (props) => {
         string = date.toDateString();
     } else if (props.duration < 60) {
         string = `${renderMonth(date.getMonth())}/${date.getFullYear()}, ${props.duration} days`;
-    } else if (props.duration < 365) {
-        string = `${renderMonth(date.getMonth())}/${date.getFullYear()}, ${props.duration / day.month} months`;
+    } else if (props.duration < 730) {
+        string = `${renderMonth(date.getMonth())}/${date.getFullYear()}, ${Math.round(props.duration / day.month)} months`;
     } else {
         string = `${date.getFullYear()}-${date.getFullYear() + props.duration / day.year}, ${props.duration / day.year} years`;
     }

@@ -2,7 +2,7 @@ import React from 'react';
 import TimelineItem from './TimelineItem'
 
 const TimelineList = ({items}) => {
-    const sortedItems = items.slice().sort((a, b) => (a.date + a.duration) - (b.date + b.duration));
+    const sortedItems = items.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
     return (<div className="timeline-container">
         {sortedItems.map((item) => (
             <TimelineItem
