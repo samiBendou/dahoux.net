@@ -14,7 +14,7 @@ export default class BirthdayText extends Component {
     }
 
     render() {
-        const birthday = this.props.birthday;
+        const birthday = new Date(this.props.birthday);
         return <h6 className="birthday">
             <FaBirthdayCake/>
             <span

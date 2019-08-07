@@ -7,23 +7,13 @@ import Timeline from "./timeline/Timeline";
 import {Container, Jumbotron} from "react-bootstrap";
 import ReactLoading from 'react-loading';
 
-
-const parseUserData = (string) => {
-    const json = JSON.parse(string);
-    json["birthday"] = new Date(json["birthday"]);
-    json["items"]["timeline"].forEach((data) => {
-        data["date"] = new Date(data["date"]);
-    });
-    return json;
-};
-
 export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
             lastName: "Last Name",
             firstName: "First Name",
-            birthday: new Date(),
+            birthday: "1970-01-01T00:00:00Z",
             quote: "Quote",
             urls: {
                 facebook: "#",
@@ -41,7 +31,7 @@ export default class App extends Component {
                     {
                         title: "Title",
                         text: "Text",
-                        date: new Date(),
+                        date: "1970-01-01T00:00:00Z",
                         location: {
                             country: "FR",
                             zip: "75001"
@@ -75,7 +65,7 @@ export default class App extends Component {
         req.open('GET', 'https://raw.githubusercontent.com/samiBendou/dahoux.net/master/src/user.json', true);
         req.onload = () => {
             if (req.status === 200)
-                this.setState({...parseUserData(req.response), ready: true});
+                this.setState({...JSON.parse(req.response), ready: true});
             else
                 console.error(req.status)
         };

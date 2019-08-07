@@ -7,18 +7,19 @@ const renderMonth = (month) => {
 };
 
 const DateText = (props) => {
+    const date = new Date(props.date);
     let string;
     if (props.duration === undefined) {
-        string = `${renderMonth(props.date.getMonth())}/${props.date.getFullYear()}`;
+        string = `${renderMonth(date.getMonth())}/${date.getFullYear()}`;
     }
     if (props.duration < 2) {
-        string = props.date.toDateString();
+        string = date.toDateString();
     } else if (props.duration < 60) {
-        string = `${renderMonth(props.date.getMonth())}/${props.date.getFullYear()} - ${props.duration} days`;
+        string = `${renderMonth(date.getMonth())}/${date.getFullYear()} - ${props.duration} days`;
     } else if (props.duration < 365) {
-        string = `${props.date.getFullYear()} - ${props.duration / ms.month} months`;
+        string = `${date.getFullYear()} - ${props.duration / ms.month} months`;
     } else {
-        string = `${props.date.getFullYear()} - ${props.duration / ms.month} years`;
+        string = `${date.getFullYear()} - ${props.duration / ms.month} years`;
     }
     return <time>{string}</time>;
 };

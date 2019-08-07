@@ -3,6 +3,7 @@ import '../scss/Timeline.scss'
 import DateText from "../common/DateText";
 import AddressText from "../common/AddressText";
 import {Button, Collapse} from "react-bootstrap";
+import TimelineCategory from "./TimelineCategory";
 
 export default class TimelineItem extends Component {
 
@@ -20,8 +21,8 @@ export default class TimelineItem extends Component {
         return (
             <div className="timeline-item">
                 <div className="timeline-item-content">
-            <span className="timeline-tag" style={{background: props.category.color}}>
-                {props.category.tag}
+            <span className={`timeline-tag ${TimelineCategory[props.category].title.toLowerCase()}`}>
+                {TimelineCategory[props.category].title}
             </span>
                     <DateText date={props.date} duration={props.duration}/>
                     <h4>{props.title}</h4>
