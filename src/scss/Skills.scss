@@ -30,13 +30,17 @@ $levelColor: $white;
 .skills {
   padding: 0;
 
+  li:hover{
+    background-color: $gray-500;
+  }
+
   li {
     background-color: $backgroundColor;
     display: block;
     position: relative;
     color: $labelColor;
     margin: 20px 0;
-    transition: width 1000ms ease-in-out, color 600ms ease-in-out;
+    transition: width 1000ms ease-in-out, color 600ms ease-in-out, background-color 150ms ease-in-out;
     border-radius: 20px;
 
     h6 {
