@@ -3,6 +3,7 @@ import SkillsList from './SkillsList';
 import {Collapse, Button} from "react-bootstrap";
 import '../scss/Skills.scss';
 import SkillsAccordion from "./SkillsAccordion";
+import {FaWrench} from "react-icons/fa";
 
 export default class Skills extends Component {
     constructor(props) {
@@ -19,9 +20,6 @@ export default class Skills extends Component {
         const items = this.props.items;
         return (
             <div id="skills" style={{textAlign: "center"}}>
-                <div className="skills-best">
-                    <SkillsList items={items.filter(item => item.category === 1)} count={3}/>
-                </div>
                 <Button
                     size="lg"
                     className="skills-more"
@@ -29,13 +27,17 @@ export default class Skills extends Component {
                     aria-controls="skills-list"
                     aria-expanded={showAllSkills}
                 >
-                    {showAllSkills ? "Less" : "More"} Skills</Button>
+                    <h3 className={"skills-button"}><FaWrench style={{verticalAlign: "top"}}/>  All Skills</h3>
+                </Button>
                 <div>
                     <Collapse in={showAllSkills}>
                         <div id="skills-list" className="skills skills-accordion">
                             <SkillsAccordion items={items}/>
                         </div>
                     </Collapse>
+                </div>
+                <div className="skills-best">
+                    <SkillsList items={items.filter(item => item.category === 1)} count={3}/>
                 </div>
             </div>)
     }

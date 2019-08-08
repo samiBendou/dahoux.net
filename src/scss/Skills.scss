@@ -10,6 +10,23 @@ $levelColor: $white;
   }
 }
 
+.skills-button {
+  margin-bottom: 0;
+}
+
+.skills-more {
+  border-radius: 10px !important;
+  margin-bottom: 0;
+}
+
+.card.skills-accordion-card {
+  border:none;
+}
+
+.skills-accordion-cards {
+  margin-top: 16px;
+}
+
 .skills {
   padding: 0;
 
@@ -20,11 +37,10 @@ $levelColor: $white;
     color: $labelColor;
     margin: 20px 0;
     transition: width 1000ms ease-in-out, color 600ms ease-in-out;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 20px;
 
-    p {
+    h6 {
       padding: 10px;
-      font-weight: normal;
       text-align: left;
     }
 
@@ -47,12 +63,4 @@ $levelColor: $white;
       color: $backgroundColor !important;
     }
   }
-}
-
-.skills-more {
-  margin-bottom: 10px;
-}
-
-.card.skills-accordion-card {
-  border:none;
 }

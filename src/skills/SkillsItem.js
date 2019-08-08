@@ -6,7 +6,7 @@ const SkillsItem = (props) => {
         <li
             style={{width: `${props.level}%`}}
         >
-            <p>{props.label}<span>{props.level}</span></p>
+            <h6>{props.label}</h6>
         </li>
     );
 };

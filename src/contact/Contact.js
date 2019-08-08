@@ -6,8 +6,8 @@ import MailForm from "../common/MailForm";
 const Contact = (props) =>
     (
         <div>
-            <h3 className="contact-header"><FaEnvelope/> Contact</h3>
-        <MailForm mail={props.mail}/>
+            <h3 className="contact-header"><FaEnvelope style={{verticalAlign: "top"}}/> Contact</h3>
+            <MailForm mail={props.mail}/>
         </div>
     );
 
