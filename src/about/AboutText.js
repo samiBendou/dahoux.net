@@ -1,6 +1,6 @@
 import React from "react";
 import AboutList from "./AboutList";
-import {FaFacebook, FaLinkedin, FaGithub, FaEnvelope} from "react-icons/fa";
+import {FaLinkedin, FaGithub, FaEnvelope} from "react-icons/fa";
 import SkillsList from "../skills/SkillsList";
 import BirthdayText from "../common/BirthdayText";
 import AddressText from "../common/AddressText";
@@ -23,7 +23,6 @@ const AboutText = (props) =>
                 <SkillsList items={props.items.skills.filter(item => item.category === 1)} count={3}/>
             </div>
             <h3 className="about-icons">
-                <a href={props.urls.facebook}><FaFacebook/></a>&nbsp;
                 <a href={props.urls.linkedin}><FaLinkedin/></a>&nbsp;
                 <a href={props.urls.github}><FaGithub/></a>&nbsp;
                 <a href={props.urls.contact}><FaEnvelope/></a>&nbsp;
