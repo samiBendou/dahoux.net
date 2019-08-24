@@ -18,7 +18,7 @@
       },
       {
         "title": "Implicated",
-        "text": "Achieved many long-term hobby projects in many software languages"
+        "text": "Achieved many long-term hobby projects in various software languages"
       },
       {
         "title": "Dynamic",
@@ -28,7 +28,7 @@
     "timeline": [
       {
         "title": "Engineering Graduate",
-        "text": "Specialized engineers in microelectronics, computer science and new technologies. Design of electrical components, embedded systems and software. General scientific knowledge. Management and strategy of technological organizations.",
+        "text": "Specialized engineers in microelectronics, computer science and new technologies (ISMIN). Design of electrical components, embedded systems and software. General scientific knowledge. Management and strategy of technological organizations.",
         "date": "2016-09-02T00:00:00Z",
         "location": {
           "country": "FR",
@@ -58,7 +58,7 @@
       },
       {
         "title": "Packaging Operator",
-        "text": "Internship in banking customization workshop, evaluation of lean potential improvements at the workshop.",
+        "text": "Debit card validation, packaging and shipping. Report on the lean potential at the workshop.",
         "date": "2017-01-02T00:00:00Z",
         "location": {
           "country": "FR",
@@ -88,7 +88,7 @@
       },
       {
         "title": "Project Manager Operations",
-        "text": "Agile project management for software development, continuous improvement, fraud management and merchant relationship",
+        "text": "Agile project management internship. Integration of a Prestashop payment solution. Continuous improvement, fraud management, client and merchant relationship.",
         "date": "2019-03-04T00:00:00Z",
         "location": {
           "country": "FR",
@@ -200,7 +200,6 @@
       }
     ]
   },
-  "mail": "sbdh75@gmail.com",
   "location": {
     "country": "FR",
     "zip": "13120"
