@@ -14,7 +14,7 @@
     "about": [
       {
         "title": "Passionated",
-        "text": "Love computer science and new technologies"
+        "text": "Love computer science, physics and economy"
       },
       {
         "title": "Implicated",
@@ -39,6 +39,21 @@
         "company": {
           "url": "https://www.mines-stetienne.fr/",
           "name": "Mines St-Etienne"
+        }
+      },
+      {
+        "title": "Preparatory classes MPSI/MP",
+        "text": "Intensive curse in fundamental maths, physics and general engineering. Competitive exam to the French “Grandes Écoles”.",
+        "date": "2014-09-02T00:00:00Z",
+        "location": {
+          "country": "FR",
+          "zip": "75012"
+        },
+        "duration": 730,
+        "category": 1,
+        "company": {
+          "url": "https://www.ac-paris.fr/serail/jcms/s1_942748/fr/accueil",
+          "name": "Lycée Paul Valéry"
         }
       },
       {
