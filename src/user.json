@@ -3,12 +3,18 @@
   "firstName": "Sami",
   "birthday": "1995-07-09T00:00:00Z",
   "quote": "Engineering student",
+  "location": {
+    "country": "FR",
+    "zip": "13120"
+  },
   "urls": {
+    "portfolio": "http://dahoux.net",
     "github": "https://github.com/samiBendou",
     "linkedin": "https://www.linkedin.com/in/sami-dahoux-b20386a9/",
     "picture": "/static/sami2.jpg",
     "contact": "#contact"
   },
+  "mail": "sami@dahoux.net",
   "items": {
     "about": [
       {
@@ -198,9 +204,5 @@
         "level": 68
       }
     ]
-  },
-  "location": {
-    "country": "FR",
-    "zip": "13120"
   }
 }
