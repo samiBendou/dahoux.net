@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "./scss/App.scss";
+import "./scss/Home.scss";
 import About from "./about/About";
 import Contact from "./contact/Contact"
 import Skills from "./skills/Skills";
@@ -61,15 +61,9 @@ export default class App extends Component {
     }
 
     componentDidMount() {
-        const req = new XMLHttpRequest();
-        req.open('GET', 'https://raw.githubusercontent.com/samiBendou/dahoux.net/master/src/user.json', true);
-        req.onload = () => {
-            if (req.status === 200)
-                this.setState({...JSON.parse(req.response), ready: true});
-            else
-                console.error(req.status)
-        };
-        req.send(null);
+        fetch("https://raw.githubusercontent.com/samiBendou/dahoux.net/master/src/user.json")
+            .then(response => response.text())
+            .then(str => this.setState({...JSON.parse(str), ready: true}));
     }
 
     render() {

@@ -1,33 +1,40 @@
-import React from "react";
+import React, {Component} from "react";
 import AboutList from "./AboutList";
-import {FaLinkedin, FaGithub, FaEnvelope} from "react-icons/fa";
+import {FaLinkedin, FaGithub, FaEnvelope, FaFilePdf} from "react-icons/fa";
 import SkillsList from "../skills/SkillsList";
 import BirthdayText from "../common/BirthdayText";
 import AddressText from "../common/AddressText";
+import MyDocument from "../pdf/MyDocument";
+import {PDFDownloadLink} from "@react-pdf/renderer";
 
-const AboutText = (props) =>
-    (
-        <div className="about-text">
-            <h1 className="about-head">
-                {`${props.firstName} ${props.lastName}`}<br/>
-                <small>{props.quote}</small>
-            </h1>
+export default class AboutText extends Component {
+    render() {
+        const props = this.props;
+        return (
+            <div className="about-text">
+                <h1 className="about-head">
+                    {`${props.firstName} ${props.lastName}`}<br/>
+                    <small>{props.quote}</small>
+                </h1>
 
-            <BirthdayText birthday={props.birthday}/>
-            <AddressText location={props.location} county={true}/>
+                <BirthdayText birthday={props.birthday}/>
+                <AddressText location={props.location} county={true}/>
 
-            <div className="about-list">
-                <AboutList items={props.items.about}/>
+                <div className="about-list">
+                    <AboutList items={props.items.about}/>
+                </div>
+                <div className="about-skills">
+                    <SkillsList items={props.items.skills.filter(item => item.category === 1)} count={3}/>
+                </div>
+                <h3 className="about-icons">
+                    <a href={props.urls.linkedin}><FaLinkedin/></a>&nbsp;
+                    <a href={props.urls.github}><FaGithub/></a>&nbsp;
+                    <a href={props.urls.contact}><FaEnvelope/></a>&nbsp;
+                    <PDFDownloadLink document={<MyDocument />} fileName="name.pdf">
+                        {() => <FaFilePdf/>}
+                    </PDFDownloadLink>
+                </h3>
             </div>
-            <div className="about-skills">
-                <SkillsList items={props.items.skills.filter(item => item.category === 1)} count={3}/>
-            </div>
-            <h3 className="about-icons">
-                <a href={props.urls.linkedin}><FaLinkedin/></a>&nbsp;
-                <a href={props.urls.github}><FaGithub/></a>&nbsp;
-                <a href={props.urls.contact}><FaEnvelope/></a>&nbsp;
-            </h3>
-        </div>
-    );
-
-export default AboutText;
+        );
+    }
+};
