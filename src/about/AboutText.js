@@ -4,6 +4,8 @@ import {FaLinkedin, FaGithub, FaEnvelope, FaFilePdf} from "react-icons/fa";
 import SkillsList from "../skills/SkillsList";
 import BirthdayText from "../common/BirthdayText";
 import AddressText from "../common/AddressText";
+import MyDocument from "../pdf/MyDocument";
+import {PDFDownloadLink} from "@react-pdf/renderer";
 
 export default class AboutText extends Component {
     render() {
@@ -28,7 +30,9 @@ export default class AboutText extends Component {
                     <a href={props.urls.linkedin}><FaLinkedin/></a>&nbsp;
                     <a href={props.urls.github}><FaGithub/></a>&nbsp;
                     <a href={props.urls.contact}><FaEnvelope/></a>&nbsp;
-                    <a href="http://localhost:3000/pdf"><FaFilePdf/></a>
+                    <PDFDownloadLink document={<MyDocument />} fileName="name.pdf">
+                        {() => <FaFilePdf/>}
+                    </PDFDownloadLink>
                 </h3>
             </div>
         );
