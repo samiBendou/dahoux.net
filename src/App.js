@@ -1,11 +1,7 @@
+import "./scss/App.scss";
 import React, {Component} from "react";
-import "./scss/Home.scss";
-import About from "./about/About";
-import Contact from "./contact/Contact"
-import Skills from "./skills/Skills";
-import Timeline from "./timeline/Timeline";
-import {Container, Jumbotron} from "react-bootstrap";
-import ReactLoading from 'react-loading';
+import Loader from "./Loader";
+import Page from "./Page";
 
 export default class App extends Component {
     constructor(props) {
@@ -20,7 +16,7 @@ export default class App extends Component {
                 github: "#",
                 linkedin: "#",
                 picture: "",
-                contact: null
+                contact: "#contact"
             },
             items: {
                 about: [
@@ -67,45 +63,6 @@ export default class App extends Component {
     }
 
     render() {
-        let urls = this.state.urls;
-        urls.contact = urls.contact || "#contact";
-
-        if (!this.state.ready) {
-        return (
-            <div className="loader-background">
-                <div
-                    style={{
-                        position: 'absolute', left: '50%', top: '50%',
-                        transform: 'translate(-50%, -50%)',
-
-                    }}>
-                    <ReactLoading type="bubbles" color="#000000"/>
-                </div>
-            </div>);
-        } else {
-            return (
-                <div>
-                    <About
-                        lastName={this.state.lastName}
-                        firstName={this.state.firstName}
-                        quote={this.state.quote}
-                        urls={urls}
-                        items={this.state.items}
-                        birthday={this.state.birthday}
-                        location={this.state.location}
-                    />
-                    <Container>
-                        <Skills items={this.state.items.skills}/>
-                        <Timeline items={this.state.items.timeline}/>
-                        <Jumbotron id="contact">
-                            <Contact
-                                mail={this.state.mail}
-                            />
-                        </Jumbotron>
-                        <h6 className="copyright-text">© Sami Dahoux 2019, All Rights Reserved</h6>
-                    </Container>
-                </div>
-            );
-        }
+        return !this.state.ready ? <Loader/> : <Page data={this.state}/>;
     }
 };
