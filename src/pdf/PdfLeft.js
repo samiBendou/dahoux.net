@@ -2,14 +2,15 @@ import React from "react";
 
 import {StyleSheet, Text, View} from '@react-pdf/renderer';
 import PdfSkillsList from "./skills/PdfSkillsList";
+import SkillsCategory from "../skills/SkillsCategory";
 
 const styles = StyleSheet.create({
-    pdfRight: {
+    pdfLeft: {
         flexDirection: "col",
     },
 
     nameText: {
-        fontSize:"16pt"
+        fontSize: "16pt"
     },
 
     section: {
@@ -19,26 +20,21 @@ const styles = StyleSheet.create({
     }
 });
 
-const PdfLeft = (props) => (
-    <View style={styles.pdfLeft}>
-        <View style={styles.section}>
-            <Text>Skills</Text>
-            <PdfSkillsList items={props.items}/>
-        </View>
-        <View style={styles.section}>
-            <Text>Languages</Text>
-            <PdfSkillsList items={props.items}/>
-        </View>
-
-        <View style={styles.section}>
-            <Text>Hobbies</Text>
-            <PdfSkillsList items={props.items}/>
-        </View>
-
-        <View style={styles.section}>
-            <Text>Travels</Text>
-            <PdfSkillsList items={props.items}/>
-        </View>
-    </View>);
+const PdfLeft = (props) => {
+    const categories = new Array(...(new Set(props.items.map(item => item.category))));
+    const items = new Map(categories.map(category => [category, []]));
+    props.items.forEach(item => items.get(item.category).push(item));
+    return (
+        <View style={styles.pdfLeft}>
+            {
+                categories.map((category) => (
+                    <View style={styles.section}>
+                        <Text>{SkillsCategory[category]}</Text>
+                        <PdfSkillsList items={items.get(category)}/>
+                    </View>
+                ))
+            }
+        </View>);
+};
 
 export default PdfLeft;

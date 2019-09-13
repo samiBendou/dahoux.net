@@ -26,10 +26,22 @@ const defaultState = {
                     zip: "75001"
                 },
                 duration: 0,
-                category: {
-                    tag: "Tag",
-                    color: "black"
+                category: 0,
+                company: {
+                    url: "#",
+                    name: "Name"
+                }
+            },
+            {
+                title: "Title",
+                text: "Text",
+                date: "1970-01-01T00:00:00Z",
+                location: {
+                    country: "FR",
+                    zip: "13120"
                 },
+                duration: 0,
+                category: 1,
                 company: {
                     url: "#",
                     name: "Name"
@@ -37,7 +49,8 @@ const defaultState = {
             }
         ],
         skills: [
-            {category: "category", label: "Label", level: 80}
+            {category: 0, label: "Label", level: 80},
+            {category: 1, label: "Label", level: 80}
         ]
     },
     mail: "me@domain.dot",
