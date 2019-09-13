@@ -9,14 +9,15 @@ const styles = StyleSheet.create({
         flexDirection: "col",
     },
 
-    nameText: {
-        fontSize: "16pt"
-    },
-
     section: {
         margin: 0,
         padding: 0,
         textAlign: "left"
+    },
+
+    header: {
+        fontSize: "14pt",
+        fontWeight: 700,
     }
 });
 

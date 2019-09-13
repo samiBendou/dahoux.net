@@ -9,10 +9,6 @@ const styles = StyleSheet.create({
         flexDirection: "col",
     },
 
-    nameText: {
-        fontSize: "16pt"
-    },
-
     section: {
         margin: 0,
         padding: 0,
@@ -34,13 +30,12 @@ const PdfRight = (props) => {
             {
                 categories.map((category) => (
                     <View style={styles.section}>
-                        <Text>{TimelineCategory[category]}</Text>
+                        <Text style={styles.header}>{TimelineCategory[category]}</Text>
                         <PdfTimelineList items={items.get(category).slice(0, 2)}/>
                     </View>
                 ))
             }
         </View>
-
     );
 };
 
