@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import ms from "./ms";
+import {ms} from "./date.js";
 import {FaBirthdayCake} from "react-icons/fa";
 import "./scss/Hidder.scss";
 

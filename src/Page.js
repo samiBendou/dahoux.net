@@ -7,15 +7,7 @@ import Contact from "./contact/Contact";
 
 const Page = (props) => (
     <div>
-        <About
-            lastName={props.data.lastName}
-            firstName={props.data.firstName}
-            quote={props.data.quote}
-            urls={props.data.urls}
-            items={props.data.items}
-            birthday={props.data.birthday}
-            location={props.data.location}
-        />
+        <About data={props.data}/>
         <Container>
             <Skills items={props.data.items.skills}/>
             <Timeline items={props.data.items.timeline}/>

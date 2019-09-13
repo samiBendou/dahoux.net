@@ -6,21 +6,13 @@ import AboutText from "./AboutText";
 const About = (props) => {
     return (
         <div id="about">
-            <img className="about-picture" width="100%" alt="profile" src={props.urls.picture}/>
+            <img className="about-picture" width="100%" alt="profile" src={props.data.urls.picture}/>
             <Jumbotron style={{paddingTop: 0, paddingBottom: 0, paddingRight: 0, borderRadius:0, paddingLeft:0}}>
                 <div className="about-content">
                     <div className="about-thumbnail">
-                        <img width="100%" alt="profile" src={props.urls.picture}/>
+                        <img width="100%" alt="profile" src={props.data.urls.picture}/>
                     </div>
-                    <AboutText
-                        firstName={props.firstName}
-                        lastName={props.lastName}
-                        quote={props.quote}
-                        urls={props.urls}
-                        items={props.items}
-                        location={props.location}
-                        birthday={props.birthday}
-                    />
+                    <AboutText data={props.data}/>
                 </div>
             </Jumbotron>
         </div>
