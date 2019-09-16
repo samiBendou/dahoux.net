@@ -4,20 +4,23 @@ import {renderDateString} from "../../common/date";
 
 const styles = StyleSheet.create({
     title: {
+        marginTop : 4,
         fontSize: "18pt",
-        fontWeight: "lighter",
+        fontFamily: "Helvetica-Bold",
     },
 
     date: {
+        marginTop : 4,
         fontSize: "14pt"
     },
 
     company: {
         fontSize: "14pt",
+        marginBottom : 4
     },
 
     text: {
-        fontSize: "12pt",
+        fontSize: "11pt",
         width: "70%"
     }
 });

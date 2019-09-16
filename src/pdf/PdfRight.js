@@ -7,17 +7,19 @@ import TimelineCategory from "../timeline/TimelineCategory";
 const styles = StyleSheet.create({
     pdfRight: {
         flexDirection: "col",
+        backgroundColor: "#fff",
+        width: "100%"
     },
 
     section: {
-        margin: 0,
+        margin: "16px, 8px, 16px, 8px",
         padding: 0,
         textAlign: "left"
     },
 
     header: {
         fontSize: "20pt",
-        fontWeight: 700,
+        fontFamily: "Helvetica-Bold"
     }
 });
 

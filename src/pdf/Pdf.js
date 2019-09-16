@@ -7,11 +7,7 @@ import PdfRight from "./PdfRight";
 // Create styles
 const styles = StyleSheet.create({
     page: {
-        backgroundColor: '#E4E4E4'
-    },
-
-    pdfHeader: {
-        flexDirection: 'row',
+        backgroundColor: '#e9ecef'
     },
     section: {
         margin: 0,
@@ -22,7 +18,7 @@ const styles = StyleSheet.create({
 
 // Create Document Component
 const Pdf = (props) => (
-    <Document>
+    <Document style={styles.document}>
         <Page size="A4" style={styles.page}>
             <PdfHeader data={props.data}/>
             <View style={{flexDirection: "row"}}>

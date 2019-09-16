@@ -10,14 +10,14 @@ const styles = StyleSheet.create({
     },
 
     section: {
-        margin: 0,
+        margin: "16px, 8px, 16px, 8px",
         padding: 0,
         textAlign: "left"
     },
 
     header: {
         fontSize: "14pt",
-        fontWeight: 700,
+        fontFamily: "Helvetica-Bold"
     }
 });
 
@@ -30,7 +30,7 @@ const PdfLeft = (props) => {
             {
                 categories.map((category) => (
                     <View style={styles.section}>
-                        <Text>{SkillsCategory[category]}</Text>
+                        <Text style={styles.header}>{SkillsCategory[category]}</Text>
                         <PdfSkillsList items={items.get(category)}/>
                     </View>
                 ))

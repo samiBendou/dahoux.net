@@ -7,14 +7,29 @@ const styles = StyleSheet.create({
         flexDirection: "row",
     },
 
-    nameText: {
-      fontSize:"16pt"
+    name: {
+        fontSize: "32pt",
+        marginBottom: 2,
+        fontFamily: "Helvetica-Bold"
+    },
+
+    quote: {
+        fontSize: "24pt",
+        marginBottom: 8,
+    },
+
+    description: {
+        marginTop: 16,
+        fontSize: "14pt",
+        width: "65%"
+    },
+
+    other: {
     },
 
     section: {
         margin: 0,
         padding: 0,
-        textAlign: "left"
     }
 });
 
@@ -24,10 +39,11 @@ const PdfHeader = (props) => (
             <Image src={props.data.urls.picture} style={{width: 150}}/>
         </View>
         <View style={{...styles.section, paddingLeft: 12, paddingTop: 12}}>
-            <Text style={{fontSize:"32pt", marginBottom: 2}}>{props.data.firstName} {props.data.lastName}</Text>
-            <Text style={{fontSize:"24pt", marginBottom: 8}}>{props.data.quote}</Text>
-            <Text>{props.data.mail}</Text>
-            <Text>{props.data.urls.portfolio.split("://")[1]}</Text>
+            <Text style={styles.name}>{props.data.firstName} {props.data.lastName}</Text>
+            <Text style={styles.quote}>{props.data.quote}</Text>
+            <Text style={styles.other}>{props.data.mail}</Text>
+            <Text style={styles.other}>{props.data.urls.portfolio.split("://")[1]}</Text>
+            <Text style={styles.description}>“{props.data.description}”</Text>
         </View>
     </View>);
 
