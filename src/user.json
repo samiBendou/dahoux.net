@@ -20,21 +20,21 @@
     "about": [
       {
         "title": "Passionated",
-        "text": "Love computer science, physics and economy"
+        "text": "Love computer science, microelectronics and music"
       },
       {
-        "title": "Implicated",
-        "text": "Achieved many long-term hobby projects in various software languages"
+        "title": "Persistent",
+        "text": "Achieved many long-term software hobby projects"
       },
       {
         "title": "Dynamic",
-        "text": "Very enthusiastic when working on productive environment"
+        "text": "Very enthusiastic about working on team environment"
       }
     ],
     "timeline": [
       {
         "title": "Engineering Graduate ISMIN",
-        "text": "Specialized engineers in microelectronics, computer science and new technologies. Design of electrical components, embedded systems and software. General scientific knowledge. Management and strategy of technological organizations.",
+        "text": "Microelectronics, computer science and embedded systems engineers. 3rd year specialization in microelectronics design. Various curses from applied physics and maths to project management and strategical management.",
         "date": "2016-09-02T00:00:00Z",
         "location": {
           "country": "FR",
@@ -49,7 +49,7 @@
       },
       {
         "title": "Preparatory classes MPSI/MP",
-        "text": "Intensive curse in fundamental maths, physics and general engineering. Competitive exam to the French “Grandes Écoles”.",
+        "text": "Intensive curse in maths, physics and general engineering. Competitive exam to the French “Grandes Écoles”. Fundamental scientific knowledge for engineering.",
         "date": "2014-09-02T00:00:00Z",
         "location": {
           "country": "FR",
@@ -64,7 +64,7 @@
       },
       {
         "title": "Packaging Operator",
-        "text": "Debit card validation, packaging and shipping. Report on the lean potential at the workshop.",
+        "text": "1rst year engineering internship. Debit card validation, packaging and shipping. Report on the lean transformation potential at the workshop. Discovering debit card production processes and quality feedback loops.",
         "date": "2017-01-02T00:00:00Z",
         "location": {
           "country": "FR",
@@ -79,7 +79,7 @@
       },
       {
         "title": "Software Engineer",
-        "text": "Design and realization of a diagnostic software for quality checks at the output of motorized microscopes production line.",
+        "text": "Design and realization of iOs app with CloudKit back-end. Diagnostic app for quality checks at the output of motorized microscopes production line. Billing database with management interface.",
         "date": "2018-01-02T00:00:00Z",
         "location": {
           "country": "FR",
@@ -94,7 +94,7 @@
       },
       {
         "title": "Project Manager Operations",
-        "text": "Agile project management internship. Integration of a Prestashop payment solution. Continuous improvement, fraud management, client and merchant relationship.",
+        "text": "Agile project management internship. Integration of a Prestashop payment solution. Continuous improvement, client and merchant relationship. Design of integration tests and operational processes. Design and implementation fraud management automation.",
         "date": "2019-03-04T00:00:00Z",
         "location": {
           "country": "FR",
