@@ -17,7 +17,7 @@ export default class SkillsList extends Component {
     }
 
     fetchItems(items) {
-        return this.props.count ? getBestItems(items, this.props.count) : items;
+        return (this.props.count ? getBestItems(items, this.props.count) : items).filter(item => item.level > 0);
     }
 
     render() {

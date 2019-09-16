@@ -151,6 +151,16 @@
         "level": 71
       },
       {
+        "category": 0,
+        "label": "VHDL",
+        "level": 75
+      },
+      {
+        "category": 0,
+        "label": "Cadence",
+        "level": 75
+      },
+      {
         "category": 1,
         "label": "Project management",
         "level": 68
@@ -204,6 +214,26 @@
         "category": 3,
         "label": "Spanish",
         "level": 68
+      },
+      {
+        "category": 4,
+        "label": "Running",
+        "level": 0
+      },
+      {
+        "category": 4,
+        "label": "Guitar/Piano",
+        "level": 0
+      },
+      {
+        "category": 4,
+        "label": "Photography",
+        "level": 0
+      },
+      {
+        "category": 4,
+        "label": "Programming",
+        "level": 0
       }
     ]
   }

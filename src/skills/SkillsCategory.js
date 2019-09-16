@@ -2,7 +2,8 @@ const categories = [
     "Tools & Technologies",
     "Industry Knowledge",
     "Interpersonal Skills",
-    "Languages"
+    "Languages",
+    "Hobbies",
 ];
 
 export default categories;
