@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
 
     date: {
         marginTop : 4,
-        fontSize: "14pt"
+        fontSize: "10pt",
+        fontFamily: "Helvetica-Bold"
     },
 
     company: {
