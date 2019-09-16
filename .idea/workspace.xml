@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="">
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="improving descriptions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pdf/PdfHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/PdfHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pdf/timeline/PdfTimelineItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/timeline/PdfTimelineItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,9 +40,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="11">
               <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -61,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="51" column="173" selection-start-line="51" selection-start-column="173" selection-end-line="51" selection-end-column="173" />
+            <state relative-caret-position="359">
+              <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -250,6 +245,11 @@
             <path>
               <item name="portfolio" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/code/web/react/portfolio" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="portfolio" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/code/web/react/portfolio" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="build" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="portfolio" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -472,28 +472,7 @@
       <workItem from="1568454034174" duration="1709000" />
       <workItem from="1568459141200" duration="231000" />
       <workItem from="1568613531192" duration="2573000" />
-      <workItem from="1568649958277" duration="2401000" />
-    </task>
-    <task id="LOCAL-00012" summary="adding hiding effects">
-      <created>1565102468426</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1565102468426</updated>
-    </task>
-    <task id="LOCAL-00013" summary="changing sending mailbox">
-      <created>1565102605375</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1565102605375</updated>
-    </task>
-    <task id="LOCAL-00014" summary="minor fixes">
-      <created>1565103365887</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1565103365887</updated>
+      <workItem from="1568649958277" duration="3222000" />
     </task>
     <task id="LOCAL-00015" summary="adding about data">
       <created>1565109078329</created>
@@ -817,11 +796,32 @@
       <option name="project" value="LOCAL" />
       <updated>1568632473745</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="code : beautifying style of CV">
+      <created>1568652629287</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1568652629290</updated>
+    </task>
+    <task id="LOCAL-00062" summary="improving descriptions">
+      <created>1568652651365</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1568652651365</updated>
+    </task>
+    <task id="LOCAL-00063" summary="improving descriptions">
+      <created>1568653573815</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1568653573815</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168079000" />
+    <option name="totallyTimeSpent" value="168900000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -836,7 +836,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23300971" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23300971" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -857,7 +857,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.450727" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.45064723" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22653721" />
@@ -899,7 +899,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="fixing date text" />
     <MESSAGE value="fixing date printing" />
     <MESSAGE value="fixing icons alignment and county print" />
     <MESSAGE value="fixing timeline style" />
@@ -924,7 +923,8 @@
     <MESSAGE value="code : adding description for PDF CV" />
     <MESSAGE value="code : finishing style of CV" />
     <MESSAGE value="code : beautifying style of CV" />
-    <option name="LAST_COMMIT_MESSAGE" value="code : beautifying style of CV" />
+    <MESSAGE value="improving descriptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="improving descriptions" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -1212,13 +1212,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pdf/PdfRight.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pdf/Pdf.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1261,9 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1274,10 +1264,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pdf/PdfRight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/user.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="51" column="173" selection-start-line="51" selection-start-column="173" selection-end-line="51" selection-end-column="173" />
+        <state relative-caret-position="359">
+          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
         </state>
       </provider>
     </entry>
