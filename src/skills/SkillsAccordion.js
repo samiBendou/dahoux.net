@@ -7,13 +7,12 @@ import SkillsCategory from "./SkillsCategory";
 
 const SkillsAccordion = (props) => {
     const categories = new Array(...(new Set(props.items.map(item => item.category))));
-    categories.splice(categories.indexOf(4));
     const items = new Map(categories.map(category => [category, []]));
     props.items.forEach(item => items.get(item.category).push(item));
     return (
         <Accordion className="skills-accordion-cards">
             {
-                categories.map((category, index) => (
+                categories.map((category, index) => category !== 4 ? (
                     <Card className="skills-accordion-card" key={category}>
                         <div>
                             <Accordion.Toggle as={Button} variant="link" eventKey={index.toString()}>
@@ -26,7 +25,7 @@ const SkillsAccordion = (props) => {
                             </div>
                         </Accordion.Collapse>
                     </Card>
-                ))
+                ) : null)
             }
         </Accordion>
     );
