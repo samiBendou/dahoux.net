@@ -20,9 +20,11 @@ const styles = StyleSheet.create({
 
     description: {
         marginTop: 24,
+        marginLeft: 8,
         fontFamily: "Helvetica-Oblique",
         fontSize: "14pt",
         width: "65%",
+        textAlign: "center"
     },
 
     link: {

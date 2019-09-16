@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
     company: {
         fontSize: "14pt",
-        marginBottom : 4
+        marginBottom : 8
     },
 
     text: {
