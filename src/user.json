@@ -177,7 +177,12 @@
       },
       {
         "category": 1,
-        "label": "Electronics",
+        "label": "Microelectronics design",
+        "level": 70
+      },
+      {
+        "category": 1,
+        "label": "Microelectronics manufacturing",
         "level": 70
       },
       {
