@@ -113,112 +113,112 @@
       {
         "category": 0,
         "label": "HTML/CSS",
-        "level": 79
+        "level": 7
       },
       {
         "category": 0,
         "label": "Python/Numpy",
-        "level": 79
+        "level": 7
       },
       {
         "category": 0,
         "label": "Javascript/Node.js",
-        "level": 75
+        "level": 8
       },
       {
         "category": 0,
         "label": "C++",
-        "level": 78
+        "level": 8
       },
       {
         "category": 0,
         "label": "Java",
-        "level": 73
+        "level": 8
       },
       {
         "category": 0,
         "label": "Swift",
-        "level": 77
+        "level": 7
       },
       {
         "category": 0,
         "label": "SQL",
-        "level": 73
+        "level": 6
       },
       {
         "category": 0,
         "label": "Matlab",
-        "level": 71
+        "level": 6
       },
       {
         "category": 0,
         "label": "VHDL",
-        "level": 75
+        "level": 8
       },
       {
         "category": 0,
         "label": "Cadence",
-        "level": 75
+        "level": 6
       },
       {
         "category": 1,
         "label": "Project management",
-        "level": 68
+        "level": 6
       },
       {
         "category": 1,
         "label": "Software development",
-        "level": 83
+        "level": 9
       },
       {
         "category": 1,
         "label": "Numerical simulation",
-        "level": 78
+        "level": 8
       },
       {
         "category": 1,
-        "label": "Microelectronics design",
-        "level": 70
+        "label": "FPGA",
+        "level": 7
       },
       {
         "category": 1,
-        "label": "Microelectronics manufacturing",
-        "level": 70
+        "label": "ASIC",
+        "level": 6
       },
       {
         "category": 1,
         "label": "Image processing",
-        "level": 78
+        "level": 8
       },
       {
         "category": 1,
         "label": "Music production",
-        "level": 76
+        "level": 8
       },
       {
         "category": 2,
         "label": "Management",
-        "level": 72
+        "level": 7
       },
       {
         "category": 2,
         "label": "Communication",
-        "level": 75
+        "level": 7
       },
       {
         "category": 3,
         "label": "French",
-        "level": 99
+        "level": 10
       },
       {
         "category": 3,
         "label": "English",
-        "level": 77
+        "level": 7
       },
       {
         "category": 3,
         "label": "Spanish",
-        "level": 68
+        "level": 6
       },
       {
         "category": 4,
