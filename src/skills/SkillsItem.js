@@ -3,11 +3,13 @@ import '../scss/Skills.scss';
 
 const SkillsItem = (props) => {
     return (
-        <li
-            style={{width: `${props.level * 10}%`}}
-        >
-            <h6>{props.label}</h6>
-        </li>
+        <div className="skills-item-container">
+            <div
+                className="skills-item" style={{width: `${props.level * 10}%`}}
+            >
+                <h6 style={{margin: 0}}>{props.label}</h6>
+            </div>
+        </div>
     );
 };
 

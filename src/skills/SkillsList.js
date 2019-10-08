@@ -24,8 +24,14 @@ export default class SkillsList extends Component {
         const items = this.fetchItems(this.props.items);
         const className = `${this.state.collapsed ? 'collapsed' : ''} ${this.state.hidden ? 'hidden' : ''}`;
         return (
-            <div className = {className}>
-                <ul className="skills">
+            <div className={className}>
+                {/*
+                <div className="skills-scale" style={{display: "flex", flexDirection: "row"}}>
+                    <div>0</div>
+                    <div style={{flexGrow:1, textAlign: "right"}}>10</div>
+                </div>
+                */}
+                <div className="skills">
                     {items.map((item) =>
                         <SkillsItem
                             label={item.label}
@@ -33,7 +39,7 @@ export default class SkillsList extends Component {
                             type={item.type}
                             key={item.label}
                         />)}
-                </ul>
+                </div>
             </div>);
     }
 }

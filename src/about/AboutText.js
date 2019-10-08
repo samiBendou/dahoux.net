@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import AboutList from "./AboutList";
 import {FaEnvelope, FaFilePdf, FaGithub, FaLinkedin} from "react-icons/fa";
-import SkillsList from "../skills/SkillsList";
 import BirthdayText from "../common/BirthdayText";
 import AddressText from "../common/AddressText";
 import Pdf from "../pdf/Pdf";
@@ -22,9 +21,6 @@ export default class AboutText extends Component {
 
                 <div className="about-list">
                     <AboutList items={data.items.about}/>
-                </div>
-                <div className="about-skills">
-                    <SkillsList items={data.items.skills.filter(item => item.category === 1)} count={3}/>
                 </div>
                 <h3 className="about-icons">
                     <a href={data.urls.linkedin}><FaLinkedin/></a>&nbsp;

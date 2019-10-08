@@ -4,19 +4,40 @@ $backgroundColor: $gray-600;
 $labelColor: $light;
 $levelColor: $white;
 
-@media only screen and (min-width: 1280px) {
-  .skills-best {
-    display: none;
-  }
-}
-
 .skills-button {
   margin-bottom: 0;
 }
 
 .skills-more {
   border-radius: 10px !important;
-  margin-bottom: 0;
+  margin-top: 24px;
+}
+
+/*
+.skills-scale {
+  font-weight: bold;
+  font-size: 13pt;
+}
+ */
+
+.skills-item-container {
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $backgroundColor;
+  margin-top: 12px;
+  transition: width 1000ms ease-in-out, color 600ms ease-in-out, background-color 150ms ease-in-out;
+}
+
+.skills-item {
+  margin: -2px;
+  padding: 8px;
+  padding-left: 16px !important;
+  text-align: left;
+  border-radius: inherit;
+  border-style: none;
+  color: $labelColor;
+  background-color: $backgroundColor;
 }
 
 .card.skills-accordion-card {
@@ -40,7 +61,7 @@ $levelColor: $white;
     position: relative;
     color: $labelColor;
     margin: 20px 0;
-    transition: width 1000ms ease-in-out, color 600ms ease-in-out, background-color 150ms ease-in-out;
+
     border-radius: 20px;
 
     h6 {
