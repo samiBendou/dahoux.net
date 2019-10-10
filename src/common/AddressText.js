@@ -15,14 +15,10 @@ export default class AddressText extends Component {
     }
 
     componentWillMount() {
-        this.fetchLocation();
-    }
-
-    fetchLocation = () => {
         fetchAddress(this.props.location).then(
             location => this.setState({...location, hidden: false})
         );
-    };
+    }
 
     render() {
         const state = this.state;
@@ -30,7 +26,7 @@ export default class AddressText extends Component {
         return <h6 className="address">
             <a
                 href={`https://www.google.com/maps/place/${this.props.location.zip}+${this.state.city}/`}>
-                <FaMapMarker style={{verticalAlign:"top"}} />
+                <FaMapMarker style={{verticalAlign: "top"}}/>
             </a>
             <span className={this.state.hidden ? 'address-hidden' : ''}> {text}</span>
         </h6>;
