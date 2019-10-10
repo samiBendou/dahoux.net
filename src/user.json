@@ -33,8 +33,8 @@
     ],
     "timeline": [
       {
-        "title": "Engineering Graduate ISMIN",
-        "text": "Microelectronics, computer science and embedded systems engineers. Various scientific and technical knowledge, project management and strategical management. 3rd year specialization in microelectronics design.",
+        "title": "Third-year engineering Student",
+        "text": "Microelectronics, Computer Science and Embedded Systems. Scientific and technical knowledge, Project Management and Strategic Management, majoring in Microelectronics Design.",
 
         "date": "2016-09-02T00:00:00Z",
         "location": {
@@ -49,8 +49,8 @@
         }
       },
       {
-        "title": "Preparatory classes MPSI/MP",
-        "text": "Intensive curse in maths, physics and engineering. Fundamental sciences, general technical knowledge. Competitive exam to the French “Grandes Écoles”.",
+        "title": "Intensive Preparatory Classes",
+        "text": "Two-year intensive course in Mathematics, Physics and Engineering. Fundamental sciences, general technical knowledge. Competitive exam for admission to top French “Grandes Écoles”.",
         "date": "2014-09-02T00:00:00Z",
         "location": {
           "country": "FR",
@@ -64,8 +64,8 @@
         }
       },
       {
-        "title": "Packaging Operator",
-        "text": "1rst year engineering internship. Debit card validation, packaging and shipping. Report on the lean transformation potential at the workshop. Discovering debit card manufacturing processes and quality feedback loops.",
+        "title": "Software Engineer Freelance",
+        "text": "Design and implementation of C++ and Javascript frameworks for computer graphics, realistic 3D animation and scientific computation. Agile project management and open-source developement on GitHub",
         "date": "2017-01-02T00:00:00Z",
         "location": {
           "country": "FR",
@@ -80,7 +80,7 @@
       },
       {
         "title": "Software Engineer",
-        "text": "Design and realization of iOs apps with CloudKit back-end. Diagnostic software for quality checks at the output of motorized microscopes production line. Billing database with management interface.",
+        "text": "Design and implementation of iOs apps with CloudKit back-end. Diagnostic software for quality checks at the output of motorized microscopes production line. Billing database with management interface.",
         "date": "2018-01-02T00:00:00Z",
         "location": {
           "country": "FR",
@@ -95,7 +95,7 @@
       },
       {
         "title": "Project Manager Operations",
-        "text": "Agile project management internship. Integration of a Prestashop payment solution. Continuous improvement, client and merchant relationship. Design of integration tests and operational processes. Design and implementation of fraud management automation.",
+        "text": "Agile project management internship. Integration of a Prestashop payment solution. Continuous improvement, client and merchant relations. Design of integration tests and operational processes. Design and implementation of fraud management automation.",
         "date": "2019-03-04T00:00:00Z",
         "location": {
           "country": "FR",
@@ -161,6 +161,11 @@
         "level": 6
       },
       {
+        "category": 0,
+        "label": "Modelsim",
+        "level": 6
+      },
+      {
         "category": 1,
         "label": "Project management",
         "level": 7
@@ -177,23 +182,13 @@
       },
       {
         "category": 1,
-        "label": "FPGA",
+        "label": "FPGA & ASIC manufacturing",
         "level": 7
-      },
-      {
-        "category": 1,
-        "label": "ASIC",
-        "level": 6
       },
       {
         "category": 1,
         "label": "Image processing",
         "level": 9
-      },
-      {
-        "category": 1,
-        "label": "Music production",
-        "level": 8
       },
       {
         "category": 2,
@@ -232,12 +227,12 @@
       },
       {
         "category": 4,
-        "label": "Photography",
+        "label": "Music production",
         "level": 0
       },
       {
         "category": 4,
-        "label": "Programming",
+        "label": "Graphics arts & Photography",
         "level": 0
       }
     ]
