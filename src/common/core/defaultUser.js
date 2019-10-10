@@ -1,4 +1,4 @@
-const defaultState = {
+const defaultUser = {
     lastName: "Last Name",
     firstName: "First Name",
     birthday: "1970-01-01T00:00:00Z",
@@ -61,4 +61,4 @@ const defaultState = {
     ready: false
 };
 
-export default defaultState;
+export default defaultUser;

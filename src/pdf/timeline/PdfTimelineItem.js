@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from "@react-pdf/renderer";
-import {renderDateString} from "../../common/date";
+import {renderDate} from "../../common/core/date";
 
 const styles = StyleSheet.create({
     title: {
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 const PdfTimelineItem = (props) => (
     <View style={{flexDirection:"col"}}>
         <Text style={styles.title}>{props.title}</Text>
-        <Text style={styles.date}>{renderDateString(new Date(props.date), props.duration)}</Text>
+        <Text style={styles.date}>{renderDate(new Date(props.date), props.duration)}</Text>
         <Text style={styles.company}>{props.company.name}</Text>
         <Text style={styles.text}>{props.text}</Text>
     </View>

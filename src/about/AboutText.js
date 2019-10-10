@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import AboutList from "./AboutList";
 import {FaEnvelope, FaFilePdf, FaGithub, FaLinkedin} from "react-icons/fa";
 import BirthdayText from "../common/BirthdayText";
-import AddressText from "../common/AddressText";
+import LocationText from "../common/LocationText";
 import Pdf from "../pdf/Pdf";
 import {PDFDownloadLink} from "@react-pdf/renderer";
 
@@ -17,7 +17,7 @@ export default class AboutText extends Component {
                 </h1>
 
                 <BirthdayText birthday={data.birthday}/>
-                <AddressText location={data.location} county={true}/>
+                <LocationText location={data.location} county={true}/>
 
                 <div className="about-list">
                     <AboutList items={data.items.about}/>

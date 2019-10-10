@@ -1,25 +1,13 @@
-import React, {Component} from "react";
-import {ms} from "./date.js";
+import React from "react";
 import {FaBirthdayCake} from "react-icons/fa";
-import "./scss/Hidder.scss";
+import {renderAge} from "./core/date";
 
-export default class BirthdayText extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {hidden: true};
-    }
+const BirthdayText = (props) => {
+    return (
+        <h6>
+            <FaBirthdayCake style={{verticalAlign: "top"}}/>
+            <span> {renderAge(new Date(props.birthday))} years</span>
+        </h6>)
+};
 
-    componentDidMount() {
-        setTimeout(() => this.setState({hidden: false}), 100);
-    }
-
-    render() {
-        const birthday = new Date(this.props.birthday);
-        return <h6 className="birthday">
-            <FaBirthdayCake style={{verticalAlign:"top"}} />
-            <span
-                className={this.state.hidden ? 'birthday-hidden' : ''}> {Math.floor((new Date() - birthday) / ms.year)} years
-            </span>
-        </h6>
-    }
-}
+export default BirthdayText;

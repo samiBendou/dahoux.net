@@ -1,7 +1,7 @@
 import React from "react";
 import {Button, Col, Form, Row} from "react-bootstrap";
 import * as Yup from "yup";
-import {Formik} from "formik";
+import {Formik} from "formik/dist/index";
 
 const sendFormMail = (values) =>
     // eslint-disable-next-line no-undef

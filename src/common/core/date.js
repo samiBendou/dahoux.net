@@ -21,7 +21,7 @@ const renderMonth = (month) => {
     return `${shifted > 9 ? '' : '0'}${shifted}`;
 };
 
-const renderDateString = (date, duration) => {
+const renderDate = (date, duration) => {
     if (duration === undefined || (new Date() - date) / ms.day < duration) {
         return `${date.getFullYear()}/${renderMonth(date.getMonth())}, to date`;
     }
@@ -36,4 +36,6 @@ const renderDateString = (date, duration) => {
     }
 };
 
-export {ms, day, renderDateString};
+const renderAge = (birthday) => Math.floor((new Date() - birthday) / ms.year);
+
+export {ms, day, renderDate, renderAge};

@@ -1,7 +1,7 @@
 import React from 'react';
 import {FaEnvelope} from "react-icons/fa";
 import '../scss/Contact.scss';
-import MailForm from "../common/MailForm";
+import MailForm from "./MailForm";
 
 const Contact = (props) =>
     (

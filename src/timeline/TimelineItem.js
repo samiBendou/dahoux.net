@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../scss/Timeline.scss'
 import DateText from "../common/DateText";
-import AddressText from "../common/AddressText";
+import LocationText from "../common/LocationText";
 import {Button, Collapse} from "react-bootstrap";
 import TimelineCategory from "./TimelineCategory";
 
@@ -26,7 +26,7 @@ export default class TimelineItem extends Component {
             </span>
                     <DateText date={props.date} duration={props.duration}/>
                     <h4>{props.title}</h4>
-                    <AddressText location={props.location}/>
+                    <LocationText location={props.location} county={false}/>
                     <a href={props.company.url}>{props.company.name}</a>
                     <Button
                         variant="link"
