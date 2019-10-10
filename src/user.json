@@ -65,7 +65,7 @@
       },
       {
         "title": "Freelance Software Engineer",
-        "text": "Design and implementation of C++ and Javascript frameworks for computer graphics, realistic 3D animation and scientific computation. Agile project management and open-source development on GitHub",
+        "text": "Design and implementation of C++ and Javascript frameworks for computer graphics, realistic 3D animation and scientific computation. Agile project management and open-source development on GitHub. More than 1000 downloads in 3 months on npm",
 
         "date": "2017-09-02T00:00:00Z",
         "location": {
@@ -75,7 +75,7 @@
         "category": 0,
         "company": {
           "url": "https://github.com/samiBendou",
-          "name": "GitHub"
+          "name": "Portfolio"
         }
       },
       {
@@ -208,7 +208,7 @@
       {
         "category": 3,
         "label": "English",
-        "level": 7
+        "level": 8
       },
       {
         "category": 3,
