@@ -31,7 +31,7 @@ const PdfRight = (props) => {
         <View style={styles.pdfRight}>
             {
                 categories.map((category) => (
-                    <View style={styles.section}>
+                    <View style={styles.section} key={category}>
                         <Text style={styles.header}>{TimelineCategory[category]}</Text>
                         <PdfTimelineList items={items.get(category)}/>
                     </View>
