@@ -22,7 +22,7 @@ const renderMonth = (month) => {
 };
 
 const renderDateString = (date, duration) => {
-    if (duration === undefined) {
+    if (duration === undefined || (new Date() - date) / ms.day < duration) {
         return `${date.getFullYear()}/${renderMonth(date.getMonth())}, to date`;
     }
     if (duration < 2) {
