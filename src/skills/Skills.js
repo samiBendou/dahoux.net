@@ -20,7 +20,7 @@ export default class Skills extends Component {
         const items = this.props.items;
         return (
             <div id="skills" style={{textAlign: "center"}}>
-                <h3 style={{marginBottom: 32, marginTop: 32, textAlign: "center"}}><FaWrench style={{verticalAlign: "top"}}/>  Skills</h3>
+                <h1 className="text-header"><FaWrench style={{verticalAlign: "top"}}/>  Skills</h1>
                 <div className="skills-best">
                     <SkillsList items={items.filter(item => item.category === 1)} count={4}/>
                 </div>

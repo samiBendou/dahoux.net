@@ -16,12 +16,15 @@ export default class AboutText extends Component {
                     <small>{data.quote}</small>
                 </h1>
 
-                <BirthdayText birthday={data.birthday}/>
-                <LocationText location={data.location} county={true}/>
+                <div className="about-misc">
+                    <BirthdayText birthday={data.birthday}/>
+                    <LocationText location={data.location} county={true}/>
+                </div>
 
                 <div className="about-list">
                     <AboutList items={data.items.about}/>
                 </div>
+
                 <h3 className="about-icons">
                     <a href={data.urls.linkedin}><FaLinkedin/></a>&nbsp;
                     <a href={data.urls.github}><FaGithub/></a>&nbsp;

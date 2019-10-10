@@ -10,7 +10,6 @@ $levelColor: $white;
 
 .skills-more {
   border-radius: 10px !important;
-  margin-top: 24px;
 }
 
 /*
@@ -25,7 +24,7 @@ $levelColor: $white;
   border-style: solid;
   border-width: 2px;
   border-color: $backgroundColor;
-  margin-top: 12px;
+  margin-bottom: 12px;
   transition: width 1000ms ease-in-out, color 600ms ease-in-out, background-color 150ms ease-in-out;
 }
 

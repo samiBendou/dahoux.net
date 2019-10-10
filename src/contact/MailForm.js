@@ -85,7 +85,7 @@ const MailForm = () => {
                         />
                     </Form.Group>
                     <Form.Group style={{textAlign: "center"}}>
-                        <Button className="mail-form-send" type="submit" size="lg"><h5 className="mail-form-button">Send</h5></Button>
+                        <Button className="mail-form-send" type="submit" size="lg"><h4 className="mail-form-button">Send</h4></Button>
                     </Form.Group>
                 </Form>
             )}

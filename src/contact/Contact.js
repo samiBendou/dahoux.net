@@ -6,7 +6,7 @@ import MailForm from "./MailForm";
 const Contact = (props) =>
     (
         <div>
-            <h3 className="contact-header"><FaEnvelope style={{verticalAlign: "top"}}/> Contact</h3>
+            <h1 className="text-header"><FaEnvelope style={{verticalAlign: "top"}}/> Contact</h1>
             <MailForm mail={props.mail}/>
         </div>
     );

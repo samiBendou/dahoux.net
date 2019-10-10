@@ -4,7 +4,7 @@ import {FaBriefcase} from "react-icons/fa";
 
 const Timeline = (props) => (
     <div>
-        <h3 className="timeline-header"><FaBriefcase style={{verticalAlign: "top"}}/> Timeline</h3>
+        <h1 className="text-header"><FaBriefcase style={{verticalAlign: "top"}}/> Timeline</h1>
         <TimelineList items={props.items}/>
     </div>
 );
