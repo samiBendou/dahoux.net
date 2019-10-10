@@ -70,12 +70,12 @@
         "date": "2017-09-02T00:00:00Z",
         "location": {
           "country": "FR",
-          "zip": "13420"
+          "zip": "13120"
         },
         "category": 0,
         "company": {
-          "url": "https://www.gemalto.com/",
-          "name": "Gemalto"
+          "url": "https://github.com/samiBendou",
+          "name": "GitHub"
         }
       },
       {
