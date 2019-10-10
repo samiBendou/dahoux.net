@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skills/SkillsCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/SkillsCategory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="242" column="7" lean-forward="true" selection-start-line="242" selection-start-column="7" selection-end-line="242" selection-end-column="7" />
+            <state relative-caret-position="465">
+              <caret line="241" column="7" selection-start-line="241" selection-start-column="7" selection-end-line="241" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -457,14 +455,7 @@
       <workItem from="1568892189201" duration="1468000" />
       <workItem from="1570197009192" duration="1967000" />
       <workItem from="1570555156108" duration="3322000" />
-      <workItem from="1570696398015" duration="1273000" />
-    </task>
-    <task id="LOCAL-00024" summary="minor cleaning">
-      <created>1565201399049</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1565201399049</updated>
+      <workItem from="1570696398015" duration="1514000" />
     </task>
     <task id="LOCAL-00025" summary="minor cleaning">
       <created>1565202298708</created>
@@ -802,11 +793,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570698013226</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="improving data">
+      <created>1570698324914</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1570698324914</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179041000" />
+    <option name="totallyTimeSpent" value="179282000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1254,8 +1252,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="242" column="7" lean-forward="true" selection-start-line="242" selection-start-column="7" selection-end-line="242" selection-end-column="7" />
+        <state relative-caret-position="465">
+          <caret line="241" column="7" selection-start-line="241" selection-start-column="7" selection-end-line="241" selection-end-column="7" />
         </state>
       </provider>
     </entry>
