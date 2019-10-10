@@ -182,7 +182,7 @@
       },
       {
         "category": 1,
-        "label": "FPGA & ASIC manufacturing",
+        "label": "IC manufacturing",
         "level": 7
       },
       {
@@ -232,7 +232,27 @@
       },
       {
         "category": 4,
-        "label": "Graphics arts & Photography",
+        "label": "Graphics arts",
+        "level": 0
+      },
+      {
+        "category": 4,
+        "label": "Photography",
+        "level": 0
+      },
+      {
+        "category": 5,
+        "label": "Morocco",
+        "level": 0
+      },
+      {
+        "category": 5,
+        "label": "Europa",
+        "level": 0
+      },
+      {
+        "category": 5,
+        "label": "Saudi Arabia",
         "level": 0
       }
     ]
