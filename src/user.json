@@ -11,7 +11,7 @@
   "urls": {
     "portfolio": "http://dahoux.net",
     "github": "https://github.com/samiBendou",
-    "linkedin": "https://www.linkedin.com/in/sami-dahoux-b20386a9/",
+    "linkedin": "https://www.linkedin.com/in/sami-dahoux/",
     "picture": "/static/sami2.jpg",
     "contact": "#contact"
   },
@@ -64,14 +64,14 @@
         }
       },
       {
-        "title": "Software Engineer Freelance",
-        "text": "Design and implementation of C++ and Javascript frameworks for computer graphics, realistic 3D animation and scientific computation. Agile project management and open-source developement on GitHub",
-        "date": "2017-01-02T00:00:00Z",
+        "title": "Freelance Software Engineer",
+        "text": "Design and implementation of C++ and Javascript frameworks for computer graphics, realistic 3D animation and scientific computation. Agile project management and open-source development on GitHub",
+
+        "date": "2017-09-02T00:00:00Z",
         "location": {
           "country": "FR",
           "zip": "13420"
         },
-        "duration": 30,
         "category": 0,
         "company": {
           "url": "https://www.gemalto.com/",
