@@ -26,7 +26,8 @@ export default class AboutText extends Component {
                     <a href={data.urls.linkedin}><FaLinkedin/></a>&nbsp;
                     <a href={data.urls.github}><FaGithub/></a>&nbsp;
                     <a href={data.urls.contact}><FaEnvelope/></a>&nbsp;
-                    <PDFDownloadLink document={<Pdf data={data}/>} fileName={`${data.lastName}_${data.firstName}_resume.pdf`}>
+                    <PDFDownloadLink document={<Pdf data={data}/>}
+                                     fileName={`${data.lastName}_${data.firstName}_resume.pdf`}>
                         {() => <FaFilePdf/>}
                     </PDFDownloadLink>
                 </h3>

@@ -12,6 +12,7 @@ const PdfTimelineList = ({items}) => {
                     text={item.text}
                     date={item.date}
                     duration={item.duration}
+                    location={item.location}
                     key={item.title + "&" + item.date}
                     company={item.company}
                 />
