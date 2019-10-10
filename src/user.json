@@ -123,7 +123,7 @@
       {
         "category": 0,
         "label": "Javascript/Node.js",
-        "level": 8
+        "level": 9
       },
       {
         "category": 0,
@@ -238,21 +238,6 @@
       {
         "category": 4,
         "label": "Photography",
-        "level": 0
-      },
-      {
-        "category": 5,
-        "label": "Morocco",
-        "level": 0
-      },
-      {
-        "category": 5,
-        "label": "Europa",
-        "level": 0
-      },
-      {
-        "category": 5,
-        "label": "Saudi Arabia",
         "level": 0
       }
     ]
