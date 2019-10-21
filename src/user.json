@@ -3,7 +3,7 @@
   "firstName": "Sami",
   "birthday": "1995-07-09T00:00:00Z",
   "quote": "Engineering student",
-  "brief": "Hello I'm a engineering student !",
+  "brief": "After 3 years at Mines St-Etienne engineering school rich of projects and experiences, I specialized in computer science, microelectronics and developed project management skills. Today I would like to answer to technical challenges by bringing creative and well thought out solutions.",
   "description": "Highly motivated engineering student looking for an internship from April to August 2020",
   "location": {
     "country": "FR",
@@ -20,16 +20,16 @@
   "items": {
     "about": [
       {
-        "title": "Passionated",
-        "text": "Love computer science, microelectronics and music"
+        "title": "Dynamic",
+        "text": "Like to be pro-active and contribute"
+      },
+      {
+        "title": "Rigorous",
+        "text": "Detail oriented and stimulated by qualitative work"
       },
       {
         "title": "Persistent",
-        "text": "Achieved many long-term software hobby projects"
-      },
-      {
-        "title": "Dynamic",
-        "text": "Very enthusiastic about working on team environment"
+        "text": "Carried out many long-term technical projects"
       }
     ],
     "timeline": [

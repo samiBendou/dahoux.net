@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fix : Experiences first on CV">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/brief/Brief.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/brief/Brief.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scss/App.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="32">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -78,9 +76,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
               <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -507,14 +502,7 @@
       <workItem from="1570777357966" duration="211000" />
       <workItem from="1570777991198" duration="893000" />
       <workItem from="1571658138078" duration="4171000" />
-      <workItem from="1571677807742" duration="2233000" />
-    </task>
-    <task id="LOCAL-00047" summary="adding data">
-      <created>1566656112146</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1566656112146</updated>
+      <workItem from="1571677807742" duration="2326000" />
     </task>
     <task id="LOCAL-00048" summary="adding data">
       <created>1566656231788</created>
@@ -852,11 +840,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571663338310</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="fix : Cleaning Brief section style">
+      <created>1571681637290</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1571681637291</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212656000" />
+    <option name="totallyTimeSpent" value="212749000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -934,7 +929,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="adding PDF generator with Sejda" />
     <MESSAGE value="fixing PDF generator" />
     <MESSAGE value="refactor of top level architecture" />
     <MESSAGE value="adding mail and portfolio" />
@@ -959,7 +953,8 @@
     <MESSAGE value="fixes on design" />
     <MESSAGE value="improving data" />
     <MESSAGE value="fix : Experiences first on CV" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : Experiences first on CV" />
+    <MESSAGE value="fix : Cleaning Brief section style" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix : Cleaning Brief section style" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1275,16 +1270,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/App.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="32">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
