@@ -27,6 +27,7 @@ const PdfRight = (props) => {
     const categories = new Array(...(new Set(props.items.map(item => item.category))));
     const items = new Map(categories.map(category => [category, []]));
     props.items.forEach(item => items.get(item.category).push(item));
+    categories.sort((a) => a === 0 ? -1 : 0 );
     return (
         <View style={styles.pdfRight}>
             {
