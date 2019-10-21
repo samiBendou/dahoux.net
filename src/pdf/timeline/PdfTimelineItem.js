@@ -6,7 +6,7 @@ import {renderLocationText} from "../../common/core/location";
 const styles = StyleSheet.create({
     title: {
         marginTop: 4,
-        fontSize: "18pt",
+        fontSize: "16pt",
         fontFamily: "Helvetica-Bold",
     },
 
@@ -17,13 +17,13 @@ const styles = StyleSheet.create({
     },
 
     company: {
-        fontSize: "14pt",
+        fontSize: "12pt",
         fontFamily: "Helvetica-Bold",
         marginBottom: 8
     },
 
     location: {
-        fontSize: "14pt"
+        fontSize: "12pt"
     },
     text: {
         fontSize: "11pt",

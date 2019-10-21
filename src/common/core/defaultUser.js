@@ -3,6 +3,7 @@ const defaultUser = {
     firstName: "First Name",
     birthday: "1970-01-01T00:00:00Z",
     quote: "Quote",
+    brief: "Lorem Ipsum",
     urls: {
         portfolio: "http://domain.dot",
         facebook: "#",
