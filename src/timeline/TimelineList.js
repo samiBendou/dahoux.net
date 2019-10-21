@@ -2,8 +2,7 @@ import React from 'react';
 import TimelineItem from './TimelineItem'
 
 const TimelineList = ({items}) => {
-    const inf = Number.POSITIVE_INFINITY;
-    const sortedItems = items.slice().sort((a, b) => (b.duration || inf) - (a.duration || inf));
+    const sortedItems = items.slice().sort((a, b) => new Date(b.end) - new Date(a.end));
     return (<div className="timeline-container">
         {sortedItems.map((item) => (
             <TimelineItem
@@ -11,7 +10,7 @@ const TimelineList = ({items}) => {
                 title={item.title}
                 text={item.text}
                 start={item.start}
-                duration={item.duration}
+                end={item.end}
                 key={item.title + "&" + item.start}
                 company={item.company}
                 location={item.location}

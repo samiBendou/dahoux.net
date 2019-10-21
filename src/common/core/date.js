@@ -21,18 +21,19 @@ const renderMonth = (month) => {
     return `${shifted > 9 ? '' : '0'}${shifted}`;
 };
 
-const renderDate = (start, duration) => {
-    if (duration === undefined) {
-        return `${start.getFullYear()}/${renderMonth(start.getMonth())}, to start`;
+const renderDate = (start, end) => {
+    if (end === undefined) {
+        return `${start.getFullYear()}/${renderMonth(start.getMonth())}, to date`;
     }
+    const duration = Math.round((end.getTime() - start.getTime()) / ms.day);
     if (duration < 2) {
         return  start.toDateString();
-    } else if (duration < 60) {
+    } else if (duration < 50) {
         return  `${start.getFullYear()}/${renderMonth(start.getMonth())}, ${duration} days`;
-    } else if (duration < 730) {
+    } else if (duration < 640) {
         return  `${start.getFullYear()}/${renderMonth(start.getMonth())}, ${Math.round(duration / day.month)} months`;
     } else {
-        return  `${start.getFullYear()}-${start.getFullYear() + duration / day.year}, ${duration / day.year} years`;
+        return  `${start.getFullYear()}-${end.getFullYear()}, ${Math.round(duration / day.year)} years`;
     }
 };
 
