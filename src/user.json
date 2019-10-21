@@ -38,11 +38,11 @@
         "text": "Microelectronics, Computer Science and Embedded Systems. Scientific and technical knowledge, Project Management and Strategic Management, majoring in Microelectronics Design.",
 
         "start": "2016-09-02T00:00:00Z",
+        "end": "2020-09-02T00:00:00Z",
         "location": {
           "country": "FR",
           "zip": "13120"
         },
-        "duration": 1460,
         "category": 1,
         "company": {
           "url": "https://www.mines-stetienne.fr/",
@@ -53,11 +53,11 @@
         "title": "Intensive Preparatory Classes",
         "text": "Two-year intensive course in Mathematics, Physics and Engineering. Fundamental sciences, general technical knowledge. Competitive exam for admission to top French “Grandes Écoles”.",
         "start": "2014-09-02T00:00:00Z",
+        "end": "2016-07-02T00:00:00Z",
         "location": {
           "country": "FR",
           "zip": "75012"
         },
-        "duration": 730,
         "category": 1,
         "company": {
           "url": "https://www.ac-paris.fr/serail/jcms/s1_942748/fr/accueil",
@@ -69,7 +69,7 @@
         "text": "Design and implementation of C++ and Javascript frameworks for Computer Graphics, Realistic 3D Animation and Scientific Computation. Project management and Open-Source development on GitHub. More than 1000 downloads in 3 months on npm.",
 
         "start": "2017-09-02T00:00:00Z",
-        "duration": 730,
+        "end": "2019-10-02T00:00:00Z",
         "location": {
           "country": "FR",
           "zip": "13120"
@@ -83,12 +83,12 @@
       {
         "title": "Software Engineer",
         "text": "Design and implementation of iOs apps with CloudKit back-end. Diagnostic software for quality checks at the output of motorized microscopes production line. Billing database with management interface.",
-        "start": "2018-01-02T00:00:00Z",
+        "start": "2018-02-02T00:00:00Z",
+        "end": "2018-08-17T00:00:00Z",
         "location": {
           "country": "FR",
           "zip": "13100"
         },
-        "duration": 273.75,
         "category": 0,
         "company": {
           "url": "http://www.xrapid-group.com/",
@@ -99,11 +99,11 @@
         "title": "Project Manager Operations",
         "text": "Agile project management internship. Integration of a Prestashop payment solution. Continuous improvement, client and merchant relations. Design of integration tests and operational processes. Design and automation of fraud management.",
         "start": "2019-03-04T00:00:00Z",
+        "end": "2018-06-26T00:00:00Z",
         "location": {
           "country": "FR",
           "zip": "75001"
         },
-        "duration": 91.2501,
         "category": 0,
         "company": {
           "url": "https://blog.usejournal.com/cash-is-king-and-reputation-is-queen-3f8014b8af80",
