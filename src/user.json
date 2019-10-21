@@ -83,7 +83,7 @@
       {
         "title": "Software Engineer",
         "text": "Design and implementation of iOs apps with CloudKit back-end. Diagnostic software for quality checks at the output of motorized microscopes production line. Billing database with management interface.",
-        "start": "2018-02-02T00:00:00Z",
+        "start": "2018-01-02T00:00:00Z",
         "end": "2018-08-17T00:00:00Z",
         "location": {
           "country": "FR",
@@ -99,7 +99,7 @@
         "title": "Project Manager Operations",
         "text": "Agile project management internship. Integration of a Prestashop payment solution. Continuous improvement, client and merchant relations. Design of integration tests and operational processes. Design and automation of fraud management.",
         "start": "2019-03-04T00:00:00Z",
-        "end": "2018-06-26T00:00:00Z",
+        "end": "2019-06-26T00:00:00Z",
         "location": {
           "country": "FR",
           "zip": "75001"
@@ -120,7 +120,7 @@
       {
         "category": 0,
         "label": "Python/Numpy",
-        "level": 8
+        "level": 9
       },
       {
         "category": 0,
@@ -143,112 +143,102 @@
         "level": 7
       },
       {
-        "category": 0,
-        "label": "SQL",
-        "level": 6
-      },
-      {
-        "category": 0,
-        "label": "Matlab",
-        "level": 7
-      },
-      {
-        "category": 0,
-        "label": "VHDL/AMS",
+        "category": 1,
+        "label": "VHDL/VHDL AMS",
         "level": 8
       },
       {
-        "category": 0,
+        "category": 1,
         "label": "Virtuoso/Spectre",
-        "level": 6
+        "level": 7
       },
       {
-        "category": 0,
+        "category": 1,
         "label": "Vivado",
-        "level": 6
+        "level": 7
       },
       {
-        "category": 0,
+        "category": 1,
         "label": "Modelsim",
         "level": 7
       },
       {
-        "category": 0,
+        "category": 1,
         "label": "System Vision",
         "level": 6
       },
       {
-        "category": 1,
-        "label": "Project management",
+        "category": 2,
+        "label": "Project Management",
         "level": 7
       },
       {
-        "category": 1,
-        "label": "Software development",
-        "level": 9
-      },
-      {
-        "category": 1,
-        "label": "Numerical simulation",
-        "level": 8
-      },
-      {
-        "category": 1,
-        "label": "IC manufacturing",
-        "level": 7
-      },
-      {
-        "category": 1,
-        "label": "Image processing",
+        "category": 2,
+        "label": "Software Development",
         "level": 9
       },
       {
         "category": 2,
+        "label": "Numerical Simulation",
+        "level": 7
+      },
+      {
+        "category": 2,
+        "label": "IC manufacturing",
+        "level": 8
+      },
+      {
+        "category": 2,
+        "label": "Image Processing",
+        "level": 8
+      },
+      {
+        "category": 3,
         "label": "Management",
         "level": 7
       },
       {
-        "category": 2,
+        "category": 3,
         "label": "Communication",
         "level": 7
       },
       {
-        "category": 3,
+        "category": 4,
         "label": "French",
         "level": 10
       },
       {
-        "category": 3,
+        "category": 4,
         "label": "English",
         "level": 8
       },
       {
-        "category": 3,
+        "category": 4,
         "label": "Spanish",
         "level": 6
       },
       {
-        "category": 4,
+        "category": 5,
         "label": "Running",
         "level": 0
       },
       {
-        "category": 4,
+        "category": 5,
         "label": "Guitar/Piano",
         "level": 0
       },
       {
-        "category": 4,
+        "category": 5,
         "label": "Music production",
         "level": 0
       },
       {
-        "category": 4,
+        "category": 5,
         "label": "Graphics arts",
         "level": 0
       },
       {
-        "category": 4,
+        "category": 5,
         "label": "Photography",
         "level": 0
       }
