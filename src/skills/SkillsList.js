@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import SkillsItem from './SkillsItem';
 
-const getBestItems = (items, count) => {
-    return items.slice().sort((a, b) => a.level - b.level).slice(-count);
-};
-
 export default class SkillsList extends Component {
     constructor(props) {
         super(props);
@@ -16,23 +12,27 @@ export default class SkillsList extends Component {
         setTimeout(() => this.setState({hidden: false}), 700);
     }
 
-    fetchItems(items) {
-        return (this.props.count ? getBestItems(items, this.props.count) : items).filter(item => item.level > 0);
-    }
-
     render() {
-        const items = this.fetchItems(this.props.items);
+        const sortedItems = this.props.items.sort((a, b) => b.level - a.level);
+        const slicedItems = this.props.count ? sortedItems.slice(0, this.props.count) : sortedItems;
+        const filteredItems = slicedItems.filter(item => item.level > 0);
         const className = `${this.state.collapsed ? 'collapsed' : ''} ${this.state.hidden ? 'hidden' : ''}`;
-        return (
-            <div className={className}>
-                {/*
+
+        let scale = <span/>;
+        if(this.props.showScale) {
+            scale = (
                 <div className="skills-scale" style={{display: "flex", flexDirection: "row"}}>
                     <div>0</div>
                     <div style={{flexGrow:1, textAlign: "right"}}>10</div>
                 </div>
-                */}
+            );
+        }
+
+        return (
+            <div className={className}>
+                {scale}
                 <div className="skills">
-                    {items.map((item) =>
+                    {filteredItems.map((item) =>
                         <SkillsItem
                             label={item.label}
                             level={item.level}
