@@ -21,7 +21,7 @@ const defaultUser = {
             {
                 title: "Title",
                 text: "Text",
-                date: "1970-01-01T00:00:00Z",
+                start: "1970-01-01T00:00:00Z",
                 location: {
                     country: "FR",
                     zip: "75001"
@@ -36,7 +36,7 @@ const defaultUser = {
             {
                 title: "Title",
                 text: "Text",
-                date: "1970-01-01T00:00:00Z",
+                start: "1970-01-01T00:00:00Z",
                 location: {
                     country: "FR",
                     zip: "13120"

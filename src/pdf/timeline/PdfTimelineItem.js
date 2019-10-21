@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
 const PdfTimelineItem = (props) => (
     <View style={{flexDirection: "col"}}>
         <Text style={styles.title}>{props.title}</Text>
-        <Text style={styles.date}>{renderDate(new Date(props.date), props.duration)}</Text>
+        <Text style={styles.date}>{renderDate(new Date(props.start), props.duration)}</Text>
         <View style={{flexDirection: "row"}}>
             <Text style={styles.company}>{props.company.name || ""} </Text>
             <Text style={styles.location}>- {renderLocationText(props.location, false)}</Text>

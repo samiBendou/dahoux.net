@@ -24,7 +24,7 @@ export default class TimelineItem extends Component {
             <span className={`timeline-tag ${TimelineCategory[props.category].toLowerCase()}`}>
                 {TimelineCategory[props.category]}
             </span>
-                    <DateText date={props.date} duration={props.duration}/>
+                    <DateText start={props.start} duration={props.duration}/>
                     <h4>{props.title}</h4>
                     <LocationText location={props.location} county={false}/>
                     <a href={props.company.url}>{props.company.name}</a>

@@ -21,18 +21,18 @@ const renderMonth = (month) => {
     return `${shifted > 9 ? '' : '0'}${shifted}`;
 };
 
-const renderDate = (date, duration) => {
-    if (duration === undefined || (new Date() - date) / ms.day < duration) {
-        return `${date.getFullYear()}/${renderMonth(date.getMonth())}, to date`;
+const renderDate = (start, duration) => {
+    if (duration === undefined) {
+        return `${start.getFullYear()}/${renderMonth(start.getMonth())}, to start`;
     }
     if (duration < 2) {
-        return  date.toDateString();
+        return  start.toDateString();
     } else if (duration < 60) {
-        return  `${date.getFullYear()}/${renderMonth(date.getMonth())}, ${duration} days`;
+        return  `${start.getFullYear()}/${renderMonth(start.getMonth())}, ${duration} days`;
     } else if (duration < 730) {
-        return  `${date.getFullYear()}/${renderMonth(date.getMonth())}, ${Math.round(duration / day.month)} months`;
+        return  `${start.getFullYear()}/${renderMonth(start.getMonth())}, ${Math.round(duration / day.month)} months`;
     } else {
-        return  `${date.getFullYear()}-${date.getFullYear() + duration / day.year}, ${duration / day.year} years`;
+        return  `${start.getFullYear()}-${start.getFullYear() + duration / day.year}, ${duration / day.year} years`;
     }
 };
 

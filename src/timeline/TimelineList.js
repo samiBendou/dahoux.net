@@ -10,9 +10,9 @@ const TimelineList = ({items}) => {
                 category={item.category}
                 title={item.title}
                 text={item.text}
-                date={item.date}
+                start={item.start}
                 duration={item.duration}
-                key={item.title + "&" + item.date}
+                key={item.title + "&" + item.start}
                 company={item.company}
                 location={item.location}
             />
