@@ -157,12 +157,32 @@
       },
       {
         "category": 0,
-        "label": "Cadence",
+        "label": "VHDL AMS",
+        "level": 6
+      },
+      {
+        "category": 0,
+        "label": "Virtuoso",
+        "level": 6
+      },
+      {
+        "category": 0,
+        "label": "Vivado",
+        "level": 6
+      },
+      {
+        "category": 0,
+        "label": "Spectre",
         "level": 6
       },
       {
         "category": 0,
         "label": "Modelsim",
+        "level": 7
+      },
+      {
+        "category": 0,
+        "label": "System Vision",
         "level": 6
       },
       {
