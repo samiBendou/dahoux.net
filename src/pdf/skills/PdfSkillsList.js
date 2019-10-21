@@ -5,7 +5,7 @@ import PdfSkillsItem from "./PdfSkillsItem";
 const PdfSkillsList = ({items}) => {
     return (
         <View>
-                {items.map((item) =>
+                {items.sort((a, b) => b.level - a.level).map((item) =>
                     <PdfSkillsItem
                         label={item.label}
                         key={item.label}
