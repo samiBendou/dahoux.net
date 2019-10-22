@@ -19,6 +19,10 @@ $moreActiveColor: $primary;
   margin-top: 0;
   margin-bottom: 0;
   }
+
+  ul {
+    padding-left: 32px;
+  }
 }
 
 .timeline-container {
@@ -58,7 +62,7 @@ $moreActiveColor: $primary;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 15px;
+  padding: 18px;
   position: relative;
   width: 400px;
   max-width: 70%;
@@ -113,8 +117,7 @@ $moreActiveColor: $primary;
 .timeline-item-content p {
   font-size: 16px;
   line-height: 24px;
-  margin: 15px 0;
-  max-width: 250px;
+  margin-top: 8px;
 }
 
 .timeline-item-content .timeline-more {
