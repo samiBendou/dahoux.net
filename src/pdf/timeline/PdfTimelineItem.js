@@ -39,7 +39,11 @@ const PdfTimelineItem = (props) => (
             <Text style={styles.company}>{props.company.name || ""} </Text>
             <Text style={styles.location}>- {renderLocationText(props.location, false)}</Text>
         </View>
-        <Text style={styles.text}>{props.text}</Text>
+        <Text style={styles.text}>{props.brief}</Text>
+        {
+            props.items.map(item => (
+                <Text style={styles.text}>- {item}</Text>
+            ))}
     </View>
 );
 

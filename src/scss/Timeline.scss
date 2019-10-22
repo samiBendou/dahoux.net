@@ -13,7 +13,8 @@ $moreActiveColor: $primary;
 }
 
 #timeline-text {
-  p {
+  p, ul {
+  text-align: left;
   vertical-align: bottom;
   margin-top: 0;
   margin-bottom: 0;

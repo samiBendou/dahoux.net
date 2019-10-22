@@ -9,7 +9,8 @@ const PdfTimelineList = ({items}) => {
             {sortedItems.map((item) => (
                 <PdfTimelineItem
                     title={item.title}
-                    text={item.text}
+                    brief={item.brief}
+                    items={item.items}
                     start={item.start}
                     end={item.end}
                     duration={item.duration}

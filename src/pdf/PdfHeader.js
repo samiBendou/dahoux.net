@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     },
 
     name: {
-        fontSize: "32pt",
+        fontSize: "28pt",
         marginBottom: 2,
         fontFamily: "Helvetica-Bold"
     },
@@ -42,9 +42,9 @@ const styles = StyleSheet.create({
 const PdfHeader = (props) => (
     <View style={styles.pdfHeader}>
         <View style={styles.section}>
-            <Image src={props.data.urls.picture} style={{width: 150}}/>
+            <Image src={props.data.urls.picture} style={{width: 124}}/>
         </View>
-        <View style={{...styles.section, paddingLeft: 12, paddingTop: 12}}>
+        <View style={{...styles.section, paddingLeft: 38, paddingTop: 12}}>
             <Text style={styles.name}>{props.data.firstName} {props.data.lastName}</Text>
             <Text style={styles.quote}>{props.data.quote}</Text>
             <Text style={styles.other}>{props.data.mail}</Text>

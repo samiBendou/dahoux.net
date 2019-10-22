@@ -35,8 +35,12 @@
     "timeline": [
       {
         "title": "Engineering Student",
-        "text": "Microelectronics, Computer Science and Embedded Systems. Scientific and technical knowledge, Project Management and Strategic Management, majoring in Microelectronics Design.",
-
+        "brief": "Microelectronics, Computer Science and Embedded Systems.",
+        "items": [
+          "Scientific and technical knowledge",
+          "Project Management and Strategic Management",
+          "Majoring in Microelectronics Design"
+        ],
         "start": "2016-09-02T00:00:00Z",
         "end": "2020-09-02T00:00:00Z",
         "location": {
@@ -51,7 +55,11 @@
       },
       {
         "title": "Intensive Preparatory Classes",
-        "text": "Two-year intensive course in Mathematics, Physics and Engineering. Fundamental sciences, general technical knowledge. Competitive exam for admission to top French “Grandes Écoles”.",
+        "brief": "Competitive exam for admission to top French “Grandes Écoles”.",
+        "items": [
+          "Mathematics, Physics and Engineering",
+          "Fundamental sciences, general technical knowledge"
+        ],
         "start": "2014-09-02T00:00:00Z",
         "end": "2016-07-02T00:00:00Z",
         "location": {
@@ -65,9 +73,13 @@
         }
       },
       {
-        "title": "Freelance Software Engineer",
-        "text": "Design and implementation of C++ and Javascript frameworks for Computer Graphics, Realistic 3D Animation and Scientific Computation. Project management and Open-Source development on GitHub. More than 1000 downloads in 3 months on npm.",
-
+        "title": "Software Engineer",
+        "brief": "Freelance design and implementation of C++ and Javascript frameworks.",
+        "items": [
+          "Realistic 3D Animation and Scientific Computation",
+          "Project Management and Open-Source development on GitHub",
+          "More than 1000 downloads in 3 months on npm"
+        ],
         "start": "2017-09-02T00:00:00Z",
         "end": "2019-10-02T00:00:00Z",
         "location": {
@@ -82,7 +94,12 @@
       },
       {
         "title": "Software Engineer",
-        "text": "Design and implementation of iOs apps with CloudKit back-end. Diagnostic software for quality checks at the output of motorized microscopes production line. Billing database with management interface.",
+        "brief": "Design and implementation of iOs apps with CloudKit back-end.",
+        "items": [
+          "Diagnostic for quality checks at the output of microscopes production line",
+          "Bluetooth remote for the microscope stage",
+          "Billing database with management interface"
+        ],
         "start": "2018-01-02T00:00:00Z",
         "end": "2018-08-17T00:00:00Z",
         "location": {
@@ -97,7 +114,13 @@
       },
       {
         "title": "Project Manager Operations",
-        "text": "Agile project management internship. Integration of a Prestashop payment solution. Continuous improvement, client and merchant relations. Design of integration tests and operational processes. Design and automation of fraud management.",
+        "brief": "Agile technical project management internship.",
+        "items": [
+          "Integration of a Prestashop payment solution",
+          "Continuous improvement, client and merchant relations",
+          "Design and automation of fraud management",
+          "Design of integration tests and operational processes"
+        ],
         "start": "2019-03-04T00:00:00Z",
         "end": "2019-06-26T00:00:00Z",
         "location": {
@@ -143,8 +166,13 @@
         "level": 7
       },
       {
+        "category": 0,
+        "label": "Bash",
+        "level": 7
+      },
+      {
         "category": 1,
-        "label": "VHDL/VHDL AMS",
+        "label": "VHDL/AMS",
         "level": 8
       },
       {
@@ -180,7 +208,7 @@
       {
         "category": 2,
         "label": "Numerical Simulation",
-        "level": 7
+        "level": 6
       },
       {
         "category": 2,
@@ -191,6 +219,16 @@
         "category": 2,
         "label": "Image Processing",
         "level": 8
+      },
+      {
+        "category": 2,
+        "label": "Embedded Systems",
+        "level": 7
+      },
+      {
+        "category": 2,
+        "label": "Machine Learning",
+        "level": 7
       },
       {
         "category": 3,

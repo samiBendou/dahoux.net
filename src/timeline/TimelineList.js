@@ -8,7 +8,8 @@ const TimelineList = ({items}) => {
             <TimelineItem
                 category={item.category}
                 title={item.title}
-                text={item.text}
+                brief={item.brief}
+                items={item.items}
                 start={item.start}
                 end={item.end}
                 key={item.title + "&" + item.start}

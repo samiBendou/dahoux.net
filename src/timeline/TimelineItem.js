@@ -21,9 +21,9 @@ export default class TimelineItem extends Component {
         return (
             <div className="timeline-item">
                 <div className="timeline-item-content">
-            <span className={`timeline-tag ${TimelineCategory[props.category].toLowerCase()}`}>
-                {TimelineCategory[props.category]}
-            </span>
+                    <span className={`timeline-tag ${TimelineCategory[props.category].toLowerCase()}`}>
+                        {TimelineCategory[props.category]}
+                    </span>
                     <DateText start={props.start} end={props.end}/>
                     <h4>{props.title}</h4>
                     <LocationText location={props.location} county={false}/>
@@ -39,7 +39,13 @@ export default class TimelineItem extends Component {
                     </Button>
                     <Collapse in={showText}>
                         <div id="timeline-text">
-                            <p>{props.text}</p>
+                            <p>{props.brief}</p>
+                            <ul>
+                                {
+                                    props.items.map(item => (
+                                        <li key={item}>{item}</li>
+                                    ))}
+                            </ul>
                         </div>
                     </Collapse>
                     <span className="circle"/>
