@@ -1,6 +1,7 @@
 import React from "react";
 
 import {Image, Link, StyleSheet, Text, View} from "@react-pdf/renderer";
+import {renderLocationText} from "../common/core/location";
 
 const styles = StyleSheet.create({
     pdfHeader: {
@@ -15,12 +16,12 @@ const styles = StyleSheet.create({
 
     quote: {
         fontSize: "24pt",
-        marginBottom: 8,
+        marginBottom: 4,
     },
 
     description: {
-        marginTop: 24,
-        marginLeft: 8,
+        marginTop: 18,
+        marginLeft: 0,
         fontFamily: "Helvetica-Oblique",
         fontSize: "14pt",
         width: "65%",
@@ -28,10 +29,13 @@ const styles = StyleSheet.create({
     },
 
     link: {
+        fontSize: "14pt",
         color: "#007bff"
     },
 
-    other: {},
+    other: {
+        fontSize: "14pt"
+    },
 
     section: {
         margin: 0,
@@ -47,6 +51,7 @@ const PdfHeader = (props) => (
         <View style={{...styles.section, paddingLeft: 38, paddingTop: 12}}>
             <Text style={styles.name}>{props.data.firstName} {props.data.lastName}</Text>
             <Text style={styles.quote}>{props.data.quote}</Text>
+            <Text style={styles.other}> {renderLocationText(props.data.location, true)}</Text>
             <Text style={styles.other}>{props.data.mail}</Text>
             <Text style={styles.link}><Link
                 src={props.data.urls.portfolio}>{props.data.urls.portfolio.split("://")[1]}</Link></Text>
