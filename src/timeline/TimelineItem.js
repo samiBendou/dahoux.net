@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import '../scss/Timeline.scss'
 import DateText from "../common/DateText";
 import LocationText from "../common/LocationText";
-import {Button, Collapse} from "react-bootstrap";
 import TimelineCategory from "./TimelineCategory";
+import CollapseText from "../common/CollapseText";
 
 export default class TimelineItem extends Component {
 
@@ -28,26 +28,7 @@ export default class TimelineItem extends Component {
                     <h4>{props.title}</h4>
                     <LocationText location={props.location} county={false}/>
                     <a href={props.company.url}>{props.company.name}</a>
-                    <Button
-                        variant="link"
-                        className="timeline-more"
-                        onClick={this.onClick}
-                        aria-controls="timeline-text"
-                        aria-expanded={showText}
-                    >
-                        Read {showText ? "Less" : "More"}
-                    </Button>
-                    <Collapse in={showText}>
-                        <div id="timeline-text">
-                            <p>{props.brief}</p>
-                            <ul>
-                                {
-                                    props.items.map(item => (
-                                        <li key={item}>{item}</li>
-                                    ))}
-                            </ul>
-                        </div>
-                    </Collapse>
+                    <CollapseText onClick={this.onClick} showText={showText} brief={props.brief} items={props.items} id={props.id}/>
                     <span className="circle"/>
                 </div>
             </div>

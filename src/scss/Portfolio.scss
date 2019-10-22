@@ -1,0 +1,47 @@
+@import 'bootstrap/bootstrap.scss';
+
+#portfolio {
+  p {
+    margin-bottom: 0;
+  }
+
+  time {
+    color: $gray-600;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .framework {
+    background-color: $gray-400;
+  }
+}
+
+.portfolio-tag {
+  margin-right: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: $gray-700;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-item {
+  margin: 24px;
+  padding: 24px 12px 24px 12px;
+  background-color: $gray-300;
+  border-radius: 10px;
+  flex-basis: 40%;
+  min-height: 240px;
+}
+
+.portfolio-bottom {
+  margin-top: 8px;
+}

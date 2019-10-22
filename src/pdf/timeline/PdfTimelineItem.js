@@ -42,7 +42,7 @@ const PdfTimelineItem = (props) => (
         <Text style={styles.text}>{props.brief}</Text>
         {
             props.items.map(item => (
-                <Text style={styles.text}>- {item}</Text>
+                <Text style={styles.text} key={item}>- {item}</Text>
             ))}
     </View>
 );

@@ -29,7 +29,73 @@
       },
       {
         "title": "Persistent",
-        "text": "Carried out many long-term technical projects"
+        "text": "Carried out many challenging technical projects"
+      }
+    ],
+    "portfolio": [
+      {
+        "tags": [
+          "framework",
+          "typescript"
+        ],
+        "title": "meca3",
+        "brief": "Ease the creation of animations that behaves like realistic physics experiments.",
+        "items": [
+          "Javascript framework for physics compliant 3D animations.",
+          "Complete API with documentation and examples",
+          "Continuous integration and testing pipelines"
+        ],
+        "start": "2019-06-30T00:00:00Z",
+        "url": "https://github.com/samiBendou/meca3"
+      },
+      {
+        "tags": [
+          "framework",
+          "typescript"
+        ],
+        "title": "space3",
+        "brief": "Intuitive coding of general purpose maths.",
+        "items": [
+          "Javascript framework for fast 3D representation and geometry computation.",
+          "Complete API with documentation and examples",
+          "Continuous integration and testing pipelines"
+        ],
+        "start": "2019-07-15T00:00:00Z",
+        "url": "https://github.com/samiBendou/space3"
+      },
+      {
+        "tags": [
+          "framework",
+          "python"
+        ],
+        "title": "am_scripts",
+        "brief": "Accounting, planning and strategic management for the game Airlines-Manager 2.",
+        "items": [
+          "Python framework for financial accounting and previsions",
+          "Scrapping interface to fetch airline and game data",
+          "Simple solver to find best purchase strategy",
+          "Simple scheduler for low-cost airlines",
+          "Financial data visualization with numpy"
+        ],
+        "start": "2019-02-02T00:00:00Z",
+        "end": "2019-03-02T00:00:00Z",
+        "url": "https://github.com/samiBendou/am_scripts"
+      },
+      {
+        "tags": [
+          "ip",
+          "vhdl"
+        ],
+        "title": "aeshdl",
+        "brief": "Hardware accelerator for AES encryption and decryption.",
+        "items": [
+          "Implementation of an AES128 IP in VHDL",
+          "Designed to be fully synthetizable",
+          "Optimized in execution time",
+          "Fully tested behavior"
+        ],
+        "start": "2019-10-02T00:00:00Z",
+        "url": "https://github.com/samiBendou/AES_VHDL"
       }
     ],
     "timeline": [

@@ -28,6 +28,20 @@
   font-weight: 400;
 }
 
+.collapse-more {
+  padding: 0 !important;
+}
+
+.collapse-more-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.collapse-more::after {
+  content: ' ►';
+  font-size: 12px;
+}
+
 body {
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif !important;
 }

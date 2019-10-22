@@ -13,6 +13,7 @@ const TimelineList = ({items}) => {
                 start={item.start}
                 end={item.end}
                 key={item.title + "&" + item.start}
+                id={item.title + "&" + item.start}
                 company={item.company}
                 location={item.location}
             />
