@@ -8,6 +8,7 @@ const PdfSkillsList = ({items}) => {
                 {items.sort((a, b) => b.level - a.level).map((item) =>
                     <PdfSkillsItem
                         label={item.label}
+                        mention={item.mention}
                         key={item.label}
                     />)}
         </View>);

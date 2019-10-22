@@ -7,7 +7,7 @@ const SkillsItem = (props) => {
             <div
                 className="skills-item" style={{width: `${props.level * 10}%`}}
             >
-                <h6 style={{margin: 0}}>{props.label}</h6>
+                <h6 style={{margin: 0}}>{props.label} {props.mention ? `- ${props.mention}` : ''}</h6>
             </div>
         </div>
     );

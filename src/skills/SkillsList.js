@@ -36,6 +36,7 @@ export default class SkillsList extends Component {
                         <SkillsItem
                             label={item.label}
                             level={item.level}
+                            mention={item.mention}
                             type={item.type}
                             key={item.label}
                         />)}

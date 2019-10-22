@@ -20,13 +20,16 @@ const defaultUser = {
         timeline: [
             {
                 title: "Title",
-                text: "Text",
+                brief: "Brief",
+                item: [
+                    "Items", "Items", "Items"
+                ],
                 start: "1970-01-01T00:00:00Z",
+                end: "1980-01-01T00:00:00Z",
                 location: {
                     country: "FR",
                     zip: "75001"
                 },
-                duration: 0,
                 category: 0,
                 company: {
                     url: "#",
@@ -35,13 +38,16 @@ const defaultUser = {
             },
             {
                 title: "Title",
-                text: "Text",
+                brief: "Brief",
+                item: [
+                    "Items", "Items", "Items"
+                ],
                 start: "1970-01-01T00:00:00Z",
+                end: "1970-02-01T00:00:00Z",
                 location: {
                     country: "FR",
                     zip: "13120"
                 },
-                duration: 0,
                 category: 1,
                 company: {
                     url: "#",
@@ -51,7 +57,7 @@ const defaultUser = {
         ],
         skills: [
             {category: 0, label: "Label", level: 80},
-            {category: 1, label: "Label", level: 80}
+            {category: 1, label: "Label", level: 80, mention: "mention"}
         ]
     },
     mail: "me@domain.dot",

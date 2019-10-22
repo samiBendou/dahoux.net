@@ -4,7 +4,7 @@
   "birthday": "1995-07-09T00:00:00Z",
   "quote": "Third-Year Engineering Student",
   "brief": "After 3 years at Mines St-Etienne engineering school rich of projects and experiences, I specialized in computer science, microelectronics and developed project management skills. Today I would like to answer to technical challenges by bringing creative and well thought out solutions.",
-  "description": "Highly motivated engineering student looking for an internship from April to August 2020",
+  "description": "Highly motivated student looking for an internship from April to August 2020",
   "location": {
     "country": "FR",
     "zip": "13120"
@@ -243,17 +243,20 @@
       {
         "category": 4,
         "label": "French",
-        "level": 10
+        "level": 10,
+        "mention" : "native"
       },
       {
         "category": 4,
         "label": "English",
-        "level": 8
+        "level": 8,
+        "mention": "TOIEC 890"
       },
       {
         "category": 4,
         "label": "Spanish",
-        "level": 6
+        "level": 6,
+        "mention": "elementary"
       },
       {
         "category": 5,
