@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 
     link: {
         fontSize: "14pt",
-        color: "#007bff"
+        color: "#7D828C"
     },
 
     other: {

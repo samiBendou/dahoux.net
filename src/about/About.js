@@ -7,7 +7,7 @@ const About = (props) => {
     return (
         <div id="about">
             <img className="about-picture" width="100%" alt="profile" src={props.data.urls.picture}/>
-            <Jumbotron style={{paddingTop: 0, paddingBottom: 0, paddingRight: 0, borderRadius:0, paddingLeft:0}}>
+            <Jumbotron className="about-jumbotron">
                 <div className="about-content">
                     <div className="about-thumbnail">
                         <img width="100%" alt="profile" src={props.data.urls.picture}/>

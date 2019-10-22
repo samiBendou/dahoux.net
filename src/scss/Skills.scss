@@ -1,6 +1,7 @@
 @import 'bootstrap/bootstrap.scss';
+@import 'colors.scss';
 
-$backgroundColor: $gray-600;
+$backgroundColor: $theme-gray-900;
 $labelColor: $light;
 $levelColor: $white;
 
@@ -12,7 +13,6 @@ $levelColor: $white;
   border-radius: 10px !important;
   margin-bottom: 24px;
 }
-
 
 .skills-scale {
   font-weight: bold;
@@ -26,7 +26,6 @@ $levelColor: $white;
   border-width: 2px;
   border-color: $backgroundColor;
   margin-bottom: 12px;
-  transition: width 1000ms ease-in-out, color 600ms ease-in-out, background-color 150ms ease-in-out;
 }
 
 .skills-item {
@@ -46,46 +45,4 @@ $levelColor: $white;
 
 .skills-accordion-cards {
   margin-top: 16px;
-}
-
-.skills {
-  padding: 0;
-
-  li:hover{
-    background-color: $gray-500;
-  }
-
-  li {
-    background-color: $backgroundColor;
-    display: block;
-    position: relative;
-    color: $labelColor;
-    margin: 20px 0;
-
-    border-radius: 20px;
-
-    h6 {
-      padding: 10px;
-      text-align: left;
-    }
-
-    span {
-      color: $levelColor;
-      position: absolute;
-      right: 10px;
-      display: inline-block;
-      width: 20px;
-      text-align: right;
-      font-weight: bold;
-      font-size: 11pt;
-    }
-
-    .collapsed & {
-      width: 50% !important;
-    }
-
-    .hidden & {
-      color: $backgroundColor !important;
-    }
-  }
 }

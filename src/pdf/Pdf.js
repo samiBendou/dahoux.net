@@ -7,7 +7,7 @@ import PdfRight from "./PdfRight";
 // Create styles
 const styles = StyleSheet.create({
     page: {
-        backgroundColor: '#e9ecef'
+        backgroundColor: '#F0F2F2'
     },
     section: {
         margin: 0,

@@ -17,10 +17,10 @@ export default class PortfolioItem extends Component {
     render() {
         const props = this.props, showText = this.state.showText;
         return (
-            <div className={`portfolio-item ${props.tags.reduce((acc, cur) => acc + " " + cur)}`}>
+            <div className={`portfolio-item`}>
                 <h4><a href={props.url}><FaExternalLinkAlt style={{verticalAlign: "top"}}/></a> {props.title}</h4>
                 {props.tags.map(tag => (
-                    <span className="portfolio-tag" key={tag}>
+                    <span className={`portfolio-tag ${tag}`} key={tag}>
                         {tag}
                     </span>
                 ))}

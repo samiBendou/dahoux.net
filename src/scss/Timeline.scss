@@ -1,10 +1,8 @@
 @import 'bootstrap/bootstrap.scss';
+@import 'colors.scss';
 
-$barColor: $gray-200;
-$timelineBackground: $gray-200;
-$moreColor: $primary;
-$moreActiveColor: $primary;
-
+$barColor: $theme-white;
+$timelineBackground: $theme-white;
 
 .timeline-item {
   h4 {
@@ -91,7 +89,7 @@ $moreActiveColor: $primary;
 }
 
 .timeline-item-content .timeline-tag {
-  color: $light;
+  color: white;
   font-size: 12px;
   font-weight: bold;
   top: 5px;
@@ -109,8 +107,8 @@ $moreActiveColor: $primary;
 }
 
 .timeline-item-content time {
-  color: $gray-600;
-  font-size: 12px;
+  color: $theme-gray-700;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -163,11 +161,11 @@ $moreActiveColor: $primary;
 }
 
 .experience {
-  background-color: $gray-600;
+  background-color: $theme-blue;
 }
 
 .education {
-  background-color: $gray-500;
+  background-color: $theme-green;
 }
 
 .accomplishment {
