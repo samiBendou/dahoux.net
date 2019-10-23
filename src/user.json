@@ -36,46 +36,34 @@
       {
         "tags": [
           "framework",
+          "mechanics",
           "typescript"
         ],
         "title": "meca3",
-        "brief": "Ease the creation of animations that behaves like realistic physics experiments.",
+        "brief": "Particles animations with realistic behavior. This project has been designed for academics that would explain or popularize their results in a web page.",
         "items": [
-          "Javascript framework for physics compliant 3D animations.",
+          "Physics engine for arbitrarily complex particles systems",
           "Complete API with documentation and examples",
           "Continuous integration and testing pipelines"
         ],
         "start": "2019-06-30T00:00:00Z",
+        "end": "2019-08-30T00:00:00Z",
         "url": "https://github.com/samiBendou/meca3"
       },
       {
         "tags": [
           "framework",
-          "typescript"
-        ],
-        "title": "space3",
-        "brief": "Intuitive coding of general purpose maths.",
-        "items": [
-          "Javascript framework for fast 3D representation and geometry computation.",
-          "Complete API with documentation and examples",
-          "Continuous integration and testing pipelines"
-        ],
-        "start": "2019-07-15T00:00:00Z",
-        "url": "https://github.com/samiBendou/space3"
-      },
-      {
-        "tags": [
-          "framework",
-          "python"
+          "finance",
+          "numpy"
         ],
         "title": "am_scripts",
-        "brief": "Accounting, planning and strategic management for the game Airlines-Manager 2.",
+        "brief": "Accounting, strategic planning and purchases management for the game Airlines-Manager 2. The project helps players that would need more precise KPIs to manage their company.",
         "items": [
-          "Python framework for financial accounting and previsions",
+          "Financial accounting and previsions",
+          "Data visualization with numpy",
           "Scrapping interface to fetch airline and game data",
           "Simple solver to find best purchase strategy",
-          "Simple scheduler for low-cost airlines",
-          "Financial data visualization with numpy"
+          "Simple scheduler for low-cost airlines"
         ],
         "start": "2019-02-02T00:00:00Z",
         "end": "2019-03-02T00:00:00Z",
@@ -84,18 +72,68 @@
       {
         "tags": [
           "ip",
+          "cryptography",
           "vhdl"
         ],
         "title": "aeshdl",
-        "brief": "Hardware accelerator for AES encryption and decryption.",
+        "brief": "Hardware accelerator that implements AES algorithm. This component is designed to be integrable in a FPGA device to process ciphers faster than with a CPU.",
         "items": [
-          "Implementation of an AES128 IP in VHDL",
           "Designed to be fully synthetizable",
           "Optimized in execution time",
           "Fully tested behavior"
         ],
         "start": "2019-10-02T00:00:00Z",
         "url": "https://github.com/samiBendou/AES_VHDL"
+      },
+      {
+        "tags": [
+          "web",
+          "design",
+          "react"
+        ],
+        "title": "portfolio",
+        "brief": "Present my resume and projects. This site is a way for me to discover new technologies of web development and to challenge myself designing new code architectures and UX.",
+        "items": [
+          "Front-end made with React.js and Bootstrap",
+          "Back-end initially made with Django then switched to a full JS implementation",
+          "Reusable open-source code"
+        ],
+        "start": "2017-10-02T00:00:00Z",
+        "url": "#"
+      },
+      {
+        "tags": [
+          "web",
+          "design",
+          "startup"
+        ],
+        "title": "easy summer",
+        "brief": "E-shop that ease the purchase of school supplies. Search supplies according to your school and class. Project proposed during the Startup Weekend Aix-Marseille. ",
+        "items": [
+          "Business plan and roll-out strategy",
+          "Advises from experts of various domains",
+          "UI/UX design of the shop"
+        ],
+        "start": "2017-11-02T00:00:00Z",
+        "end": "2017-11-04T00:00:00Z",
+        "url": "#"
+      },
+      {
+        "tags": [
+          "web",
+          "astronomy",
+          "three.js"
+        ],
+        "title": "stellar system",
+        "brief": "3D interactive animation that represent the movement of stellar systems. Reproduces the behavior of planets and stars under gravity.",
+        "items": [
+          "Realistic real-time simulation",
+          "Data model to represent the state of a stellar body",
+          "Rendering with Three.js"
+        ],
+        "start": "2018-01-01T00:00:00Z",
+        "end": "2018-02-01T00:00:00Z",
+        "url": "https://samibendou.github.io/NBodiesSolver/"
       }
     ],
     "timeline": [
@@ -104,8 +142,9 @@
         "brief": "Microelectronics, Computer Science and Embedded Systems.",
         "items": [
           "Scientific and technical knowledge",
-          "Project Management and Strategic Management",
-          "Majoring in Microelectronics Design"
+          "Management and Strategic Management",
+          "Majoring in Microelectronics Design",
+          "Various associative activities"
         ],
         "start": "2016-09-02T00:00:00Z",
         "end": "2020-09-02T00:00:00Z",
@@ -140,11 +179,12 @@
       },
       {
         "title": "Software Engineer",
-        "brief": "Freelance design and implementation of C++ and Javascript frameworks.",
+        "brief": "Scientific Computation frameworks, freelance.",
         "items": [
-          "Realistic 3D Animation and Scientific Computation",
-          "Project Management and Open-Source development on GitHub",
-          "More than 1000 downloads in 3 months on npm"
+          "Object Oriented APIs for data processing",
+          "Real time 3D web rendering for simulation",
+          "Continuous integration pipelines and testing",
+          "Open-Source development and version control"
         ],
         "start": "2017-09-02T00:00:00Z",
         "end": "2019-10-02T00:00:00Z",
@@ -160,11 +200,11 @@
       },
       {
         "title": "Software Engineer",
-        "brief": "Design and implementation of iOs apps with CloudKit back-end.",
+        "brief": "Validation test bench of automated microscopes.",
         "items": [
-          "Diagnostic for quality checks at the output of microscopes production line",
-          "Bluetooth remote for the microscope stage",
-          "Billing database with management interface"
+          "Measurement processing to validate stage displacement",
+          "Remote iPhone application to drive the microscope stage",
+          "Validation application to run go/nogo tests and visualize the results"
         ],
         "start": "2018-01-02T00:00:00Z",
         "end": "2018-08-17T00:00:00Z",
