@@ -4,6 +4,7 @@ import DateText from "../common/DateText";
 import LocationText from "../common/LocationText";
 import TimelineCategory from "./TimelineCategory";
 import CollapseText from "../common/CollapseText";
+import CompanyText from "../common/CompanyText";
 
 export default class TimelineItem extends Component {
 
@@ -27,8 +28,14 @@ export default class TimelineItem extends Component {
                     <DateText start={props.start} end={props.end}/>
                     <h4>{props.title}</h4>
                     <LocationText location={props.location} county={false}/>
-                    <a href={props.company.url}>{props.company.name}</a>
-                    <CollapseText onClick={this.onClick} showText={showText} brief={props.brief} items={props.items} id={props.id}/>
+                    <CompanyText url={props.company.url} name={props.company.name}/>
+                    <CollapseText
+                        onClick={this.onClick}
+                        showText={showText}
+                        brief={props.brief}
+                        items={props.items}
+                        id={props.id}
+                    />
                     <span className="circle"/>
                 </div>
             </div>

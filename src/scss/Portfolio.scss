@@ -13,11 +13,15 @@
   }
 
   .framework {
-    background-color: $theme-green;
+    background-color: $theme-tag-blue;
   }
 
   .ip {
-    background-color: $theme-blue;
+    background-color: $theme-tag-yellow;
+  }
+
+  .portfolio-item-show & {
+    flex-grow: 10;
   }
 }
 
@@ -28,7 +32,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 10px;
-  color: $theme-white;
+  color: white;
   padding: 4px;
   background-color: $theme-gray-900;
 }
@@ -43,12 +47,17 @@
 .portfolio-item {
   margin: 24px;
   padding: 24px 12px 24px 12px;
-  background-color: $theme-white;
+  background-color: $theme-gray-300;
   border-radius: 10px;
   flex-basis: 40%;
   min-height: 240px;
+  transition: flex-grow 200ms;
+  flex-grow: 1;
 }
 
+.portfolio-item.show {
+  flex-grow: 3;
+}
 .portfolio-bottom {
   margin-top: 8px;
 }

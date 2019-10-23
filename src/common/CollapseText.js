@@ -1,8 +1,8 @@
 import {Button, Collapse} from "react-bootstrap";
 import React from "react";
 
-const CollapseText = (props) => (
-    <div>
+const CollapseText = (props) => {
+    const button = (
         <Button
             variant="link"
             className="collapse-more"
@@ -12,6 +12,8 @@ const CollapseText = (props) => (
         >
             <span className="collapse-more-text">Read {props.showText ? "Less" : "More"}</span>
         </Button>
+    );
+    const collapse = (
         <Collapse in={props.showText}>
             <div id={props.id} className={"collapse-text"}>
                 <p>{props.brief}</p>
@@ -23,7 +25,14 @@ const CollapseText = (props) => (
                 </ul>
             </div>
         </Collapse>
-    </div>
-);
+    );
+    return (
+        <div>
+            {props.after ? collapse : button}
+            {props.after ? button : collapse}
+
+        </div>
+    );
+};
 
 export default CollapseText;

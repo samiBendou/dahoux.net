@@ -7,7 +7,7 @@
 }
 
 .loader-background {
-  background-color: $theme-white;
+  background-color: $theme-gray-300;
   width: 100%;
   height: 100%;
   top: 0;
@@ -48,22 +48,22 @@ body {
 }
 
 a, .btn-link{
-  color: $theme-gray-700 !important;
+  color: $theme-blue !important;
   transition: color 200ms;
 }
 a:hover, .btn-link:hover {
-  color: $theme-gray-900 !important;
+  color: $theme-marine !important;
 }
 
 .btn-primary {
-  background-color: $theme-gray-700 !important;
+  background-color: $theme-blue !important;
   border:none !important;
 }
 
 .btn-primary:hover {
-  background-color: $theme-gray-900 !important;
+  background-color: $theme-marine !important;
 }
 
 .jumbotron {
-  background-color: $theme-white !important;
+  background-color: $theme-gray-300 !important;
 }

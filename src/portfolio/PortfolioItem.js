@@ -15,9 +15,10 @@ export default class PortfolioItem extends Component {
     };
 
     render() {
+        const onClick = this.onClick;
         const props = this.props, showText = this.state.showText;
         return (
-            <div className={`portfolio-item`}>
+            <div className={`portfolio-item ${this.state.showText ? " show" : ""}`}>
                 <h4><a href={props.url}><FaExternalLinkAlt style={{verticalAlign: "top"}}/></a> {props.title}</h4>
                 {props.tags.map(tag => (
                     <span className={`portfolio-tag ${tag}`} key={tag}>
@@ -26,7 +27,7 @@ export default class PortfolioItem extends Component {
                 ))}
                 <p><DateText start={props.start} end={props.end}/></p>
                 <p>{props.brief}</p>
-                <CollapseText onClick={this.onClick} showText={showText} brief={""} items={props.items}/>
+                <CollapseText onClick={onClick} showText={showText} brief={""} items={props.items} after/>
             </div>
         );
     }

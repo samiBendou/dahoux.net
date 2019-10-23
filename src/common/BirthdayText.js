@@ -6,7 +6,7 @@ const BirthdayText = (props) => {
     return (
         <h6>
             <FaBirthdayCake style={{verticalAlign: "top"}}/>
-            <span> {renderAge(new Date(props.birthday))} years</span>
+            <span> {renderAge(new Date(props.birthday))} years old</span>
         </h6>)
 };
 
