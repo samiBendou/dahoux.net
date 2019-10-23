@@ -16,24 +16,38 @@ const day = {
     year:365
 };
 
+const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+];
+
 const renderMonth = (month) => {
-    const shifted = month + 1;
-    return `${shifted > 9 ? '' : '0'}${shifted}`;
+    return months[month];
 };
 
 const renderDate = (start, end) => {
     if (end === undefined) {
-        return `${start.getFullYear()}/${renderMonth(start.getMonth())}, to date`;
+        return `${start.getFullYear()} ${renderMonth(start.getMonth())}, to date`;
     }
     const duration = Math.round((end.getTime() - start.getTime()) / ms.day);
+    const startYear = start.getFullYear(), endYear = end.getFullYear();
+    const startMonth = renderMonth(start.getMonth()), endMonth = renderMonth(end.getMonth());
     if (duration < 2) {
         return  start.toDateString();
     } else if (duration < 50) {
-        return  `${start.getFullYear()}/${renderMonth(start.getMonth())}, ${duration} days`;
-    } else if (duration < 640) {
-        return  `${start.getFullYear()}/${renderMonth(start.getMonth())}, ${Math.round(duration / day.month)} months`;
+        return  `${startMonth} ${startYear}, ${duration} days`;
     } else {
-        return  `${start.getFullYear()}-${end.getFullYear()}, ${Math.round(duration / day.year)} years`;
+        return  `${startMonth} ${startYear} - ${endMonth} ${endYear}`;
     }
 };
 

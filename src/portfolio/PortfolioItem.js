@@ -18,7 +18,7 @@ export default class PortfolioItem extends Component {
         const onClick = this.onClick;
         const props = this.props, showText = this.state.showText;
         return (
-            <div className={`portfolio-item ${this.state.showText ? " show" : ""}`}>
+            <div className={`portfolio-item ${showText ? "show" : ""}`}>
                 <h4><a href={props.url}><FaExternalLinkAlt style={{verticalAlign: "top"}}/></a> {props.title}</h4>
                 {props.tags.map(tag => (
                     <span className={`portfolio-tag ${tag}`} key={tag}>

@@ -51,13 +51,9 @@
   border-radius: 10px;
   flex-basis: 40%;
   min-height: 240px;
-  transition: flex-grow 200ms;
   flex-grow: 1;
 }
 
-.portfolio-item.show {
-  flex-grow: 3;
-}
 .portfolio-bottom {
   margin-top: 8px;
 }

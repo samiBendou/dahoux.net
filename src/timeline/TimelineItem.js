@@ -19,9 +19,10 @@ export default class TimelineItem extends Component {
 
     render() {
         const props = this.props, showText = this.state.showText;
+        const onClick = this.onClick;
         return (
             <div className="timeline-item">
-                <div className="timeline-item-content">
+                <div className={`timeline-item-content ${showText ? "show" : ""}`}>
                     <span className={`timeline-tag ${TimelineCategory[props.category].toLowerCase()}`}>
                         {TimelineCategory[props.category]}
                     </span>
@@ -30,7 +31,7 @@ export default class TimelineItem extends Component {
                     <LocationText location={props.location} county={false}/>
                     <CompanyText url={props.company.url} name={props.company.name}/>
                     <CollapseText
-                        onClick={this.onClick}
+                        onClick={onClick}
                         showText={showText}
                         brief={props.brief}
                         items={props.items}
