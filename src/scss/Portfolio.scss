@@ -20,6 +20,14 @@
     background-color: $theme-tag-yellow;
   }
 
+  .web {
+    background-color: $theme-tag-pink;
+  }
+
+  .design {
+    background-color: $theme-tag-green;
+  }
+
   .portfolio-item-show & {
     flex-grow: 10;
   }
@@ -34,7 +42,7 @@
   border-radius: 10px;
   color: white;
   padding: 4px;
-  background-color: $theme-gray-900;
+  background-color: $theme-gray-700;
 }
 
 .portfolio-container {

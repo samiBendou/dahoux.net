@@ -26,7 +26,7 @@ export default class PortfolioItem extends Component {
                     </span>
                 ))}
                 <p><DateText start={props.start} end={props.end}/></p>
-                <p>{props.brief}</p>
+                <p className="portfolio-text">{props.brief}</p>
                 <CollapseText onClick={onClick} showText={showText} brief={""} items={props.items} after/>
             </div>
         );
