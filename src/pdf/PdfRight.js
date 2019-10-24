@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     },
 
     section: {
-        margin: "16px, 8px, 16px, 8px",
+        margin: "8px",
         padding: 0,
         textAlign: "left"
     },

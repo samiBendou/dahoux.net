@@ -54,11 +54,10 @@
 
 .portfolio-item {
   margin: 24px;
-  padding: 24px 12px 24px 12px;
+  padding: 16px;
   background-color: $theme-gray-300;
   border-radius: 10px;
   flex-basis: 40%;
-  min-height: 240px;
   flex-grow: 1;
 }
 
