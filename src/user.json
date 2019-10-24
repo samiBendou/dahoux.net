@@ -90,9 +90,9 @@
         "tags": [
           "web",
           "design",
-          "react"
+          "react.js"
         ],
-        "title": "portfolio",
+        "title": "dahoux.net",
         "brief": "Present my resume and projects. This site is a way for me to discover new technologies of web development and to challenge myself designing new code architectures and UX.",
         "items": [
           "Front-end with React.js and Bootstrap",
@@ -100,7 +100,7 @@
           "Reusable open-source code"
         ],
         "start": "2017-10-02T00:00:00Z",
-        "url": "#"
+        "url": "https://github.com/samiBendou/dahoux.net"
       },
       {
         "tags": [
@@ -117,7 +117,7 @@
         ],
         "start": "2017-11-02T00:00:00Z",
         "end": "2017-11-04T00:00:00Z",
-        "url": "#"
+        "url": "https://www.swaixmarseille.fr/"
       },
       {
         "tags": [
@@ -244,149 +244,179 @@
     "skills": [
       {
         "category": 0,
+        "label": "MS Office",
+        "level": 9
+      },
+      {
+        "category": 0,
+        "label": "Altassian/Jira",
+        "level": 8
+      },
+      {
+        "category": 0,
+        "label": "Windows",
+        "level": 7
+      },
+      {
+        "category": 0,
+        "label": "Mac/Linux",
+        "level": 8
+      },
+      {
+        "category": 0,
+        "label": "Git",
+        "level": 8
+      },
+      {
+        "category": 0,
+        "label": "Jetbrains IDE",
+        "level": 7
+      },
+      {
+        "category": 1,
         "label": "HTML/CSS",
         "level": 8
       },
       {
-        "category": 0,
+        "category": 1,
         "label": "Python/Numpy",
         "level": 9
       },
       {
-        "category": 0,
+        "category": 1,
         "label": "Javascript/Node.js",
         "level": 9
       },
       {
-        "category": 0,
+        "category": 1,
         "label": "C/C++",
         "level": 9
       },
       {
-        "category": 0,
+        "category": 1,
         "label": "Java",
         "level": 8
       },
       {
-        "category": 0,
+        "category": 1,
         "label": "Swift",
         "level": 7
       },
       {
-        "category": 0,
+        "category": 1,
         "label": "Bash",
         "level": 7
       },
       {
-        "category": 1,
+        "category": 2,
         "label": "VHDL/AMS",
         "level": 8
       },
       {
-        "category": 1,
+        "category": 2,
         "label": "Virtuoso/Spectre",
         "level": 7
       },
       {
-        "category": 1,
+        "category": 2,
         "label": "Vivado",
         "level": 7
       },
       {
-        "category": 1,
+        "category": 2,
         "label": "Modelsim",
         "level": 7
       },
       {
-        "category": 1,
+        "category": 2,
         "label": "System Vision",
         "level": 6
       },
       {
-        "category": 2,
+        "category": 3,
         "label": "Project Management",
         "level": 7
       },
       {
-        "category": 2,
+        "category": 3,
         "label": "Software Development",
         "level": 9
       },
       {
-        "category": 2,
+        "category": 3,
         "label": "Numerical Simulation",
         "level": 6
       },
       {
-        "category": 2,
+        "category": 3,
         "label": "IC manufacturing",
         "level": 8
       },
       {
-        "category": 2,
+        "category": 3,
         "label": "Image Processing",
         "level": 8
       },
       {
-        "category": 2,
+        "category": 3,
         "label": "Embedded Systems",
         "level": 7
       },
       {
-        "category": 2,
+        "category": 3,
         "label": "Machine Learning",
         "level": 7
       },
       {
-        "category": 3,
+        "category": 4,
         "label": "Management",
         "level": 7
       },
       {
-        "category": 3,
+        "category": 4,
         "label": "Communication",
         "level": 7
       },
       {
-        "category": 4,
+        "category": 5,
         "label": "French",
         "level": 10,
-        "mention" : "native"
+        "mention": "native"
       },
       {
-        "category": 4,
+        "category": 5,
         "label": "English",
         "level": 8,
         "mention": "TOIEC 890"
       },
       {
-        "category": 4,
+        "category": 5,
         "label": "Spanish",
         "level": 6,
         "mention": "elementary"
       },
       {
-        "category": 5,
+        "category": 6,
         "label": "Running",
         "level": 0
       },
       {
-        "category": 5,
+        "category": 6,
         "label": "Guitar/Piano",
         "level": 0
       },
       {
-        "category": 5,
+        "category": 6,
         "label": "Music production",
         "level": 0
       },
       {
-        "category": 5,
+        "category": 6,
         "label": "Graphics arts",
         "level": 0
       },
       {
-        "category": 5,
+        "category": 6,
         "label": "Photography",
         "level": 0
       }
