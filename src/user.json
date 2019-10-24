@@ -126,7 +126,7 @@
           "three.js"
         ],
         "title": "stellar system",
-        "brief": "3D interactive animation that represent the movement of stellar systems. Reproduces the behavior of planets and stars under gravity.",
+        "brief": "3D interactive animation that represents the movement of stellar systems. Reproduces the behavior of planets and stars under gravity.",
         "items": [
           "Realistic real-time simulation",
           "Data model to represent the state of a stellar body",
@@ -203,7 +203,7 @@
         "title": "Software Engineer",
         "brief": "Validation test bench of automated microscopes.",
         "items": [
-          "Measurement processing to validate stage displacement",
+          "Measurement processing to validate the behaviour of stage and lenses",
           "Remote iPhone application to drive the microscope stage",
           "Validation application to run go/nogo tests and visualize the results"
         ],
