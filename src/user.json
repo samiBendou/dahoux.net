@@ -40,7 +40,7 @@
           "typescript"
         ],
         "title": "meca3",
-        "brief": "Particles animations with realistic behavior. This project has been designed for academics that would explain or popularize their results in a web page.",
+        "brief": "Particles animations with realistic behavior. This project has been designed for academics that would like to explain or popularize their results with a 3D animation.",
         "items": [
           "Physics engine for arbitrarily complex particles systems",
           "Complete API with documentation and examples",
@@ -78,6 +78,7 @@
         "title": "aeshdl",
         "brief": "Hardware accelerator that implements AES algorithm. This component is designed to be integrable in a FPGA device to process ciphers faster than with a CPU.",
         "items": [
+          "Encryption and Decryption",
           "Designed to be fully synthetizable",
           "Optimized in execution time",
           "Fully tested behavior"
@@ -94,8 +95,8 @@
         "title": "portfolio",
         "brief": "Present my resume and projects. This site is a way for me to discover new technologies of web development and to challenge myself designing new code architectures and UX.",
         "items": [
-          "Front-end made with React.js and Bootstrap",
-          "Back-end initially made with Django then switched to a full JS implementation",
+          "Front-end with React.js and Bootstrap",
+          "Back-end with Django then full JS",
           "Reusable open-source code"
         ],
         "start": "2017-10-02T00:00:00Z",
@@ -224,8 +225,8 @@
         "items": [
           "Integration of a Prestashop payment solution",
           "Continuous improvement, client and merchant relations",
-          "Design and automation of fraud management",
-          "Design of integration tests and operational processes"
+          "Design of fraud management rules and automation",
+          "Design of tests and processes for operations"
         ],
         "start": "2019-03-04T00:00:00Z",
         "end": "2019-06-26T00:00:00Z",
