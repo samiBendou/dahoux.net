@@ -4,6 +4,7 @@ import {Button, Collapse} from "react-bootstrap";
 import '../scss/Skills.scss';
 import SkillsAccordion from "./SkillsAccordion";
 import {FaWrench} from "react-icons/fa";
+import SkillsCategory from "./SkillsCategory";
 
 export default class Skills extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ export default class Skills extends Component {
             <div id="skills" style={{textAlign: "center"}}>
                 <h1 className="text-header"><FaWrench style={{verticalAlign: "top"}}/>  Skills</h1>
                 <div className="skills-best">
-                    <SkillsList items={items.filter(item => item.category === 2)} count={4} showScale/>
+                    <SkillsList items={items.filter(item => SkillsCategory[item.category] === "Industry Knowledge")} count={4} showScale/>
                 </div>
                 <Button
                     className="skills-more"

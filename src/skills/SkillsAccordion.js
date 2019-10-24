@@ -12,7 +12,7 @@ const SkillsAccordion = (props) => {
     return (
         <Accordion className="skills-accordion-cards">
             {
-                categories.map((category, index) => category < 5 ? (
+                categories.map((category, index) => category < 6 ? (
                     <Card className="skills-accordion-card" key={category}>
                         <div>
                             <Accordion.Toggle as={Button} variant="link" eventKey={index.toString()}>
