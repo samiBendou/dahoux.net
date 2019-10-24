@@ -2,8 +2,6 @@
 @import 'colors.scss';
 
 $backgroundColor: $theme-gray-900;
-$labelColor: $light;
-$levelColor: $white;
 
 .skills-button {
   margin-bottom: 0;
@@ -35,7 +33,7 @@ $levelColor: $white;
   text-align: left;
   border-radius: inherit;
   border-style: none;
-  color: $labelColor;
+  color: white;
   background-color: $backgroundColor;
 }
 

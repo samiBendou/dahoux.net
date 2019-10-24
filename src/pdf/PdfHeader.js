@@ -17,11 +17,13 @@ const styles = StyleSheet.create({
     quote: {
         fontSize: "24pt",
         marginBottom: 4,
+        color: "#656A73"
     },
 
     description: {
-        marginTop: 18,
-        marginLeft: 0,
+        marginTop: 8,
+        marginBottom: 8,
+        marginLeft: 12,
         fontFamily: "Helvetica-Oblique",
         fontSize: "14pt",
         width: "65%",
@@ -46,9 +48,9 @@ const styles = StyleSheet.create({
 const PdfHeader = (props) => (
     <View style={styles.pdfHeader}>
         <View style={styles.section}>
-            <Image src={props.data.urls.picture} style={{width: 124}}/>
+            <Image src={props.data.urls.thumbnail} style={{width: 150}}/>
         </View>
-        <View style={{...styles.section, paddingLeft: 38, paddingTop: 12}}>
+        <View style={{...styles.section, paddingLeft: 12, paddingTop: 12}}>
             <Text style={styles.name}>{props.data.firstName} {props.data.lastName}</Text>
             <Text style={styles.quote}>{props.data.quote}</Text>
             <Text style={styles.other}> {renderLocationText(props.data.location, true)}</Text>
