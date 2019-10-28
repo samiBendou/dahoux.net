@@ -20,11 +20,13 @@ export default class PortfolioItem extends Component {
         return (
             <div className={`portfolio-item ${showText ? "show" : ""}`}>
                 <h4><a href={props.url}><FaExternalLinkAlt style={{verticalAlign: "top"}}/></a> {props.title}</h4>
-                {props.tags.map(tag => (
-                    <span className={`portfolio-tag ${tag}`} key={tag}>
+                <div style={{display: "flex", flexWrap: "wrap"}}>
+                    {props.tags.map(tag => (
+                        <div className={`portfolio-tag ${tag}`} key={tag}>
                         {tag}
-                    </span>
-                ))}
+                    </div>
+                    ))}
+                </div>
                 <p><DateText start={props.start} end={props.end}/></p>
                 <p className="portfolio-text">{props.brief}</p>
                 <CollapseText onClick={onClick} showText={showText} brief={""} items={props.items} after/>
