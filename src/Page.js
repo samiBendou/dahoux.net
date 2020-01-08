@@ -16,7 +16,7 @@ const Page = (props) => (
             <Portfolio items={props.data.items.portfolio}/>
             <Timeline items={props.data.items.timeline}/>
             <Contact mail={props.data.mail}/>
-            <h6 className="copyright-text">© Sami Dahoux 2019, All Rights Reserved</h6>
+            <h6 className="copyright-text">© Sami Dahoux 2020, All Rights Reserved</h6>
         </Container>
     </div>
 );

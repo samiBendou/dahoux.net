@@ -41,7 +41,8 @@
           "typescript"
         ],
         "title": "meca3",
-        "brief": "Particles animations with realistic behavior. This project has been designed for academics that would like to explain or popularize their results with a 3D animation.",
+        "brief": "Physics engine with realistic behavior. This project has been designed for academics that would like to explain or popularize their results with a 3D animation. It can also be used to design realistic video games",
+
         "items": [
           "Physics engine for arbitrarily complex particles systems",
           "Complete API with documentation and examples",
@@ -295,6 +296,11 @@
       },
       {
         "category": 1,
+        "label": "Rust",
+        "level": 7
+      },
+      {
+        "category": 1,
         "label": "Java",
         "level": 8
       },
@@ -346,12 +352,17 @@
       {
         "category": 3,
         "label": "Numerical Simulation",
-        "level": 6
+        "level": 8
+      },
+      {
+        "category": 3,
+        "label": "Machine Learning",
+        "level": 8
       },
       {
         "category": 3,
         "label": "IC manufacturing",
-        "level": 8
+        "level": 6
       },
       {
         "category": 3,
@@ -361,11 +372,6 @@
       {
         "category": 3,
         "label": "Embedded Systems",
-        "level": 7
-      },
-      {
-        "category": 3,
-        "label": "Machine Learning",
         "level": 7
       },
       {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Link, StyleSheet, Text, View} from "@react-pdf/renderer";
+import {Image, Link, StyleSheet, Text, View} from "@react-pdf/renderer";
 import {renderLocationText} from "../common/core/location";
 
 const styles = StyleSheet.create({
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
 const PdfHeader = (props) => (
     <View style={styles.pdfHeader}>
         <View style={styles.section}>
+            <Image src={props.data.urls.thumbnail} style={{width: 140}}/>
         </View>
         <View style={{...styles.section, paddingLeft: 12, paddingTop: 12}}>
             <Text style={styles.name}>{props.data.firstName} {props.data.lastName}</Text>
