@@ -12,13 +12,13 @@ const styles = StyleSheet.create({
     },
 
     section: {
-        margin: "12px",
+        margin: "8px",
         padding: 0,
         textAlign: "left"
     },
 
     header: {
-        fontSize: "20pt",
+        fontSize: "18pt",
         fontFamily: "Helvetica-Bold"
     }
 });

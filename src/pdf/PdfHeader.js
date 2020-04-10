@@ -9,13 +9,13 @@ const styles = StyleSheet.create({
     },
 
     name: {
-        fontSize: "28pt",
+        fontSize: "24pt",
         marginBottom: 2,
         fontFamily: "Helvetica-Bold"
     },
 
     quote: {
-        fontSize: "24pt",
+        fontSize: "14pt",
         marginBottom: 4,
         color: "#656A73"
     },

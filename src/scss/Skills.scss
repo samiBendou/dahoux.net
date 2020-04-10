@@ -35,6 +35,9 @@ $backgroundColor: $theme-gray-900;
   border-style: none;
   color: white;
   background-color: $backgroundColor;
+  h6 {
+    font-size: 16pt;
+  }
 }
 
 .card.skills-accordion-card {

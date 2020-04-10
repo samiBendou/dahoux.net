@@ -21,7 +21,7 @@ export default class AboutText extends Component {
                     <LocationText location={data.location} county={true}/>
                 </div>
 
-                <div className="about-list">
+                <div className="about-list" id="inner-about-list">
                     <AboutList items={data.items.about}/>
                 </div>
 

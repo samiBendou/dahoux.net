@@ -3,7 +3,7 @@
 
 #portfolio {
   p {
-    margin-bottom: 0;
+    margin-bottom: 2px;
   }
 
   time {
@@ -12,20 +12,16 @@
     font-weight: bold;
   }
 
-  .framework {
+  .application, .simulator, .game {
     background-color: $theme-tag-blue;
   }
 
-  .ip {
-    background-color: $theme-tag-yellow;
+  .ip, .library {
+    background-color: $theme-tag-green;
   }
 
   .web {
     background-color: $theme-tag-pink;
-  }
-
-  .design {
-    background-color: $theme-tag-green;
   }
 
   .portfolio-item-show & {
@@ -54,14 +50,30 @@
 }
 
 .portfolio-item {
-  margin: 24px;
+  margin: 24px 0 24px 24px;
   padding: 16px;
   background-color: $theme-gray-300;
   border-radius: 10px;
-  flex-basis: 40%;
   flex-grow: 1;
 }
 
+@media only screen and (max-width: 768px) {
+  .portfolio-item {
+    flex-basis: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio-item {
+    flex-basis: 40%;
+  }
+}
+
+
 .portfolio-bottom {
   margin-top: 8px;
+}
+
+.portfolio-text {
+  font-style: italic;
 }

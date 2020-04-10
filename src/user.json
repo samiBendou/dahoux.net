@@ -2,12 +2,12 @@
   "lastName": "Dahoux",
   "firstName": "Sami",
   "birthday": "1995-07-09T00:00:00Z",
-  "quote": "Third-Year Engineering Student",
-  "brief": "After 3 years at Mines St-Etienne engineering school rich of projects and experiences, I specialized in computer science, microelectronics and developed project management skills. Today I would like to answer to technical challenges by bringing creative and well thought out solutions.",
-  "description": "Highly motivated student looking for an internship abroad from April to August 2020",
+  "quote": "Engineering Student",
+  "brief": "After 3 years at Mines St-Etienne engineering school rich of projects and experiences, I would like to meet today's societal challenges by participating to innovative and responsible technical answers.",
+  "description": "Highly motivated student looking for an internship abroad from May to September 2020",
   "location": {
     "country": "FR",
-    "zip": "13120"
+    "zip": "75019"
   },
   "urls": {
     "portfolio": "http://dahoux.net",
@@ -22,31 +22,30 @@
     "about": [
       {
         "title": "Dynamic",
-        "text": "Like to be pro-active and contribute"
+        "text": "Pro-active and work-enthusiast"
       },
       {
-        "title": "Rigorous",
-        "text": "Detail-oriented and stimulated by qualitative work"
+        "title": "Adaptable",
+        "text": "Love team work and eager to learn"
       },
       {
         "title": "Persistent",
-        "text": "Carried out many challenging technical projects"
+        "text": "Love to be challenged"
       }
     ],
     "portfolio": [
       {
         "tags": [
-          "framework",
-          "mechanics",
-          "typescript"
+          "library",
+          "typescript",
+          "npm"
         ],
         "title": "meca3",
-        "brief": "Physics engine with realistic behavior. This project has been designed for academics that would like to explain or popularize their results with a 3D animation. It can also be used to design realistic video games",
-
+        "brief": "Physics engine for web browsers",
         "items": [
-          "Physics engine for arbitrarily complex particles systems",
-          "Complete API with documentation and examples",
-          "Continuous integration and testing pipelines"
+          "Library with documentation and examples",
+          "Simulate dynamics of n-body systems",
+          "Over than 500 downloads"
         ],
         "start": "2019-06-30T00:00:00Z",
         "end": "2019-08-30T00:00:00Z",
@@ -54,100 +53,64 @@
       },
       {
         "tags": [
-          "framework",
-          "finance",
-          "numpy"
+          "application",
+          "rust",
+          "piston"
+        ],
+        "title": "nbody",
+        "brief": "Simulation of gravity among a stellar system",
+        "items": [
+          "Mini-game interface",
+          "Physics engine for n-body systems",
+          "Basic 3D graphics engine",
+          "Physics related features"
+        ],
+        "start": "2019-12-15T00:00:00Z",
+        "end": "2020-02-15T00:00:00Z",
+        "url": "https://github.com/samiBendou/nbodies"
+      },
+      {
+        "tags": [
+          "application",
+          "numpy",
+          "scipy"
         ],
         "title": "am_scripts",
-        "brief": "Accounting, strategic planning and purchases management for the game Airlines-Manager 2. The project helps players that would need more precise KPIs to manage their company.",
+        "brief": "Bot for the game Airlines-Manager 2",
         "items": [
           "Financial accounting and previsions",
-          "Data visualization with numpy",
-          "Scrapping interface to fetch airline and game data",
-          "Simple solver to find best purchase strategy",
-          "Simple scheduler for low-cost airlines"
+          "Market studies and previsions",
+          "Purchases decision support tool",
+          "Basic flight scheduler"
         ],
         "start": "2019-02-02T00:00:00Z",
-        "end": "2019-03-02T00:00:00Z",
+        "end": "2019-04-02T00:00:00Z",
         "url": "https://github.com/samiBendou/am_scripts"
       },
       {
         "tags": [
-          "ip",
-          "cryptography",
-          "vhdl"
-        ],
-        "title": "aeshdl",
-        "brief": "Hardware accelerator that implements AES algorithm. This component is designed to be integrable in a FPGA device to process ciphers faster than with a CPU.",
-        "items": [
-          "Encryption and Decryption",
-          "Designed to be fully synthetizable",
-          "Optimized in execution time",
-          "Fully tested behavior"
-        ],
-        "start": "2019-10-02T00:00:00Z",
-        "url": "https://github.com/samiBendou/AES_VHDL"
-      },
-      {
-        "tags": [
           "web",
-          "design",
           "react.js"
         ],
         "title": "dahoux.net",
-        "brief": "Present my resume and projects. This site is a way for me to discover new technologies of web development and to challenge myself designing new code architectures and UX.",
+        "brief": "Customizable portfolio website",
         "items": [
-          "Front-end with React.js and Bootstrap",
-          "Back-end with Django then full JS",
-          "Reusable open-source code"
+          "Use a file to encode user's resume",
+          "Generate a website similar to this one"
         ],
         "start": "2017-10-02T00:00:00Z",
         "url": "https://github.com/samiBendou/dahoux.net"
-      },
-      {
-        "tags": [
-          "web",
-          "design",
-          "startup"
-        ],
-        "title": "easy summer",
-        "brief": "E-shop that ease the purchase of school supplies. Search supplies according to your school and class. Project proposed during the Startup Weekend Aix-Marseille. ",
-        "items": [
-          "Business plan and roll-out strategy",
-          "Advises from experts of various domains",
-          "UI/UX design of the shop"
-        ],
-        "start": "2017-11-02T00:00:00Z",
-        "end": "2017-11-04T00:00:00Z",
-        "url": "https://www.swaixmarseille.fr/"
-      },
-      {
-        "tags": [
-          "web",
-          "astronomy",
-          "three.js"
-        ],
-        "title": "stellar system",
-        "brief": "3D interactive animation that represents the movement of stellar systems. Reproduces the behavior of planets and stars under gravity.",
-        "items": [
-          "Realistic real-time simulation",
-          "Data model to represent the state of a stellar body",
-          "Rendering with Three.js"
-        ],
-        "start": "2018-01-01T00:00:00Z",
-        "end": "2018-02-01T00:00:00Z",
-        "url": "https://samibendou.github.io/NBodiesSolver/"
       }
     ],
     "timeline": [
       {
         "title": "Engineering Student",
-        "brief": "Microelectronics, Computer Science and Embedded Systems.",
+        "brief": "Microelectronics, computer science and embedded systems engineers",
         "items": [
-          "Scientific and technical knowledge",
-          "Management and Strategic Management",
-          "Majoring in Microelectronics Design",
-          "Various associative activities"
+          "Acquisition of advanced scientific knowledge and technical skills",
+          "Learning skills in business, team and project management",
+          "IT and supply chain option",
+          "Majoring in microelectronics design"
         ],
         "start": "2016-09-02T00:00:00Z",
         "end": "2020-09-02T00:00:00Z",
@@ -163,10 +126,10 @@
       },
       {
         "title": "Intensive Preparatory Classes",
-        "brief": "Competitive exam for admission to top French “Grandes Écoles”.",
+        "brief": "Participation in competitive exam for admission to top French “Grandes Écoles”",
         "items": [
-          "Mathematics, Physics and Engineering",
-          "Fundamental sciences, general technical knowledge"
+          "Acquisition of scientific and technical knowledge",
+          "Specialized in mathematics, physics and engineering"
         ],
         "start": "2014-09-02T00:00:00Z",
         "end": "2016-07-02T00:00:00Z",
@@ -181,19 +144,19 @@
         }
       },
       {
-        "title": "Software Engineer",
-        "brief": "Scientific Computation frameworks, freelance.",
+        "title": "Open-Source Developer",
+        "brief": "Self-initiative projects on the subjects of scientific simulation and video-games",
         "items": [
-          "Object Oriented APIs for data processing",
-          "Real time 3D web rendering for simulation",
-          "Continuous integration pipelines and testing",
-          "Open-Source development and version control"
+          "Develop code libraries and demo games",
+          "Acquire advanced scientific knowledge",
+          "Lead agile software development projects",
+          "Ensure quality of code with CI and VCS"
         ],
         "start": "2017-09-02T00:00:00Z",
-        "end": "2019-10-02T00:00:00Z",
+        "end": "2020-02-02T00:00:00Z",
         "location": {
           "country": "FR",
-          "zip": "13120"
+          "zip": "75019"
         },
         "category": 0,
         "company": {
@@ -203,11 +166,12 @@
       },
       {
         "title": "Software Engineer",
-        "brief": "Validation test bench of automated microscopes.",
+        "brief": "Academic project, team of three autonomous students during the whole project",
         "items": [
-          "Measurement processing to validate the behaviour of stage and lenses",
-          "Remote iPhone application to drive the microscope stage",
-          "Validation application to run go/nogo tests and visualize the results"
+          "Design a quality test for AI driven microscopes",
+          "Establish requirements, budget and planning",
+          "Contribute to management and client relation",
+          "Develop an iPhone application to the perform tests"
         ],
         "start": "2018-01-02T00:00:00Z",
         "end": "2018-08-17T00:00:00Z",
@@ -223,12 +187,13 @@
       },
       {
         "title": "Project Manager Operations",
-        "brief": "Agile technical project management internship.",
+        "brief": "Internship, responsible for the integration of a payment solution at e-merchants",
         "items": [
-          "Integration of a Prestashop payment solution",
-          "Continuous improvement, client and merchant relations",
-          "Design of fraud management rules and automation",
-          "Design of tests and processes for operations"
+          "Manage integration projects lasting from one week to one month",
+          "Lead merchant relation and end-user support",
+          "Contribute continuous improvement of the operations",
+          "Contribute to product road map",
+          "Develop procedures to improve payment fraud resistance"
         ],
         "start": "2019-03-04T00:00:00Z",
         "end": "2019-06-26T00:00:00Z",
@@ -251,58 +216,78 @@
       },
       {
         "category": 0,
-        "label": "Altassian/Jira",
-        "level": 8
+        "label": "CPLEX",
+        "level": 6
       },
       {
         "category": 0,
-        "label": "Windows",
+        "label": "Unity",
         "level": 7
       },
       {
         "category": 0,
-        "label": "Mac/Linux",
+        "label": "Jira / Trello",
         "level": 8
       },
       {
         "category": 0,
-        "label": "Git",
+        "label": "Mac / Linux / Windows",
         "level": 8
       },
       {
         "category": 0,
-        "label": "Jetbrains IDE",
+        "label": "GitHub",
+        "level": 8
+      },
+      {
+        "category": 0,
+        "label": "Travis-CI / Codecov",
+        "level": 6
+      },
+      {
+        "category": 0,
+        "label": "Jetbrains / VSCode",
+        "level": 7
+      },
+      {
+        "category": 0,
+        "label": "CloudKit / MongoDB",
+        "level": 6
+      },
+      {
+        "category": 1,
+        "label": "VBA",
         "level": 7
       },
       {
         "category": 1,
-        "label": "HTML/CSS",
-        "level": 8
-      },
-      {
-        "category": 1,
-        "label": "Python/Numpy",
+        "label": "Python",
         "level": 9
       },
       {
         "category": 1,
-        "label": "Javascript/Node.js",
+        "label": "Javascript",
         "level": 9
       },
       {
         "category": 1,
-        "label": "C/C++",
+        "label": "C / C++ / C#",
         "level": 9
+      },
+      {
+        "category": 1,
+        "label": "Matlab",
+        "level": 6
       },
       {
         "category": 1,
         "label": "Rust",
-        "level": 7
+        "level": 8
       },
       {
         "category": 1,
         "label": "Java",
-        "level": 8
+        "level": 7
       },
       {
         "category": 1,
@@ -341,90 +326,105 @@
       },
       {
         "category": 3,
-        "label": "Project Management",
-        "level": 7
-      },
-      {
-        "category": 3,
-        "label": "Software Development",
-        "level": 9
-      },
-      {
-        "category": 3,
         "label": "Numerical Simulation",
         "level": 8
       },
       {
         "category": 3,
-        "label": "Machine Learning",
-        "level": 8
+        "label": "Image Processing",
+        "level": 7
       },
       {
         "category": 3,
-        "label": "IC manufacturing",
+        "label": "Machine Learning",
+        "level": 9
+      },
+      {
+        "category": 3,
+        "label": "Operations Research",
+        "level": 7
+      },
+      {
+        "category": 4,
+        "label": "Supply Chain",
+        "level": 8
+      },
+      {
+        "category": 4,
+        "label": "Software Development",
+        "level": 7
+      },
+      {
+        "category": 4,
+        "label": "Integrated Circuits",
         "level": 6
       },
       {
-        "category": 3,
-        "label": "Image Processing",
-        "level": 8
+        "category": 4,
+        "label": "Video Game",
+        "level": 0
       },
       {
-        "category": 3,
+        "category": 4,
+        "label": "Computer Music",
+        "level": 0
+      },
+      {
+        "category": 4,
+        "label": "Aerospace",
+        "level": 0
+      },
+      {
+        "category": 4,
         "label": "Embedded Systems",
         "level": 7
       },
       {
-        "category": 4,
+        "category": 5,
         "label": "Management",
         "level": 7
       },
       {
-        "category": 4,
+        "category": 5,
         "label": "Communication",
         "level": 7
       },
       {
-        "category": 5,
+        "category": 6,
         "label": "French",
         "level": 10,
         "mention": "native"
       },
       {
-        "category": 5,
+        "category": 6,
         "label": "English",
         "level": 8,
         "mention": "TOIEC 890"
       },
       {
-        "category": 5,
+        "category": 6,
         "label": "Spanish",
         "level": 6,
         "mention": "elementary"
       },
       {
-        "category": 6,
-        "label": "Running",
+        "category": 7,
+        "label": "Running / Swimming",
         "level": 0
       },
       {
-        "category": 6,
-        "label": "Guitar/Piano",
+        "category": 7,
+        "label": "Music",
         "level": 0
       },
       {
-        "category": 6,
-        "label": "Music production",
-        "level": 0
-      },
-      {
-        "category": 6,
-        "label": "Graphics arts",
-        "level": 0
-      },
-      {
-        "category": 6,
+        "category": 7,
         "label": "Photography",
+        "level": 0
+      },
+      {
+        "category": 7,
+        "label": "Aviation",
         "level": 0
       }
     ]

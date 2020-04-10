@@ -16,7 +16,6 @@ const CollapseText = (props) => {
     const collapse = (
         <Collapse in={props.showText}>
             <div id={props.id} className={"collapse-text"}>
-                <p>{props.brief}</p>
                 <ul>
                     {
                         props.items.map(item => (
@@ -28,6 +27,7 @@ const CollapseText = (props) => {
     );
     return (
         <div>
+            <p className="timeline-item-brief">{props.brief}</p>
             {props.after ? collapse : button}
             {props.after ? button : collapse}
 

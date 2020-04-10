@@ -8,6 +8,14 @@
   .about-picture {
     display: none;
   }
+
+  .about-text {
+    flex-basis: 100%;
+  }
+
+  #outer-about-list {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -15,19 +23,73 @@
     display: none;
   }
   .about-list, .about-icons {
-    text-align: center;
+    align-self: center;
+  }
+
+  .about-item {
+    padding: 24px;
   }
 
   .about-text {
     padding-left: 4px !important;
     padding-right: 4px !important;
     margin-top: 24px;
+    flex-basis: 100%;
+  }
+
+  #about {
+    p, h1, h2, h3, h4, h5, h6, small {
+      text-align: center;
+    }
+  }
+
+  #outer-about-list {
+    display: none;
   }
 }
 
-@media only screen and (max-width: 1279px) {
-  .about-skills {
+@media only screen and (max-width: 1024px) {
+  #outer-about-list {
     display: none;
+  }
+  #inner-about-list {
+    display: flex;
+  }
+
+  .about-icons {
+    text-align: center;
+  }
+
+  .about-item {
+    padding-right: 24px;
+  }
+
+  .about-text {
+
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #inner-about-list {
+    display: none;
+  }
+  #outer-about-list {
+    display: flex;
+    flex-basis: 70%;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: center;
+    padding-left: 32px;
+    font-size: 18pt;
+  }
+
+
+  .about-text {
+    flex-basis: 70%;
+    p, h1, h2, h3, h4, h5, h6, small {
+      text-align: right;
+    }
+
   }
 }
 
@@ -38,11 +100,11 @@
 .about-jumbotron {
   padding: 0 !important;
   border-radius: 0;
+  box-shadow: black;
 }
 
 .about-text {
   text-align: left;
-  flex-basis: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -52,6 +114,9 @@
 
 .about-misc {
   margin-top: 24px;
+  h6 {
+    font-size: 14pt;
+  }
 }
 
 .about-thumbnail {
@@ -70,5 +135,21 @@
 #about {
   small {
     color: $theme-gray-900;
+  }
+  h1 {
+    font-size: 28pt;
+    font-weight: 600;
+  }
+}
+
+#outer-about-list, #inner-about-list {
+  h5 {
+    font-style: oblique;
+    font-size: 18pt;
+    font-weight: bold;
+  }
+  p {
+    font-size: 14pt;
+    font-weight:100;
   }
 }

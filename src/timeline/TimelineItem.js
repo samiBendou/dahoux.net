@@ -36,6 +36,7 @@ export default class TimelineItem extends Component {
                         brief={props.brief}
                         items={props.items}
                         id={props.id}
+                        after={true}
                     />
                     <span className="circle"/>
                 </div>

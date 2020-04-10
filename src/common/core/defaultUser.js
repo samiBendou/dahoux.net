@@ -30,7 +30,7 @@ const defaultUser = {
                     country: "FR",
                     zip: "75001"
                 },
-                category: 0,
+                    category: 0,
                 company: {
                     url: "#",
                     name: "Name"

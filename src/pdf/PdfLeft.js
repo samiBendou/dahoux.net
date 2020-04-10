@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     },
 
     section: {
-        margin: "12px, 8px, 12px, 8px",
+        margin: "8px, 8px, 8px, 8px",
         padding: 0,
         textAlign: "left"
     },
@@ -28,7 +28,7 @@ const PdfLeft = (props) => {
     return (
         <View style={styles.pdfLeft}>
             {
-                categories.slice(1).map((category) => (
+                categories.filter(category => category !== 2 && category !== 3).map((category) => (
                     <View style={styles.section} key={category}>
                         <Text style={styles.header}>{SkillsCategory[category]}</Text>
                         <PdfSkillsList items={items.get(category)}/>

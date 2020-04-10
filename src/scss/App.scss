@@ -34,13 +34,13 @@
 }
 
 .collapse-more-text {
-  font-size: 14px;
+  font-size: 12pt;
   font-weight: bold;
 }
 
 .collapse-more::after {
   content: ' ►';
-  font-size: 12px;
+  font-size: 10pt;
 }
 
 body {
@@ -53,6 +53,18 @@ a, .btn-link{
 }
 a:hover, .btn-link:hover {
   color: $theme-marine !important;
+}
+
+p, ul, li, span {
+  font-size: 14pt;
+}
+
+.form-label {
+  font-size: 20pt;
+}
+
+.form-control {
+  font-size: 14pt!important;
 }
 
 .btn-primary {
