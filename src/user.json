@@ -3,8 +3,7 @@
   "firstName": "Sami",
   "birthday": "1995-07-09T00:00:00Z",
   "quote": "Engineering Student",
-  "brief": "After 3 years at Mines St-Etienne engineering school rich of projects and experiences, I would like to meet today's societal challenges by participating to innovative and responsible technical answers.",
-  "description": "Highly motivated student looking for an internship abroad from May to September 2020",
+  "brief": "After 3 years at Mines St-Etienne engineering school rich of projects and experiences, I would like to meet today's societal challenges by contributing to innovative and responsible technical answers.",
   "location": {
     "country": "FR",
     "zip": "75019"
@@ -26,7 +25,7 @@
       },
       {
         "title": "Adaptable",
-        "text": "Love team work and eager to learn"
+        "text": "Believe in team work and eager to learn"
       },
       {
         "title": "Persistent",
@@ -43,9 +42,9 @@
         "title": "meca3",
         "brief": "Physics engine for web browsers",
         "items": [
-          "Library with documentation and examples",
-          "Simulate dynamics of n-body systems",
-          "Over than 500 downloads"
+          "Libraries with documentation and examples",
+          "Dynamics of n-body systems",
+          "More than 500 downloads"
         ],
         "start": "2019-06-30T00:00:00Z",
         "end": "2019-08-30T00:00:00Z",
@@ -60,9 +59,9 @@
         "title": "nbody",
         "brief": "Simulation of gravity among a stellar system",
         "items": [
-          "Mini-game interface",
+          "Basic game interface",
           "Physics engine for n-body systems",
-          "Basic 3D graphics engine",
+          "Simple 3D graphics engine",
           "Physics related features"
         ],
         "start": "2019-12-15T00:00:00Z",
@@ -78,8 +77,8 @@
         "title": "am_scripts",
         "brief": "Bot for the game Airlines-Manager 2",
         "items": [
-          "Financial accounting and previsions",
-          "Market studies and previsions",
+          "Accounting, financial previsions",
+          "Market studies",
           "Purchases decision support tool",
           "Basic flight scheduler"
         ],
@@ -107,8 +106,9 @@
         "title": "Engineering Student",
         "brief": "Microelectronics, computer science and embedded systems engineers",
         "items": [
-          "Acquisition of advanced scientific knowledge and technical skills",
-          "Learning skills in business, team and project management",
+          "Acquire advanced scientific knowledge",
+          "Develop technical skills",
+          "Learn skills in business and project management",
           "IT and supply chain option",
           "Majoring in microelectronics design"
         ],
@@ -128,7 +128,7 @@
         "title": "Intensive Preparatory Classes",
         "brief": "Participation in competitive exam for admission to top French “Grandes Écoles”",
         "items": [
-          "Acquisition of scientific and technical knowledge",
+          "Learn fundamental scientific and technical knowledge",
           "Specialized in mathematics, physics and engineering"
         ],
         "start": "2014-09-02T00:00:00Z",
@@ -149,8 +149,8 @@
         "items": [
           "Develop code libraries and demo games",
           "Acquire advanced scientific knowledge",
-          "Lead agile software development projects",
-          "Ensure quality of code with CI and VCS"
+          "Lead software development projects",
+          "Maintain quality of code"
         ],
         "start": "2017-09-02T00:00:00Z",
         "end": "2020-02-02T00:00:00Z",
@@ -168,10 +168,10 @@
         "title": "Software Engineer",
         "brief": "Academic project, team of three autonomous students during the whole project",
         "items": [
-          "Design a quality test for AI driven microscopes",
+          "Design a test bench for AI driven microscopes",
           "Establish requirements, budget and planning",
           "Contribute to management and client relation",
-          "Develop an iPhone application to the perform tests"
+          "Develop an iPhone app to the perform tests"
         ],
         "start": "2018-01-02T00:00:00Z",
         "end": "2018-08-17T00:00:00Z",
@@ -189,11 +189,11 @@
         "title": "Project Manager Operations",
         "brief": "Internship, responsible for the integration of a payment solution at e-merchants",
         "items": [
-          "Manage integration projects lasting from one week to one month",
+          "Manage integration projects",
           "Lead merchant relation and end-user support",
-          "Contribute continuous improvement of the operations",
+          "Participate to operational continuous improvement",
           "Contribute to product road map",
-          "Develop procedures to improve payment fraud resistance"
+          "Develop procedures to reduce payment fraud"
         ],
         "start": "2019-03-04T00:00:00Z",
         "end": "2019-06-26T00:00:00Z",

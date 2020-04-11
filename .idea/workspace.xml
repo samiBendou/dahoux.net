@@ -1,31 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="Major UI update">
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/about/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/about/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/about/AboutItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/about/AboutItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/about/AboutText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/about/AboutText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/brief/Brief.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/brief/Brief.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/CollapseText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/CollapseText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/core/defaultUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/core/defaultUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/core/location.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/core/location.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pdf/PdfHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/PdfHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pdf/PdfLeft.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/PdfLeft.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pdf/PdfRight.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/PdfRight.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pdf/timeline/PdfTimelineItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/timeline/PdfTimelineItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/About.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/Portfolio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Portfolio.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/Skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Skills.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/Timeline.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Timeline.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skills/SkillsCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/SkillsCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline/TimelineItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeline/TimelineItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,14 +205,8 @@
       <workItem from="1585848230811" duration="727000" />
       <workItem from="1585941360747" duration="197000" />
       <workItem from="1586522870993" duration="35555000" />
-      <workItem from="1586562947503" duration="68000" />
-    </task>
-    <task id="LOCAL-00078" summary="minor fix">
-      <created>1570699339453</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1570699339453</updated>
+      <workItem from="1586562947503" duration="569000" />
+      <workItem from="1586563529350" duration="3589000" />
     </task>
     <task id="LOCAL-00079" summary="fix on date printing">
       <created>1570700842897</created>
@@ -571,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578473465878</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="Major UI update">
+      <created>1586563043249</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1586563043250</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TodoView">
@@ -627,38 +607,54 @@
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="583" y="29" key="CommitChangelistDialog2" timestamp="1586563008050">
+    <state x="552" y="179" key="#Deployment" timestamp="1586563363344">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586563008050" />
+    <state x="552" y="179" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1586563363344" />
+    <state x="552" y="179" key="#Options" timestamp="1586563399229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Options/0.0.1920.1040@0.0.1920.1040" timestamp="1586563399229" />
+    <state x="583" y="29" key="CommitChangelistDialog2" timestamp="1586567111263">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="583" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586567111263" />
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1585683299731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585683299731" />
-    <state width="1876" height="40" key="GridCell.Tab.0.bottom" timestamp="1586561918402">
+    <state width="1876" height="132" key="GridCell.Tab.0.bottom" timestamp="1586566528147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="40" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586561918402" />
-    <state width="1876" height="40" key="GridCell.Tab.0.center" timestamp="1586561918402">
+    <state width="1876" height="132" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586566528147" />
+    <state width="1876" height="132" key="GridCell.Tab.0.center" timestamp="1586566528147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="40" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586561918402" />
-    <state width="1876" height="40" key="GridCell.Tab.0.left" timestamp="1586561918402">
+    <state width="1876" height="132" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586566528147" />
+    <state width="1876" height="132" key="GridCell.Tab.0.left" timestamp="1586566528147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="40" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586561918402" />
-    <state width="1876" height="40" key="GridCell.Tab.0.right" timestamp="1586561918402">
+    <state width="1876" height="132" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586566528147" />
+    <state width="1876" height="132" key="GridCell.Tab.0.right" timestamp="1586566528147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="40" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586561918402" />
+    <state width="1876" height="132" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586566528147" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1586535044386">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1586535044386" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1586563047876">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586563047876" />
     <state x="646" y="94" width="627" height="852" key="find.popup" timestamp="1586556733527">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586556733527" />
+    <state x="830" y="419" key="publish.login" timestamp="1586563542974">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="830" y="419" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1586563542974" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1586547552901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
