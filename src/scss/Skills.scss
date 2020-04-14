@@ -20,10 +20,9 @@ $backgroundColor: $theme-gray-900;
 
 .skills-item-container {
   border-radius: 20px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: $backgroundColor;
   margin-bottom: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .skills-item {

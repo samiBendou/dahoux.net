@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="Minor cleaning">
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/Skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Skills.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skills/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/Skills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skills/SkillsItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/SkillsItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,14 +206,7 @@
       <workItem from="1586562947503" duration="569000" />
       <workItem from="1586563529350" duration="4225000" />
       <workItem from="1586687664913" duration="7871000" />
-      <workItem from="1586867808694" duration="1346000" />
-    </task>
-    <task id="LOCAL-00080" summary="improving data">
-      <created>1570700852155</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1570700852155</updated>
+      <workItem from="1586867808694" duration="1797000" />
     </task>
     <task id="LOCAL-00081" summary="improving location fetching architecture">
       <created>1570720113625</created>
@@ -554,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586567145473</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Removing skills scale">
+      <created>1586870462518</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1586870462519</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TodoView">
@@ -581,7 +578,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="code: refactor date to start in user.json" />
     <MESSAGE value="code : cleaning timeline data processing" />
     <MESSAGE value="code : cleaning sorting of skills, adding scale and changing cateogry" />
     <MESSAGE value="fix: minor fixes on skills" />
@@ -606,7 +602,8 @@
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Major UI update" />
     <MESSAGE value="Minor cleaning" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor cleaning" />
+    <MESSAGE value="Removing skills scale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing skills scale" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -618,10 +615,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#Options/0.0.1920.1040@0.0.1920.1040" timestamp="1586563399229" />
-    <state x="583" y="29" key="CommitChangelistDialog2" timestamp="1586687738466">
+    <state x="583" y="29" key="CommitChangelistDialog2" timestamp="1586870461825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586687738466" />
+    <state x="583" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586870461825" />
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1585683299731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -658,10 +655,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586867962739" />
-    <state x="830" y="419" key="publish.login" timestamp="1586729041339">
+    <state x="830" y="419" key="publish.login" timestamp="1586870478868">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="830" y="419" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1586729041339" />
+    <state x="830" y="419" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1586870478868" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1586547552901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
