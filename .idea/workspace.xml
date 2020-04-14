@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="">
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="Minor cleaning">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pdf/PdfHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/PdfHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/About.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Skills.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/Skills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/SkillsItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/SkillsItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,14 +207,9 @@
       <workItem from="1585941360747" duration="197000" />
       <workItem from="1586522870993" duration="35555000" />
       <workItem from="1586562947503" duration="569000" />
-      <workItem from="1586563529350" duration="3589000" />
-    </task>
-    <task id="LOCAL-00079" summary="fix on date printing">
-      <created>1570700842897</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1570700842897</updated>
+      <workItem from="1586563529350" duration="4225000" />
+      <workItem from="1586687664913" duration="7871000" />
+      <workItem from="1586867808694" duration="1346000" />
     </task>
     <task id="LOCAL-00080" summary="improving data">
       <created>1570700852155</created>
@@ -551,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586563043250</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Minor cleaning">
+      <created>1586567145472</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1586567145473</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TodoView">
@@ -578,7 +581,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="updating texts" />
     <MESSAGE value="code: refactor date to start in user.json" />
     <MESSAGE value="code : cleaning timeline data processing" />
     <MESSAGE value="code : cleaning sorting of skills, adding scale and changing cateogry" />
@@ -603,58 +605,63 @@
     <MESSAGE value="minor update" />
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Major UI update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Major UI update" />
+    <MESSAGE value="Minor cleaning" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor cleaning" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="179" key="#Deployment" timestamp="1586563363344">
+    <state x="552" y="179" key="#Deployment" timestamp="1586729072469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="179" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1586563363344" />
+    <state x="552" y="179" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1586729072469" />
     <state x="552" y="179" key="#Options" timestamp="1586563399229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#Options/0.0.1920.1040@0.0.1920.1040" timestamp="1586563399229" />
-    <state x="583" y="29" key="CommitChangelistDialog2" timestamp="1586567111263">
+    <state x="583" y="29" key="CommitChangelistDialog2" timestamp="1586687738466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586567111263" />
+    <state x="583" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586687738466" />
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1585683299731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585683299731" />
-    <state width="1876" height="132" key="GridCell.Tab.0.bottom" timestamp="1586566528147">
+    <state width="1876" height="471" key="GridCell.Tab.0.bottom" timestamp="1586870242417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="132" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586566528147" />
-    <state width="1876" height="132" key="GridCell.Tab.0.center" timestamp="1586566528147">
+    <state width="1876" height="471" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586870242417" />
+    <state width="1876" height="471" key="GridCell.Tab.0.center" timestamp="1586870242417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="132" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586566528147" />
-    <state width="1876" height="132" key="GridCell.Tab.0.left" timestamp="1586566528147">
+    <state width="1876" height="471" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586870242417" />
+    <state width="1876" height="471" key="GridCell.Tab.0.left" timestamp="1586870242416">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="132" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586566528147" />
-    <state width="1876" height="132" key="GridCell.Tab.0.right" timestamp="1586566528147">
+    <state width="1876" height="471" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586870242416" />
+    <state width="1876" height="471" key="GridCell.Tab.0.right" timestamp="1586870242417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="132" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586566528147" />
+    <state width="1876" height="471" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586870242417" />
+    <state x="764" y="147" key="RollbackChangesDialog" timestamp="1586870287094">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="764" y="147" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586870287094" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1586535044386">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1586535044386" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1586563047876">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1586567149779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586563047876" />
-    <state x="646" y="94" width="627" height="852" key="find.popup" timestamp="1586556733527">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586567149779" />
+    <state x="646" y="94" width="627" height="852" key="find.popup" timestamp="1586867962739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586556733527" />
-    <state x="830" y="419" key="publish.login" timestamp="1586563542974">
+    <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586867962739" />
+    <state x="830" y="419" key="publish.login" timestamp="1586729041339">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="830" y="419" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1586563542974" />
+    <state x="830" y="419" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1586729041339" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1586547552901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

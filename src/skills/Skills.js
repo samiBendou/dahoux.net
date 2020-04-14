@@ -23,7 +23,7 @@ export default class Skills extends Component {
             <div id="skills" style={{textAlign: "center"}}>
                 <h1 className="text-header"><FaWrench style={{verticalAlign: "top"}}/>  Skills</h1>
                 <div className="skills-best">
-                    <SkillsList items={items.filter(item => SkillsCategory[item.category] === "Industry Knowledge")} count={4} showScale/>
+                    <SkillsList items={items.filter(item => SkillsCategory[item.category] === "Industry Knowledge")} count={4} showScale={false}/>
                 </div>
                 <Button
                     className="skills-more"
