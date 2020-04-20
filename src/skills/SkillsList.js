@@ -18,20 +18,17 @@ export default class SkillsList extends Component {
         const filteredItems = slicedItems.filter(item => item.level > 0);
         const className = `${this.state.collapsed ? 'collapsed' : ''} ${this.state.hidden ? 'hidden' : ''}`;
 
-        let scale = <span/>;
-        if(this.props.showScale) {
-            scale = (
-                <div className="skills-scale" style={{display: "flex", flexDirection: "row"}}>
-                    <div>0</div>
-                    <div style={{flexGrow:1, textAlign: "right"}}>10</div>
-                </div>
-            );
-        }
+        let scale = (
+            <div className="skills-scale" style={{display: "flex", flexDirection: "row"}}>
+                <div>0</div>
+                <div style={{flexGrow:1, textAlign: "right"}}>10</div>
+            </div>
+        );
 
         return (
             <div className={className}>
-                {scale}
-                <div className="skills">
+                {this.props.showScale ? scale : ""}
+                <div className="skills-list">
                     {filteredItems.map((item) =>
                         <SkillsItem
                             label={item.label}
@@ -39,6 +36,7 @@ export default class SkillsList extends Component {
                             mention={item.mention}
                             type={item.type}
                             key={item.label}
+                            category={item.category}
                         />)}
                 </div>
             </div>);

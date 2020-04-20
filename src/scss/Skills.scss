@@ -3,13 +3,21 @@
 
 $backgroundColor: $theme-gray-900;
 
+.skills-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
 .skills-button {
   margin-bottom: 0;
 }
 
 .skills-more {
+  margin-top: 8px;
   border-radius: 10px !important;
-  margin-bottom: 24px;
 }
 
 .skills-scale {
@@ -20,20 +28,24 @@ $backgroundColor: $theme-gray-900;
 
 .skills-item-container {
   border-radius: 20px;
-  margin-bottom: 12px;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin: 8px;
 }
 
 .skills-item {
-  margin: -2px;
   padding: 8px;
-  padding-left: 16px !important;
   text-align: center;
   border-radius: inherit;
   border-style: none;
   color: white;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
   background-color: $backgroundColor;
+  opacity: 78%;
   h6 {
     font-size: 16pt;
   }
@@ -45,4 +57,33 @@ $backgroundColor: $theme-gray-900;
 
 .skills-accordion-cards {
   margin-top: 16px;
+}
+
+.scientific-knowledge {
+  background-color: $theme-tag-red;
+}
+
+.industry-knowledge {
+  background-color: $theme-tag-purple;
+}
+
+.tools-technologies {
+    background-color: $theme-tag-green;
+  }
+
+.computer-languages {
+  background-color: $theme-tag-blue;
+}
+
+.hardware-design {
+  background-color: $theme-tag-blue;
+}
+
+
+.hardware-design {
+  background-color: $theme-tag-blue;
+}
+
+.interpersonal-skills {
+  background-color: $theme-tag-green;
 }

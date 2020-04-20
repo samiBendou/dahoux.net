@@ -144,13 +144,13 @@
         }
       },
       {
-        "title": "Open-Source Developer",
-        "brief": "Self-initiative projects on the subjects of scientific simulation and video-games",
+        "title": "Software Engineer",
+        "brief": "Self-initiative projects on the subjects of scientific computing and computer vision",
         "items": [
-          "Develop code libraries and demo games",
-          "Acquire advanced scientific knowledge",
-          "Lead software development projects",
-          "Maintain quality of code"
+          "Design simulations from academic research papers",
+          "Follow online lectures from MIT and Stanford",
+          "Lead open-source software development projects",
+          "Develop code libraries and demo games"
         ],
         "start": "2017-09-02T00:00:00Z",
         "end": "2020-02-02T00:00:00Z",
@@ -160,8 +160,8 @@
         },
         "category": 0,
         "company": {
-          "url": "https://github.com/samiBendou",
-          "name": "samiBendou"
+          "url": "https://www.mines-stetienne.fr/",
+          "name": "Mines St-Etienne"
         }
       },
       {
@@ -352,32 +352,32 @@
       {
         "category": 4,
         "label": "Software Development",
-        "level": 7
+        "level": 9
       },
       {
         "category": 4,
         "label": "Integrated Circuits",
-        "level": 6
+        "level": 9
       },
       {
         "category": 4,
         "label": "Video Game",
-        "level": 0
+        "level": 6
       },
       {
         "category": 4,
         "label": "Computer Music",
-        "level": 0
+        "level": 6
       },
       {
         "category": 4,
         "label": "Aerospace",
-        "level": 0
+        "level": 6
       },
       {
         "category": 4,
         "label": "Embedded Systems",
-        "level": 7
+        "level": 9
       },
       {
         "category": 5,

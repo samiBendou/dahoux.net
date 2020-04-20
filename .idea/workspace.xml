@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Portfolio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Portfolio.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/Skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Skills.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/Skills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/SkillsItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/SkillsItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/SkillsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/SkillsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,14 +212,12 @@
       <workItem from="1586562947503" duration="569000" />
       <workItem from="1586563529350" duration="4225000" />
       <workItem from="1586687664913" duration="7871000" />
-      <workItem from="1586867808694" duration="1797000" />
-    </task>
-    <task id="LOCAL-00081" summary="improving location fetching architecture">
-      <created>1570720113625</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1570720113627</updated>
+      <workItem from="1586867808694" duration="2402000" />
+      <workItem from="1586945845137" duration="1174000" />
+      <workItem from="1587238078031" duration="2515000" />
+      <workItem from="1587243055060" duration="3931000" />
+      <workItem from="1587378124286" duration="1206000" />
+      <workItem from="1587389910766" duration="202000" />
     </task>
     <task id="LOCAL-00082" summary="improving location fetching architecture">
       <created>1570720416378</created>
@@ -551,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586870462519</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="Removing skills scale">
+      <created>1586870920169</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1586870920169</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TodoView">
@@ -615,30 +626,78 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#Options/0.0.1920.1040@0.0.1920.1040" timestamp="1586563399229" />
-    <state x="583" y="29" key="CommitChangelistDialog2" timestamp="1586870461825">
+    <state x="583" y="29" key="CommitChangelistDialog2" timestamp="1586870919553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586870461825" />
+    <state x="583" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586870919553" />
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1585683299731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585683299731" />
-    <state width="1876" height="471" key="GridCell.Tab.0.bottom" timestamp="1586870242417">
+    <state width="1876" height="42" key="GridCell.Tab.0.bottom" timestamp="1587389320419">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="471" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586870242417" />
-    <state width="1876" height="471" key="GridCell.Tab.0.center" timestamp="1586870242417">
+    <state width="1876" height="42" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587389320419" />
+    <state width="1876" height="42" key="GridCell.Tab.0.center" timestamp="1587389320419">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="471" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586870242417" />
-    <state width="1876" height="471" key="GridCell.Tab.0.left" timestamp="1586870242416">
+    <state width="1876" height="42" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587389320419" />
+    <state width="1876" height="42" key="GridCell.Tab.0.left" timestamp="1587389320419">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="471" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586870242416" />
-    <state width="1876" height="471" key="GridCell.Tab.0.right" timestamp="1586870242417">
+    <state width="1876" height="42" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587389320419" />
+    <state width="1876" height="42" key="GridCell.Tab.0.right" timestamp="1587389320419">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="471" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586870242417" />
+    <state width="1876" height="42" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587389320419" />
+    <state width="1876" height="272" key="GridCell.Tab.1.bottom" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
+    <state width="1876" height="272" key="GridCell.Tab.1.center" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
+    <state width="1876" height="272" key="GridCell.Tab.1.left" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
+    <state width="1876" height="272" key="GridCell.Tab.1.right" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
+    <state width="1876" height="272" key="GridCell.Tab.2.bottom" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
+    <state width="1876" height="272" key="GridCell.Tab.2.center" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
+    <state width="1876" height="272" key="GridCell.Tab.2.left" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
+    <state width="1876" height="272" key="GridCell.Tab.2.right" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
+    <state width="1876" height="272" key="GridCell.Tab.3.bottom" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
+    <state width="1876" height="272" key="GridCell.Tab.3.center" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
+    <state width="1876" height="272" key="GridCell.Tab.3.left" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
+    <state width="1876" height="272" key="GridCell.Tab.3.right" timestamp="1587250403251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="272" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587250403251" />
     <state x="764" y="147" key="RollbackChangesDialog" timestamp="1586870287094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -651,14 +710,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586567149779" />
-    <state x="646" y="94" width="627" height="852" key="find.popup" timestamp="1586867962739">
+    <state x="646" y="94" width="627" height="852" key="find.popup" timestamp="1587244522811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586867962739" />
-    <state x="830" y="419" key="publish.login" timestamp="1586870478868">
+    <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587244522811" />
+    <state x="830" y="419" key="publish.login" timestamp="1586946113698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="830" y="419" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1586870478868" />
+    <state x="830" y="419" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1586946113698" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1586547552901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -674,6 +733,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pdf/skills/PdfSkillsItem.js</url>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/skills/SkillsItem.js</url>
+          <line>8</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
