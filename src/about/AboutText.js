@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import AboutList from "./AboutList";
-import {FaEnvelope, FaFilePdf, FaGithub, FaLinkedin} from "react-icons/fa";
+import {FaFilePdf, FaGithub, FaLinkedin} from "react-icons/fa";
 import BirthdayText from "../common/BirthdayText";
 import LocationText from "../common/LocationText";
 import Pdf from "../pdf/Pdf";
@@ -28,7 +28,6 @@ export default class AboutText extends Component {
                 <h3 className="about-icons">
                     <a href={data.urls.linkedin}><FaLinkedin/></a>&nbsp;
                     <a href={data.urls.github}><FaGithub/></a>&nbsp;
-                    <a href={data.urls.contact}><FaEnvelope/></a>&nbsp;
                     <PDFDownloadLink document={<Pdf data={data}/>}
                                      fileName={`${data.lastName}_${data.firstName}_resume.pdf`}>
                         {() => <FaFilePdf/>}

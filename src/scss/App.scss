@@ -17,16 +17,18 @@
 
 .text-header {
   text-align: center;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-weight: 400 !important;
 }
 
 .text-brief {
   text-align: center;
-  line-height: 1.67;
-  padding: 24px;
+  font-size: x-large !important;
+  margin-top: 32px;
   margin-bottom: 0;
   font-weight: 400;
+  font-style: italic;
 }
 
 .collapse-more {
