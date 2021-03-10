@@ -10,7 +10,7 @@ const About = (props) => {
             <Jumbotron className="about-jumbotron">
                 <div className="about-content">
                     <div className="about-thumbnail">
-                        <img width="100%" alt="profile" src={props.data.urls.picture}/>
+                        <img width="100%" alt="profile" src={process.env.PUBLIC_URL + props.data.urls.picture}/>
                     </div>
                     <AboutText data={props.data}/>
                     <div className="about-list" id="outer-about-list">
