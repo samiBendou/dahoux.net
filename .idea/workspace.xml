@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="cleaning deployment.yml and adding homepage">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fix: hotfix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pdf/PdfHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/PdfHeader.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,9 +144,9 @@
       <item itemvalue="Node.js.scapper.js" />
       <item itemvalue="Node.js.scratch_1.js" />
       <item itemvalue="Node.js.scratch.js" />
-      <item itemvalue="npm.deploy" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="npm.predeploy" />
+      <item itemvalue="npm.deploy" />
     </list>
     <recent_temporary>
       <list>
@@ -242,20 +243,6 @@
       <workItem from="1587389910766" duration="202000" />
       <workItem from="1615374200730" duration="107000" />
       <workItem from="1615374321866" duration="2951000" />
-    </task>
-    <task id="LOCAL-00086" summary="improving data">
-      <created>1570732932365</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1570732932365</updated>
-    </task>
-    <task id="LOCAL-00087" summary="adding location in pdf">
-      <created>1570735097841</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1570735097841</updated>
     </task>
     <task id="LOCAL-00088" summary="minor changes">
       <created>1570735543233</created>
@@ -586,7 +573,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615376546526</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="fix: hotfix">
+      <created>1615380376261</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1615380376261</updated>
+    </task>
+    <task id="LOCAL-00136" summary="fix: hotfix">
+      <created>1615380406544</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1615380406544</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TodoView">
@@ -625,7 +626,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="code : implementing a mention for languages skills" />
     <MESSAGE value="fix : minor changes on timeline items" />
     <MESSAGE value="fix : minor changes on pdf header" />
     <MESSAGE value="code : adding a portfolio section" />
@@ -650,7 +650,8 @@
     <MESSAGE value="Adding npm-install to Actions" />
     <MESSAGE value="Adding bootstrap sources" />
     <MESSAGE value="cleaning deployment.yml and adding homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaning deployment.yml and adding homepage" />
+    <MESSAGE value="fix: hotfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: hotfix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
