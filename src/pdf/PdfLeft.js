@@ -28,7 +28,7 @@ const PdfLeft = (props) => {
     return (
         <View style={styles.pdfLeft}>
             {
-                categories.filter(category => category !== 2 && category !== 3).map((category) => (
+                categories.filter(category => category !== 3).map((category) => (
                     <View style={styles.section} key={category}>
                         <Text style={styles.header}>{SkillsCategory[category]}</Text>
                         <PdfSkillsList items={items.get(category)}/>

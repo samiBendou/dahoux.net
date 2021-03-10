@@ -2,37 +2,74 @@
   "lastName": "Dahoux",
   "firstName": "Sami",
   "birthday": "1995-07-09T00:00:00Z",
-  "quote": "Engineering Student",
-  "brief": "After 3 years at Mines St-Etienne engineering school rich of projects and experiences, I would like to meet today's societal challenges by contributing to innovative and responsible technical answers.",
+  "quote": "Eager to learn!",
+  "brief": "Innovative and sustainable technological answers!",
   "location": {
     "country": "FR",
     "zip": "75019"
   },
   "urls": {
-    "portfolio": "http://dahoux.net",
+    "portfolio": "https://samibendou.github.io/portfolio/",
     "github": "https://github.com/samiBendou",
-    "linkedin": "https://www.linkedin.com/in/sami-dahoux/",
-    "picture": "/static/sami2.jpg",
-    "thumbnail": "/static/sami2_pdf.jpg",
+    "linkedin": "https://www.linkedin.com/in/samidahoux/",
     "contact": "#contact"
   },
-  "mail": "sami@dahoux.net",
+  "mail": "samidahoux@gmail.com",
   "items": {
     "about": [
       {
-        "title": "Dynamic",
-        "text": "Pro-active and work-enthusiast"
+        "title": "Engineer",
+        "text": "Software, hardware and system engineering"
       },
       {
-        "title": "Adaptable",
-        "text": "Believe in team work and eager to learn"
+        "title": "Developer",
+        "text": "Open-source contributions and projects"
       },
       {
-        "title": "Persistent",
-        "text": "Love to be challenged"
+        "title": "Manager",
+        "text": "Digital project management and agile methods"
       }
     ],
     "portfolio": [
+      {
+        "tags": [
+          "application",
+          "python",
+          "c",
+          "side-channel",
+          "vhdl",
+          "fpga"
+        ],
+        "title": "SCABox",
+        "brief": "Evaluation framework for remote side-channel analysis",
+        "items": [
+          "Side-channel resilience of FPGA crypto-core",
+          "Hybrid attack bench targeting a Zybo-Z7",
+          "Embedded application to control attack flow",
+          "Remote client to launch attack and visualize result"
+        ],
+        "start": "2020-06-30T00:00:00Z",
+        "end": "2021-06-30T00:00:00Z",
+        "url": "https://emse-sas-lab.github.io/SCAbox/"
+      },
+      {
+        "tags": [
+          "library",
+          "c++",
+          "computer vision",
+          "machine learning"
+        ],
+        "title": "FaceDetection",
+        "brief": "Embedded Viola and Jones based face detector",
+        "items": [
+          "Linear algebra library",
+          "Machine learning library for classification",
+          "Open-source project for embedded devices"
+        ],
+        "start": "2018-01-30T00:00:00Z",
+        "end": "2019-01-30T00:00:00Z",
+        "url": "https://github.com/samiBendou/FaceDetection"
+      },
       {
         "tags": [
           "library",
@@ -40,15 +77,15 @@
           "npm"
         ],
         "title": "meca3",
-        "brief": "Physics engine for web browsers",
+        "brief": "Simple physics engine for web browsers",
         "items": [
           "Libraries with documentation and examples",
           "Dynamics of n-body systems",
-          "More than 500 downloads"
+          "Used for 3D animations and games"
         ],
         "start": "2019-06-30T00:00:00Z",
         "end": "2019-08-30T00:00:00Z",
-        "url": "https://github.com/samiBendou/meca3"
+        "url": "https://www.npmjs.com/package/meca3"
       },
       {
         "tags": [
@@ -57,7 +94,7 @@
           "piston"
         ],
         "title": "nbody",
-        "brief": "Simulation of gravity among a stellar system",
+        "brief": "3D simulation of n-body gravity on custom stellar systems",
         "items": [
           "Basic game interface",
           "Physics engine for n-body systems",
@@ -71,11 +108,12 @@
       {
         "tags": [
           "application",
+          "python",
           "numpy",
           "scipy"
         ],
         "title": "am_scripts",
-        "brief": "Bot for the game Airlines-Manager 2",
+        "brief": "Strategy bot for the game Airlines-Manager 2",
         "items": [
           "Accounting, financial previsions",
           "Market studies",
@@ -89,28 +127,30 @@
       {
         "tags": [
           "web",
-          "react.js"
+          "javascript",
+          "react"
         ],
-        "title": "dahoux.net",
+        "title": "portfolio",
         "brief": "Customizable portfolio website",
         "items": [
-          "Use a file to encode user's resume",
-          "Generate a website similar to this one"
+          "Use a json file to encode user's resume",
+          "Generate a website similar to this one",
+          "Generate a basic PDF resume"
         ],
         "start": "2017-10-02T00:00:00Z",
-        "url": "https://github.com/samiBendou/dahoux.net"
+        "url": "https://github.com/samiBendou/portfolio"
       }
     ],
     "timeline": [
       {
-        "title": "Engineering Student",
+        "title": "Engineering School Graduate",
         "brief": "Microelectronics, computer science and embedded systems engineers",
         "items": [
           "Acquire advanced scientific knowledge",
           "Develop technical skills",
           "Learn skills in business and project management",
-          "IT and supply chain option",
-          "Majoring in microelectronics design"
+          "Specialized in microelectronics design",
+          "Option information technology and supply chain"
         ],
         "start": "2016-09-02T00:00:00Z",
         "end": "2020-09-02T00:00:00Z",
@@ -141,6 +181,50 @@
         "company": {
           "url": "https://www.ac-paris.fr/serail/jcms/s1_942748/fr/accueil",
           "name": "Lycée Paul Valéry"
+        }
+      },
+      {
+        "title": "System Engineer",
+        "brief": "Control design on Urbalis Fluence CBTC automatic subway system",
+        "items": [
+          "Interface between signalling and software teams",
+          "Preliminary studies and design",
+          "Functional requirements specification",
+          "Functional architecture specification",
+          "Functional requirements tracking",
+          "Software development support"
+        ],
+        "start": "2020-11-15T00:00:00Z",
+        "location": {
+          "country": "FR",
+          "zip": "93400"
+        },
+        "category": 0,
+        "company": {
+          "url": "https://www.alstom.com/our-solutions/signalling/urbalis-cbtc-range-future-signalling-systems",
+          "name": "Alstom"
+        }
+      },
+      {
+        "title": "Hardware Security Engineer",
+        "brief": "Demonstration of the abilities of remote side-channel attacks on a Xilinx FPGA fabric",
+        "items": [
+          "Establish attack means available by the state of the art",
+          "Design an FPGA hybrid attack bench and a demo app",
+          "Develop the bench, the demo and the drivers",
+          "Technical and scientific documentation",
+          "Lead agile development flow"
+        ],
+        "start": "2020-06-02T00:00:00Z",
+        "end": "2020-11-02T00:00:00Z",
+        "location": {
+          "country": "FR",
+          "zip": "13120"
+        },
+        "category": 0,
+        "company": {
+          "url": "https://emse-sas-lab.github.io/SCAbox/",
+          "name": "SCABox"
         }
       },
       {
@@ -189,9 +273,10 @@
         "title": "Project Manager Operations",
         "brief": "Internship, responsible for the integration of a payment solution at e-merchants",
         "items": [
-          "Manage integration projects",
+          "Schedule integration projects",
+          "Monitor and analyze operational and product KPIs",
           "Lead merchant relation and end-user support",
-          "Participate to operational continuous improvement",
+          "Lead operational continuous improvement",
           "Contribute to product road map",
           "Develop procedures to reduce payment fraud"
         ],
@@ -222,7 +307,7 @@
       {
         "category": 0,
         "label": "Unity",
-        "level": 7
+        "level": 6
       },
       {
         "category": 0,
@@ -231,13 +316,13 @@
       },
       {
         "category": 0,
-        "label": "Mac / Linux / Windows",
+        "label": "Ubuntu / Mac / Windows",
         "level": 8
       },
       {
         "category": 0,
-        "label": "GitHub",
-        "level": 8
+        "label": "Git",
+        "level": 10
       },
       {
         "category": 0,
@@ -255,9 +340,9 @@
         "level": 6
       },
       {
-        "category": 1,
-        "label": "VBA",
-        "level": 7
+        "category": 0,
+        "label": "React",
+        "level": 6
       },
       {
         "category": 1,
@@ -271,7 +356,7 @@
       },
       {
         "category": 1,
-        "label": "C / C++ / C#",
+        "label": "C / C++",
         "level": 9
       },
       {
@@ -282,7 +367,7 @@
       {
         "category": 1,
         "label": "Rust",
-        "level": 8
+        "level": 10
       },
       {
         "category": 1,
@@ -312,7 +397,7 @@
       {
         "category": 2,
         "label": "Vivado",
-        "level": 7
+        "level": 8
       },
       {
         "category": 2,
@@ -321,8 +406,18 @@
       },
       {
         "category": 2,
-        "label": "System Vision",
+        "label": "Zybo devices",
         "level": 6
+      },
+      {
+        "category": 2,
+        "label": "STM32 microcontrollers",
+        "level": 6
+      },
+      {
+        "category": 2,
+        "label": "Vitis / SDK",
+        "level": 8
       },
       {
         "category": 3,
@@ -345,9 +440,24 @@
         "level": 7
       },
       {
-        "category": 4,
-        "label": "Supply Chain",
-        "level": 8
+        "category": 3,
+        "label": "Mathematical Modeling",
+        "level": 7
+      },
+      {
+        "category": 3,
+        "label": "Computer architecture",
+        "level": 7
+      },
+      {
+        "category": 3,
+        "label": "Microelectronics",
+        "level": 7
+      },
+      {
+        "category": 3,
+        "label": "Side-Channel",
+        "level": 7
       },
       {
         "category": 4,
@@ -361,13 +471,8 @@
       },
       {
         "category": 4,
-        "label": "Video Game",
-        "level": 6
-      },
-      {
-        "category": 4,
-        "label": "Computer Music",
-        "level": 6
+        "label": "FPGA Prototyping",
+        "level": 9
       },
       {
         "category": 4,
@@ -380,14 +485,24 @@
         "level": 9
       },
       {
-        "category": 5,
-        "label": "Management",
-        "level": 7
+        "category": 4,
+        "label": "Railway Signalling",
+        "level": 9
       },
       {
-        "category": 5,
-        "label": "Communication",
-        "level": 7
+        "category": 4,
+        "label": "System Specification",
+        "level": 9
+      },
+      {
+        "category": 4,
+        "label": "Physical Hacking",
+        "level": 8
+      },
+      {
+        "category": 4,
+        "label": "Project Management",
+        "level": 8
       },
       {
         "category": 6,
@@ -399,7 +514,7 @@
         "category": 6,
         "label": "English",
         "level": 8,
-        "mention": "TOIEC 890"
+        "mention": "fluent"
       },
       {
         "category": 6,
@@ -409,22 +524,17 @@
       },
       {
         "category": 7,
-        "label": "Running / Swimming",
+        "label": "Inline Skates",
         "level": 0
       },
       {
         "category": 7,
-        "label": "Music",
+        "label": "Music Composition",
         "level": 0
       },
       {
         "category": 7,
-        "label": "Photography",
-        "level": 0
-      },
-      {
-        "category": 7,
-        "label": "Aviation",
+        "label": "Video Games",
         "level": 0
       }
     ]

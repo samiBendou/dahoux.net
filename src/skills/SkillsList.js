@@ -28,7 +28,7 @@ export default class SkillsList extends Component {
         return (
             <div className={className}>
                 {this.props.showScale ? scale : ""}
-                <div className="skills-list">
+                <div className="skills-stack">
                     {filteredItems.map((item) =>
                         <SkillsItem
                             label={item.label}
