@@ -1,6 +1,6 @@
 const categories = [
     "Tools & Technologies",
-    "Computer Languages",
+    "Software Languages",
     "Hardware Design",
     "Scientific Knowledge",
     "Industry Knowledge",
