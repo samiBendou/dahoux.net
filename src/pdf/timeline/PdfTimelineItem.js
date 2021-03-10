@@ -6,7 +6,7 @@ import {renderLocationText} from "../../common/core/location";
 const styles = StyleSheet.create({
     title: {
         marginTop: 4,
-        fontSize: "14pt",
+        fontSize: "16pt",
         fontFamily: "Helvetica-Bold",
     },
 
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 const PdfTimelineItem = (props) => (
     <View style={{flexDirection: "col"}}>
         <Text style={styles.title}>{props.title}</Text>
-        <Text style={styles.date}>{renderDate(new Date(props.start), new Date(props.end))}</Text>
+        <Text style={styles.date}>{renderDate(new Date(props.start), props.end ? new Date(props.end) : undefined)}</Text>
         <View style={{flexDirection: "row"}}>
             <Text style={styles.company}>{props.company.name || ""} </Text>
             <Text style={styles.location}>- {renderLocationText(props.location, false)}</Text>

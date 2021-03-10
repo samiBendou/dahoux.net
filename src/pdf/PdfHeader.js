@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
         marginTop: 8,
         fontFamily: "Helvetica-Oblique",
         fontSize: "12pt",
-        textAlign: "center"
+        textAlign: "center",
+        width: "50%"
     },
 
     link: {
@@ -44,6 +45,7 @@ const styles = StyleSheet.create({
 
 const PdfHeader = (props) => (
     <View style={styles.pdfHeader}>
+
         <View style={{margin: 0, padding: 16}}>
             <Text style={styles.name}>{props.data.firstName} {props.data.lastName}</Text>
             <Text style={styles.quote}>{props.data.quote}</Text>
@@ -51,6 +53,9 @@ const PdfHeader = (props) => (
             <Text style={styles.other}>{props.data.mail}</Text>
             <Text style={styles.link}><Link
                 src={props.data.urls.portfolio}>{props.data.urls.portfolio.split("://")[1]}</Link></Text>
+        </View>
+
+        <View style={{paddingTop: 32, paddingBottom: 32}}>
             <Text style={styles.description}>“{props.data.brief}”</Text>
         </View>
     </View>);

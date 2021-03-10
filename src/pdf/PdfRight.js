@@ -1,8 +1,7 @@
 import React from "react";
 
-import {StyleSheet, Text, View} from '@react-pdf/renderer';
+import {StyleSheet, View} from '@react-pdf/renderer';
 import PdfTimelineList from "./timeline/PdfTimelineList";
-import TimelineCategory from "../timeline/TimelineCategory";
 
 const styles = StyleSheet.create({
     pdfRight: {
@@ -32,9 +31,8 @@ const PdfRight = (props) => {
     return (
         <View style={styles.pdfRight}>
             {
-                categories.map((category) => (
+                categories.filter(category => category === 0).map((category) => (
                     <View style={styles.section} key={category}>
-                        <Text style={styles.header}>{TimelineCategory[category]}</Text>
                         <PdfTimelineList items={items.get(category)}/>
                     </View>
                 ))
