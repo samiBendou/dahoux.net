@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Image, Link, StyleSheet, Text, View} from "@react-pdf/renderer";
+import {Link, StyleSheet, Text, View} from "@react-pdf/renderer";
 import {renderLocationText} from "../common/core/location";
 
 const styles = StyleSheet.create({
@@ -22,11 +22,8 @@ const styles = StyleSheet.create({
 
     description: {
         marginTop: 8,
-        marginBottom: 8,
-        marginLeft: 12,
         fontFamily: "Helvetica-Oblique",
         fontSize: "12pt",
-        width: "70%",
         textAlign: "center"
     },
 
@@ -47,10 +44,7 @@ const styles = StyleSheet.create({
 
 const PdfHeader = (props) => (
     <View style={styles.pdfHeader}>
-        <View style={styles.section}>
-            <Image src={props.data.urls.thumbnail} style={{width: 140}}/>
-        </View>
-        <View style={{...styles.section, paddingLeft: 12, paddingTop: 12}}>
+        <View style={{margin: 0, padding: 16}}>
             <Text style={styles.name}>{props.data.firstName} {props.data.lastName}</Text>
             <Text style={styles.quote}>{props.data.quote}</Text>
             <Text style={styles.other}> {renderLocationText(props.data.location, true)}</Text>
