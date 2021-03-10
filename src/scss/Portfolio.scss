@@ -12,20 +12,28 @@
     font-weight: bold;
   }
 
-  .application, .simulator, .game {
-    background-color: $theme-tag-blue;
+  .application,  .game, .web, .ip, .library, .simulator {
+    background-color: $theme-tag-red;
   }
 
-  .ip, .library {
-    background-color: $theme-tag-green;
-  }
-
-  .web {
+  .computer.vision, .machine.learning, .side-channel  {
     background-color: $theme-tag-purple;
+  }
+
+  .python, .rust, .typescript, .c\+\+, .c, .javascript {
+    background-color: $theme-tag-lemon;
+  }
+
+  .numpy, .scipy, .piston, .react, .npm, .fpga {
+    background-color: $theme-tag-orange;
   }
 
   .portfolio-item-show & {
     flex-grow: 10;
+  }
+
+  .vhdl {
+    background-color: $theme-tag-blue;
   }
 }
 

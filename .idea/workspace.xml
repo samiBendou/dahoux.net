@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fix: remove contact form">
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="remove contact form and updating user info">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contact/Contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contact/MailForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/about/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/about/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/about/AboutText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/about/AboutText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/brief/Brief.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pdf/Pdf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/Pdf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pdf/PdfHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/PdfHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pdf/PdfRight.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/PdfRight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/About.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Portfolio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Portfolio.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Skills.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Timeline.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Timeline.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/Skills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/SkillsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/SkillsList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,13 +257,6 @@
       <workItem from="1587389910766" duration="202000" />
       <workItem from="1615374200730" duration="107000" />
       <workItem from="1615374321866" duration="2951000" />
-    </task>
-    <task id="LOCAL-00092" summary="improving data">
-      <created>1570785232530</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1570785232531</updated>
     </task>
     <task id="LOCAL-00093" summary="improving data">
       <created>1571658467136</created>
@@ -589,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615392292256</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="remove contact form and updating user info">
+      <created>1615392336007</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1615392336007</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TodoView">
@@ -628,7 +640,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="code : cleaning color table" />
     <MESSAGE value="code : cleaning dates and removing width transitions" />
     <MESSAGE value="code : minor cleaning on styles" />
     <MESSAGE value="code : cleaning PDF and Portfolio style" />
@@ -653,7 +664,8 @@
     <MESSAGE value="fix: clean category choice and date display" />
     <MESSAGE value="code: removing thumbnail #4, merge #5" />
     <MESSAGE value="fix: remove contact form" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: remove contact form" />
+    <MESSAGE value="remove contact form and updating user info" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove contact form and updating user info" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -667,6 +679,12 @@
           <url>file://$PROJECT_DIR$/src/skills/SkillsItem.js</url>
           <line>8</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/skills/Skills.js</url>
+          <line>10</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -8,16 +8,28 @@ $backgroundColor: $theme-gray-900;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 12px;
+  align-items: end;
+}
+
+
+.skills-stack {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  place-content: end;
 }
 
 .skills-button {
-  margin-bottom: 0;
+  padding: 0;
+  margin: 4px !important;
 }
 
 .skills-more {
-  margin-top: 8px;
+  background-color: $backgroundColor !important;
   border-radius: 10px !important;
+  margin: 8px;
+  padding: 8px !important;
 }
 
 .skills-scale {
@@ -39,6 +51,7 @@ $backgroundColor: $theme-gray-900;
   color: white;
   height: 50px;
 
+
   display: flex;
   justify-content: center;
   align-content: center;
@@ -46,7 +59,8 @@ $backgroundColor: $theme-gray-900;
 
   background-color: $backgroundColor;
   h6 {
-    font-size: 16pt;
+    font-size: 12pt;
+    font-weight: bold;
   }
 }
 
@@ -59,19 +73,19 @@ $backgroundColor: $theme-gray-900;
 }
 
 .scientific-knowledge {
-  background-color: $theme-tag-red;
-}
-
-.industry-knowledge {
   background-color: $theme-tag-purple;
 }
 
+.industry-knowledge {
+  background-color: $theme-tag-red;
+}
+
 .tools-technologies {
-    background-color: $theme-tag-green;
+    background-color: $theme-tag-orange;
   }
 
-.computer-languages {
-  background-color: $theme-tag-blue;
+.software-languages {
+  background-color: $theme-tag-lemon;
 }
 
 .hardware-design {
@@ -84,5 +98,9 @@ $backgroundColor: $theme-gray-900;
 }
 
 .interpersonal-skills {
-  background-color: $theme-tag-green;
+  background-color: $theme-tag-orange;
+}
+
+.languages {
+  background-color: $theme-tag-lemon;
 }

@@ -13,7 +13,7 @@ const Page = (props) => (
             <Skills items={props.data.items.skills}/>
             <Portfolio items={props.data.items.portfolio}/>
             <Timeline items={props.data.items.timeline}/>
-            <p className="copyright-text">© Sami Dahoux 2021 - License on GitHub</p>
+            <p className="copyright-text">© Sami Dahoux 2021 - All Rights Reserved</p>
         </Container>
     </div>
 );

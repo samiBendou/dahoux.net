@@ -3,7 +3,7 @@
   "firstName": "Sami",
   "birthday": "1995-07-09T00:00:00Z",
   "quote": "Eager to learn!",
-  "brief": "Meet today's societal challenges by contributing to innovative and sustainable technological answers!",
+  "brief": "Innovative and sustainable technological answers!",
   "location": {
     "country": "FR",
     "zip": "75019"
@@ -35,9 +35,10 @@
         "tags": [
           "application",
           "python",
-          "hardware",
+          "c",
           "side-channel",
-          "FPGA"
+          "vhdl",
+          "fpga"
         ],
         "title": "SCABox",
         "brief": "Evaluation framework for remote side-channel analysis",
@@ -107,6 +108,7 @@
       {
         "tags": [
           "application",
+          "python",
           "numpy",
           "scipy"
         ],
@@ -125,7 +127,8 @@
       {
         "tags": [
           "web",
-          "react.js"
+          "javascript",
+          "react"
         ],
         "title": "portfolio",
         "brief": "Customizable portfolio website",
@@ -140,7 +143,7 @@
     ],
     "timeline": [
       {
-        "title": "Engineering Student",
+        "title": "Engineering School Graduate",
         "brief": "Microelectronics, computer science and embedded systems engineers",
         "items": [
           "Acquire advanced scientific knowledge",
@@ -318,7 +321,7 @@
       },
       {
         "category": 0,
-        "label": "GitHub / GitLab",
+        "label": "Git",
         "level": 10
       },
       {
@@ -438,7 +441,7 @@
       },
       {
         "category": 3,
-        "label": "System architecture",
+        "label": "Mathematical Modeling",
         "level": 7
       },
       {
@@ -448,13 +451,13 @@
       },
       {
         "category": 3,
-        "label": "Requirements Specification",
+        "label": "Microelectronics",
         "level": 7
       },
       {
-        "category": 4,
-        "label": "Supply Chain",
-        "level": 8
+        "category": 3,
+        "label": "Side-Channel",
+        "level": 7
       },
       {
         "category": 4,
@@ -483,13 +486,23 @@
       },
       {
         "category": 4,
-        "label": "Train Signalling",
+        "label": "Railway Signalling",
         "level": 9
       },
       {
         "category": 4,
-        "label": "CBTC Systems",
+        "label": "System Specification",
         "level": 9
+      },
+      {
+        "category": 4,
+        "label": "Physical Hacking",
+        "level": 8
+      },
+      {
+        "category": 4,
+        "label": "Project Management",
+        "level": 8
       },
       {
         "category": 6,

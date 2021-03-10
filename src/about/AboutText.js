@@ -16,10 +16,7 @@ export default class AboutText extends Component {
                     <small>{data.quote}</small>
                 </h1>
 
-                <div className="about-misc">
-                    <BirthdayText birthday={data.birthday}/>
-                    <LocationText location={data.location} county={true}/>
-                </div>
+
 
                 <div className="about-list" id="inner-about-list">
                     <AboutList items={data.items.about}/>
@@ -33,6 +30,11 @@ export default class AboutText extends Component {
                         {() => <FaFilePdf/>}
                     </PDFDownloadLink>
                 </h3>
+
+                <div className="about-misc">
+                    <BirthdayText birthday={data.birthday}/>
+                    <LocationText location={data.location} county={true}/>
+                </div>
             </div>
         );
     }

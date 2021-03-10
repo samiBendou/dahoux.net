@@ -1,7 +1,7 @@
 import React from "react";
 
 import {Document, Page, StyleSheet, View} from '@react-pdf/renderer';
-import PdfHeader from "./PdfHeader";
+
 import PdfLeft from "./PdfLeft";
 import PdfRight from "./PdfRight";
 // Create styles
@@ -20,10 +20,9 @@ const styles = StyleSheet.create({
 const Pdf = (props) => (
     <Document style={styles.document}>
         <Page size="A4" style={styles.page}>
-            <PdfHeader data={props.data}/>
             <View style={{flexDirection: "row"}}>
                 <PdfLeft items={props.data.items.skills}/>
-                <PdfRight items={props.data.items.timeline}/>
+                <PdfRight items={props.data.items.timeline} data={props.data}/>
             </View>
         </Page>
     </Document>);
