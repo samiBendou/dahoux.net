@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="Adding npm-install to Actions">
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="Adding bootstrap sources">
       <change beforePath="$PROJECT_DIR$/.github/workflows/deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,14 +225,7 @@
       <workItem from="1587378124286" duration="1206000" />
       <workItem from="1587389910766" duration="202000" />
       <workItem from="1615374200730" duration="107000" />
-      <workItem from="1615374321866" duration="1925000" />
-    </task>
-    <task id="LOCAL-00084" summary="improving data">
-      <created>1570732580593</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1570732580593</updated>
+      <workItem from="1615374321866" duration="2164000" />
     </task>
     <task id="LOCAL-00085" summary="improving data">
       <created>1570732802951</created>
@@ -568,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615376124159</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="Adding bootstrap sources">
+      <created>1615376345700</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1615376345700</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TodoView">
@@ -606,7 +608,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="fix: minor fixes on skills" />
     <MESSAGE value="code : implementing lists of items for timeline items" />
     <MESSAGE value="code : implementing a mention for languages skills" />
     <MESSAGE value="fix : minor changes on timeline items" />
@@ -631,7 +632,8 @@
     <MESSAGE value="Removing skills scale" />
     <MESSAGE value="Deploying via gh-pages and Actions" />
     <MESSAGE value="Adding npm-install to Actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding npm-install to Actions" />
+    <MESSAGE value="Adding bootstrap sources" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding bootstrap sources" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

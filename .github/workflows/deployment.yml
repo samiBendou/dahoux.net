@@ -7,7 +7,7 @@ on:
       - deployment
 
 jobs:
-  docs:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
         name: Dependencies fetch
         uses: bahmutov/npm-install@v1.6.0
       -
-        name: Outpuit build
+        name: Output build
         run: npm run build
       -
         name: Pages deployment
