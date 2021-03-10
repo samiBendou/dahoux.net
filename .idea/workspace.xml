@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fix: hotfix">
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fix: remove contact form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pdf/PdfHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/PdfHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contact/Contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contact/MailForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +22,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -243,34 +245,6 @@
       <workItem from="1587389910766" duration="202000" />
       <workItem from="1615374200730" duration="107000" />
       <workItem from="1615374321866" duration="2951000" />
-    </task>
-    <task id="LOCAL-00088" summary="minor changes">
-      <created>1570735543233</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1570735543233</updated>
-    </task>
-    <task id="LOCAL-00089" summary="cleaning user fetching">
-      <created>1570736333704</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1570736333704</updated>
-    </task>
-    <task id="LOCAL-00090" summary="fixes on design">
-      <created>1570741893501</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1570741893502</updated>
-    </task>
-    <task id="LOCAL-00091" summary="fixes on design">
-      <created>1570742047136</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1570742047136</updated>
     </task>
     <task id="LOCAL-00092" summary="improving data">
       <created>1570785232530</created>
@@ -587,7 +561,35 @@
       <option name="project" value="LOCAL" />
       <updated>1615380406544</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="fix: sorting by start date instead of end date">
+      <created>1615392171056</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1615392171056</updated>
+    </task>
+    <task id="LOCAL-00138" summary="fix: changing Computer Languages to Software Languages">
+      <created>1615392185458</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1615392185458</updated>
+    </task>
+    <task id="LOCAL-00139" summary="fix: clean category choice and date display">
+      <created>1615392230258</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1615392230258</updated>
+    </task>
+    <task id="LOCAL-00140" summary="code: removing thumbnail #4, merge #5">
+      <created>1615392292256</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1615392292256</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TodoView">
@@ -626,11 +628,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="fix : minor changes on timeline items" />
-    <MESSAGE value="fix : minor changes on pdf header" />
-    <MESSAGE value="code : adding a portfolio section" />
-    <MESSAGE value="code : changing color theme" />
-    <MESSAGE value="code : changing color theme and minor cleaning of Timeline" />
     <MESSAGE value="code : cleaning color table" />
     <MESSAGE value="code : cleaning dates and removing width transitions" />
     <MESSAGE value="code : minor cleaning on styles" />
@@ -651,7 +648,12 @@
     <MESSAGE value="Adding bootstrap sources" />
     <MESSAGE value="cleaning deployment.yml and adding homepage" />
     <MESSAGE value="fix: hotfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: hotfix" />
+    <MESSAGE value="fix: sorting by start date instead of end date" />
+    <MESSAGE value="fix: changing Computer Languages to Software Languages" />
+    <MESSAGE value="fix: clean category choice and date display" />
+    <MESSAGE value="code: removing thumbnail #4, merge #5" />
+    <MESSAGE value="fix: remove contact form" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: remove contact form" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
