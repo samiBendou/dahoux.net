@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="cleaning deployment.yml and adding homepage">
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fix: static and images paths must start from public directory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/about/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/about/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Skills.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +22,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -97,8 +98,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.build">
+    <configuration name="Serve" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="5000" isV8Legacy="true" restartOnDisconnect="true">
+      <option name="v8Legacy" value="true" />
+      <method v="2">
+        <option name="LaunchBrowser.Before.Run" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" url="localhost:5000" />
+      </method>
+    </configuration>
+    <configuration default="true" type="FirefoxRemoteDebugType" port="5000">
+      <method v="2" />
+    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="localhost:5000" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:5000">
       <method v="2" />
     </configuration>
     <configuration name="scapper.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="scapper.js" working-dir="$PROJECT_DIR$/src/common">
@@ -110,7 +123,17 @@
     <configuration name="scratch.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$APPLICATION_CONFIG_DIR$/scratches/scratch.js" working-dir="$PROJECT_DIR$/../../scratch">
       <method v="2" />
     </configuration>
-    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -120,17 +143,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="npm start" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="node" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="predeploy" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -140,19 +153,31 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="node" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Attach to Node.js/Chrome.Serve" />
       <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="JavaScript Debug.localhost:5000" />
       <item itemvalue="Node.js.scapper.js" />
       <item itemvalue="Node.js.scratch_1.js" />
       <item itemvalue="Node.js.scratch.js" />
-      <item itemvalue="npm.npm start" />
-      <item itemvalue="npm.predeploy" />
+      <item itemvalue="npm.build" />
       <item itemvalue="npm.deploy" />
+      <item itemvalue="npm.predeploy" />
+      <item itemvalue="npm.start" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.deploy" />
-        <item itemvalue="npm.predeploy" />
+        <item itemvalue="JavaScript Debug.localhost:5000" />
         <item itemvalue="Node.js.scratch.js" />
         <item itemvalue="Node.js.scapper.js" />
         <item itemvalue="Node.js.scratch_1.js" />
@@ -243,14 +268,8 @@
       <workItem from="1587378124286" duration="1206000" />
       <workItem from="1587389910766" duration="202000" />
       <workItem from="1615374200730" duration="107000" />
-      <workItem from="1615374321866" duration="2951000" />
-    </task>
-    <task id="LOCAL-00086" summary="improving data">
-      <created>1570732932365</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1570732932365</updated>
+      <workItem from="1615374321866" duration="4224000" />
+      <workItem from="1615378583876" duration="1080000" />
     </task>
     <task id="LOCAL-00087" summary="adding location in pdf">
       <created>1570735097841</created>
@@ -588,7 +607,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615376546526</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="fix: static and images paths must start from public directory">
+      <created>1615377329835</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1615377329835</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TodoView">
@@ -623,10 +649,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="code : implementing a mention for languages skills" />
     <MESSAGE value="fix : minor changes on timeline items" />
     <MESSAGE value="fix : minor changes on pdf header" />
     <MESSAGE value="code : adding a portfolio section" />
@@ -651,7 +677,8 @@
     <MESSAGE value="Adding npm-install to Actions" />
     <MESSAGE value="Adding bootstrap sources" />
     <MESSAGE value="cleaning deployment.yml and adding homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaning deployment.yml and adding homepage" />
+    <MESSAGE value="fix: static and images paths must start from public directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: static and images paths must start from public directory" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -665,6 +692,11 @@
           <url>file://$PROJECT_DIR$/src/skills/SkillsItem.js</url>
           <line>8</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/common/core/location.js</url>
+          <line>38</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
