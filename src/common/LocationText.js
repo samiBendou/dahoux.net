@@ -4,10 +4,10 @@ import {renderLocationText, renderLocationURL} from "./core/location";
 
 const LocationText = (props) => {
     return (
-        <h6>
-            <a href={renderLocationURL(props.location)}><FaMapMarker style={{verticalAlign: "top"}}/></a>
+        <span className="text-location">
+            <a href={renderLocationURL(props.location)}><FaMapMarker className="icon-header"/></a>
             <span> {renderLocationText(props.location, props.county)}</span>
-        </h6>);
+        </span>);
 };
 
 export default LocationText;

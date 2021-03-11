@@ -3,10 +3,10 @@ import {FaExternalLinkAlt} from "react-icons/fa";
 
 const CompanyText = (props) => {
     return (
-        <h6>
-            <a href={props.url}><FaExternalLinkAlt style={{verticalAlign: "top"}}/></a>
+        <span className="text-company">
+            <a href={props.url}><FaExternalLinkAlt className="icon-header"/></a>
             <span> {props.name}</span>
-        </h6>);
+        </span>);
 };
 
 export default CompanyText;

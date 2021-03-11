@@ -1,0 +1,34 @@
+@import 'colors.scss';
+
+.tag.application,
+.tag.game,
+.tag.web,
+.tag.ip,
+.tag.library,
+.tag.simulator {
+  background-color: $industry-knowledge-color;
+}
+
+.tag.computer-vision,
+.tag.machine-learning,
+.tag.side-channel {
+  background-color: $scientific-knowledge-color;
+}
+
+.tag.python,
+.tag.rust,
+.tag.typescript,
+.tag.c\+\+,
+.tag.c,
+.tag.javascript {
+  background-color: $software-languages-color;
+}
+
+.tag.numpy,
+.tag.scipy,
+.tag.piston,
+.tag.react,
+.tag.npm,
+.tag.fpga {
+  background-color: $tools-technologies-color;
+}

@@ -1,52 +1,17 @@
-@import 'bootstrap/bootstrap';
 @import 'colors.scss';
-
-.copyright-text {
-  text-align: center;
-  padding-bottom: 12px;
-}
-
-.loader-background {
-  background-color: $theme-gray-300;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-}
-
-.text-header {
-  text-align: center;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  font-weight: 400 !important;
-}
-
-.text-brief {
-  text-align: center;
-  font-size: x-large !important;
-  margin-top: 32px;
-  margin-bottom: 0;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.collapse-more {
-  padding: 0 !important;
-}
-
-.collapse-more-text {
-  font-size: 12pt;
-  font-weight: bold;
-}
-
-.collapse-more::after {
-  content: ' ►';
-  font-size: 10pt;
-}
 
 body {
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif !important;
+}
+
+p, li, a {
+  font-size: large;
+}
+
+
+time {
+  color: $theme-gray-700;
+  font-weight: bold;
 }
 
 a, .btn-link{
@@ -57,27 +22,32 @@ a:hover, .btn-link:hover {
   color: $theme-marine !important;
 }
 
-p, ul, li, span {
-  font-size: 14pt;
+#loader-container {
+  background-color: $theme-gray-300;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
 }
 
-.form-label {
-  font-size: 20pt;
+#copyright {
+  font-weight: normal;
+  text-align: center;
 }
 
-.form-control {
-  font-size: 14pt!important;
+.icon-header {
+  vertical-align: top;
 }
 
-.btn-primary {
-  background-color: $theme-blue !important;
-  border:none !important;
+.text-header {
+  text-align: center;
+  font-weight: 400;
+  font-size: xxx-large;
+  margin: 32px;
 }
 
-.btn-primary:hover {
-  background-color: $theme-marine !important;
+.text-location, .text-birthday, .links-bar {
+  font-weight: normal !important;
 }
 
-.jumbotron {
-  background-color: $theme-gray-300 !important;
-}

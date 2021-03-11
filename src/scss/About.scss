@@ -1,164 +1,65 @@
-@import 'bootstrap/bootstrap.scss';
 @import 'colors.scss';
 
-@media only screen and (min-width: 767px) {
-  .about-content {
-    display: block;
-  }
-  .about-picture {
-    display: none;
-  }
-
-  .about-text {
-    flex-basis: 100%;
-  }
-
-  #outer-about-list {
-    display: none;
-  }
-
-  .about-text {
-    text-align: center;
-  }
+#about-title {
+  color: $theme-gray-700;
+  font-weight: normal;
 }
 
-@media only screen and (max-width: 767px) {
-  .about-thumbnail, .about-skills {
-    display: none;
-  }
-  .about-list, .about-icons {
-    align-self: center;
-  }
-
-  .about-text {
-    text-align: center;
-  }
-
-  .about-item {
-    padding: 24px;
-  }
-
-  .about-text {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-    margin-top: 24px;
-    flex-basis: 100%;
-  }
-
-  #about {
-    p, h1, h2, h3, h4, h5, h6, small {
-      text-align: center;
-    }
-  }
-
-  #outer-about-list {
-    display: none;
-  }
+#about-name {
+  color: $theme-gray-900;
 }
 
-@media only screen and (max-width: 1024px) {
-  #outer-about-list {
-    display: none;
-  }
-  #inner-about-list {
-    display: flex;
-  }
-
-  .about-icons {
-    text-align: center;
-  }
-
-  .about-item {
-    padding-right: 24px;
-  }
-
-  .about-text {
-
-  }
+#about-quote {
+  text-align: center;
+  font-size: x-large;
+  font-weight: 400;
+  font-style: italic;
+  margin: 32px;
 }
 
-@media only screen and (min-width: 1024px) {
-  #inner-about-list {
-    display: none;
-  }
-  #outer-about-list {
-    display: flex;
-    flex-basis: 70%;
-    flex-direction: column;
-    align-items: stretch;
-    align-self: center;
-    padding-left: 8px;
-    font-size: 18pt;
-  }
-
-
-  .about-text {
-    flex-basis: 70%;
-    text-align: left;
-    padding-right: 8px;
-    p, h1, h2, h3, h4, h5, h6, small {
-      text-align: right !important;
-    }
-  }
-}
-
-.about-content {
-  display: flex;
-}
-
-.about-jumbotron {
-  border-radius: 0;
-  box-shadow: black;
-  margin-bottom: 0 !important;
-}
-
-.about-text {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  align-self: center;
-
-}
-
-.about-misc {
-  margin-top: 8px;
-  h6 {
-    font-size: 14pt;
-  }
-}
-
-.about-thumbnail {
-  text-align: right;
-  flex-shrink: 1.67;
-}
-
-
-.about-icons {
-  margin-top: 8px;
-  margin-bottom: 0px;
-}
-
-.about-head {
-  margin-bottom: 0px;
+.about-left-item, .about-right-item  {
+  margin: 0 0 16px;
 }
 
 #about {
-  small {
-    color: $theme-gray-900;
-  }
-  h1 {
-    font-size: 28pt;
-    font-weight: 600;
-  }
+  background-color: $theme-gray-300;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
 }
 
-#outer-about-list, #inner-about-list {
-  h5 {
-    font-size: 18pt;
-    font-weight: bold;
+#about-inner {
+  display: flex;
+  align-self: stretch;
+}
+
+#about-first {
+  display: flex;
+  flex-direction: column;
+  padding-right: 8px;
+  text-align: right;
+  flex-basis: 100%;
+}
+
+#about-second {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+  flex-basis: 100%;
+
+}
+
+@media only screen and (max-width: 767px) {
+  #about-first, #about-second {
+    text-align: center;
   }
-  p {
-    font-size: 14pt;
-    font-weight:100;
+
+  #about-inner {
+    flex-direction: column;
+  }
+
+  #about-second {
+    flex-direction: row;
   }
 }

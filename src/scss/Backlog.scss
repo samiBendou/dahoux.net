@@ -1,0 +1,64 @@
+@import 'colors.scss';
+
+.tag {
+  margin: 0 4px 0 0;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  padding: 4px;
+  background-color: $theme-gray-700;
+}
+
+.backlog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.backlog-tags-list {
+  display: flex;
+  align-content: center;
+}
+
+.backlog-tag {
+  margin: 0 4px 0 0;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  padding: 4px;
+  background-color: $theme-gray-700;
+}
+
+.backlog-item {
+  flex-basis: 30%;
+  margin: 8px;
+  padding: 16px;
+  min-width: 300px;
+  background-color: $theme-gray-300;
+}
+
+.backlog-item-brief {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.backlog-item-items {
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 1600px) {
+  .backlog-item {
+    flex-basis: 45%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .backlog-item {
+    flex-basis: 100%;
+  }
+}

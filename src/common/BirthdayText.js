@@ -4,10 +4,10 @@ import {renderAge} from "./core/date";
 
 const BirthdayText = (props) => {
     return (
-        <h6>
-            <FaBirthdayCake style={{verticalAlign: "top"}}/>
+        <span className="text-birthday">
+            <FaBirthdayCake className="icon-header"/>
             <span> {renderAge(new Date(props.birthday))} years old</span>
-        </h6>)
+        </span>)
 };
 
 export default BirthdayText;

@@ -9,7 +9,6 @@
     "node-sass": "^4.13.1",
     "pdfcrowd": "^4.10.0",
     "react": "^16.8.6",
-    "react-bootstrap": "^1.5.1",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
     "react-loading": "^2.0.3",

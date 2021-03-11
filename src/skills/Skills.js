@@ -10,12 +10,12 @@ const Skills = (props) => {
     items.forEach(item => itemsByCategory.get(item.category).push(item));
     return (
         <div id="skills" style={{textAlign: "center"}}>
-            <h1 className="text-header"><FaWrench style={{verticalAlign: "top"}}/>  Skills</h1>
-            <div className="skills-list">
+            <h1 className="text-header"><FaWrench className="icon-header"/>  Skills</h1>
+            <div id="skills-inner">
                 {
-                    categories.map((category) => category < 6 ? (
-                        <SkillsList className="skills-stack" items={itemsByCategory.get(category)}/>
-                    ) : null)
+                    categories.map((category) => (
+                        <SkillsList items={itemsByCategory.get(category)} category={category}/>
+                    ))
                 }
             </div>
         </div>)
