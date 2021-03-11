@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import '../scss/Portfolio.scss'
 import DateText from "../common/DateText";
-import CollapseText from "../common/CollapseText";
 import {FaExternalLinkAlt} from "react-icons/fa";
 
 export default class PortfolioItem extends Component {
@@ -19,7 +18,7 @@ export default class PortfolioItem extends Component {
         const props = this.props, showText = this.state.showText;
         return (
             <div className={`portfolio-item ${showText ? "show" : ""}`}>
-                <h4><a href={props.url}><FaExternalLinkAlt style={{verticalAlign: "top"}}/></a> {props.title}</h4>
+                <h4><a href={props.url}><FaExternalLinkAlt className="icon-header"/></a> {props.title}</h4>
                 <div style={{display: "flex", flexWrap: "wrap"}}>
                     {props.tags.map(tag => (
                         <div className={`portfolio-tag ${tag}`} key={tag}>
@@ -29,7 +28,7 @@ export default class PortfolioItem extends Component {
                 </div>
                 <p><DateText start={props.start} end={props.end}/></p>
                 <p className="portfolio-text">{props.brief}</p>
-                <CollapseText onClick={onClick} showText={showText} brief={""} items={props.items} after/>
+                <p>{props.items}</p>
             </div>
         );
     }

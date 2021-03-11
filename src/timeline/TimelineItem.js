@@ -3,7 +3,6 @@ import '../scss/Timeline.scss'
 import DateText from "../common/DateText";
 import LocationText from "../common/LocationText";
 import TimelineCategory from "./TimelineCategory";
-import CollapseText from "../common/CollapseText";
 import CompanyText from "../common/CompanyText";
 
 export default class TimelineItem extends Component {
@@ -19,7 +18,6 @@ export default class TimelineItem extends Component {
 
     render() {
         const props = this.props, showText = this.state.showText;
-        const onClick = this.onClick;
         return (
             <div className="timeline-item">
                 <div className={`timeline-item-content ${showText ? "show" : ""}`}>
@@ -30,14 +28,7 @@ export default class TimelineItem extends Component {
                     <h4>{props.title}</h4>
                     <LocationText location={props.location} county={false}/>
                     <CompanyText url={props.company.url} name={props.company.name}/>
-                    <CollapseText
-                        onClick={onClick}
-                        showText={showText}
-                        brief={props.brief}
-                        items={props.items}
-                        id={props.id}
-                        after={true}
-                    />
+                    <p>{props.items}</p>
                     <span className="circle"/>
                 </div>
             </div>

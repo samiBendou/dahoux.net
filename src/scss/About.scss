@@ -1,36 +1,76 @@
-@import 'bootstrap/bootstrap.scss';
 @import 'colors.scss';
 
+#about-header {
+  font-size: xxx-large;
+  margin: 12px 0 0;
+}
+
+#about-title {
+  color: $theme-gray-900;
+}
+
+#about-quote {
+  text-align: center;
+  font-size: x-large;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.about-left-item, .about-right-item {
+  margin: 0 0 12px;
+}
+
+#about {
+  background-color: $theme-gray-300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about-inner {
+  display: flex;
+  align-self: center;
+}
+
+#about-left {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  margin-right: 8px;
+  text-align: right;
+}
+
+#about-right {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+
+/*
 @media only screen and (min-width: 767px) {
-  .about-content {
-    display: block;
+
+  #about-left {
+    text-align: left;
+    padding-right: 8px;
+    p, h1, h2, h3, h4, h5, h6, small {
+      text-align: right !important;
+    }
   }
-  .about-picture {
+
+  #about-right {
     display: none;
-  }
-
-  .about-text {
-    flex-basis: 100%;
-  }
-
-  #outer-about-list {
-    display: none;
-  }
-
-  .about-text {
-    text-align: center;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .about-thumbnail, .about-skills {
-    display: none;
-  }
-  .about-list, .about-icons {
+
+  #about-right, #about-links {
     align-self: center;
   }
 
-  .about-text {
+  #about-left {
     text-align: center;
   }
 
@@ -38,7 +78,7 @@
     padding: 24px;
   }
 
-  .about-text {
+  #about-left {
     padding-left: 4px !important;
     padding-right: 4px !important;
     margin-top: 24px;
@@ -51,37 +91,29 @@
     }
   }
 
-  #outer-about-list {
+  #about-right {
     display: none;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  #outer-about-list {
+  #about-right {
     display: none;
   }
-  #inner-about-list {
+  #about-inner-items {
     display: flex;
   }
 
-  .about-icons {
+  #about-links {
     text-align: center;
-  }
-
-  .about-item {
-    padding-right: 24px;
-  }
-
-  .about-text {
-
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  #inner-about-list {
+  #about-inner-items {
     display: none;
   }
-  #outer-about-list {
+  #about-right {
     display: flex;
     flex-basis: 70%;
     flex-direction: column;
@@ -90,56 +122,33 @@
     padding-left: 8px;
     font-size: 18pt;
   }
-
-
-  .about-text {
-    flex-basis: 70%;
-    text-align: left;
-    padding-right: 8px;
-    p, h1, h2, h3, h4, h5, h6, small {
-      text-align: right !important;
-    }
-  }
 }
 
-.about-content {
-  display: flex;
-}
-
-.about-jumbotron {
-  border-radius: 0;
-  box-shadow: black;
-  margin-bottom: 0 !important;
-}
-
-.about-text {
+#about-left {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   align-self: center;
-
 }
 
-.about-misc {
+#about-inner {
+  display: flex;
+}
+
+#about-misc {
   margin-top: 8px;
   h6 {
     font-size: 14pt;
   }
 }
 
-.about-thumbnail {
-  text-align: right;
-  flex-shrink: 1.67;
-}
-
-
-.about-icons {
+#about-links {
   margin-top: 8px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
-.about-head {
-  margin-bottom: 0px;
+#about-title {
+  margin-bottom: 0;
 }
 
 #about {
@@ -152,7 +161,7 @@
   }
 }
 
-#outer-about-list, #inner-about-list {
+#about-right, #about-inner-items {
   h5 {
     font-size: 18pt;
     font-weight: bold;
@@ -162,3 +171,4 @@
     font-weight:100;
   }
 }
+*/

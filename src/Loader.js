@@ -2,7 +2,7 @@ import React from "react";
 import ReactLoading from "react-loading";
 
 const Loader = () => (
-    <div className="loader-background">
+    <div id="loader-container">
         <div
             style={{
                 position: 'absolute', left: '50%', top: '50%',

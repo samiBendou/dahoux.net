@@ -1,49 +1,4 @@
-@import 'bootstrap/bootstrap';
 @import 'colors.scss';
-
-.copyright-text {
-  text-align: center;
-  padding-bottom: 12px;
-}
-
-.loader-background {
-  background-color: $theme-gray-300;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-}
-
-.text-header {
-  text-align: center;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  font-weight: 400 !important;
-}
-
-.text-brief {
-  text-align: center;
-  font-size: x-large !important;
-  margin-top: 32px;
-  margin-bottom: 0;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.collapse-more {
-  padding: 0 !important;
-}
-
-.collapse-more-text {
-  font-size: 12pt;
-  font-weight: bold;
-}
-
-.collapse-more::after {
-  content: ' ►';
-  font-size: 10pt;
-}
 
 body {
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif !important;
@@ -57,27 +12,30 @@ a:hover, .btn-link:hover {
   color: $theme-marine !important;
 }
 
-p, ul, li, span {
-  font-size: 14pt;
+#loader-container {
+  background-color: $theme-gray-300;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
 }
 
-.form-label {
-  font-size: 20pt;
+.icon-header {
+  vertical-align: top;
 }
 
-.form-control {
-  font-size: 14pt!important;
+.text-header {
+  text-align: center;
+  margin: 24px 0;
+  font-weight: 400;
 }
 
-.btn-primary {
-  background-color: $theme-blue !important;
-  border:none !important;
+.text-location, .text-birthday, .links-bar {
+  font-weight: normal !important;
 }
 
-.btn-primary:hover {
-  background-color: $theme-marine !important;
-}
-
-.jumbotron {
-  background-color: $theme-gray-300 !important;
+.copyright-text {
+  text-align: center;
+  margin: 24px;
 }
