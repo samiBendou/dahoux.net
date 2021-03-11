@@ -9,7 +9,7 @@ const About = (props) => {
     const data = props.data;
     return (
         <div id="about">
-            <h1 className="text-header"><FaUserCircle className="icon-header"/> Hello!</h1>
+            <h1 id="about-header" className="text-header"><FaUserCircle className="icon-header"/> Hello...</h1>
 
             <div id="about-inner">
                 <div id="about-left">
@@ -29,16 +29,16 @@ const About = (props) => {
                         <BirthdayText birthday={data.birthday}/>
                     </h3>
 
-                    <h3 id="about-links" className="about-left-item">
+                    <h2 id="about-links" className="about-left-item">
                         <LinksBar data={data}/>
-                    </h3>
+                    </h2>
                 </div>
 
                 <div id="about-right">
                 {
                     data.items.about.map((item) =>
                         <span>
-                            <h3 className="about-right-item">{item.title}</h3>
+                            <h2 className="about-right-item">{item.title}</h2>
                             <p className="about-right-item">{item.text}</p>
                         </span>)
                 }

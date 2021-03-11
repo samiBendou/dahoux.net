@@ -2,7 +2,7 @@
 
 #about-header {
   font-size: xxx-large;
-  margin: 12px 0 0;
+  margin: 32px;
 }
 
 #about-title {
@@ -14,11 +14,13 @@
   font-size: x-large;
   font-weight: 400;
   font-style: italic;
+  margin: 32px;
 }
 
-.about-left-item, .about-right-item {
-  margin: 0 0 12px;
+.about-left-item, .about-right-item  {
+  margin: 0 0 16px;
 }
+
 
 #about {
   background-color: $theme-gray-300;
@@ -36,7 +38,7 @@
   display: flex;
   align-self: center;
   flex-direction: column;
-  margin-right: 8px;
+  padding-right: 8px;
   text-align: right;
 }
 
@@ -44,7 +46,7 @@
   display: flex;
   align-self: center;
   flex-direction: column;
-  margin-left: 8px;
+  padding-left: 8px;
 }
 
 
