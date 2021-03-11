@@ -2,8 +2,10 @@ $theme-gray-300: #F0F2F2;
 $theme-gray-500: #AEB4BF;
 $theme-gray-700: #7D828C;
 $theme-gray-900: #656A73;
+
 $theme-blue: #0583F2;
 $theme-marine: #033E8C;
+
 $theme-tag-yellow: #EDD86A;
 $theme-tag-purple: #5f4cd9;
 $theme-tag-blue: #4ca5d9;
@@ -11,3 +13,14 @@ $theme-tag-orange: #d9874c;
 $theme-tag-lemon: #4cd995;
 $theme-tag-red: #d94c4c;
 $theme-tag-skin: #E0AF90;
+
+$default-color: $theme-gray-900;
+
+$scientific-knowledge-color: $theme-tag-purple;
+$industry-knowledge-color: $theme-tag-red;
+$software-languages-color: $theme-tag-lemon;
+$hardware-design-color: $theme-tag-blue;
+$tools-technologies-color: $theme-tag-orange;
+$interpersonal-skills-color: $theme-tag-skin;
+$languages-color: $theme-tag-lemon;
+

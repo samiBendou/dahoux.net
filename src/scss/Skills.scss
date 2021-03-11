@@ -1,14 +1,5 @@
 @import 'colors.scss';
 
-$default-color: $theme-gray-900;
-$scientific-knowledge-color: $theme-tag-purple;
-$industry-knowledge-color: $theme-tag-red;
-$software-languages-color: $theme-tag-lemon;
-$hardware-design-color: $theme-tag-blue;
-$tools-technologies-color: $theme-tag-orange;
-$interpersonal-skills-color: $theme-tag-skin;
-$languages-color: $theme-tag-lemon;
-
 .skills-item {
   background-color: $default-color;
 }
