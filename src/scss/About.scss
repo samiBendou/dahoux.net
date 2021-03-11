@@ -1,8 +1,13 @@
 @import 'colors.scss';
 
 #about-title {
-  color: $theme-gray-900;
+  color: $theme-gray-700;
   font-weight: normal;
+}
+
+
+#about-name {
+  color: $theme-gray-900;
 }
 
 #about-quote {
