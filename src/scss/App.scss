@@ -31,6 +31,11 @@ a:hover, .btn-link:hover {
   position: absolute;
 }
 
+#copyright {
+  font-weight: normal;
+  text-align: center;
+}
+
 .icon-header {
   vertical-align: top;
 }
@@ -46,7 +51,3 @@ a:hover, .btn-link:hover {
   font-weight: normal !important;
 }
 
-.copyright-text {
-  text-align: center;
-  margin: 24px;
-}

@@ -1,10 +1,11 @@
 import React from 'react';
 import ProjectsItem from './ProjectsItem'
+import '../scss/Backlog.scss'
 
 const ProjectsList = ({items}) => {
     const sortedItems = items.slice().sort((a, b) => new Date(b.start) - new Date(a.start));
     return (
-        <div className="projects-list">
+        <div className="backlog-list">
             {sortedItems.map((item) => (
                 <ProjectsItem
                     tags={item.tags}

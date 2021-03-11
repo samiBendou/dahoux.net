@@ -2,7 +2,7 @@ import React from "react";
 import About from "./about/About";
 import Skills from "./skills/Skills";
 import Timeline from "./timeline/Timeline";
-import Projects from "./portfolio/Projects";
+import Projects from "./projects/Projects";
 
 const Page = (props) => (
     <div>
@@ -10,7 +10,7 @@ const Page = (props) => (
         <Skills items={props.data.items.skills}/>
         <Projects items={props.data.items.portfolio}/>
         <Timeline items={props.data.items.timeline}/>
-        <p className="copyright-text">© Sami Dahoux 2021 - All Rights Reserved</p>
+        <h2 id="copyright">© Sami Dahoux 2021 - All Rights Reserved</h2>
     </div>
 );
 

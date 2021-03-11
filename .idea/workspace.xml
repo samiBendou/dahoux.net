@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fix: removing SKillsItem">
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="refactor: changing portfolio to projects and re-layout">
+      <change afterPath="$PROJECT_DIR$/src/scss/Backlog.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portfolio/Portfolio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/portfolio/Projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portfolio/PortfolioItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/portfolio/ProjectsItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portfolio/PortfolioList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/portfolio/ProjectsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/portfolio/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/projects/Projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/portfolio/ProjectsItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/projects/ProjectsItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/portfolio/ProjectsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/projects/ProjectsList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/Portfolio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Projects.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Projects.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Projects.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/Skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Skills.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Timeline.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Timeline.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/timeline/TimelineItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeline/TimelineItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/timeline/TimelineList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeline/TimelineList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,14 +253,7 @@
       <workItem from="1587389910766" duration="202000" />
       <workItem from="1615374200730" duration="107000" />
       <workItem from="1615374321866" duration="2951000" />
-      <workItem from="1615452077175" duration="24213000" />
-    </task>
-    <task id="LOCAL-00100" summary="code : cleaning timeline data processing">
-      <created>1571689633323</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1571689633323</updated>
+      <workItem from="1615452077175" duration="29371000" />
     </task>
     <task id="LOCAL-00101" summary="code : cleaning sorting of skills, adding scale and changing cateogry">
       <created>1571689690232</created>
@@ -595,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615477154708</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="refactor: changing portfolio to projects and re-layout">
+      <created>1615482808065</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1615482808066</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TodoView">
@@ -634,7 +637,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="removing bootstrap" />
     <MESSAGE value="updating data" />
     <MESSAGE value="adding thumbnail" />
     <MESSAGE value="minor update" />
@@ -659,7 +661,8 @@
     <MESSAGE value="fix: color of title and name" />
     <MESSAGE value="refactor: new flex skills bar" />
     <MESSAGE value="fix: removing SKillsItem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: removing SKillsItem" />
+    <MESSAGE value="refactor: changing portfolio to projects and re-layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: changing portfolio to projects and re-layout" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
