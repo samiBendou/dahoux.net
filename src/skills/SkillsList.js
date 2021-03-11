@@ -1,44 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react';
 import SkillsItem from './SkillsItem';
+import SkillsCategory from "./SkillsCategory";
+import titleToLabel from "../common/core/tags";
 
-export default class SkillsList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {collapsed: true, hidden: true};
-    }
-
-    componentDidMount() {
-        setTimeout(() => this.setState({collapsed: false}), 0);
-        setTimeout(() => this.setState({hidden: false}), 700);
-    }
-
-    render() {
-        const sortedItems = this.props.items.sort((a, b) => b.level - a.level);
-        const slicedItems = this.props.count ? sortedItems.slice(0, this.props.count) : sortedItems;
-        const filteredItems = slicedItems.filter(item => item.level > 0);
-        const className = `${this.state.collapsed ? 'collapsed' : ''} ${this.state.hidden ? 'hidden' : ''}`;
-
-        let scale = (
-            <div className="skills-scale" style={{display: "flex", flexDirection: "row"}}>
-                <div>0</div>
-                <div style={{flexGrow:1, textAlign: "right"}}>10</div>
-            </div>
-        );
-
-        return (
-            <div className={className}>
-                {this.props.showScale ? scale : ""}
-                <div className="skills-stack">
-                    {filteredItems.map((item) =>
-                        <SkillsItem
-                            label={item.label}
-                            level={item.level}
-                            mention={item.mention}
-                            type={item.type}
-                            key={item.label}
-                            category={item.category}
-                        />)}
-                </div>
-            </div>);
-    }
+const SkillsList = (props) => {
+    const sortedItems = props.items.sort((a, b) => b.level - a.level);
+    const slicedItems = props.count ? sortedItems.slice(0, props.count) : sortedItems;
+    const category = SkillsCategory[props.category];
+    return (
+        <div className="skills-list">
+            <h2 className={`skills-title ${titleToLabel(category)}`}>{category}</h2>
+            {slicedItems.map((item) =>
+                <SkillsItem
+                    label={item.label}
+                    level={item.level}
+                    mention={item.mention}
+                    type={item.type}
+                    key={item.label}
+                    category={item.category}
+                />)}
+        </div>);
 }
+
+export default SkillsList;

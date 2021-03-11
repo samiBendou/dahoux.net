@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fix: clean header fonts and margins">
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fix: color of title and name">
+      <change afterPath="$PROJECT_DIR$/src/common/core/tags.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/About.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Skills.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/Skills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/SkillsItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/SkillsItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/SkillsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/SkillsList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,14 +248,7 @@
       <workItem from="1587389910766" duration="202000" />
       <workItem from="1615374200730" duration="107000" />
       <workItem from="1615374321866" duration="2951000" />
-      <workItem from="1615452077175" duration="14232000" />
-    </task>
-    <task id="LOCAL-00097" summary="updating texts">
-      <created>1571681650385</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1571681650386</updated>
+      <workItem from="1615452077175" duration="18546000" />
     </task>
     <task id="LOCAL-00098" summary="code: refactor date to start in user.json">
       <created>1571683505861</created>
@@ -588,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615472168611</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="fix: color of title and name">
+      <created>1615472530368</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1615472530368</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TodoView">
@@ -627,7 +632,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="fix : cleaning skills category logic" />
     <MESSAGE value="udpating data" />
     <MESSAGE value="fix : minor fixes on pdf and skills css" />
     <MESSAGE value="removing bootstrap" />
@@ -652,7 +656,8 @@
     <MESSAGE value="code: creating skills stacks and modifying color code" />
     <MESSAGE value="refactor: removing bootstrap and cleaning About scss" />
     <MESSAGE value="fix: clean header fonts and margins" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: clean header fonts and margins" />
+    <MESSAGE value="fix: color of title and name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: color of title and name" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -663,14 +668,15 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/skills/SkillsItem.js</url>
-          <line>8</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/skills/Skills.js</url>
           <line>10</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/skills/SkillsList.js</url>
+          <line>13</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

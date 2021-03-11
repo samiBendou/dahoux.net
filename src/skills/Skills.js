@@ -11,11 +11,11 @@ const Skills = (props) => {
     return (
         <div id="skills" style={{textAlign: "center"}}>
             <h1 className="text-header"><FaWrench className="icon-header"/>  Skills</h1>
-            <div className="skills-list">
+            <div id="skills-inner">
                 {
-                    categories.map((category) => category < 6 ? (
-                        <SkillsList className="skills-stack" items={itemsByCategory.get(category)}/>
-                    ) : null)
+                    categories.map((category) => (
+                        <SkillsList items={itemsByCategory.get(category)} category={category}/>
+                    ))
                 }
             </div>
         </div>)

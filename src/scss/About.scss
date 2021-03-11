@@ -5,7 +5,6 @@
   font-weight: normal;
 }
 
-
 #about-name {
   color: $theme-gray-900;
 }
@@ -21,7 +20,6 @@
 .about-left-item, .about-right-item  {
   margin: 0 0 16px;
 }
-
 
 #about {
   background-color: $theme-gray-300;
@@ -65,129 +63,3 @@
     flex-direction: row;
   }
 }
-
-
-/*
-@media only screen and (min-width: 767px) {
-
-  #about-left {
-    text-align: left;
-    padding-right: 8px;
-    p, h1, h2, h3, h4, h5, h6, small {
-      text-align: right !important;
-    }
-  }
-
-  #about-right {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-
-  #about-right, #about-links {
-    align-self: center;
-  }
-
-  #about-left {
-    text-align: center;
-  }
-
-  .about-item {
-    padding: 24px;
-  }
-
-  #about-left {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-    margin-top: 24px;
-    flex-basis: 100%;
-  }
-
-  #about {
-    p, h1, h2, h3, h4, h5, h6, small {
-      text-align: center;
-    }
-  }
-
-  #about-right {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  #about-right {
-    display: none;
-  }
-  #about-inner-items {
-    display: flex;
-  }
-
-  #about-links {
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  #about-inner-items {
-    display: none;
-  }
-  #about-right {
-    display: flex;
-    flex-basis: 70%;
-    flex-direction: column;
-    align-items: stretch;
-    align-self: center;
-    padding-left: 8px;
-    font-size: 18pt;
-  }
-}
-
-#about-left {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  align-self: center;
-}
-
-#about-inner {
-  display: flex;
-}
-
-#about-misc {
-  margin-top: 8px;
-  h6 {
-    font-size: 14pt;
-  }
-}
-
-#about-links {
-  margin-top: 8px;
-  margin-bottom: 0;
-}
-
-#about-title {
-  margin-bottom: 0;
-}
-
-#about {
-  small {
-    color: $theme-gray-900;
-  }
-  h1 {
-    font-size: 28pt;
-    font-weight: 600;
-  }
-}
-
-#about-right, #about-inner-items {
-  h5 {
-    font-size: 18pt;
-    font-weight: bold;
-  }
-  p {
-    font-size: 14pt;
-    font-weight:100;
-  }
-}
-*/
