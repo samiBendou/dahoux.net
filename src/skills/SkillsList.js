@@ -1,5 +1,4 @@
 import React from 'react';
-import SkillsItem from './SkillsItem';
 import SkillsCategory from "./SkillsCategory";
 import titleToLabel from "../common/core/tags";
 
@@ -11,14 +10,8 @@ const SkillsList = (props) => {
         <div className="skills-list">
             <h2 className={`skills-title ${titleToLabel(category)}`}>{category}</h2>
             {slicedItems.map((item) =>
-                <SkillsItem
-                    label={item.label}
-                    level={item.level}
-                    mention={item.mention}
-                    type={item.type}
-                    key={item.label}
-                    category={item.category}
-                />)}
+                <h3 className={`skills-item ${titleToLabel(SkillsCategory[item.category])}`}>{item.label} {item.mention ? `- ${item.mention}` : ''}</h3>
+                )}
         </div>);
 }
 

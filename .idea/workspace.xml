@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fix: color of title and name">
-      <change afterPath="$PROJECT_DIR$/src/common/core/tags.js" afterDir="false" />
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="refactor: new flex skills bar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/About.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/Skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Skills.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skills/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/Skills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skills/SkillsItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/SkillsItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/SkillsItem.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/skills/SkillsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/SkillsList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -248,14 +244,7 @@
       <workItem from="1587389910766" duration="202000" />
       <workItem from="1615374200730" duration="107000" />
       <workItem from="1615374321866" duration="2951000" />
-      <workItem from="1615452077175" duration="18546000" />
-    </task>
-    <task id="LOCAL-00098" summary="code: refactor date to start in user.json">
-      <created>1571683505861</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1571683505861</updated>
+      <workItem from="1615452077175" duration="18956000" />
     </task>
     <task id="LOCAL-00099" summary="updating data">
       <created>1571683693573</created>
@@ -593,7 +582,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615472530368</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="refactor: new flex skills bar">
+      <created>1615476977491</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1615476977491</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TodoView">
@@ -632,7 +628,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="udpating data" />
     <MESSAGE value="fix : minor fixes on pdf and skills css" />
     <MESSAGE value="removing bootstrap" />
     <MESSAGE value="updating data" />
@@ -657,7 +652,8 @@
     <MESSAGE value="refactor: removing bootstrap and cleaning About scss" />
     <MESSAGE value="fix: clean header fonts and margins" />
     <MESSAGE value="fix: color of title and name" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: color of title and name" />
+    <MESSAGE value="refactor: new flex skills bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: new flex skills bar" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -671,12 +667,6 @@
           <url>file://$PROJECT_DIR$/src/skills/Skills.js</url>
           <line>10</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/skills/SkillsList.js</url>
-          <line>13</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
