@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="refactor: removing bootstrap and cleaning About scss">
+    <list default="true" id="8610d892-4a60-4fda-a17a-a10cf1c7db0d" name="Default Changelist" comment="fix: clean header fonts and margins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/about/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/about/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/About.scss" afterDir="false" />
@@ -246,14 +246,7 @@
       <workItem from="1587389910766" duration="202000" />
       <workItem from="1615374200730" duration="107000" />
       <workItem from="1615374321866" duration="2951000" />
-      <workItem from="1615452077175" duration="12404000" />
-    </task>
-    <task id="LOCAL-00095" summary="fix : Experiences first on CV">
-      <created>1571663338309</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1571663338310</updated>
+      <workItem from="1615452077175" duration="14008000" />
     </task>
     <task id="LOCAL-00096" summary="fix : Cleaning Brief section style">
       <created>1571681637290</created>
@@ -591,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615469350048</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="fix: clean header fonts and margins">
+      <created>1615470572084</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1615470572084</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TodoView">
@@ -630,7 +630,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="code : cleaning PDF and Portfolio style" />
     <MESSAGE value="fix : cleaning skills category logic" />
     <MESSAGE value="udpating data" />
     <MESSAGE value="fix : minor fixes on pdf and skills css" />
@@ -655,7 +654,8 @@
     <MESSAGE value="remove contact form and updating user info" />
     <MESSAGE value="code: creating skills stacks and modifying color code" />
     <MESSAGE value="refactor: removing bootstrap and cleaning About scss" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: removing bootstrap and cleaning About scss" />
+    <MESSAGE value="fix: clean header fonts and margins" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: clean header fonts and margins" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

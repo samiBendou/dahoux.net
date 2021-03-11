@@ -12,9 +12,9 @@ const About = (props) => {
             <h1 id="about-header" className="text-header"><FaUserCircle className="icon-header"/> Hello...</h1>
 
             <div id="about-inner">
-                <div id="about-left">
+                <div id="about-first">
                     <h1 id="about-name" className="about-left-item">
-                        {`${data.firstName} ${data.lastName}`}<br/>
+                        {`${data.firstName} ${data.lastName}`}
                     </h1>
 
                     <h2 id="about-title" className="about-left-item">
@@ -34,7 +34,7 @@ const About = (props) => {
                     </h2>
                 </div>
 
-                <div id="about-right">
+                <div id="about-second">
                 {
                     data.items.about.map((item) =>
                         <span>
