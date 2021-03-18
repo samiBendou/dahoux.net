@@ -65,7 +65,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 
 }
 
@@ -74,7 +74,7 @@
   flex-direction: column;
   flex-basis: content-box;
   justify-content: center;
-  place-content: end;
+  place-content: flex-end;
   flex-wrap: wrap;
 
 }
