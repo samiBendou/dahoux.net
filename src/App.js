@@ -6,37 +6,39 @@ import Page from "./Page";
 export default class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {status: "loading", error: undefined};
-        this.data = undefined;
+        this.state = {status: "loading", error: undefined, data: undefined};
     }
 
     componentWillMount() {
-        fetch("http://localhost:5000/api/v1/bendou")
+        fetch("http://135.125.232.210:5000/api/v1/bendou")
             .then(res => {
-                if(res.status !== 200) {
-                    res.text().then(text => {
-                        this.setState({status: "error", error: `${res.status}: ${text}`});
-                    });
-                    throw Error(res.status.toString());
+                if (res.status === 200) {
+                    return res.json();
                 }
-                return res.json();
+                res.text().then(text => {
+                    this.setState({status: "error", error: new Error(`${res.status} - ${text}`)});
+                });
+                return null;
+
             })
             .then(contents => {
-                this.data = contents
-                this.setState({status: "ready"});
+                if (contents === null) {
+                    return;
+                }
+                this.setState({status: "ready", data: contents});
             })
             .catch(err => this.setState({status: "error", error: err}));
     }
 
     render() {
-        switch(this.state.status) {
+        switch (this.state.status) {
             case "loading":
                 return <Loader/>;
             case "ready":
-                return <Page data={this.data}/>;
+                return <Page data={this.state.data}/>;
             case "error":
                 console.log(this.state.error);
-                return <p>Something went wrong!<br/>{this.state.error}</p>
+                return <p>Something went wrong!<br/>{this.state.error.toString()}</p>
             default:
                 return <p>Unexpected application status! {this.state.status}</p>
         }
