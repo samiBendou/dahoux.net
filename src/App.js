@@ -2,28 +2,45 @@ import "./scss/App.scss";
 import React, {Component} from "react";
 import Loader from "./Loader";
 import Page from "./Page";
-import {fetchLocation, fetchTimelineLocation} from "./common/core/location";
-import defaultUser from "./common/core/defaultUser";
-import user from "./user.json";
 
 export default class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {ready: false};
-        this.data = defaultUser;
+        this.state = {status: "loading", error: undefined, data: undefined};
     }
 
     componentWillMount() {
-        Promise.all([fetchLocation(user.location), fetchTimelineLocation(user.items.timeline)])
-            .then((items) => {
-                this.data = user;
-                this.data.location = items[0];
-                this.data.items.timeline.forEach((item, index) => item.location = items[1][index]);
-                this.setState({ready: true});
+        fetch("http://135.125.232.210:5000/api/v1/bendou")
+            .then(res => {
+                if (res.status === 200) {
+                    return res.json();
+                }
+                res.text().then(text => {
+                    this.setState({status: "error", error: new Error(`${res.status} - ${text}`)});
+                });
+                return null;
+
             })
+            .then(contents => {
+                if (contents === null) {
+                    return;
+                }
+                this.setState({status: "ready", data: contents});
+            })
+            .catch(err => this.setState({status: "error", error: err}));
     }
 
     render() {
-        return !this.state.ready ? <Loader/> : <Page data={this.data}/>;
+        switch (this.state.status) {
+            case "loading":
+                return <Loader/>;
+            case "ready":
+                return <Page data={this.state.data}/>;
+            case "error":
+                console.log(this.state.error);
+                return <p>Something went wrong!<br/>{this.state.error.toString()}</p>
+            default:
+                return <p>Unexpected application status! {this.state.status}</p>
+        }
     }
 };
