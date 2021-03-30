@@ -10,7 +10,7 @@ export default class App extends Component {
     }
 
     componentWillMount() {
-        fetch("http://135.125.232.210:5000/api/v1/bendou")
+        fetch("https://portfolio.bendou.space/api/v1/bendou")
             .then(res => {
                 if (res.status === 200) {
                     return res.json();
