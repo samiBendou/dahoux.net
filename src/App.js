@@ -10,7 +10,7 @@ export default class App extends Component {
     }
 
     componentWillMount() {
-        fetch("https://api.bendou.space/portfolio/bendou")
+        fetch("https://portfolio.bendou.space/api/portfolio/bendou")
             .then(res => {
                 if (res.status === 200) {
                     return res.json();
@@ -38,9 +38,9 @@ export default class App extends Component {
                 return <Page data={this.state.data}/>;
             case "error":
                 console.log(this.state.error);
-                return <p>Something went wrong!<br/>{this.state.error.toString()}</p>
+                return <div>Something went wrong!<br/>{this.state.error.toString()}</div>
             default:
-                return <p>Unexpected application status! {this.state.status}</p>
+                return <div>Unexpected application status! {this.state.status}</div>
         }
     }
 };
