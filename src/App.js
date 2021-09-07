@@ -12,8 +12,8 @@ export default class App extends Component {
     this.state = { status: "loading", error: undefined, data: undefined };
   }
 
-  componentMount() {
-    fetch("https://bendou.space/api/portfolio/bendou")
+  componentDidMount() {
+    fetch("/api/portfolio/bendou")
       .then((res) => {
         if (res.status === 200) {
           return res.json();
