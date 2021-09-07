@@ -21,7 +21,7 @@ const defaultUser = {
             {
                 title: "Title",
                 brief: "Brief",
-                item: [
+                items: [
                     "Items", "Items", "Items"
                 ],
                 start: "1970-01-01T00:00:00Z",
@@ -39,7 +39,7 @@ const defaultUser = {
             {
                 title: "Title",
                 brief: "Brief",
-                item: [
+                items: [
                     "Items", "Items", "Items"
                 ],
                 start: "1970-01-01T00:00:00Z",
