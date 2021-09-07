@@ -1,7 +1,3 @@
-const categories = [
-    "Experience",
-    "Education",
-    "Accomplishment"
-];
+const categories = ["Experience", "Education", "Accomplishment"];
 
 export default categories;

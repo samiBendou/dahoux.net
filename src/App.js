@@ -12,7 +12,7 @@ export default class App extends Component {
     this.state = { status: "loading", error: undefined, data: undefined };
   }
 
-  componentWillMount() {
+  componentMount() {
     fetch("https://bendou.space/api/portfolio/bendou")
       .then((res) => {
         if (res.status === 200) {
