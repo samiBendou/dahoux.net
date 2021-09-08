@@ -1,4 +1,4 @@
-import { FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import Pdf from "../pdf/Pdf";
 import React from "react";
@@ -12,6 +12,10 @@ const LinkBar = (props) => {
       &nbsp;
       <a href={props.data.urls.github}>
         <FaGithub className="links-bar-button" />
+      </a>
+      &nbsp;
+      <a href={`mailto:${props.data.mail}`}>
+        <FaEnvelope className="links-bar-button" />
       </a>
       &nbsp;
       <PDFDownloadLink
