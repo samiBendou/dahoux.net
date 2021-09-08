@@ -1,0 +1,89 @@
+@import "colors.scss";
+
+#home-page {
+  #copyright {
+    background-color: $theme-gray-300;
+    margin: 0;
+    padding: 1em;
+  }
+}
+
+#home-header {
+  color: $theme-gray-900;
+  font-size: 3em;
+  margin: 0em !important;
+}
+
+#home {
+  background-color: $theme-gray-300;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  em {
+    color: black;
+  }
+}
+
+#home-inner {
+  display: flex;
+  align-self: stretch;
+  overflow: auto;
+}
+
+.home-parallax {
+  border-radius: 10vw 10vw;
+  width: 30vw;
+  height: 30vw;
+}
+
+#home-first {
+  text-align: center;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  height: 100vh;
+
+  .links-bar-button {
+    width: 4em;
+    height: 4em;
+    margin: 2em;
+  }
+}
+
+#home-second {
+  border-radius: 10vw 0 0 10vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  text-align: center;
+  align-items: stretch;
+  font-size: x-large;
+  color: $theme-gray-700;
+
+  h2 {
+    margin: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #home-inner {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #home-first {
+    .links-bar-button {
+      margin: 1em;
+      width: 3em;
+      height: 3em;
+    }
+  }
+
+  .home-parallax {
+    display: none;
+  }
+}

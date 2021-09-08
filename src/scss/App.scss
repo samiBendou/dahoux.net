@@ -1,24 +1,31 @@
-@import 'colors.scss';
+@import "colors.scss";
 
 body {
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-p, li, a {
+main {
+  padding-top: 4em;
+}
+
+p,
+li,
+a {
   font-size: large;
 }
-
 
 time {
   color: $theme-gray-700;
   font-weight: bold;
 }
 
-a, .btn-link{
+a,
+.btn-link {
   color: $theme-blue !important;
   transition: color 200ms;
 }
-a:hover, .btn-link:hover {
+a:hover,
+.btn-link:hover {
   color: $theme-marine !important;
 }
 
@@ -36,6 +43,33 @@ a:hover, .btn-link:hover {
   text-align: center;
 }
 
+#navbar {
+  width: 100vw;
+  position: fixed;
+  overflow: visible;
+  z-index: 1000 !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: $theme-gray-300;
+  align-items: center;
+  margin: 0em;
+
+  list-style: none;
+
+  a {
+    padding: 0.8em;
+    font-size: large;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bold;
+  }
+}
+
+.navbar-active {
+  background-color: white;
+}
+
 .icon-header {
   vertical-align: top;
 }
@@ -47,7 +81,8 @@ a:hover, .btn-link:hover {
   margin: 32px;
 }
 
-.text-location, .text-birthday, .links-bar {
+.text-location,
+.text-birthday,
+.links-bar {
   font-weight: normal !important;
 }
-

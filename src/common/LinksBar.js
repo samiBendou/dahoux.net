@@ -7,18 +7,18 @@ const LinkBar = (props) => {
   return (
     <span className="links-bar">
       <a href={props.data.urls.linkedin}>
-        <FaLinkedin />
+        <FaLinkedin className="links-bar-button" />
       </a>
       &nbsp;
       <a href={props.data.urls.github}>
-        <FaGithub />
+        <FaGithub className="links-bar-button" />
       </a>
       &nbsp;
       <PDFDownloadLink
         document={<Pdf data={props.data} />}
         fileName={`${props.data.lastName}_${props.data.firstName}_resume.pdf`}
       >
-        {() => <FaFilePdf />}
+        {() => <FaFilePdf className="links-bar-button" />}
       </PDFDownloadLink>
     </span>
   );

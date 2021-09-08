@@ -1,4 +1,11 @@
-@import 'colors.scss';
+@import "colors.scss";
+
+#about {
+  .links-bar-button {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
 
 #about-title {
   color: $theme-gray-700;
@@ -17,7 +24,8 @@
   margin: 32px;
 }
 
-.about-left-item, .about-right-item  {
+.about-left-item,
+.about-right-item {
   margin: 0 0 16px;
 }
 
@@ -26,7 +34,6 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-
 }
 
 #about-inner {
@@ -47,11 +54,11 @@
   flex-direction: column;
   padding-left: 8px;
   flex-basis: 100%;
-
 }
 
 @media only screen and (max-width: 767px) {
-  #about-first, #about-second {
+  #about-first,
+  #about-second {
     text-align: center;
   }
 

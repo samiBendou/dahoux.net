@@ -1,68 +1,49 @@
 import "./scss/App.scss";
 import React, { Component } from "react";
-import Loader from "./Loader";
-import Page from "./Page";
-import Pdf from "./pdf/Pdf";
-import { PDFViewer } from "@react-pdf/renderer";
 import { Route } from "react-router-dom";
+
+import Loader from "./Loader";
+import { HomePage, ResumePage, ResumeDocument } from "./Views";
+
+const Status = {
+  Ready: "ready",
+  Loading: "loading",
+  Error: "error",
+};
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { status: "loading", error: undefined, data: undefined };
+    this.state = { status: Status.Loading, error: undefined, data: undefined };
   }
 
-  componentDidMount() {
-    fetch("/api/portfolio/bendou")
-      .then((res) => {
-        if (res.status === 200) {
-          return res.json();
-        }
-        res.text().then((text) => {
-          this.setState({
-            status: "error",
-            error: new Error(`${res.status} - ${text}`),
-          });
-        });
-        return null;
-      })
-      .then((contents) => {
-        if (contents === null) {
-          return;
-        }
-        this.setState({ status: "ready", data: contents });
-      })
-      .catch((err) => this.setState({ status: "error", error: err }));
+  async componentDidMount() {
+    const res = await fetch("/api/portfolio/bendou");
+    const text = await res.text();
+    if (res.status !== 200) {
+      this.setState({ status: Status.Error, error: new Error(`${res.status} - ${text}`) });
+      return Promise.reject(text);
+    }
+    const object = JSON.parse(text);
+    this.setState({ status: Status.Ready, data: object });
+    return Promise.resolve();
   }
 
   render() {
     const data = this.state.data;
     switch (this.state.status) {
-      case "loading":
-        return <Route exact path="/" component={Loader} />;
-      case "ready":
+      case Status.Loading:
+        return <Route path="/" component={Loader} />;
+      case Status.Ready:
         return (
           <div>
-            <Route exact path="/" component={() => <Page data={data} />} />
-            <Route
-              path="/pdf"
-              component={() => (
-                <PDFViewer
-                  style={{
-                    position: "absolute",
-                    border: 0,
-                    height: "100%",
-                    width: "100%",
-                  }}
-                >
-                  <Pdf data={data} />
-                </PDFViewer>
-              )}
-            />
+            <Route exact path="/" component={() => <HomePage data={data} />} />
+            <Route exact path="/portfolio" component={() => <ResumePage data={data} />} />
+            <Route path="/resume" component={() => <ResumeDocument data={data} />} />
           </div>
         );
-      case "error":
-        console.log(this.state.error);
+      case Status.Error:
+        console.error(this.state.error);
         return (
           <div>
             Something went wrong!

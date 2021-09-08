@@ -10,7 +10,7 @@ const SkillsList = (props) => {
     <div className="skills-list">
       <h2 className={`skills-title ${titleToLabel(category)}`}>{category}</h2>
       {slicedItems.map((item) => (
-        <h3 className={`skills-item ${titleToLabel(SkillsCategory[item.category])}`}>
+        <h3 key={item.label} className={`skills-item ${titleToLabel(SkillsCategory[item.category])}`}>
           {item.label} {item.mention ? `- ${item.mention}` : ""}
         </h3>
       ))}
