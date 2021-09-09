@@ -9,13 +9,13 @@ const Skills = (props) => {
   const itemsByCategory = new Map(categories.map((category) => [category, []]));
   items.forEach((item) => itemsByCategory.get(item.category).push(item));
   return (
-    <div id="skills" style={{ textAlign: "center" }}>
+    <div id="skills">
       <h1 className="title">
         <FaWrench className="icon-header" /> Skills
       </h1>
-      <div id="skills-inner">
+      <div className="inner">
         {categories.map((category) => (
-          <SkillsList items={itemsByCategory.get(category)} category={category} />
+          <SkillsList key={category} items={itemsByCategory.get(category)} category={category} />
         ))}
       </div>
     </div>
