@@ -4,7 +4,7 @@ import ProjectsList from "./ProjectsList";
 
 const Projects = (props) => (
   <div id="projects">
-    <h1 className="text-header">
+    <h1 className="title">
       <FaDraftingCompass className="icon-header" /> Projects
     </h1>
     <ProjectsList items={props.items} />

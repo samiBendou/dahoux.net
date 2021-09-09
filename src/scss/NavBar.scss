@@ -1,12 +1,13 @@
 @import "colors.scss";
 
 $nav-height: 80px;
+$element-padding: 1rem;
 $open-speed: 500ms;
 
 #navbar {
   width: 100vw;
   height: $nav-height;
-  margin: 0em;
+  margin: 0;
 
   background-color: $theme-gray-300;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -31,20 +32,22 @@ $open-speed: 500ms;
   }
 
   a {
-    display: flex;
-    align-items: center;
     height: 100%;
-    padding: 0 1em;
+    padding: 0 $element-padding;
+
     text-decoration: none;
     font-size: x-large;
     font-weight: bold;
+
+    display: flex;
+    align-items: center;
   }
 
-  .title {
-    padding-left: 0.8em;
-    padding-right: 0.8em;
+  .header {
+    padding: 0 $element-padding;
     margin: 0;
     margin-right: auto;
+
     color: $theme-gray-900;
     em {
       color: black;
@@ -63,13 +66,16 @@ $open-speed: 500ms;
     }
 
     .nav {
-      padding: 0;
-      height: auto;
       position: absolute;
       top: $nav-height;
-      transition: all $open-speed ease;
+      height: auto;
+      padding: 0;
+
       transform: translateX(50%);
+
       background-color: $theme-gray-300 !important;
+
+      transition: all $open-speed ease;
     }
   }
 

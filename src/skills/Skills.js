@@ -10,7 +10,7 @@ const Skills = (props) => {
   items.forEach((item) => itemsByCategory.get(item.category).push(item));
   return (
     <div id="skills" style={{ textAlign: "center" }}>
-      <h1 className="text-header">
+      <h1 className="title">
         <FaWrench className="icon-header" /> Skills
       </h1>
       <div id="skills-inner">

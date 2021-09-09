@@ -3,18 +3,20 @@
 #about {
   padding-bottom: 4em;
 
-  .links-bar-button {
-    width: 2em;
-    height: 2em;
-    padding-left: 0.5em;
-
-    margin: 0em;
-  }
-
   .text-location,
   .text-birthday,
   .links-bar {
     font-size: x-large;
+  }
+
+  .links-bar {
+    .button {
+      width: 2em;
+      height: 2em;
+      padding-left: 0.5em;
+
+      margin: 0em;
+    }
   }
 }
 

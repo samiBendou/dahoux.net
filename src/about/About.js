@@ -8,7 +8,7 @@ const About = (props) => {
   const data = props.data;
   return (
     <div id="about">
-      <h1 id="about-header" className="text-header">
+      <h1 id="about-header" className="title">
         <FaUserCircle className="icon-header" /> About
       </h1>
 

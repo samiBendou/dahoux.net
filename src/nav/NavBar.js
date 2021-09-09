@@ -35,7 +35,7 @@ const NavInline = (props) => (
 
 const NavBar = (props) => (
   <nav id="navbar">
-    <h2 className="title">{props.title}</h2>
+    <h2 className="header">{props.title}</h2>
     <NavInline>{props.children}</NavInline>
     <NavDropdown icon={props.icon}>{props.children}</NavDropdown>
   </nav>

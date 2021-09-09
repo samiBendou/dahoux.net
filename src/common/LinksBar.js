@@ -5,26 +5,26 @@ import React from "react";
 
 const LinkBar = (props) => {
   return (
-    <span className="links-bar">
+    <div className="links-bar">
       <a href={props.data.urls.linkedin}>
-        <FaLinkedin className="links-bar-button" />
+        <FaLinkedin className="button" />
       </a>
-      &nbsp;
+
       <a href={props.data.urls.github}>
-        <FaGithub className="links-bar-button" />
+        <FaGithub className="button" />
       </a>
-      &nbsp;
+
       <a href={`mailto:${props.data.mail}`}>
-        <FaEnvelope className="links-bar-button" />
+        <FaEnvelope className="button" />
       </a>
-      &nbsp;
+
       <PDFDownloadLink
         document={<Pdf data={props.data} />}
         fileName={`${props.data.lastName}_${props.data.firstName}_resume.pdf`}
       >
-        {() => <FaFilePdf className="links-bar-button" />}
+        {() => <FaFilePdf className="button" />}
       </PDFDownloadLink>
-    </span>
+    </div>
   );
 };
 
