@@ -3,28 +3,13 @@ import About from "./about/About";
 import Skills from "./skills/Skills";
 import Timeline from "./timeline/Timeline";
 import Projects from "./projects/Projects";
-import { FaHamburger } from "react-icons/fa";
 
 import Home from "./home/Home";
 
 import Pdf from "./pdf/Pdf";
 import { PDFViewer } from "@react-pdf/renderer";
 import Copyright from "./common/Copyright";
-import { NavBar, NavItem } from "./common/NavBar";
-
-const Title = () => (
-  <span>
-    <em>bendou</em>.space
-  </span>
-);
-
-export const Nav = () => (
-  <NavBar title={<Title />} icon={<FaHamburger />}>
-    <NavItem link="/">Home</NavItem>
-    <NavItem link="/portfolio/">Portfolio</NavItem>
-    <NavItem link="/resume/">Resume</NavItem>
-  </NavBar>
-);
+import Nav from "./nav/Nav";
 
 export const HomePage = (props) => (
   <div>
@@ -41,7 +26,7 @@ export const HomePage = (props) => (
 export const PortfolioPage = (props) => (
   <div>
     <Nav />
-    <main id="resume-page">
+    <main id="portfolio-page">
       <About data={props.data} />
       <Skills items={props.data.items.skills} />
       <Projects items={props.data.items.portfolio} />
@@ -55,15 +40,18 @@ export const PortfolioPage = (props) => (
 
 export const ResumePage = (props) => (
   <div>
-    <PDFViewer
-      style={{
-        position: "absolute",
-        border: 0,
-        height: "100%",
-        width: "100%",
-      }}
-    >
-      <Pdf data={props.data} />
-    </PDFViewer>
+    <Nav />
+    <main id="resume-page">
+      <PDFViewer
+        style={{
+          position: "absolute",
+          border: 0,
+          height: "100%",
+          width: "100%",
+        }}
+      >
+        <Pdf data={props.data} />
+      </PDFViewer>
+    </main>
   </div>
 );

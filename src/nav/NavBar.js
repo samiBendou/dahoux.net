@@ -20,7 +20,7 @@ const NavDropdown = (props) => {
       <a className="icon" href="#" onClick={() => setOpen(!open)}>
         {props.icon}
       </a>
-      <CSSTransition in={open} timeout={500} classNames="nav-translate">
+      <CSSTransition in={open} timeout={500} classNames="show">
         <ul className="nav">{props.children}</ul>
       </CSSTransition>
     </div>

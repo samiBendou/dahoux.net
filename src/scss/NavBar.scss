@@ -12,12 +12,11 @@ $open-speed: 500ms;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
   z-index: 1000 !important;
-
   position: fixed;
   overflow: visible;
+
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 
   .inline {
     height: 100%;
@@ -34,9 +33,7 @@ $open-speed: 500ms;
   a {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 100%;
-    margin: 0;
     padding: 0 1em;
     text-decoration: none;
     font-size: x-large;
@@ -76,17 +73,17 @@ $open-speed: 500ms;
     }
   }
 
-  .nav-translate-enter-done {
+  .nav.show-enter-done {
     transform: translateX(-50%) !important;
   }
-  .nav-translate-enter-active {
+  .nav.show-enter-active {
     transform: translateX(-50%) !important;
   }
-  .nav-translate-exit-active {
+  .nav.show-exit-active {
     transform: translateX(50%) !important;
   }
 
-  .nav-translate-exit-done {
+  .nav.show-exit-done {
     transform: translateX(50%) !important;
   }
 }
