@@ -1,24 +1,20 @@
 @import "colors.scss";
 
 #home-page {
-  #copyright {
-    background-color: $theme-gray-300;
-    margin: 0;
-    padding: 1em;
-  }
+  background-color: $theme-gray-300;
+  height: 100%;
 }
 
 #home-header {
   color: $theme-gray-900;
-  font-size: 3em;
   margin: 0em !important;
 }
 
 #home {
-  background-color: $theme-gray-300;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  padding-bottom: 4em;
   em {
     color: black;
   }
@@ -30,8 +26,8 @@
   overflow: auto;
 }
 
-.home-parallax {
-  border-radius: 10vw 10vw;
+.home-thumbnail {
+  border-radius: 10vw;
   width: 30vw;
   height: 30vw;
 }
@@ -43,33 +39,44 @@
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  height: 100vh;
+
+  #home-links {
+    margin-top: 1em;
+    border-radius: 10vw;
+    background-color: white;
+  }
 
   .links-bar-button {
-    width: 4em;
-    height: 4em;
-    margin: 2em;
+    width: 3.7em;
+    height: 3.7em;
+    margin: 1.5em;
   }
 }
 
 #home-second {
   border-radius: 10vw 0 0 10vw;
   background-color: white;
-  display: flex;
-  flex-direction: column;
+  display: inline-grid;
   flex-basis: 100%;
   text-align: center;
-  align-items: stretch;
-  justify-content: center;
-  font-size: x-large;
-  color: $theme-gray-700;
-
+  align-items: center;
+  vertical-align: middle;
+  font-size: large !important;
   h2 {
-    margin: 1.5em;
+    margin: 1em 4em 1em 4em !important;
+    justify-content: center;
+    flex: 1;
+    color: $theme-gray-700;
   }
 }
 
 @media only screen and (max-width: 1024px) {
+  #home-first {
+    #home-links {
+      margin-top: 0em;
+      background-color: $theme-gray-300;
+    }
+  }
   #home-inner {
     flex-direction: column;
   }
@@ -84,7 +91,13 @@
     }
   }
 
-  .home-parallax {
+  .home-thumbnail {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1981px) {
+  #home-second {
+    font-size: x-large !important;
   }
 }

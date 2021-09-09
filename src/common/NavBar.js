@@ -1,19 +1,45 @@
-import React from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import "../scss/NavBar.scss";
 
-const NavBar = () => {
+import React, { useState } from "react";
+import { FaHamburger } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
+
+const NavItem = (props) => (
+  <li className="item">
+    <NavLink exact to={props.link} activeClassName="active">
+      {props.children}
+    </NavLink>
+  </li>
+);
+
+const NavDropdown = (props) => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav id="navbar">
-      <NavLink exact to="/resume/" activeClassName="navbar-active">
-        Resume
-      </NavLink>
-      <NavLink exact to="/portfolio/" activeClassName="navbar-active">
-        Portfolio
-      </NavLink>
-      <NavLink exact to="/" activeClassName="navbar-active">
-        Home
-      </NavLink>
-    </nav>
+    <div className="dropdown">
+      <a className="icon" href="#" onClick={() => setOpen(!open)}>
+        <FaHamburger />
+      </a>
+      <CSSTransition in={open} timeout={500} classNames="nav-translate">
+        <ul className="nav">{props.children}</ul>
+      </CSSTransition>
+    </div>
   );
 };
-export default withRouter(NavBar);
+
+const NavInline = (props) => (
+  <div className="inline">
+    <ul className="nav">{props.children}</ul>
+  </div>
+);
+
+const NavBar = (props) => (
+  <nav id="navbar">
+    <h2 className="title">{props.title}</h2>
+    <NavInline>{props.children}</NavInline>
+    <NavDropdown>{props.children}</NavDropdown>
+  </nav>
+);
+
+export { NavBar, NavItem };

@@ -1,27 +1,32 @@
 @import "colors.scss";
 
 #about {
+  padding-bottom: 4em;
+
   .links-bar-button {
-    width: 1.5em;
-    height: 1.5em;
+    width: 2em;
+    height: 2em;
+    padding-left: 0.5em;
+
+    margin: 0em;
+  }
+
+  .text-location,
+  .text-birthday,
+  .links-bar {
+    font-size: x-large;
   }
 }
 
 #about-title {
   color: $theme-gray-700;
   font-weight: normal;
+  font-size: xx-large;
 }
 
 #about-name {
+  font-size: xxx-large;
   color: $theme-gray-900;
-}
-
-#about-quote {
-  text-align: center;
-  font-size: x-large;
-  font-weight: 400;
-  font-style: italic;
-  margin: 32px;
 }
 
 .about-left-item,
@@ -50,10 +55,15 @@
 }
 
 #about-second {
+  font-size: x-large;
   display: flex;
   flex-direction: column;
   padding-left: 8px;
   flex-basis: 100%;
+  p {
+    font-size: x-large;
+    font-style: italic;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -64,9 +74,5 @@
 
   #about-inner {
     flex-direction: column;
-  }
-
-  #about-second {
-    flex-direction: row;
   }
 }

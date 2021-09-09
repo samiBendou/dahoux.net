@@ -2,27 +2,21 @@ import React from "react";
 import "../scss/Home.scss";
 import LinksBar from "../common/LinksBar";
 import ProfilePicture from "./sami2.jpg"; // gives image path
-import { Parallax } from "react-parallax";
 import Emoji from "a11y-react-emoji";
 
 const Home = (props) => {
   const data = props.data;
   return (
     <div id="home">
-      <div id="home-header" className="text-header">
-        <h1>
+      <div id="home-header">
+        <h1 className="text-header">
           Hi I'm <em>Sami</em> ! <Emoji symbol="🙂️" />
         </h1>
       </div>
       <div id="home-inner">
         <div id="home-first">
           <div>
-            <Parallax
-              className="home-parallax"
-              bgImage={ProfilePicture}
-              bgImageAlt="the cat"
-              strength={-200}
-            ></Parallax>
+            <img className="home-thumbnail" src={ProfilePicture} alt="profile thumbnail" />
           </div>
 
           <div id="home-links">

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
 import Loader from "./Loader";
-import { HomePage, ResumePage, ResumeDocument } from "./Views";
+import { HomePage, PortfolioPage, ResumePage } from "./Views";
 
 const Status = {
   Ready: "ready",
@@ -38,8 +38,8 @@ export default class App extends Component {
         return (
           <div>
             <Route exact path="/" component={() => <HomePage data={data} />} />
-            <Route exact path="/portfolio" component={() => <ResumePage data={data} />} />
-            <Route path="/resume" component={() => <ResumeDocument data={data} />} />
+            <Route exact path="/portfolio" component={() => <PortfolioPage data={data} />} />
+            <Route path="/resume" component={() => <ResumePage data={data} />} />
           </div>
         );
       case Status.Error:
