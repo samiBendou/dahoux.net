@@ -14,27 +14,26 @@ export default class ProjectsItem extends Component {
   render() {
     const props = this.props;
     return (
-      <div className="backlog-item">
-        <h2>
+      <div className="item">
+        <h2 className="name">
           <a href={props.url}>
-            <FaExternalLinkAlt className="icon-header" />
-          </a>{" "}
-          {props.title}
+            <FaExternalLinkAlt className="icon" /> {props.title}
+          </a>
         </h2>
         <h4>
           <DateText start={props.start} end={props.end} />
         </h4>
-        <div className="backlog-tags-list">
+        <div className="tags-list">
           {props.tags.map((tag) => (
             <div className={`tag ${titleToLabel(tag)}`} key={tag}>
               {tag}
             </div>
           ))}
         </div>
-        <p className="backlog-item-brief">{props.brief}</p>
-        <ul className="backlog-item-items">
+        <p className="brief">{props.brief}</p>
+        <ul className="items-list">
           {props.items.map((item) => (
-            <li>{item}</li>
+            <li key={item}>{item}</li>
           ))}
         </ul>
       </div>

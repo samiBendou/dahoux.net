@@ -3,12 +3,12 @@ import { FaDraftingCompass } from "react-icons/fa";
 import ProjectsList from "./ProjectsList";
 
 const Projects = (props) => (
-  <div id="projects">
+  <section id="projects">
     <h1 className="title">
-      <FaDraftingCompass className="icon-header" /> Projects
+      <FaDraftingCompass className="icon" /> Projects
     </h1>
     <ProjectsList items={props.items} />
-  </div>
+  </section>
 );
 
 export default Projects;

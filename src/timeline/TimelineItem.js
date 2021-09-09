@@ -16,8 +16,8 @@ export default class TimelineItem extends Component {
   render() {
     const props = this.props;
     return (
-      <div className="backlog-item">
-        <div className="backlog-tags-list">
+      <div className="item">
+        <div className="tags-list">
           {[TimelineCategory[props.category], ...(props.tags || [])].map((tag) => (
             <div className={`tag ${titleToLabel(tag)}`} key={tag}>
               {tag}
@@ -27,17 +27,17 @@ export default class TimelineItem extends Component {
         <h4>
           <DateText start={props.start} end={props.end} />
         </h4>
-        <h2>{props.title}</h2>
+        <h2 className="name">{props.title}</h2>
         <h3>
           <CompanyText url={props.company.url} name={props.company.name} />
         </h3>
         <h3>
           <LocationText location={props.location} county={false} />
         </h3>
-        <p className="backlog-item-brief">{props.brief}</p>
-        <ul className="backlog-item-items">
+        <p className="item-brief">{props.brief}</p>
+        <ul className="items-list">
           {props.items.map((item) => (
-            <li key={item.toString()}>{item}</li>
+            <li key={item}>{item}</li>
           ))}
         </ul>
         <span className="circle" />

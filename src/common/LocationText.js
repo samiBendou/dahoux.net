@@ -6,7 +6,7 @@ const LocationText = (props) => {
   return (
     <span className="text-location">
       <a href={renderLocationURL(props.location)}>
-        <FaMapMarker className="icon-header" />
+        <FaMapMarker className="icon" />
       </a>
       <span> {renderLocationText(props.location, props.county)}</span>
     </span>

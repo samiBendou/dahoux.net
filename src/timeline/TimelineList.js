@@ -5,7 +5,7 @@ import "../scss/Backlog.scss";
 const TimelineList = ({ items }) => {
   const sortedItems = items.slice().sort((a, b) => new Date(b.start) - new Date(a.start));
   return (
-    <div className="backlog-list">
+    <div className="backlog">
       {sortedItems.map((item) => (
         <TimelineItem
           category={item.category}

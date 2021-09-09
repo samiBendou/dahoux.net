@@ -1,9 +1,9 @@
 @import "colors.scss";
 
 .tag.experience {
-  background-color: $theme-tag-red;
+  background-color: $theme-tag-red !important;
 }
 
 .tag.education {
-  background-color: $theme-tag-purple;
+  background-color: $theme-tag-purple !important;
 }

@@ -5,9 +5,10 @@ const CompanyText = (props) => {
   return (
     <span className="text-company">
       <a href={props.url}>
-        <FaExternalLinkAlt className="icon-header" />
+        <FaExternalLinkAlt className="icon" />
+
+        <span> {props.name}</span>
       </a>
-      <span> {props.name}</span>
     </span>
   );
 };

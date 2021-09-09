@@ -6,13 +6,13 @@
 .tag.ip,
 .tag.library,
 .tag.simulator {
-  background-color: $industry-knowledge-color;
+  background-color: $industry-knowledge-color !important;
 }
 
 .tag.computer-vision,
 .tag.machine-learning,
 .tag.side-channel {
-  background-color: $scientific-knowledge-color;
+  background-color: $scientific-knowledge-color !important;
 }
 
 .tag.python,
@@ -21,7 +21,7 @@
 .tag.c\+\+,
 .tag.c,
 .tag.javascript {
-  background-color: $software-languages-color;
+  background-color: $software-languages-color !important;
 }
 
 .tag.numpy,
@@ -30,5 +30,5 @@
 .tag.react,
 .tag.npm,
 .tag.fpga {
-  background-color: $tools-technologies-color;
+  background-color: $tools-technologies-color !important;
 }

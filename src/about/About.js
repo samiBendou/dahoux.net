@@ -9,7 +9,7 @@ const About = (props) => {
   return (
     <section id="about">
       <h1 className="title">
-        <FaUserCircle className="icon-header" /> About
+        <FaUserCircle className="icon" /> About
       </h1>
 
       <div className="inner">

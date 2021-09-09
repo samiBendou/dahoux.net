@@ -11,7 +11,7 @@ const Skills = (props) => {
   return (
     <section id="skills">
       <h1 className="title">
-        <FaWrench className="icon-header" /> Skills
+        <FaWrench className="icon" /> Skills
       </h1>
       <div className="inner">
         {categories.map((category) => (
