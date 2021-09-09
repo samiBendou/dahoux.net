@@ -11,7 +11,7 @@ const Home = (props) => {
     <section id="home">
       <div className="first">
         <h1 className="header">
-          Hi I'm <em>Sami</em> ! <Emoji symbol="🙂️" />
+          Hi I&#39; m <em>Sami</em> ! <Emoji symbol="🙂️" />
         </h1>
         <img className="thumbnail" src={ProfilePicture} alt="profile thumbnail" />
         <LinksBar data={data} />
