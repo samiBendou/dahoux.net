@@ -7,7 +7,7 @@ import LinksBar from "../common/LinksBar";
 const About = (props) => {
   const data = props.data;
   return (
-    <div id="about">
+    <section id="about">
       <h1 className="title">
         <FaUserCircle className="icon-header" /> About
       </h1>
@@ -36,7 +36,7 @@ const About = (props) => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

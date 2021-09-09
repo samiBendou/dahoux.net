@@ -1,6 +1,9 @@
 @import "colors.scss";
 
+$element-radius: 3rem;
+
 .tag {
+  border-radius: $element-radius;
   margin: 0 4px 0 0;
   font-size: 12px;
   font-weight: bold;
@@ -19,6 +22,7 @@
 
 .backlog-tags-list {
   display: flex;
+  flex-wrap: wrap;
   align-content: center;
 }
 
@@ -39,6 +43,7 @@
   padding: 16px;
   min-width: 300px;
   background-color: $theme-gray-300;
+  border-radius: $element-radius;
 }
 
 .backlog-item-brief {

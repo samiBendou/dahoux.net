@@ -9,7 +9,7 @@ const Skills = (props) => {
   const itemsByCategory = new Map(categories.map((category) => [category, []]));
   items.forEach((item) => itemsByCategory.get(item.category).push(item));
   return (
-    <div id="skills">
+    <section id="skills">
       <h1 className="title">
         <FaWrench className="icon-header" /> Skills
       </h1>
@@ -18,7 +18,7 @@ const Skills = (props) => {
           <SkillsList key={category} items={itemsByCategory.get(category)} category={category} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

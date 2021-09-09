@@ -1,19 +1,25 @@
 @import "colors.scss";
 
+$element-radius: 3rem;
+
 #skills {
   .inner {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: flex-end;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
   }
 
   .stack {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    border-radius: 3rem 3rem 0 0;
+    border-radius: $element-radius $element-radius 0 0;
+    margin: auto;
+    border-bottom: 1rem solid $theme-gray-700;
   }
 
   .name {
@@ -46,6 +52,8 @@
     .stack {
       flex-direction: row;
       place-content: start;
+      border-radius: 0 $element-radius $element-radius 0;
+      border: none;
     }
 
     .name {
