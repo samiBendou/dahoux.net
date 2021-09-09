@@ -1,7 +1,6 @@
 import "../scss/NavBar.scss";
 
 import React, { useState } from "react";
-import { FaHamburger } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
@@ -19,7 +18,7 @@ const NavDropdown = (props) => {
   return (
     <div className="dropdown">
       <a className="icon" href="#" onClick={() => setOpen(!open)}>
-        <FaHamburger />
+        {props.icon}
       </a>
       <CSSTransition in={open} timeout={500} classNames="nav-translate">
         <ul className="nav">{props.children}</ul>
@@ -38,7 +37,7 @@ const NavBar = (props) => (
   <nav id="navbar">
     <h2 className="title">{props.title}</h2>
     <NavInline>{props.children}</NavInline>
-    <NavDropdown>{props.children}</NavDropdown>
+    <NavDropdown icon={props.icon}>{props.children}</NavDropdown>
   </nav>
 );
 

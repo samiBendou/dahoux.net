@@ -3,6 +3,8 @@ import About from "./about/About";
 import Skills from "./skills/Skills";
 import Timeline from "./timeline/Timeline";
 import Projects from "./projects/Projects";
+import { FaHamburger } from "react-icons/fa";
+
 import Home from "./home/Home";
 
 import Pdf from "./pdf/Pdf";
@@ -17,7 +19,7 @@ const Title = () => (
 );
 
 export const Nav = () => (
-  <NavBar title={<Title />}>
+  <NavBar title={<Title />} icon={<FaHamburger />}>
     <NavItem link="/">Home</NavItem>
     <NavItem link="/portfolio/">Portfolio</NavItem>
     <NavItem link="/resume/">Resume</NavItem>
