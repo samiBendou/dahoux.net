@@ -4,6 +4,7 @@ import { Route } from "react-router-dom";
 
 import Loader from "./Loader";
 import { HomePage, PortfolioPage, ResumePage } from "./Views";
+import { Switch } from "react-router";
 
 const Status = {
   Ready: "ready",
@@ -18,15 +19,19 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    const res = await fetch("/api/portfolio/bendou");
-    const text = await res.text();
-    if (res.status !== 200) {
-      this.setState({ status: Status.Error, error: new Error(`${res.status} - ${text}`) });
-      return Promise.reject(text);
+    try {
+      const res = await fetch("/api/portfolio/bendou");
+      const text = await res.text();
+      if (res.status !== 200) {
+        this.setState({ status: Status.Error, error: new Error(`${res.status} - ${text}`) });
+        return Promise.reject(text);
+      }
+      const object = JSON.parse(text);
+      this.setState({ status: Status.Ready, data: object });
+      return Promise.resolve();
+    } catch (error) {
+      return Promise.reject(error);
     }
-    const object = JSON.parse(text);
-    this.setState({ status: Status.Ready, data: object });
-    return Promise.resolve();
   }
 
   render() {
@@ -36,11 +41,11 @@ export default class App extends Component {
         return <Route path="/" component={Loader} />;
       case Status.Ready:
         return (
-          <div>
+          <Switch>
             <Route exact path="/" component={() => <HomePage data={data} />} />
             <Route exact path="/portfolio" component={() => <PortfolioPage data={data} />} />
             <Route path="/resume" component={() => <ResumePage data={data} />} />
-          </div>
+          </Switch>
         );
       case Status.Error:
         console.error(this.state.error);

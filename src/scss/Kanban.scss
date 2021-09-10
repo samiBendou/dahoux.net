@@ -1,0 +1,31 @@
+@import "colors.scss";
+
+#kanban {
+  @media only screen and (max-width: 1023px) {
+    display: none;
+  }
+
+  .columns {
+    .column {
+      flex-basis: 100%;
+
+      .title {
+        text-align: center;
+        font-size: xx-large;
+        color: $theme-gray-900;
+      }
+    }
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    .backlog {
+      .item {
+        flex-basis: 80%;
+      }
+
+      .items-list {
+        display: none;
+      }
+    }
+  }
+}

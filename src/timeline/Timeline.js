@@ -3,12 +3,12 @@ import TimelineList from "./TimelineList";
 import { FaBriefcase } from "react-icons/fa";
 
 const Timeline = (props) => (
-  <div id="timeline">
+  <section id="timeline">
     <h1 className="title">
       <FaBriefcase className="icon" /> Timeline
     </h1>
     <TimelineList items={props.items} />
-  </div>
+  </section>
 );
 
 export default Timeline;

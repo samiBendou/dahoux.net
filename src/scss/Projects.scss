@@ -1,5 +1,11 @@
 @import "colors.scss";
 
+#projects {
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+
 .tag.application,
 .tag.game,
 .tag.web,

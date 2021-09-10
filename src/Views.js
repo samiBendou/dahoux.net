@@ -10,6 +10,7 @@ import Pdf from "./pdf/Pdf";
 import { PDFViewer } from "@react-pdf/renderer";
 import Copyright from "./common/Copyright";
 import Nav from "./nav/Nav";
+import Kanban from "./kanban/Kanban";
 
 export const HomePage = (props) => (
   <div>
@@ -31,6 +32,7 @@ export const PortfolioPage = (props) => (
       <Skills items={props.data.items.skills} />
       <Projects items={props.data.items.portfolio} />
       <Timeline items={props.data.items.timeline} />
+      <Kanban data={props.data} />
     </main>
     <footer>
       <Copyright />
