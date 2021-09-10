@@ -1,7 +1,3 @@
-const titleToLabel = (title) => title.toLowerCase()
-    .replace(" ", "-")
-    .replace("&", "")
-    .replace(" ", "")
-
+const titleToLabel = (title) => title.toLowerCase().replace(" ", "-").replace("&", "").replace(" ", "");
 
 export default titleToLabel;

@@ -1,122 +1,129 @@
-@import 'colors.scss';
+@import "colors.scss";
 
-.skills-item {
-  background-color: $default-color;
-}
+$element-radius: 3rem;
 
-.skills-item.scientific-knowledge {
-  background-color: $scientific-knowledge-color;
-}
-
-.skills-item.industry-knowledge {
-  background-color: $industry-knowledge-color;
-}
-
-.skills-item.tools-technologies {
-  background-color: $tools-technologies-color;
-}
-
-.skills-item.software-languages {
-  background-color: $software-languages-color;
-}
-
-.skills-item.hardware-design {
-  background-color: $hardware-design-color;
-}
-
-.skills-item.interpersonal-skills {
-  background-color: $interpersonal-skills-color;
-}
-
-.skills-item.languages {
-  background-color: $languages-color;
-}
-
-.skills-title.scientific-knowledge {
-  color: $scientific-knowledge-color;
-}
-
-.skills-title.industry-knowledge {
-  color: $industry-knowledge-color;
-}
-
-.skills-title.tools-technologies {
-  color: $tools-technologies-color;
-}
-
-.skills-title.software-languages {
-  color: $software-languages-color;
-}
-
-.skills-title.hardware-design {
-  color: $hardware-design-color;
-}
-
-.skills-title.interpersonal-skills {
-  color: $interpersonal-skills-color;
-}
-
-.skills-title.languages {
-  color: $languages-color;
-}
-
-#skills-inner {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-
-}
-
-.skills-list {
-  display: flex;
-  flex-direction: column;
-  flex-basis: content-box;
-  justify-content: center;
-  place-content: flex-end;
-  flex-wrap: wrap;
-
-}
-
-.skills-title {
-  padding: 8px;
-  margin: 0;
-  flex-grow: 2;
-}
-
-.skills-item {
-  margin: 0;
-  padding: 8px;
-  text-align: center;
-  color: white;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-}
-
-@media only screen and (max-width: 1024px) {
-  #skills-inner {
-    flex-direction: column;
-    align-items: start;
-  }
-
-  .skills-list {
+#skills {
+  .inner {
+    display: flex;
     flex-direction: row;
-    place-content: start;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
   }
 
-
-  .skills-title {
-    text-align: left;
-    justify-content: left;
-    flex-basis: 100%;
+  .stack {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: $element-radius $element-radius 0 0;
+    margin: auto;
+    border-bottom: 1rem solid $theme-gray-700;
   }
 
-  .skills-item {
-    text-align: left;
+  .name {
+    padding: 0.5rem;
+    margin: 0;
+
+    text-align: center;
+  }
+
+  .item {
+    margin: 0;
+    padding: 8px;
+    height: 50px;
+
+    text-align: center;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .inner {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .stack {
+      flex-direction: row;
+      place-content: start;
+      border-radius: 0 $element-radius $element-radius 0;
+      border: none;
+    }
+
+    .name {
+      text-align: left;
+      justify-content: left;
+      flex-basis: 100%;
+    }
+
+    .item {
+      text-align: left;
+    }
+  }
+
+  .stack {
+    background-color: $default-color;
+  }
+
+  .stack.scientific-knowledge {
+    background-color: $scientific-knowledge-color;
+  }
+
+  .stack.industry-knowledge {
+    background-color: $industry-knowledge-color;
+  }
+
+  .stack.tools-technologies {
+    background-color: $tools-technologies-color;
+  }
+
+  .stack.software-languages {
+    background-color: $software-languages-color;
+  }
+
+  .stack.hardware-design {
+    background-color: $hardware-design-color;
+  }
+
+  .stack.interpersonal-skills {
+    background-color: $interpersonal-skills-color;
+  }
+
+  .stack.languages {
+    background-color: $languages-color;
+  }
+
+  .name.scientific-knowledge {
+    color: $scientific-knowledge-color;
+  }
+
+  .name.industry-knowledge {
+    color: $industry-knowledge-color;
+  }
+
+  .name.tools-technologies {
+    color: $tools-technologies-color;
+  }
+
+  .name.software-languages {
+    color: $software-languages-color;
+  }
+
+  .name.hardware-design {
+    color: $hardware-design-color;
+  }
+
+  .name.interpersonal-skills {
+    color: $interpersonal-skills-color;
+  }
+
+  .name.languages {
+    color: $languages-color;
   }
 }
-

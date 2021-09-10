@@ -1,0 +1,51 @@
+@import "colors.scss";
+
+$element-radius: 3rem;
+
+#kanban {
+  @media only screen and (max-width: 1023px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1981px) {
+    .columns {
+      .column {
+        flex-basis: 25% !important;
+      }
+    }
+  }
+
+  .columns {
+    .column {
+      background-color: $theme-gray-300;
+      border-radius: $element-radius;
+      flex-basis: 100%;
+      margin: 0 1rem;
+      padding: 0 4px $element-radius 4px;
+      .title {
+        text-align: center;
+        font-size: xx-large;
+        color: $theme-gray-900;
+      }
+    }
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .backlog {
+      max-height: 75vh;
+      overflow: scroll;
+
+      .item {
+        background-color: white;
+        height: fit-content;
+        flex-basis: 80%;
+        min-width: 0 !important;
+      }
+
+      .items-list {
+        display: none;
+      }
+    }
+  }
+}

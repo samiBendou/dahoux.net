@@ -1,0 +1,98 @@
+@import "colors.scss";
+
+$element-radius: 3rem;
+$image-dimension-small: 25vw;
+$image-dimension-big: 75vw;
+
+#home {
+  background-color: $theme-gray-300;
+  padding-bottom: 8rem;
+
+  display: flex;
+  em {
+    color: black;
+  }
+
+  .header {
+    color: $theme-gray-900;
+  }
+
+  .thumbnail {
+    width: $image-dimension-small;
+    height: $image-dimension-small;
+
+    border-radius: $element-radius;
+  }
+
+  .first {
+    text-align: center;
+    align-items: center;
+
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .links-bar {
+      margin-top: clamp(0.1rem, 1.5rem, 3rem);
+      width: $image-dimension-small;
+      border-radius: $element-radius;
+      background-color: white;
+
+      display: flex;
+      justify-content: space-around;
+      .button {
+        width: clamp(1rem, 3rem, 5rem);
+        height: clamp(1rem, 3rem, 5rem);
+        margin: clamp(0.1rem, 2rem, 4rem) 0;
+      }
+    }
+  }
+
+  .second {
+    background-color: white;
+    border-radius: 0 0 0 $element-radius;
+
+    font-size: large !important;
+    text-align: center;
+
+    flex-basis: 100%;
+    display: inline-grid;
+    align-items: center;
+    h2 {
+      margin: 1rem 4rem 1rem 4rem !important;
+      color: $theme-gray-700;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    padding: 0;
+
+    flex-direction: column;
+
+    .first {
+      .links-bar {
+        background-color: $theme-gray-300;
+      }
+    }
+
+    .second {
+      border-radius: $element-radius 0 0 0;
+    }
+
+    .thumbnail {
+      width: $image-dimension-big;
+      height: $image-dimension-big;
+    }
+    .first {
+      .links-bar {
+        width: $image-dimension-big;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1981px) {
+    .second {
+      font-size: x-large !important;
+    }
+  }
+}

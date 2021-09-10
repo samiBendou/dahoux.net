@@ -1,24 +1,37 @@
-@import 'colors.scss';
+@import "colors.scss";
+@import "NavBar.scss";
 
 body {
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-p, li, a {
+main {
+  padding-top: $nav-height;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p,
+li {
   font-size: large;
 }
-
 
 time {
   color: $theme-gray-700;
   font-weight: bold;
 }
 
-a, .btn-link{
+a,
+.btn-link {
   color: $theme-blue !important;
   transition: color 200ms;
+  text-decoration: none;
+  font-weight: bold;
 }
-a:hover, .btn-link:hover {
+a:hover,
+.btn-link:hover {
   color: $theme-marine !important;
 }
 
@@ -36,18 +49,19 @@ a:hover, .btn-link:hover {
   text-align: center;
 }
 
-.icon-header {
-  vertical-align: top;
-}
-
-.text-header {
+.title {
   text-align: center;
-  font-weight: 400;
-  font-size: xxx-large;
+  font-weight: bold;
+  font-size: 3em;
   margin: 32px;
+
+  .icon {
+    vertical-align: top;
+  }
 }
 
-.text-location, .text-birthday, .links-bar {
+.text-location,
+.text-birthday,
+.links-bar {
   font-weight: normal !important;
 }
-
