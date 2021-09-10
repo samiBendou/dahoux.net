@@ -35,11 +35,10 @@ $element-radius: 3rem;
     .backlog {
       max-height: 75vh;
       overflow: scroll;
-
       .item {
         background-color: white;
         height: fit-content;
-        flex-basis: 80%;
+        flex-basis: 100%;
         min-width: 0 !important;
       }
 
