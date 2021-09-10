@@ -7,6 +7,7 @@ import SkillsCategory from "../skills/SkillsCategory";
 const styles = StyleSheet.create({
   pdfLeft: {
     flexDirection: "col",
+    width: "35%",
   },
 
   section: {
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
   },
 
   header: {
-    fontSize: "14pt",
+    fontSize: "12pt",
     fontFamily: "Helvetica-Bold",
   },
 });

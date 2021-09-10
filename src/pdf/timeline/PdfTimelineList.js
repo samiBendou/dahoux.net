@@ -3,10 +3,9 @@ import { View } from "@react-pdf/renderer";
 import PdfTimelineItem from "./PdfTimelineItem";
 
 const PdfTimelineList = ({ items }) => {
-  const sortedItems = items.slice().sort((a, b) => new Date(b.end) - new Date(a.end));
   return (
     <View>
-      {sortedItems.map((item) => (
+      {items.map((item) => (
         <PdfTimelineItem
           title={item.title}
           brief={item.brief}

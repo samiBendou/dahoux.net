@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     flexDirection: "col",
     backgroundColor: "#fff",
     width: "100%",
+    paddingRight: "16px",
   },
 
   section: {
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     fontFamily: "Helvetica-Oblique",
     fontSize: "12pt",
     textAlign: "center",
-    width: "50%",
+    width: "100%",
   },
 
   link: {
@@ -59,28 +60,28 @@ const PdfRight = (props) => {
   const categories = new Array(...new Set(props.items.map((item) => item.category)));
   const items = new Map(categories.map((category) => [category, []]));
   props.items.forEach((item) => items.get(item.category).push(item));
-  // noinspection JSIncompatibleTypesComparison
-  categories.sort((a) => (a === 0 ? -1 : 0));
+  const experiences = items
+    .get(0)
+    .sort((a, b) => new Date(b.start) - new Date(a.start))
+    .slice(0, 5);
+  console.log(experiences);
   return (
     <View style={styles.pdfRight}>
-      <View style={{ margin: 0, padding: 16 }}>
+      <View style={{ margin: 0, padding: 8 }}>
         <Text style={styles.name}>
           {props.data.firstName} {props.data.lastName}
         </Text>
         <Text style={styles.quote}>{props.data.quote}</Text>
         <Text style={styles.other}> {renderLocationText(props.data.location, true)}</Text>
         <Text style={styles.other}>{props.data.mail}</Text>
-        <Text style={styles.link}>
-          <Link src={props.data.urls.portfolio}>{props.data.urls.portfolio.split("://")[1]}</Link>
-        </Text>
+        <Link style={styles.link} src={props.data.urls.portfolio}>
+          {props.data.urls.portfolio.split("://")[1]}
+        </Link>
       </View>
-      {categories
-        .filter((category) => category === 0)
-        .map((category) => (
-          <View style={styles.section} key={category}>
-            <PdfTimelineList items={items.get(category)} />
-          </View>
-        ))}
+
+      <View style={styles.section}>
+        <PdfTimelineList items={experiences} />
+      </View>
     </View>
   );
 };

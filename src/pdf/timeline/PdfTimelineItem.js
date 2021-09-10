@@ -27,17 +27,17 @@ const styles = StyleSheet.create({
   },
   brief: {
     fontSize: "11pt",
-    width: "70%",
+    width: "100%",
     fontFamily: "Helvetica-Oblique",
   },
   items: {
     fontSize: "12pt",
-    width: "70%",
+    width: "100%",
   },
 });
 
 const PdfTimelineItem = (props) => (
-  <View style={{ flexDirection: "col" }}>
+  <View style={{ flexDirection: "col", marginBottom: 8 }}>
     <Text style={styles.title}>{props.title}</Text>
     <Text style={styles.date}>{renderDate(new Date(props.start), props.end ? new Date(props.end) : undefined)}</Text>
     <View style={{ flexDirection: "row" }}>
