@@ -64,7 +64,6 @@ const PdfRight = (props) => {
     .get(0)
     .sort((a, b) => new Date(b.start) - new Date(a.start))
     .slice(0, 5);
-  console.log(experiences);
   return (
     <View style={styles.pdfRight}>
       <View style={{ margin: 0, padding: 8 }}>
