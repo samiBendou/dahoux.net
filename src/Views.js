@@ -15,7 +15,7 @@ import { TimelineItem } from "./timeline/TimelineItem";
 export const TimelineItemPage = (props) => (
   <div>
     <Nav />
-    <main id="timeline-item-page" className="backlog page">
+    <main id="item-page" className="backlog page">
       <TimelineItem
         category={props.item.category}
         tags={props.item.tags}

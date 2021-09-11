@@ -10,6 +10,7 @@ const TimelineList = ({ items }) => {
         <TimelineCard
           tags={item.tags}
           category={item.category}
+          url={item.url}
           title={item.title}
           brief={item.brief}
           items={item.items}

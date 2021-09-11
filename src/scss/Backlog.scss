@@ -6,6 +6,10 @@ $modal-width: 50vw;
 
 .backlog.page {
   width: 100vw !important;
+
+  .quit {
+    display: none;
+  }
 }
 
 .backlog.page,
@@ -13,43 +17,63 @@ $modal-width: 50vw;
   .item {
     background-color: white !important;
     flex-basis: 75vw;
+  }
 
-    .tag {
-      font-size: large !important;
+  @media only screen and (min-width: 1024px) {
+    .item {
+      .tag {
+        font-size: large !important;
+      }
     }
-  }
 
-  h1 {
-    font-size: xxx-large !important;
-    text-align: center;
-  }
+    h1 {
+      font-size: xxx-large !important;
+      text-align: center;
+    }
 
-  h2 {
-    font-size: xx-large !important;
-  }
+    h2 {
+      font-size: xx-large !important;
+    }
 
-  h3 {
-    font-size: x-large;
-  }
+    h3 {
+      font-size: x-large;
+    }
 
-  h4 {
-    font-size: large;
-  }
+    h4 {
+      font-size: large;
+    }
 
-  p,
-  li {
-    font-size: x-large;
+    p,
+    li {
+      font-size: x-large;
+    }
   }
 }
 
 .backlog.modal {
   width: $modal-width;
   margin: auto;
-  margin-top: $nav-height !important;
+  margin-top: calc(#{$nav-height} + 1rem) !important;
+  border-radius: $element-radius;
+  //padding: $element-radius 0 $element-radius 0;
+  border: 1rem solid $theme-gray-700;
+  background-color: white;
   .item {
-    width: $modal-width !important;
-    border: 1rem solid $theme-gray-300;
+    margin: 1rem !important;
+    max-height: 100vh;
+    width: $modal-width;
+    overflow: scroll;
     flex-basis: auto !important;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .item {
+      max-height: 60vh;
+      width: 100vw;
+      min-width: 0;
+      margin: 0 !important;
+    }
+    width: 75vw;
   }
 }
 
@@ -57,9 +81,23 @@ $modal-width: 50vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  .top {
+    display: flex;
+    align-items: flex-start;
+    .quit {
+      margin-left: auto;
+      font-size: x-large;
+    }
+  }
   .card {
     cursor: pointer;
+    .quit {
+      display: none;
+    }
+  }
+
+  .card:hover {
+    background-color: $theme-gray-300 !important;
   }
 
   .item {
@@ -70,7 +108,7 @@ $modal-width: 50vw;
 
     .tag {
       border-radius: $element-radius;
-      margin: 0 4px 0 0;
+      margin: 0 4px 4px 0px;
       font-size: 12px;
       font-weight: bold;
       letter-spacing: 1px;
@@ -84,17 +122,6 @@ $modal-width: 50vw;
       display: flex;
       flex-wrap: wrap;
       align-content: center;
-    }
-
-    .tag {
-      margin: 0 4px 0 0;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: white;
-      padding: 4px;
-      background-color: $theme-gray-700;
     }
 
     flex-basis: 30%;

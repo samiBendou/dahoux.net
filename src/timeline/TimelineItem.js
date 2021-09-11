@@ -10,22 +10,34 @@ import titleToLabel from "../common/core/tags";
 import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
-import { FaExternalLinkAlt } from "react-icons/fa";
-
-Modal.setAppElement("#root");
+import { FaExternalLinkAlt, FaTimes } from "react-icons/fa";
 
 const TimelineHead = (props) => {
+  function handleClick(event) {
+    let isLink = event.target.parentNode.nodeName === "A";
+    if (event.target.nodeName === "path") {
+      isLink = event.target.parentNode.parentNode.nodeName === "A";
+    }
+    !isLink && props.openModal && props.openModal();
+  }
+
   const category = TimelineCategory[props.category] || "";
   const tags = [...(props.tags || []), ...(category ? [category] : [])];
   return (
-    <div onClick={props.onClick}>
-      <div className="tags-list">
-        {tags.map((tag) => (
-          <div className={`tag ${titleToLabel(tag)}`} key={tag}>
-            {tag}
-          </div>
-        ))}
+    <div onClick={handleClick}>
+      <div className="top">
+        <div className="tags-list">
+          {tags.map((tag) => (
+            <div className={`tag ${titleToLabel(tag)}`} key={tag}>
+              {tag}
+            </div>
+          ))}
+        </div>
+        <button className="quit" onClick={props.closeModal}>
+          <FaTimes className="icon" />
+        </button>
       </div>
+
       <h1 className="name">{props.title}</h1>
       <h4>
         <DateText start={props.start} end={props.end} />
@@ -70,19 +82,17 @@ const TimelineCard = (props) => {
   const [open, setOpen] = useState(false);
 
   function openModal() {
-    setOpen(true && !detailed);
+    setOpen(true);
   }
 
   function closeModal() {
     setOpen(false);
   }
 
-  const detailed = props.detailed;
-
   return (
     <div className="item card">
       <TimelineHead
-        onClick={openModal}
+        openModal={openModal}
         category={props.category}
         tags={props.tags}
         url={props.url}
@@ -97,6 +107,7 @@ const TimelineCard = (props) => {
 
       <Modal className="backlog modal" isOpen={open} onRequestClose={closeModal} shouldCloseOnOverlayClick={true}>
         <TimelineItem
+          closeModal={closeModal}
           category={props.category}
           tags={props.tags}
           url={props.url}
@@ -117,6 +128,7 @@ const TimelineItem = (props) => {
   return (
     <div className="item">
       <TimelineHead
+        closeModal={props.closeModal}
         category={props.category}
         tags={props.tags}
         url={props.url}

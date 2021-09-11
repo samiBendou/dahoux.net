@@ -1,11 +1,14 @@
 import "./scss/App.scss";
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
+import { Switch } from "react-router";
+import Modal from "react-modal";
 
 import Loader from "./Loader";
 import { HomePage, PortfolioPage, ResumePage, TimelineItemPage } from "./Views";
-import { Switch } from "react-router";
 import { slugifyString } from "./common/core/url";
+
+Modal.setAppElement("#root");
 
 const Status = {
   Ready: "ready",
