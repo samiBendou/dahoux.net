@@ -1,14 +1,9 @@
 import React from "react";
-import TimelineList from "./TimelineList";
 import { FaBriefcase } from "react-icons/fa";
+import { Listing } from "../kanban/Kanban";
 
-const Timeline = (props) => (
-  <section id="timeline">
-    <h1 className="title">
-      <FaBriefcase className="icon" /> Timeline
-    </h1>
-    <TimelineList items={props.items} />
-  </section>
+const Timeline = ({ items }) => (
+  <Listing id="timeline" icon={<FaBriefcase className="icon" />} title="Timeline" items={items} />
 );
 
 export default Timeline;

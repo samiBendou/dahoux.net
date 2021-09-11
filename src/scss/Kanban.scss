@@ -8,14 +8,14 @@ $element-radius: 3rem;
   }
 
   @media only screen and (min-width: 1981px) {
-    .columns {
+    .inner {
       .column {
         flex-basis: 25% !important;
       }
     }
   }
 
-  .columns {
+  .inner {
     .column {
       background-color: $theme-gray-300;
       border-radius: $element-radius;

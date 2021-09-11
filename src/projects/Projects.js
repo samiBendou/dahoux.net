@@ -1,14 +1,9 @@
 import React from "react";
 import { FaDraftingCompass } from "react-icons/fa";
-import TimelineList from "../timeline/TimelineList";
+import { Listing } from "../kanban/Kanban";
 
-const Projects = (props) => (
-  <section id="projects">
-    <h1 className="title">
-      <FaDraftingCompass className="icon" /> Projects
-    </h1>
-    <TimelineList items={props.items} />
-  </section>
+const Projects = ({ items }) => (
+  <Listing id="projects" icon={<FaDraftingCompass className="icon" />} title="Projects" items={items} />
 );
 
 export default Projects;
