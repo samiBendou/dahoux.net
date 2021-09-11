@@ -1,19 +1,19 @@
 import React from "react";
 import About from "./about/About";
 import Skills from "./skills/Skills";
-import Timeline from "./timeline/Timeline";
-import Projects from "./projects/Projects";
+import History from "./kanban/History";
+import Projects from "./kanban/Projects";
 
 import Home from "./home/Home";
 import Pdf from "./pdf/Pdf";
 import { PDFViewer } from "@react-pdf/renderer";
 import { Board } from "./kanban/Kanban";
-import { TimelineItem } from "./timeline/TimelineItem";
+import { CardDetailed } from "./kanban/CardItem";
 import { Page } from "./common/wrappers";
 
-export const TimelineItemPage = ({ item }) => (
+export const CardDetailedPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>
-    <TimelineItem item={item} key={item.title + item.start} id={item.title + item.start} />
+    <CardDetailed item={item} key={item.title + item.start} id={item.title + item.start} />
   </Page>
 );
 
@@ -28,7 +28,7 @@ export const PortfolioPage = (props) => (
     <About data={props.data} />
     <Skills items={props.data.items.skills} />
     <Projects items={props.data.items.portfolio} />
-    <Timeline items={props.data.items.timeline} />
+    <History items={props.data.items.timeline} />
     <Board data={props.data} />
   </Page>
 );

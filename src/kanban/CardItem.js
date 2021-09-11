@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "../scss/Timeline.scss";
+import "../scss/History.scss";
 import "../scss/Projects.scss";
 import "../scss/Backlog.scss";
 import DateText from "../common/DateText";
 import LocationText from "../common/LocationText";
-import TimelineCategory from "./TimelineCategory";
+import CardCategory from "./CardCategory";
 import CompanyText from "../common/CompanyText";
 import titleToLabel from "../common/core/tags";
 import Modal from "react-modal";
@@ -13,7 +13,7 @@ import { slugifyString } from "../common/core/url";
 import { FaTimes } from "react-icons/fa";
 import ExternalLinkText from "../common/ExternalLInkText";
 
-const TimelineHead = ({ item, openModal, closeModal }) => {
+const CardHead = ({ item, openModal, closeModal }) => {
   function handleClick(event) {
     let isLink = event.target.parentNode.nodeName === "A";
     if (event.target.nodeName === "path") {
@@ -22,7 +22,7 @@ const TimelineHead = ({ item, openModal, closeModal }) => {
     !isLink && openModal && openModal();
   }
 
-  const category = TimelineCategory[item.category] || "";
+  const category = CardCategory[item.category] || "";
   const tags = [...(item.tags || []), ...(category ? [category] : [])];
   return (
     <div onClick={handleClick}>
@@ -62,7 +62,7 @@ const TimelineHead = ({ item, openModal, closeModal }) => {
   );
 };
 
-const TimelineDetails = ({ item }) => (
+const CardDetails = ({ item }) => (
   <div>
     <h2>Description</h2>
     <p className="item-brief">{item.brief}</p>
@@ -75,7 +75,7 @@ const TimelineDetails = ({ item }) => (
   </div>
 );
 
-const TimelineCard = ({ item }) => {
+const CardBrief = ({ item }) => {
   const [open, setOpen] = useState(false);
 
   function openModal() {
@@ -88,21 +88,21 @@ const TimelineCard = ({ item }) => {
 
   return (
     <div className="item card">
-      <TimelineHead openModal={openModal} item={item} />
+      <CardHead openModal={openModal} item={item} />
       <Modal className="backlog modal" isOpen={open} onRequestClose={closeModal} shouldCloseOnOverlayClick={true}>
-        <TimelineItem closeModal={closeModal} item={item} />
+        <CardDetailed closeModal={closeModal} item={item} />
       </Modal>
     </div>
   );
 };
 
-const TimelineItem = ({ item, closeModal }) => {
+const CardDetailed = ({ item, closeModal }) => {
   return (
     <div className="item">
-      <TimelineHead closeModal={closeModal} item={item} />
-      <TimelineDetails item={item} />
+      <CardHead closeModal={closeModal} item={item} />
+      <CardDetails item={item} />
     </div>
   );
 };
 
-export { TimelineItem, TimelineCard };
+export { CardDetailed, CardBrief };

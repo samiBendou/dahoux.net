@@ -5,7 +5,7 @@ import { Switch } from "react-router";
 import Modal from "react-modal";
 
 import Loader from "./Loader";
-import { HomePage, PortfolioPage, ResumePage, TimelineItemPage } from "./Views";
+import { HomePage, PortfolioPage, ResumePage, CardDetailedPage } from "./Views";
 import { slugifyString } from "./common/core/url";
 
 Modal.setAppElement("#root");
@@ -53,7 +53,7 @@ export default class App extends Component {
               <Route
                 key={`/timeline/${slugifyString(item.title, item.start)}`}
                 path={`/timeline/${slugifyString(item.title, item.start)}`}
-                component={() => <TimelineItemPage item={item} />}
+                component={() => <CardDetailedPage item={item} />}
               />
             ))}
           </Switch>

@@ -1,16 +1,16 @@
 import React from "react";
-import { TimelineCard } from "./TimelineItem";
+import { CardBrief } from "./CardItem";
 import "../scss/Backlog.scss";
 
-const TimelineList = ({ items }) => {
+const CardList = ({ items }) => {
   const sortedItems = items.slice().sort((a, b) => new Date(b.start) - new Date(a.start));
   return (
     <div className="backlog">
       {sortedItems.map((item) => (
-        <TimelineCard item={item} key={item.title + item.start} id={item.title + item.start} />
+        <CardBrief item={item} key={item.title + item.start} id={item.title + item.start} />
       ))}
     </div>
   );
 };
 
-export default TimelineList;
+export default CardList;

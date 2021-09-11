@@ -1,13 +1,13 @@
 import "../scss/Kanban.scss";
 import React from "react";
 import { FaBriefcase, FaCalendarAlt, FaDraftingCompass, FaGraduationCap } from "react-icons/fa";
-import TimelineList from "../timeline/TimelineList";
+import CardList from "./CardList";
 import { IconTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
 
 const Listing = ({ icon, id, title, items }) => (
   <Section id={id} title={<IconTitle icon={icon} title={title}></IconTitle>}>
-    <TimelineList items={items} />
+    <CardList items={items} />
   </Section>
 );
 
@@ -16,7 +16,7 @@ const Column = ({ icon, title, items }) => (
     <h2 className="title">
       {icon} {title}
     </h2>
-    <TimelineList items={items} />
+    <CardList items={items} />
   </div>
 );
 
