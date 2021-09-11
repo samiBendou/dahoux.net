@@ -1,5 +1,5 @@
 import React from "react";
-import TimelineItem from "./TimelineItem";
+import { TimelineCard } from "./TimelineItem";
 import "../scss/Backlog.scss";
 
 const TimelineList = ({ items }) => {
@@ -7,7 +7,8 @@ const TimelineList = ({ items }) => {
   return (
     <div className="backlog">
       {sortedItems.map((item) => (
-        <TimelineItem
+        <TimelineCard
+          tags={item.tags}
           category={item.category}
           title={item.title}
           brief={item.brief}

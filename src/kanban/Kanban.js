@@ -2,7 +2,6 @@ import "../scss/Kanban.scss";
 import React from "react";
 import { FaBriefcase, FaCalendarAlt, FaDraftingCompass, FaGraduationCap } from "react-icons/fa";
 import TimelineList from "../timeline/TimelineList";
-import ProjectsList from "../projects/ProjectsList";
 
 const Kanban = (props) => {
   const timeline = props.data.items.timeline;
@@ -32,7 +31,7 @@ const Kanban = (props) => {
           <h2 className="title">
             <FaDraftingCompass className="icon" /> Projects
           </h2>
-          <ProjectsList items={props.data.items.portfolio} />
+          <TimelineList items={props.data.items.portfolio} />
         </div>
       </div>
     </section>

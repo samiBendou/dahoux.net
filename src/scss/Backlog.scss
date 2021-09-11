@@ -1,16 +1,71 @@
 @import "colors.scss";
+@import "NavBar.scss";
 
 $element-radius: 3rem;
+$modal-width: 50vw;
+
+.backlog.page {
+  width: 100vw !important;
+}
+
+.backlog.page,
+.backlog.modal {
+  .item {
+    background-color: white !important;
+    flex-basis: 75vw;
+
+    .tag {
+      font-size: large !important;
+    }
+  }
+
+  h1 {
+    font-size: xxx-large !important;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: xx-large !important;
+  }
+
+  h3 {
+    font-size: x-large;
+  }
+
+  h4 {
+    font-size: large;
+  }
+
+  p,
+  li {
+    font-size: x-large;
+  }
+}
+
+.backlog.modal {
+  width: $modal-width;
+  margin: auto;
+  margin-top: $nav-height !important;
+  .item {
+    width: $modal-width !important;
+    border: 1rem solid $theme-gray-300;
+    flex-basis: auto !important;
+  }
+}
 
 .backlog {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
+  .card {
+    cursor: pointer;
+  }
+
   .item {
     .name,
     .a {
-      font-size: x-large !important;
+      font-size: x-large;
     }
 
     .tag {

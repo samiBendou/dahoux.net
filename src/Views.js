@@ -5,12 +5,37 @@ import Timeline from "./timeline/Timeline";
 import Projects from "./projects/Projects";
 
 import Home from "./home/Home";
-
 import Pdf from "./pdf/Pdf";
 import { PDFViewer } from "@react-pdf/renderer";
 import Copyright from "./common/Copyright";
 import Nav from "./nav/Nav";
 import Kanban from "./kanban/Kanban";
+import { TimelineItem } from "./timeline/TimelineItem";
+
+export const TimelineItemPage = (props) => (
+  <div>
+    <Nav />
+    <main id="timeline-item-page" className="backlog page">
+      <TimelineItem
+        category={props.item.category}
+        tags={props.item.tags}
+        url={props.item.url}
+        title={props.item.title}
+        brief={props.item.brief}
+        items={props.item.items}
+        start={props.item.start}
+        end={props.item.end}
+        key={props.item.title + props.item.start}
+        id={props.item.title + props.item.start}
+        company={props.item.company}
+        location={props.item.location}
+      />
+    </main>
+    <footer>
+      <Copyright />
+    </footer>
+  </div>
+);
 
 export const HomePage = (props) => (
   <div>

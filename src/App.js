@@ -3,8 +3,9 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
 import Loader from "./Loader";
-import { HomePage, PortfolioPage, ResumePage } from "./Views";
+import { HomePage, PortfolioPage, ResumePage, TimelineItemPage } from "./Views";
 import { Switch } from "react-router";
+import { slugifyString } from "./common/core/url";
 
 const Status = {
   Ready: "ready",
@@ -45,6 +46,13 @@ export default class App extends Component {
             <Route exact path="/" component={() => <HomePage data={data} />} />
             <Route exact path="/portfolio" component={() => <PortfolioPage data={data} />} />
             <Route path="/resume" component={() => <ResumePage data={data} />} />
+            {[...data.items.timeline, ...data.items.portfolio].map((item) => (
+              <Route
+                key={`/timeline/${slugifyString(item.title, item.start)}`}
+                path={`/timeline/${slugifyString(item.title, item.start)}`}
+                component={() => <TimelineItemPage item={item} />}
+              />
+            ))}
           </Switch>
         );
       case Status.Error:
