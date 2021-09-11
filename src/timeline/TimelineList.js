@@ -7,20 +7,7 @@ const TimelineList = ({ items }) => {
   return (
     <div className="backlog">
       {sortedItems.map((item) => (
-        <TimelineCard
-          tags={item.tags}
-          category={item.category}
-          url={item.url}
-          title={item.title}
-          brief={item.brief}
-          items={item.items}
-          start={item.start}
-          end={item.end}
-          key={item.title + item.start}
-          id={item.title + item.start}
-          company={item.company}
-          location={item.location}
-        />
+        <TimelineCard item={item} key={item.title + item.start} id={item.title + item.start} />
       ))}
     </div>
   );

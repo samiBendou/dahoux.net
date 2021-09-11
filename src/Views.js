@@ -7,26 +7,13 @@ import Projects from "./projects/Projects";
 import Home from "./home/Home";
 import Pdf from "./pdf/Pdf";
 import { PDFViewer } from "@react-pdf/renderer";
-import { Board, Listing } from "./kanban/Kanban";
+import { Board } from "./kanban/Kanban";
 import { TimelineItem } from "./timeline/TimelineItem";
 import { Page } from "./common/wrappers";
 
-export const TimelineItemPage = (props) => (
+export const TimelineItemPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>
-    <TimelineItem
-      category={props.item.category}
-      tags={props.item.tags}
-      url={props.item.url}
-      title={props.item.title}
-      brief={props.item.brief}
-      items={props.item.items}
-      start={props.item.start}
-      end={props.item.end}
-      key={props.item.title + props.item.start}
-      id={props.item.title + props.item.start}
-      company={props.item.company}
-      location={props.item.location}
-    />
+    <TimelineItem item={item} key={item.title + item.start} id={item.title + item.start} />
   </Page>
 );
 

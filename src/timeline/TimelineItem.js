@@ -10,19 +10,20 @@ import titleToLabel from "../common/core/tags";
 import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
-import { FaExternalLinkAlt, FaTimes } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
+import ExternalLinkText from "../common/ExternalLInkText";
 
-const TimelineHead = (props) => {
+const TimelineHead = ({ item, openModal, closeModal }) => {
   function handleClick(event) {
     let isLink = event.target.parentNode.nodeName === "A";
     if (event.target.nodeName === "path") {
       isLink = event.target.parentNode.parentNode.nodeName === "A";
     }
-    !isLink && props.openModal && props.openModal();
+    !isLink && openModal && openModal();
   }
 
-  const category = TimelineCategory[props.category] || "";
-  const tags = [...(props.tags || []), ...(category ? [category] : [])];
+  const category = TimelineCategory[item.category] || "";
+  const tags = [...(item.tags || []), ...(category ? [category] : [])];
   return (
     <div onClick={handleClick}>
       <div className="top">
@@ -33,52 +34,48 @@ const TimelineHead = (props) => {
             </div>
           ))}
         </div>
-        <button className="quit" onClick={props.closeModal}>
+        <button className="quit" onClick={closeModal}>
           <FaTimes className="icon" />
         </button>
       </div>
 
-      <h1 className="name">{props.title}</h1>
+      <h1 className="name">{item.title}</h1>
       <h4>
-        <DateText start={props.start} end={props.end} />
+        <DateText start={item.start} end={item.end} />
       </h4>
-      {props.company && (
+      {item.company && (
         <h3>
-          <CompanyText url={props.company.url} name={props.company.name} />
+          <CompanyText url={item.company.url} name={item.company.name} />
         </h3>
       )}
-      {props.location && (
+      {item.location && (
         <h3>
-          <LocationText location={props.location} county={false} />
+          <LocationText location={item.location} county={false} />
         </h3>
       )}
 
       <h4>
-        {props.url && (
-          <a href={props.url}>
-            <FaExternalLinkAlt className="icon" /> View More
-          </a>
-        )}
-        {!props.url && <NavLink to={`/timeline/${slugifyString(props.title, props.start)}`}>View More</NavLink>}
+        {item.url && <ExternalLinkText url={item.url} title="View More" />}
+        {!item.url && <NavLink to={`/timeline/${slugifyString(item.title, item.start)}`}>View More</NavLink>}
       </h4>
     </div>
   );
 };
 
-const TimelineDetails = (props) => (
+const TimelineDetails = ({ item }) => (
   <div>
     <h2>Description</h2>
-    <p className="item-brief">{props.brief}</p>
+    <p className="item-brief">{item.brief}</p>
     <h2>Key points</h2>
     <ul className="items-list">
-      {props.items.map((item) => (
+      {item.items.map((item) => (
         <li key={item}>{item}</li>
       ))}
     </ul>
   </div>
 );
 
-const TimelineCard = (props) => {
+const TimelineCard = ({ item }) => {
   const [open, setOpen] = useState(false);
 
   function openModal() {
@@ -91,54 +88,19 @@ const TimelineCard = (props) => {
 
   return (
     <div className="item card">
-      <TimelineHead
-        openModal={openModal}
-        category={props.category}
-        tags={props.tags}
-        url={props.url}
-        title={props.title}
-        brief={props.brief}
-        items={props.items}
-        start={props.start}
-        end={props.end}
-        company={props.company}
-        location={props.location}
-      />
-
+      <TimelineHead openModal={openModal} item={item} />
       <Modal className="backlog modal" isOpen={open} onRequestClose={closeModal} shouldCloseOnOverlayClick={true}>
-        <TimelineItem
-          closeModal={closeModal}
-          category={props.category}
-          tags={props.tags}
-          url={props.url}
-          title={props.title}
-          brief={props.brief}
-          items={props.items}
-          start={props.start}
-          end={props.end}
-          company={props.company}
-          location={props.location}
-        />
+        <TimelineItem closeModal={closeModal} item={item} />
       </Modal>
     </div>
   );
 };
 
-const TimelineItem = (props) => {
+const TimelineItem = ({ item, closeModal }) => {
   return (
     <div className="item">
-      <TimelineHead
-        closeModal={props.closeModal}
-        category={props.category}
-        tags={props.tags}
-        url={props.url}
-        title={props.title}
-        start={props.start}
-        end={props.end}
-        company={props.company}
-        location={props.location}
-      />
-      <TimelineDetails brief={props.brief} items={props.items} />
+      <TimelineHead closeModal={closeModal} item={item} />
+      <TimelineDetails item={item} />
     </div>
   );
 };
