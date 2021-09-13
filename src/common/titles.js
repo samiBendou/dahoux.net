@@ -9,7 +9,7 @@ const PageTitle = () => (
 
 const IconTitle = ({ icon, title }) => (
   <Fragment>
-    {icon} {title}
+    <span className="icon">{icon}</span> {title}
   </Fragment>
 );
 

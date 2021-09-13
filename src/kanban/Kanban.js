@@ -6,7 +6,7 @@ import { IconTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
 
 const Listing = ({ icon, id, title, items }) => (
-  <Section id={id} title={<IconTitle icon={icon} title={title}></IconTitle>}>
+  <Section id={id} title={<IconTitle icon={icon} title={title} />}>
     <CardList items={items} />
   </Section>
 );
@@ -14,7 +14,7 @@ const Listing = ({ icon, id, title, items }) => (
 const Column = ({ icon, title, items }) => (
   <div className="column">
     <h2 className="title">
-      {icon} {title}
+      <IconTitle icon={icon} title={title} />
     </h2>
     <CardList items={items} />
   </div>
@@ -27,11 +27,11 @@ const Board = ({ data }) => {
   const projects = data.items.portfolio;
 
   return (
-    <Section id="kanban" title={<IconTitle icon={<FaCalendarAlt className="icon" />} title="Timeline" />}>
+    <Section id="kanban" title={<IconTitle icon={<FaCalendarAlt />} title="Timeline" />}>
       <div className="inner">
-        <Column icon={<FaBriefcase className="icon" />} title="Experience" items={experiences} />
-        <Column icon={<FaGraduationCap className="icon" />} title="Education" items={formations} />
-        <Column icon={<FaDraftingCompass className="icon" />} title="Projects" items={projects} />
+        <Column icon={<FaBriefcase />} title="Experience" items={experiences} />
+        <Column icon={<FaGraduationCap />} title="Education" items={formations} />
+        <Column icon={<FaDraftingCompass />} title="Projects" items={projects} />
       </div>
     </Section>
   );

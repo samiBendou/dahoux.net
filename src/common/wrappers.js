@@ -1,6 +1,7 @@
 import React from "react";
 import Copyright from "./Copyright";
 import Nav from "../nav/Nav";
+import slugify from "slugify";
 
 const Page = ({ title, children, copyright, className }) => (
   <div>
@@ -13,7 +14,7 @@ const Page = ({ title, children, copyright, className }) => (
 );
 
 const Section = ({ id, title, children }) => (
-  <section id={id}>
+  <section id={id || slugify(title).toLowerCase()}>
     <h1 className="title">{title}</h1>
     {children}
   </section>
