@@ -17,9 +17,9 @@ const NavDropdown = (props) => {
 
   return (
     <div className="dropdown">
-      <a className="icon" href="#" onClick={() => setOpen(!open)}>
+      <button className="icon" onClick={() => setOpen(!open)}>
         {props.icon}
-      </a>
+      </button>
       <CSSTransition in={open} timeout={500} classNames="show">
         <ul className="nav">{props.children}</ul>
       </CSSTransition>

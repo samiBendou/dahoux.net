@@ -1,59 +1,49 @@
 import React from "react";
 import About from "./about/About";
 import Skills from "./skills/Skills";
-import Timeline from "./timeline/Timeline";
-import Projects from "./projects/Projects";
+import History from "./kanban/History";
+import Projects from "./kanban/Projects";
 
 import Home from "./home/Home";
-
 import Pdf from "./pdf/Pdf";
 import { PDFViewer } from "@react-pdf/renderer";
-import Copyright from "./common/Copyright";
-import Nav from "./nav/Nav";
-import Kanban from "./kanban/Kanban";
+import { Board } from "./kanban/Kanban";
+import { CardDetailed } from "./kanban/CardItem";
+import { Page } from "./common/wrappers";
+
+export const CardDetailedPage = ({ item }) => (
+  <Page title="item-page" className="backlog page" copyright>
+    <CardDetailed item={item} key={item.title + item.start} id={item.title + item.start} />
+  </Page>
+);
 
 export const HomePage = (props) => (
-  <div>
-    <Nav />
-    <main id="home-page">
-      <Home data={props.data} />
-    </main>
-    <footer>
-      <Copyright />
-    </footer>
-  </div>
+  <Page title="home-page" copyright>
+    <Home data={props.data} />
+  </Page>
 );
 
 export const PortfolioPage = (props) => (
-  <div>
-    <Nav />
-    <main id="portfolio-page">
-      <About data={props.data} />
-      <Skills items={props.data.items.skills} />
-      <Projects items={props.data.items.portfolio} />
-      <Timeline items={props.data.items.timeline} />
-      <Kanban data={props.data} />
-    </main>
-    <footer>
-      <Copyright />
-    </footer>
-  </div>
+  <Page title="portfolio-page" copyright>
+    <About data={props.data} />
+    <Skills items={props.data.items.skills} />
+    <Projects items={props.data.items.portfolio} />
+    <History items={props.data.items.timeline} />
+    <Board data={props.data} />
+  </Page>
 );
 
 export const ResumePage = (props) => (
-  <div>
-    <Nav />
-    <main id="resume-page">
-      <PDFViewer
-        style={{
-          position: "absolute",
-          border: 0,
-          height: "100%",
-          width: "100%",
-        }}
-      >
-        <Pdf data={props.data} />
-      </PDFViewer>
-    </main>
-  </div>
+  <Page title="resume-page">
+    <PDFViewer
+      style={{
+        position: "absolute",
+        border: 0,
+        height: "100%",
+        width: "100%",
+      }}
+    >
+      <Pdf data={props.data} />
+    </PDFViewer>
+  </Page>
 );

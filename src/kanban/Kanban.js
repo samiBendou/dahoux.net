@@ -1,42 +1,40 @@
 import "../scss/Kanban.scss";
 import React from "react";
 import { FaBriefcase, FaCalendarAlt, FaDraftingCompass, FaGraduationCap } from "react-icons/fa";
-import TimelineList from "../timeline/TimelineList";
-import ProjectsList from "../projects/ProjectsList";
+import CardList from "./CardList";
+import { IconTitle } from "../common/titles";
+import { Section } from "../common/wrappers";
 
-const Kanban = (props) => {
-  const timeline = props.data.items.timeline;
+const Listing = ({ icon, id, title, items }) => (
+  <Section id={id} title={<IconTitle icon={icon} title={title} />}>
+    <CardList items={items} />
+  </Section>
+);
+
+const Column = ({ icon, title, items }) => (
+  <div className="column">
+    <h2 className="title">
+      <IconTitle icon={icon} title={title} />
+    </h2>
+    <CardList items={items} />
+  </div>
+);
+
+const Board = ({ data }) => {
+  const timeline = data.items.timeline;
   const experiences = timeline.filter((item) => item.category === 0);
   const formations = timeline.filter((item) => item.category === 1);
+  const projects = data.items.portfolio;
 
   return (
-    <section id="kanban">
-      <h1 className="title">
-        <FaCalendarAlt className="icon" /> Timeline
-      </h1>
-      <div className="columns">
-        <div className="column">
-          <h2 className="title">
-            <FaBriefcase className="icon" /> Experience
-          </h2>
-          <TimelineList items={experiences} />
-        </div>
-        <div className="column">
-          <h2 className="title">
-            <FaGraduationCap className="icon" /> Education
-          </h2>
-          <TimelineList items={formations} />
-        </div>
-
-        <div className="column">
-          <h2 className="title">
-            <FaDraftingCompass className="icon" /> Projects
-          </h2>
-          <ProjectsList items={props.data.items.portfolio} />
-        </div>
+    <Section id="kanban" title={<IconTitle icon={<FaCalendarAlt />} title="Timeline" />}>
+      <div className="inner">
+        <Column icon={<FaBriefcase />} title="Experience" items={experiences} />
+        <Column icon={<FaGraduationCap />} title="Education" items={formations} />
+        <Column icon={<FaDraftingCompass />} title="Projects" items={projects} />
       </div>
-    </section>
+    </Section>
   );
 };
 
-export default Kanban;
+export { Board, Listing, Column };

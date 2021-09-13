@@ -8,14 +8,14 @@ $element-radius: 3rem;
   }
 
   @media only screen and (min-width: 1981px) {
-    .columns {
+    .inner {
       .column {
         flex-basis: 25% !important;
       }
     }
   }
 
-  .columns {
+  .inner {
     .column {
       background-color: $theme-gray-300;
       border-radius: $element-radius;
@@ -35,16 +35,11 @@ $element-radius: 3rem;
     .backlog {
       max-height: 75vh;
       overflow: scroll;
-
       .item {
         background-color: white;
         height: fit-content;
-        flex-basis: 80%;
+        flex-basis: 100%;
         min-width: 0 !important;
-      }
-
-      .items-list {
-        display: none;
       }
     }
   }

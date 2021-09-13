@@ -1,10 +1,10 @@
 import React from "react";
 import { NavBar, NavItem } from "./NavBar";
 import { FaHamburger } from "react-icons/fa";
-import Title from "../common/Title";
+import { PageTitle } from "../common/titles";
 
 const Nav = () => (
-  <NavBar title={<Title />} icon={<FaHamburger />}>
+  <NavBar title={<PageTitle />} icon={<FaHamburger />}>
     <NavItem link="/">Home</NavItem>
     <NavItem link="/portfolio/">Portfolio</NavItem>
     <NavItem link="/resume/">Resume</NavItem>

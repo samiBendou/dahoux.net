@@ -54,6 +54,7 @@ $element-radius: 3rem;
       place-content: start;
       border-radius: 0 $element-radius $element-radius 0;
       border: none;
+      margin-right: 8px;
     }
 
     .name {

@@ -23,15 +23,24 @@ time {
   font-weight: bold;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
 a,
-.btn-link {
+button {
   color: $theme-blue !important;
   transition: color 200ms;
   text-decoration: none;
   font-weight: bold;
 }
 a:hover,
-.btn-link:hover {
+button:hover {
   color: $theme-marine !important;
 }
 

@@ -3,15 +3,13 @@ import "../scss/About.scss";
 import { FaUserCircle } from "react-icons/fa";
 import LocationText from "../common/LocationText";
 import LinksBar from "../common/LinksBar";
+import { Section } from "../common/wrappers";
+import { IconTitle } from "../common/titles";
 
 const About = (props) => {
   const data = props.data;
   return (
-    <section id="about">
-      <h1 className="title">
-        <FaUserCircle className="icon" /> About
-      </h1>
-
+    <Section id="about" title={<IconTitle icon={<FaUserCircle className="icon" />} title="About" />}>
       <div className="inner">
         <div className="first">
           <h1 className="name left-item">{`${data.firstName} ${data.lastName}`}</h1>
@@ -36,7 +34,7 @@ const About = (props) => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

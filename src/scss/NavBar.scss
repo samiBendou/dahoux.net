@@ -19,6 +19,11 @@ $open-speed: 500ms;
   display: flex;
   align-items: center;
 
+  .icon {
+    padding-right: 1rem;
+    font-size: x-large;
+  }
+
   .inline {
     height: 100%;
   }
@@ -70,7 +75,11 @@ $open-speed: 500ms;
       top: $nav-height;
       height: auto;
       padding: 0;
+      padding-right: 4rem;
+      border-radius: 0 0 0 3rem;
+      border-left: 1rem solid $theme-gray-700;
 
+      //box-shadow: rgba(149, 157, 165, 0.2) 8px 8px 24px;
       transform: translateX(50%);
 
       background-color: $theme-gray-300 !important;
