@@ -66,6 +66,7 @@ const CardDetails = ({ item }) => (
   <div>
     <h2>Description</h2>
     <p className="item-brief">{item.brief}</p>
+    {item.description && <p>{item.description}</p>}
     <h2>Key points</h2>
     <ul className="items-list">
       {item.items.map((item) => (
