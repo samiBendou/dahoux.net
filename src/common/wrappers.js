@@ -1,6 +1,6 @@
 import React from "react";
 import Copyright from "./Copyright";
-import Nav from "../nav/Nav";
+import { AdminNav, Nav } from "../nav/Nav";
 import slugify from "slugify";
 
 const Page = ({ title, children, copyright, className }) => (
@@ -13,6 +13,14 @@ const Page = ({ title, children, copyright, className }) => (
   </div>
 );
 
+const AdminPage = ({ children, copyright }) => (
+  <div>
+    <AdminNav />
+    <main id="edit-page">{children}</main>
+    <footer>{copyright && <Copyright />}</footer>
+  </div>
+);
+
 const Section = ({ id, title, children }) => (
   <section id={id || slugify(title).toLowerCase()}>
     <h1 className="title">{title}</h1>
@@ -20,4 +28,4 @@ const Section = ({ id, title, children }) => (
   </section>
 );
 
-export { Page, Section };
+export { Page, AdminPage, Section };

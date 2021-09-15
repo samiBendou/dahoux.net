@@ -18,6 +18,8 @@ const day = {
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+const getDate = (datetime) => (datetime ? datetime.split("T")[0] : datetime);
+
 const renderMonth = (month) => {
   return months[month];
 };
@@ -42,4 +44,4 @@ const renderDate = (start, end) => {
 
 const renderAge = (birthday) => Math.floor((new Date() - birthday) / ms.year);
 
-export { ms, day, renderDate, renderAge };
+export { ms, day, renderDate, renderAge, getDate };

@@ -71,7 +71,7 @@ const PdfRight = (props) => {
           {props.data.firstName} {props.data.lastName}
         </Text>
         <Text style={styles.quote}>{props.data.quote}</Text>
-        <Text style={styles.other}> {renderLocationText(props.data.location, true)}</Text>
+        <Text style={styles.other}> {renderLocationText(props.data.location.resolved, true)}</Text>
         <Text style={styles.other}>{props.data.mail}</Text>
         <Link style={styles.link} src={props.data.urls.portfolio}>
           {props.data.urls.portfolio.split("://")[1]}

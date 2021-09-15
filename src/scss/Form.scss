@@ -1,0 +1,108 @@
+@import "colors.scss";
+@import "NavBar.scss";
+
+#edit-page,
+#login-page {
+  background-color: $theme-gray-300;
+  width: 100vw;
+  height: calc(100vh - #{$nav-height});
+  position: fixed;
+  overflow: scroll;
+
+  .edit-form {
+    margin: 1rem;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    margin: 0.5rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 3rem;
+  }
+  textarea {
+    resize: vertical;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0.5em;
+  }
+
+  label {
+    justify-content: center;
+  }
+
+  button {
+    font-size: large;
+  }
+
+  .btn-submit {
+    text-align: center;
+    border-radius: 3rem;
+    padding: 1rem;
+    color: white !important;
+    background-color: $theme-blue;
+    font-size: x-large;
+  }
+
+  .btn-submit:hover {
+    background-color: $theme-marine;
+  }
+
+  .btn-bar {
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    label {
+      width: 30%;
+    }
+    input,
+    textarea {
+      width: 70%;
+    }
+  }
+
+  .form-text {
+    label {
+      text-align: center;
+    }
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+    width: 100%;
+    input,
+    textarea {
+      width: 90%;
+    }
+    .form-row-action {
+      width: 100%;
+      flex-grow: 1;
+    }
+  }
+
+  .form-card,
+  .about-list,
+  .skills-row {
+    .form-row {
+      align-items: center;
+    }
+  }
+}

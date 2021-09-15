@@ -6,7 +6,7 @@ import DateText from "../common/DateText";
 import LocationText from "../common/LocationText";
 import CardCategory from "./CardCategory";
 import CompanyText from "../common/CompanyText";
-import titleToLabel from "../common/core/tags";
+import { titleToLabel } from "../common/core/tags";
 import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
@@ -50,7 +50,7 @@ const CardHead = ({ item, openModal, closeModal }) => {
       )}
       {item.location && (
         <h3>
-          <LocationText location={item.location} county={false} />
+          <LocationText location={item.location.resolved} county={false} />
         </h3>
       )}
 

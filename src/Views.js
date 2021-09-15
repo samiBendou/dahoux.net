@@ -1,15 +1,25 @@
 import React from "react";
+import { PDFViewer } from "@react-pdf/renderer";
+import { Link, Redirect } from "react-router-dom";
+import { Formik, Form } from "formik";
+
 import About from "./about/About";
 import Skills from "./skills/Skills";
 import History from "./kanban/History";
 import Projects from "./kanban/Projects";
 
+import { AdminPage, Page } from "./common/wrappers";
 import Home from "./home/Home";
 import Pdf from "./pdf/Pdf";
-import { PDFViewer } from "@react-pdf/renderer";
 import { Board } from "./kanban/Kanban";
 import { CardDetailed } from "./kanban/CardItem";
-import { Page } from "./common/wrappers";
+import AboutForm from "./about/AboutForm";
+import { CardList } from "./kanban/CardForm";
+
+import "./scss/Form.scss";
+import { SkillsListForm } from "./skills/SkillsForm";
+import { submitData, preprocessData } from "./common/core/data";
+import { AdminNav } from "./nav/Nav";
 
 export const CardDetailedPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>
@@ -47,3 +57,59 @@ export const ResumePage = (props) => (
     </PDFViewer>
   </Page>
 );
+
+export const LoginPage = () => (
+  <div id="login-page">
+    <form method="POST" action="/api/admin/auth">
+      <div className="form-group">
+        <label htmlFor="usernameInput">Username</label>
+        <input name="username" type="text" className="form-control" id="usernameInput" />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="passwordInput">Password</label>
+        <input name="password" type="password" className="form-control" id="passwordInput" placeholder="Password" />
+      </div>
+
+      <button type="submit" className="btn btn-primary">
+        Login
+      </button>
+    </form>
+  </div>
+);
+
+export const EditPage = ({ data }) => {
+  if (!document.cookie.includes("AuthToken")) {
+    return <Redirect from="/admin/" to="/admin/login" />;
+  }
+  return (
+    <AdminPage>
+      <div>
+        <Formik
+          initialValues={data}
+          onSubmit={submitData}
+          render={({ values }) => (
+            <Form className="edit-form">
+              <h2>About</h2>
+              <h3>
+                <Link to="/admin/general">Edit infos</Link>
+              </h3>
+              <section>
+                <h2>Projects</h2>
+                <CardList name="items.portfolio" values={values.items.portfolio} />
+              </section>
+              <section>
+                <h2>History</h2>
+                <CardList name="items.timeline" values={values.items.timeline} />
+              </section>
+              <section>
+                <h2>Skills</h2>
+                <SkillsListForm name="items.skills" values={values.items.skills} />
+              </section>
+            </Form>
+          )}
+        ></Formik>
+      </div>
+    </AdminPage>
+  );
+};

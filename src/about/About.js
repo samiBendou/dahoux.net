@@ -21,7 +21,7 @@ const About = (props) => {
           </h2>
 
           <h3 className="location left-item">
-            <LocationText location={data.location} county={true} />
+            <LocationText location={data.location.resolved} county={true} />
           </h3>
         </div>
 

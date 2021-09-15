@@ -5,8 +5,15 @@ import { Switch } from "react-router";
 import Modal from "react-modal";
 
 import Loader from "./Loader";
-import { HomePage, PortfolioPage, ResumePage, CardDetailedPage } from "./Views";
+import { HomePage, PortfolioPage, ResumePage, CardDetailedPage, EditPage, LoginPage } from "./Views";
 import { slugifyString } from "./common/core/url";
+import { SkillForm } from "./skills/SkillsForm";
+import { Form, Formik } from "formik";
+import { cloneData, getData, preprocessData, submitData } from "./common/core/data";
+import { CardForm } from "./kanban/CardForm";
+import AboutForm from "./about/AboutForm";
+import { AdminNav } from "./nav/Nav";
+import { AdminPage } from "./common/wrappers";
 
 Modal.setAppElement("#root");
 
@@ -24,22 +31,17 @@ export default class App extends Component {
 
   async componentDidMount() {
     try {
-      const res = await fetch("/api/portfolio/bendou");
-      const text = await res.text();
-      if (res.status !== 200) {
-        this.setState({ status: Status.Error, error: new Error(`${res.status} - ${text}`) });
-        return Promise.reject(text);
-      }
-      const object = JSON.parse(text);
-      this.setState({ status: Status.Ready, data: object });
-      return Promise.resolve();
+      const data = await getData("bendou");
+      const preprocessed = preprocessData(cloneData(data));
+      this.setState({ status: Status.Ready, data: data, preprocessed: preprocessed });
     } catch (error) {
-      return Promise.reject(error);
+      this.setState({ status: Status.Error, error: error });
     }
   }
 
   render() {
     const data = this.state.data;
+    const preprocessed = this.state.preprocessed;
     switch (this.state.status) {
       case Status.Loading:
         return <Route path="/" component={Loader} />;
@@ -54,6 +56,83 @@ export default class App extends Component {
                 key={`/timeline/${slugifyString(item.title, item.start)}`}
                 path={`/timeline/${slugifyString(item.title, item.start)}`}
                 component={() => <CardDetailedPage item={item} />}
+              />
+            ))}
+            <Route exact path="/admin/login" component={LoginPage} />
+            <Route exact path="/admin/" component={() => <EditPage data={preprocessed} />} />
+            <Route
+              exact
+              path="/admin/general"
+              component={() => (
+                <AdminPage>
+                  <Formik
+                    className="edit-form"
+                    initialValues={preprocessed}
+                    onSubmit={submitData}
+                    render={({ values }) => (
+                      <Form className="edit-form">
+                        <AboutForm values={values} />
+                      </Form>
+                    )}
+                  ></Formik>
+                </AdminPage>
+              )}
+            />
+            {data.items.timeline.map((item, index) => (
+              <Route
+                key={`/admin/timeline/${slugifyString(item.title, item.start)}`}
+                path={`/admin/timeline/${slugifyString(item.title, item.start)}`}
+                component={() => (
+                  <AdminPage>
+                    <Formik
+                      initialValues={preprocessed}
+                      onSubmit={submitData}
+                      render={({ values }) => (
+                        <Form className="edit-form">
+                          <CardForm name="items.timeline" values={values.items.timeline} index={index} />
+                        </Form>
+                      )}
+                    ></Formik>
+                  </AdminPage>
+                )}
+              />
+            ))}
+            {data.items.portfolio.map((item, index) => (
+              <Route
+                key={`/admin/timeline/${slugifyString(item.title, item.start)}`}
+                path={`/admin/timeline/${slugifyString(item.title, item.start)}`}
+                component={() => (
+                  <AdminPage>
+                    <Formik
+                      initialValues={preprocessed}
+                      onSubmit={submitData}
+                      render={({ values }) => (
+                        <Form className="edit-form">
+                          <CardForm name="items.portfolio" values={values.items.portfolio} index={index} />
+                        </Form>
+                      )}
+                    ></Formik>
+                  </AdminPage>
+                )}
+              />
+            ))}
+            {data.items.skills.map((item, index) => (
+              <Route
+                key={`/admin/skills/${slugifyString(item.label)}`}
+                path={`/admin/skills/${slugifyString(item.label)}`}
+                component={() => (
+                  <AdminPage>
+                    <Formik
+                      initialValues={preprocessed}
+                      onSubmit={submitData}
+                      render={({ values }) => (
+                        <Form className="edit-form">
+                          <SkillForm name="items.skills" values={values.items.skills} index={index} />
+                        </Form>
+                      )}
+                    ></Formik>
+                  </AdminPage>
+                )}
               />
             ))}
           </Switch>
