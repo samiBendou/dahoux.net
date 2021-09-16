@@ -13,12 +13,12 @@ import Home from "./home/Home";
 import Pdf from "./pdf/Pdf";
 import { Board } from "./kanban/Kanban";
 import { CardDetailed } from "./kanban/CardItem";
-import { CardList, CardTable } from "./kanban/CardForm";
+import { CardForm, CardList, CardTable } from "./kanban/CardForm";
 
 import "./scss/Form.scss";
 import { SkillsListForm, SkillsTable } from "./skills/SkillsForm";
 import { submitData } from "./common/core/data";
-import { AboutTable } from "./about/AboutForm";
+import { AboutForm, AboutTable } from "./about/AboutForm";
 
 export const CardDetailedPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>
@@ -75,6 +75,51 @@ export const LoginPage = () => (
       </button>
     </form>
   </div>
+);
+
+export const CardEditPage = ({ initial, name, index }) => {
+  const [, key] = name.split(".");
+  return (
+    <AdminPage>
+      <Formik
+        initialValues={initial}
+        onSubmit={submitData}
+        render={({ values }) => (
+          <Form className="edit-form">
+            <CardForm name={name} values={values.items[key]} index={index} />
+          </Form>
+        )}
+      ></Formik>
+    </AdminPage>
+  );
+};
+
+export const SkillEditPage = ({ initial, index }) => (
+  <AdminPage>
+    <Formik
+      initialValues={initial}
+      onSubmit={submitData}
+      render={({ values }) => (
+        <Form className="edit-form">
+          <CardForm name="items.skills" values={values.items.skills} index={index} />
+        </Form>
+      )}
+    ></Formik>
+  </AdminPage>
+);
+
+export const AboutEditPage = ({ initial }) => (
+  <AdminPage>
+    <Formik
+      initialValues={initial}
+      onSubmit={submitData}
+      render={({ values }) => (
+        <Form className="edit-form">
+          <AboutForm values={values} />
+        </Form>
+      )}
+    ></Formik>
+  </AdminPage>
 );
 
 export const EditPage = ({ data }) => {
