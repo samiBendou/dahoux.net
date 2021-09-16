@@ -2,7 +2,15 @@ import { FastField } from "formik";
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
-import { ArrayForm, CompanyForm, DateForm, KeyValueForm, TextAreaForm } from "../common/forms";
+import {
+  ArrayForm,
+  CompanyForm,
+  DurationForm,
+  FormButton,
+  KeyValueForm,
+  LocationForm,
+  TextAreaForm,
+} from "../common/forms";
 import { Section } from "../common/wrappers";
 
 const GeneralInfoForm = ({ name, index }) => (
@@ -14,8 +22,10 @@ const GeneralInfoForm = ({ name, index }) => (
     <KeyValueForm title="Category" id={`${name}.${index}.category`} />
     <h5>Company</h5>
     <CompanyForm prefix={`${name}.${index}.company`} />
-    <h2>Dates</h2>
-    <DateForm prefix={`${name}.${index}`} />
+    <h5>Dates</h5>
+    <DurationForm prefix={`${name}.${index}`} />
+    <h5>Location</h5>
+    <LocationForm prefix={`${name}.${index}.location`} />
   </div>
 );
 
@@ -43,11 +53,7 @@ const CardForm = ({ name, values, index }) => {
       <Fragment>
         <GeneralInfoForm name={name} index={index} />
         <DescriptionForm name={name} values={values} index={index} />
-        <div className="btn-bar">
-          <button className="btn-submit" type="submit">
-            Submit
-          </button>
-        </div>
+        <FormButton />
       </Fragment>
     </div>
   );
@@ -70,7 +76,18 @@ const CardsListForm = ({ name, values }) => (
     className="cards-list"
     name={name}
     array={values}
-    initial={{ title: "New Item", tags: [], brief: "", items: [], start: "", end: "", url: "" }}
+    initial={{
+      category: name.indexOf("portfolio") === -1 ? 0 : undefined,
+      title: "New Item",
+      tags: "",
+      brief: "",
+      items: [],
+      start: "",
+      end: "",
+      url: "",
+      location: name.indexOf("portfolio") === -1 ? { zip: "", country: "" } : undefined,
+      company: { url: "", name: "" },
+    }}
     render={(index) => <CardLinkForm name={name} values={values} index={index} />}
   />
 );

@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom";
 import { getDate } from "./date";
 import { joinTags, splitTags } from "./tags";
 
@@ -22,6 +23,9 @@ export function postprocessData(data) {
     if (item.category !== undefined) {
       item.category = parseInt(item.category);
     }
+    if (item.location && (!item.location.zip || !item.location.country)) {
+      delete item.location;
+    }
   });
   data.items.skills.forEach((item) => {
     item.level = parseInt(item.level);
@@ -35,7 +39,7 @@ export async function getData(user) {
     const res = await fetch(`/api/portfolio/${user}`);
     const text = await res.text();
     if (res.status !== 200) {
-      throw Promise.reject(new Error(`${res.status} - ${text}`));
+      return Promise.reject(new Error(`${res.status} - ${text}`));
     }
     return Promise.resolve(JSON.parse(text));
   } catch (error) {
@@ -52,6 +56,31 @@ export async function postData(data) {
     },
     body: JSON.stringify(data),
   });
+}
+
+export async function postCredentials(credentials) {
+  return await fetch("/api/admin/auth", {
+    method: "post",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  });
+}
+
+export async function submitCredentials(credentials, actions) {
+  try {
+    const res = await postCredentials(credentials);
+    if (res.status !== 200) {
+      const text = await res.text();
+      throw new Error(`${res.status} - ${text}`);
+    }
+    window.location.href = "/admin";
+  } catch (error) {
+    console.error(error);
+  }
+  actions.setSubmitting(false);
 }
 
 export async function submitData(data, actions) {

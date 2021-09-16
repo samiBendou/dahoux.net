@@ -1,8 +1,7 @@
 @import "colors.scss";
 @import "NavBar.scss";
 
-#edit-page,
-#login-page {
+#edit-page {
   background-color: $theme-gray-300;
   width: 100vw;
   height: calc(100vh - #{$nav-height});
@@ -10,7 +9,9 @@
   overflow: scroll;
   margin-top: $nav-height;
   padding-top: 0 !important;
-  .edit-form {
+
+  .edit-form,
+  .login-form {
     align-items: center;
     display: flex;
     flex-flow: column nowrap;
@@ -26,10 +27,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    .btn-bar {
+      position: fixed;
+      top: $nav-height;
+      right: 0;
+      outline: none;
+    }
   }
 
-  .form-group,
-  .form-text {
+  .form-group {
     display: flex;
     align-items: center;
   }
@@ -54,22 +61,21 @@
     text-align: center;
   }
 
-  .btn-submit {
-    text-align: center;
-    border-radius: 3rem;
-    padding: 1rem;
-    color: white !important;
-    background-color: $theme-blue;
-    font-size: x-large;
-  }
-
-  .btn-submit:hover {
-    background-color: $theme-marine;
-  }
-
   .btn-bar {
     text-align: center;
     margin: 1rem;
+
+    button {
+      text-align: center;
+      border-radius: 3rem;
+      padding: 1rem;
+      color: white !important;
+      background-color: $theme-blue;
+      font-size: x-large;
+    }
+    button:hover {
+      background-color: $theme-marine;
+    }
   }
 
   .form-row {

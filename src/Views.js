@@ -17,8 +17,10 @@ import { CardForm, CardList, CardTable } from "./kanban/CardForm";
 
 import "./scss/Form.scss";
 import { SkillsListForm, SkillsTable } from "./skills/SkillsForm";
-import { submitData } from "./common/core/data";
+import { submitCredentials, submitData } from "./common/core/data";
 import { AboutForm, AboutTable } from "./about/AboutForm";
+import { FormButton, KeyValueForm, LogButton, LoginForm } from "./common/forms";
+import { Fragment } from "react";
 
 export const CardDetailedPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>
@@ -58,23 +60,14 @@ export const ResumePage = (props) => (
 );
 
 export const LoginPage = () => (
-  <div id="login-page">
-    <form method="POST" action="/api/admin/auth">
-      <div className="form-group">
-        <label htmlFor="usernameInput">Username</label>
-        <input name="username" type="text" className="form-control" id="usernameInput" />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="passwordInput">Password</label>
-        <input name="password" type="password" className="form-control" id="passwordInput" placeholder="Password" />
-      </div>
-
-      <button type="submit" className="btn btn-primary">
-        Login
-      </button>
-    </form>
-  </div>
+  <AdminPage>
+    <Formik initialValues={{ username: "", password: "" }} onSubmit={submitCredentials}>
+      <Form className="edit-form">
+        <LoginForm />
+        <LogButton />
+      </Form>
+    </Formik>
+  </AdminPage>
 );
 
 export const CardEditPage = ({ initial, name, index }) => {
@@ -137,6 +130,7 @@ export const EditPage = ({ data }) => {
             <CardTable id="portfolio-table" name="items.portfolio" items={values.items.portfolio} title="Projects" />
             <CardTable id="history-table" name="items.timeline" items={values.items.timeline} title="History" />
             <SkillsTable name="items.skills" items={values.items.skills} />
+            <FormButton />
           </Form>
         )}
       ></Formik>

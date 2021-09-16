@@ -2,42 +2,65 @@ import React, { Fragment } from "react";
 import { FastField, FieldArray } from "formik";
 import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
 
-const KeyValueForm = ({ title, id, type }) => (
+export const FormButton = () => (
+  <div className="btn-bar">
+    <button className="btn-submit" type="submit">
+      Submit
+    </button>
+  </div>
+);
+
+export const LogButton = () => (
+  <div className="btn-bar">
+    <button className="btn-login" type="submit">
+      Login
+    </button>
+  </div>
+);
+
+export const KeyValueForm = ({ title, id, type }) => (
   <div className="form-group">
     <label htmlFor={id}>{title}</label>
     <FastField id={id} name={id} type={type || "text"} />
   </div>
 );
 
-const TextAreaForm = ({ title, id }) => (
-  <div className="form-text">
+export const TextAreaForm = ({ title, id }) => (
+  <div className="form-group">
     <label htmlFor={id}>{title}</label>
     <FastField as="textarea" spellCheck={true} id={id} name={id} type="text" />
   </div>
 );
 
-const LocationForm = ({ prefix }) => (
+export const LocationForm = ({ prefix }) => (
   <div>
     <KeyValueForm id={`${prefix}.zip`} title="Zip Code" />
     <KeyValueForm id={`${prefix}.country`} title="Country" />
   </div>
 );
 
-const CompanyForm = ({ prefix }) => (
+export const CompanyForm = ({ prefix }) => (
   <div>
     <KeyValueForm id={`${prefix}.name`} title="Name" />
     <KeyValueForm id={`${prefix}.url`} title="Link" />
   </div>
 );
 
-const DurationForm = ({ prefix }) => (
+export const DurationForm = ({ prefix }) => (
   <div>
     <KeyValueForm id={`${prefix}.start`} type="date" title="Start" />
     <KeyValueForm id={`${prefix}.end`} type="date" title="End" />
   </div>
 );
 
-const ArrayForm = ({ name, array, render, initial, className }) => (
+export const LoginForm = () => (
+  <div>
+    <KeyValueForm id="username" title="Username" />
+    <KeyValueForm id="password" title="Password" type="password" />
+  </div>
+);
+
+export const ArrayForm = ({ name, array, render, initial, className }) => (
   <div className={className}>
     <FieldArray
       name={name}
@@ -68,5 +91,3 @@ const ArrayForm = ({ name, array, render, initial, className }) => (
     />
   </div>
 );
-
-export { KeyValueForm, TextAreaForm, ArrayForm, LocationForm, CompanyForm, DurationForm as DateForm };

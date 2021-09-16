@@ -42,7 +42,7 @@ const PdfTimelineItem = (props) => (
     <Text style={styles.date}>{renderDate(new Date(props.start), props.end ? new Date(props.end) : undefined)}</Text>
     <View style={{ flexDirection: "row" }}>
       <Text style={styles.company}>{props.company.name || ""} </Text>
-      <Text style={styles.location}>- {renderLocationText(props.location.resolved, false)}</Text>
+      {props.location && <Text style={styles.location}>- {renderLocationText(props.location.resolved, false)}</Text>}
     </View>
     <Text style={styles.brief}>{props.brief}</Text>
     {props.items.map((item) => (

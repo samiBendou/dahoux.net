@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
-import { ArrayForm, KeyValueForm } from "../common/forms";
+import { ArrayForm, FormButton, KeyValueForm } from "../common/forms";
 import { SkillsTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
 
@@ -13,11 +13,7 @@ const SkillForm = ({ values, name, index }) => {
         <KeyValueForm id={`${name}.${index}.label`} title="Label" />
         <KeyValueForm id={`${name}.${index}.level`} title="Level" />
         <KeyValueForm id={`${name}.${index}.category`} title="Category" />
-        <div className="btn-bar">
-          <button className="btn-submit" type="submit">
-            Submit
-          </button>
-        </div>
+        <FormButton />
       </Fragment>
     </div>
   );

@@ -1,7 +1,7 @@
 import { FastField } from "formik";
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { ArrayForm, KeyValueForm, LocationForm, TextAreaForm } from "../common/forms";
+import { ArrayForm, FormButton, KeyValueForm, LocationForm, TextAreaForm } from "../common/forms";
 import { AboutTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
 
@@ -54,11 +54,7 @@ const AboutForm = ({ values }) => (
     <h2>Location</h2>
     <LocationForm prefix="location" />
     <LinksForm />
-    <div className="btn-bar">
-      <button className="btn-submit" type="submit">
-        Submit
-      </button>
-    </div>
+    <FormButton />
   </div>
 );
 
