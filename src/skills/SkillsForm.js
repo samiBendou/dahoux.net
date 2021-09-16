@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
 import { ArrayForm, KeyValueForm } from "../common/forms";
+import { SkillsTitle } from "../common/titles";
+import { Section } from "../common/wrappers";
 
 const SkillForm = ({ values, name, index }) => {
   return (
@@ -41,4 +43,10 @@ const SkillsListForm = ({ name, values }) => (
   />
 );
 
-export { SkillForm, SkillsListForm };
+const SkillsTable = ({ items, name }) => (
+  <Section id="skills-table" title={<SkillsTitle />}>
+    <SkillsListForm name={name} values={items} />
+  </Section>
+);
+
+export { SkillForm, SkillsTable };

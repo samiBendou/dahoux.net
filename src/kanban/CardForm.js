@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
 import { ArrayForm, CompanyForm, DateForm, KeyValueForm, TextAreaForm } from "../common/forms";
+import { Section } from "../common/wrappers";
 
 const GeneralInfoForm = ({ name, index }) => (
   <div>
@@ -74,4 +75,10 @@ const CardsListForm = ({ name, values }) => (
   />
 );
 
-export { CardForm, CardsListForm as CardList };
+const CardTable = ({ items, id, title, name }) => (
+  <Section id={id} title={title}>
+    <CardsListForm name={name} values={items} />
+  </Section>
+);
+
+export { CardForm, CardTable };

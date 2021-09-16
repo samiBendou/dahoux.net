@@ -13,14 +13,10 @@
     margin: 1rem;
   }
 
-  section {
-    width: 100%;
-  }
-
   input,
   textarea {
     margin: 0.5rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     border: none;
     border-radius: 3rem;
   }
@@ -30,15 +26,6 @@
 
   h2 {
     text-align: center;
-    margin: 0.5em;
-  }
-
-  label {
-    justify-content: center;
-  }
-
-  button {
-    font-size: large;
   }
 
   .btn-submit {
@@ -84,17 +71,17 @@
 
   .form-row {
     display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-
     width: 100%;
     input,
     textarea {
       width: 90%;
     }
-    .form-row-action {
+    .inner {
       width: 100%;
       flex-grow: 1;
+    }
+    .action {
+      display: flex;
     }
   }
 

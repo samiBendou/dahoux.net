@@ -11,7 +11,7 @@ import { SkillForm } from "./skills/SkillsForm";
 import { Form, Formik } from "formik";
 import { cloneData, getData, preprocessData, submitData } from "./common/core/data";
 import { CardForm } from "./kanban/CardForm";
-import AboutForm from "./about/AboutForm";
+import { AboutForm } from "./about/AboutForm";
 import { AdminNav } from "./nav/Nav";
 import { AdminPage } from "./common/wrappers";
 

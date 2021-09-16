@@ -1,6 +1,9 @@
 import { FastField } from "formik";
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import { ArrayForm, KeyValueForm, LocationForm, TextAreaForm } from "../common/forms";
+import { AboutTitle } from "../common/titles";
+import { Section } from "../common/wrappers";
 
 const GeneralInfoForm = () => (
   <div>
@@ -59,4 +62,12 @@ const AboutForm = ({ values }) => (
   </div>
 );
 
-export default AboutForm;
+const AboutTable = () => (
+  <Section id="about-table" title={<AboutTitle />}>
+    <h3>
+      <Link to="/admin/general">Edit infos</Link>
+    </h3>
+  </Section>
+);
+
+export { AboutForm, AboutTable };

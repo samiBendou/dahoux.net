@@ -1,15 +1,14 @@
-import React from "react";
 import "../scss/About.scss";
-import { FaUserCircle } from "react-icons/fa";
+import React from "react";
 import LocationText from "../common/LocationText";
 import LinksBar from "../common/LinksBar";
 import { Section } from "../common/wrappers";
-import { IconTitle } from "../common/titles";
+import { AboutTitle } from "../common/titles";
 
 const About = (props) => {
   const data = props.data;
   return (
-    <Section id="about" title={<IconTitle icon={<FaUserCircle className="icon" />} title="About" />}>
+    <Section id="about" title={<AboutTitle />}>
       <div className="first">
         <h1 className="name left-item">{`${data.firstName} ${data.lastName}`}</h1>
 

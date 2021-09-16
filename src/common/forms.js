@@ -46,14 +46,16 @@ const ArrayForm = ({ name, array, render, initial, className }) => (
           {array && array.length > 0 ? (
             array.map((item, index) => (
               <div key={index} className="form-row">
-                <div className="form-row-action">{render(index)}</div>
-                <button type="button" onClick={() => arrayHelpers.remove(index)}>
-                  <FaMinusCircle />
-                </button>
-                &nbsp;
-                <button type="button" onClick={() => arrayHelpers.insert(index, initial)}>
-                  <FaPlusCircle />
-                </button>
+                <div className="inner">{render(index)}</div>
+                <div className="action">
+                  <button type="button" onClick={() => arrayHelpers.remove(index)}>
+                    <FaMinusCircle />
+                  </button>
+                  &nbsp;
+                  <button type="button" onClick={() => arrayHelpers.insert(index, initial)}>
+                    <FaPlusCircle />
+                  </button>
+                </div>
               </div>
             ))
           ) : (

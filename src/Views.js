@@ -13,11 +13,12 @@ import Home from "./home/Home";
 import Pdf from "./pdf/Pdf";
 import { Board } from "./kanban/Kanban";
 import { CardDetailed } from "./kanban/CardItem";
-import { CardList } from "./kanban/CardForm";
+import { CardList, CardTable } from "./kanban/CardForm";
 
 import "./scss/Form.scss";
-import { SkillsListForm } from "./skills/SkillsForm";
+import { SkillsListForm, SkillsTable } from "./skills/SkillsForm";
 import { submitData } from "./common/core/data";
+import { AboutTable } from "./about/AboutForm";
 
 export const CardDetailedPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>
@@ -82,32 +83,18 @@ export const EditPage = ({ data }) => {
   }
   return (
     <AdminPage>
-      <div>
-        <Formik
-          initialValues={data}
-          onSubmit={submitData}
-          render={({ values }) => (
-            <Form className="edit-form">
-              <h2>About</h2>
-              <h3>
-                <Link to="/admin/general">Edit infos</Link>
-              </h3>
-              <section>
-                <h2>Projects</h2>
-                <CardList name="items.portfolio" values={values.items.portfolio} />
-              </section>
-              <section>
-                <h2>History</h2>
-                <CardList name="items.timeline" values={values.items.timeline} />
-              </section>
-              <section>
-                <h2>Skills</h2>
-                <SkillsListForm name="items.skills" values={values.items.skills} />
-              </section>
-            </Form>
-          )}
-        ></Formik>
-      </div>
+      <Formik
+        initialValues={data}
+        onSubmit={submitData}
+        render={({ values }) => (
+          <Form className="edit-form">
+            <AboutTable />
+            <CardTable id="portfolio-table" name="items.portfolio" items={values.items.portfolio} title="Projects" />
+            <CardTable id="history-table" name="items.timeline" items={values.items.timeline} title="History" />
+            <SkillsTable name="items.skills" items={values.items.skills} />
+          </Form>
+        )}
+      ></Formik>
     </AdminPage>
   );
 };
