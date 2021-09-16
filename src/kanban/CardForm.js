@@ -1,6 +1,5 @@
 import { FastField } from "formik";
-import React, { Fragmen } from "react";
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
 import { ArrayForm, CompanyForm, DateForm, KeyValueForm, TextAreaForm } from "../common/forms";
@@ -39,7 +38,7 @@ const DescriptionForm = ({ name, values, index }) => (
 
 const CardForm = ({ name, values, index }) => {
   return (
-    <div className="form-card edit-form">
+    <div className="inner">
       <h3>{values[index].title} </h3>
       <Fragment>
         <GeneralInfoForm name={name} index={index} />
@@ -56,18 +55,19 @@ const CardForm = ({ name, values, index }) => {
 
 const CardLinkForm = ({ values, index }) => {
   return (
-    <div className="form-card">
+    <Fragment>
       <h3>
         <Link to={`/admin/timeline/${slugifyString(values[index].title, values[index].start)}`}>
           {values[index].title}
         </Link>
       </h3>
-    </div>
+    </Fragment>
   );
 };
 
 const CardsListForm = ({ name, values }) => (
   <ArrayForm
+    className="cards-list"
     name={name}
     array={values}
     initial={{ title: "New Item", tags: [], brief: "", items: [], start: "", end: "", url: "" }}

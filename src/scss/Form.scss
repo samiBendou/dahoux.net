@@ -8,9 +8,34 @@
   height: calc(100vh - #{$nav-height});
   position: fixed;
   overflow: scroll;
-
+  margin-top: $nav-height;
+  padding-top: 0 !important;
   .edit-form {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
     margin: 1rem;
+
+    .inner {
+      min-width: 50%;
+    }
+  }
+
+  .edit-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .form-group,
+  .form-text {
+    display: flex;
+    align-items: center;
+  }
+
+  label {
+    width: 6rem;
   }
 
   input,
@@ -19,6 +44,7 @@
     padding: 0.5rem 1rem 0.5rem 1rem;
     border: none;
     border-radius: 3rem;
+    flex-grow: 1;
   }
   textarea {
     resize: vertical;
@@ -46,50 +72,15 @@
     margin: 1rem;
   }
 
-  .form-group {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    label {
-      width: 30%;
-    }
-    input,
-    textarea {
-      width: 70%;
-    }
-  }
-
-  .form-text {
-    label {
-      text-align: center;
-    }
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-
   .form-row {
     display: flex;
-    width: 100%;
-    input,
-    textarea {
-      width: 90%;
-    }
     .inner {
-      width: 100%;
       flex-grow: 1;
+      display: flex;
+      margin-right: 0.5rem;
     }
     .action {
       display: flex;
-    }
-  }
-
-  .form-card,
-  .about-list,
-  .skills-row {
-    .form-row {
-      align-items: center;
     }
   }
 }

@@ -7,7 +7,7 @@ import { Section } from "../common/wrappers";
 
 const SkillForm = ({ values, name, index }) => {
   return (
-    <div className="skills-row edit-form">
+    <div className="inner">
       <h3>{values[index].label} </h3>
       <Fragment>
         <KeyValueForm id={`${name}.${index}.label`} title="Label" />
@@ -25,11 +25,11 @@ const SkillForm = ({ values, name, index }) => {
 
 const SkillLinkForm = ({ values, index }) => {
   return (
-    <div className="form-card">
+    <Fragment>
       <h3>
         <Link to={`/admin/skills/${slugifyString(values[index].label)}`}>{values[index].label}</Link>
       </h3>
-    </div>
+    </Fragment>
   );
 };
 

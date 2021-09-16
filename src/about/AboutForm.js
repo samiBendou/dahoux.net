@@ -30,8 +30,8 @@ const DescriptionForm = ({ values }) => (
       initial={{ title: "", text: "" }}
       render={(index) => (
         <Fragment>
-          <FastField spellcheck="true" type="text" name={`items.about.${index}.title`} />
-          <FastField as="textarea" spellcheck="true" type="text" name={`items.about.${index}.text`} />
+          <FastField spellCheck={true} type="text" name={`items.about.${index}.title`} />
+          <FastField as="textarea" spellCheck={true} type="text" name={`items.about.${index}.text`} />
         </Fragment>
       )}
     />
@@ -48,7 +48,7 @@ const LinksForm = () => (
 );
 
 const AboutForm = ({ values }) => (
-  <div className="edit-form">
+  <div className="inner">
     <GeneralInfoForm />
     <DescriptionForm values={values} />
     <h2>Location</h2>

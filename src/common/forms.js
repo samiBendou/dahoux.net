@@ -12,7 +12,7 @@ const KeyValueForm = ({ title, id, type }) => (
 const TextAreaForm = ({ title, id }) => (
   <div className="form-text">
     <label htmlFor={id}>{title}</label>
-    <FastField as="textarea" spellcheck="true" id={id} name={id} type="text" />
+    <FastField as="textarea" spellCheck={true} id={id} name={id} type="text" />
   </div>
 );
 

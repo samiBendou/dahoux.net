@@ -87,7 +87,7 @@ export const EditPage = ({ data }) => {
         initialValues={data}
         onSubmit={submitData}
         render={({ values }) => (
-          <Form className="edit-form">
+          <Form className="edit-table">
             <AboutTable />
             <CardTable id="portfolio-table" name="items.portfolio" items={values.items.portfolio} title="Projects" />
             <CardTable id="history-table" name="items.timeline" items={values.items.timeline} title="History" />
