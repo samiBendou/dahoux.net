@@ -24,7 +24,7 @@ const AdminPage = ({ children, copyright }) => (
 const Section = ({ id, title, children }) => (
   <section id={id || slugify(title).toLowerCase()}>
     <h1 className="title">{title}</h1>
-    {children}
+    <div className="inner">{children}</div>
   </section>
 );
 

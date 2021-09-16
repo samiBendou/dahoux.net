@@ -28,11 +28,9 @@ const Board = ({ data }) => {
 
   return (
     <Section id="kanban" title={<IconTitle icon={<FaCalendarAlt />} title="Timeline" />}>
-      <div className="inner">
-        <Column icon={<FaBriefcase />} title="Experience" items={experiences} />
-        <Column icon={<FaGraduationCap />} title="Education" items={formations} />
-        <Column icon={<FaDraftingCompass />} title="Projects" items={projects} />
-      </div>
+      <Column icon={<FaBriefcase />} title="Experience" items={experiences} />
+      <Column icon={<FaGraduationCap />} title="Education" items={formations} />
+      <Column icon={<FaDraftingCompass />} title="Projects" items={projects} />
     </Section>
   );
 };

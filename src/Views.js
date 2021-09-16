@@ -13,13 +13,11 @@ import Home from "./home/Home";
 import Pdf from "./pdf/Pdf";
 import { Board } from "./kanban/Kanban";
 import { CardDetailed } from "./kanban/CardItem";
-import AboutForm from "./about/AboutForm";
 import { CardList } from "./kanban/CardForm";
 
 import "./scss/Form.scss";
 import { SkillsListForm } from "./skills/SkillsForm";
-import { submitData, preprocessData } from "./common/core/data";
-import { AdminNav } from "./nav/Nav";
+import { submitData } from "./common/core/data";
 
 export const CardDetailedPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>

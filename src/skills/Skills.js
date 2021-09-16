@@ -12,11 +12,9 @@ const Skills = (props) => {
   items.forEach((item) => itemsByCategory.get(item.category).push(item));
   return (
     <Section id="skills" title={<IconTitle icon={<FaWrench className="icon" />} title="Skills" />}>
-      <div className="inner">
-        {categories.map((category) => (
-          <SkillsList key={category} items={itemsByCategory.get(category)} category={category} />
-        ))}
-      </div>
+      {categories.map((category) => (
+        <SkillsList key={category} items={itemsByCategory.get(category)} category={category} />
+      ))}
     </Section>
   );
 };
