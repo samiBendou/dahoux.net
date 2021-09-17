@@ -118,8 +118,18 @@ export const EditPage = ({ data }) => {
         {({ values }) => (
           <Form className="edit-table">
             <AboutTable />
-            <CardTable id="portfolio-table" name="items.portfolio" items={values.items.portfolio} title="Projects" />
-            <CardTable id="history-table" name="items.timeline" items={values.items.timeline} title="History" />
+            <CardTable
+              id="portfolio-table"
+              name="items.portfolio"
+              items={values.items.portfolio}
+              title={<ProjectsTitle />}
+            />
+            <CardTable
+              id="history-table"
+              name="items.timeline"
+              items={values.items.timeline}
+              title={<HistoryTitle />}
+            />
             <SkillsTable name="items.skills" items={values.items.skills} />
             <FormButton />
           </Form>
