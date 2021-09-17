@@ -1,11 +1,11 @@
 import { getDate } from "./date";
 import { joinTags, splitTags } from "./tags";
 
-export function cloneData(data) {
+export const cloneData = (data) => {
   return JSON.parse(JSON.stringify(data));
-}
+};
 
-export function preprocessData(data) {
+export const preprocessData = (data) => {
   delete data._id;
   data.birthday = getDate(data.birthday);
   [...data.items.portfolio, ...data.items.timeline].forEach((item) => {
@@ -14,9 +14,9 @@ export function preprocessData(data) {
     item.end = getDate(item.end);
   });
   return data;
-}
+};
 
-export function postprocessData(data) {
+export const postprocessData = (data) => {
   [...data.items.portfolio, ...data.items.timeline].forEach((item) => {
     item.tags = splitTags(item.tags);
     if (item.category !== undefined) {
@@ -31,9 +31,9 @@ export function postprocessData(data) {
     item.category = parseInt(item.category);
   });
   return data;
-}
+};
 
-export async function getData(user) {
+export const getData = async (user) => {
   try {
     const res = await fetch(`/api/portfolio/${user}`);
     const text = await res.text();
@@ -44,9 +44,9 @@ export async function getData(user) {
   } catch (error) {
     return Promise.reject(error);
   }
-}
+};
 
-export async function postData(data) {
+export const postData = async (data) => {
   return await fetch("/api/admin/edit", {
     method: "post",
     headers: {
@@ -55,9 +55,9 @@ export async function postData(data) {
     },
     body: JSON.stringify(data),
   });
-}
+};
 
-export async function postCredentials(credentials) {
+export const postCredentials = async (credentials) => {
   return await fetch("/api/admin/auth", {
     method: "post",
     headers: {
@@ -66,9 +66,9 @@ export async function postCredentials(credentials) {
     },
     body: JSON.stringify(credentials),
   });
-}
+};
 
-export async function submitCredentials(credentials, actions) {
+export const submitCredentials = async (credentials, actions) => {
   try {
     const res = await postCredentials(credentials);
     if (res.status !== 200) {
@@ -80,9 +80,9 @@ export async function submitCredentials(credentials, actions) {
     console.error(error);
   }
   actions.setSubmitting(false);
-}
+};
 
-export async function submitData(data, actions) {
+export const submitData = async (data, actions) => {
   if (!window.confirm("Are you sure you want to send the modifications ?")) {
     return;
   }
@@ -101,4 +101,4 @@ export async function submitData(data, actions) {
     window.alert("An error has occurred");
   }
   actions.setSubmitting(false);
-}
+};
