@@ -1,6 +1,5 @@
 import "./scss/App.scss";
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
 import Modal from "react-modal";
 import { ErrorPage, LoaderPage } from "./Views";
 import { cloneData, getData, preprocessData } from "./common/core/data";
