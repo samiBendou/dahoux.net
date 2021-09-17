@@ -1,4 +1,5 @@
-const titleToLabel = (title) => title.toLowerCase().replace(" ", "-").replace("&", "").replace(" ", "");
-const joinTags = (tags) => (tags || []).join(";");
-const splitTags = (tags) => tags.split(";").filter((item) => !!item);
-export { joinTags, splitTags, titleToLabel };
+export const titleToLabel = (title) => title.toLowerCase().replace(" ", "-").replace("&", "").replace(" ", "");
+
+export const joinTags = (tags) => (tags || []).join(";");
+
+export const splitTags = (tags) => tags.split(";").filter((item) => !!item);

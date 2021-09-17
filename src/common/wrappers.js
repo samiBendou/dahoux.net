@@ -3,7 +3,7 @@ import { CopyrightText } from "./texts";
 import { AdminNav, Nav } from "../nav/Nav";
 import slugify from "slugify";
 
-const Page = ({ title, children, copyright, className }) => (
+export const Page = ({ title, children, copyright, className }) => (
   <div>
     <Nav />
     <main id={title} className={className}>
@@ -13,7 +13,7 @@ const Page = ({ title, children, copyright, className }) => (
   </div>
 );
 
-const AdminPage = ({ children, copyright }) => (
+export const AdminPage = ({ children, copyright }) => (
   <div>
     <AdminNav />
     <main id="edit-page">{children}</main>
@@ -21,11 +21,9 @@ const AdminPage = ({ children, copyright }) => (
   </div>
 );
 
-const Section = ({ id, title, children }) => (
+export const Section = ({ id, title, children }) => (
   <section id={id || slugify(title).toLowerCase()}>
     <h1 className="title">{title}</h1>
     <div className="inner">{children}</div>
   </section>
 );
-
-export { Page, AdminPage, Section };
