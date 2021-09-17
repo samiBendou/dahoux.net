@@ -21,6 +21,7 @@ const CardsRouter = ({ items }) =>
   items.map((item) => (
     <Route
       key={`/timeline/${slugifyString(item.title, item.start)}`}
+      exact
       path={`/timeline/${slugifyString(item.title, item.start)}`}
       component={() => <CardsDetailedPage item={item} />}
     />
@@ -29,7 +30,7 @@ const CardsRouter = ({ items }) =>
 const PublicRouter = ({ data }) => [
   <Route key="0" exact path="/" component={() => <HomePage data={data} />} />,
   <Route key="1" exact path="/portfolio" component={() => <PortfolioPage data={data} />} />,
-  <Route key="2" path="/resume" component={() => <ResumePage data={data} />} />,
+  <Route key="2" exact path="/resume" component={() => <ResumePage data={data} />} />,
   ...CardsRouter({ items: data.items.experience }),
   ...CardsRouter({ items: data.items.education }),
   ...CardsRouter({ items: data.items.projects }),

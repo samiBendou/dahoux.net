@@ -33,7 +33,7 @@ export default class App extends Component {
   render() {
     switch (this.state.status) {
       case Status.Loading:
-        return <Route path="/" component={LoaderPage} />;
+        return <LoaderPage />;
       case Status.Ready:
         return <MainRouter data={this.state.data} initial={this.state.preprocessed} />;
       case Status.Error:
