@@ -1,7 +1,6 @@
 import React from "react";
 import "../scss/Home.scss";
 import { LinksBar } from "../common/buttons";
-import ProfilePicture from "./sami2.jpg"; // gives image path
 import Emoji from "a11y-react-emoji";
 import { EmojiText } from "../common/texts";
 
@@ -13,7 +12,7 @@ const Home = (props) => {
         <h1 className="header">
           Hi I&#39; m <em>Sami</em> ! <Emoji symbol="🙂️" />
         </h1>
-        <img className="thumbnail" src={ProfilePicture} alt="profile thumbnail" />
+        <img className="thumbnail" src="/static/sami2.jpg" alt="profile thumbnail" />
         <LinksBar data={data} />
       </div>
 
