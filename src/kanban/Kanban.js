@@ -1,9 +1,8 @@
 import "../scss/Kanban.scss";
 
 import React from "react";
-import { FaBriefcase, FaCalendarAlt, FaDraftingCompass, FaGraduationCap } from "react-icons/fa";
 import CardList from "./CardList";
-import { IconTitle } from "../common/titles";
+import { EducationTitle, ExperienceTitle, ProjectsTitle, TimelineTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
 
 const Listing = ({ id, title, items }) => (
@@ -12,11 +11,9 @@ const Listing = ({ id, title, items }) => (
   </Section>
 );
 
-const Column = ({ icon, title, items }) => (
+const Column = ({ title, items }) => (
   <div className="column">
-    <h2 className="title">
-      <IconTitle icon={icon} title={title} />
-    </h2>
+    <h2 className="title">{title}</h2>
     <CardList items={items} />
   </div>
 );
@@ -28,10 +25,10 @@ const Board = ({ data }) => {
   const projects = data.items.portfolio;
 
   return (
-    <Section id="kanban" title={<IconTitle icon={<FaCalendarAlt />} title="Timeline" />}>
-      <Column icon={<FaBriefcase />} title="Experience" items={experiences} />
-      <Column icon={<FaGraduationCap />} title="Education" items={formations} />
-      <Column icon={<FaDraftingCompass />} title="Projects" items={projects} />
+    <Section id="kanban" title={<TimelineTitle />}>
+      <Column title={<ExperienceTitle />} items={experiences} />
+      <Column title={<EducationTitle />} items={formations} />
+      <Column title={<ProjectsTitle />} items={projects} />
     </Section>
   );
 };
