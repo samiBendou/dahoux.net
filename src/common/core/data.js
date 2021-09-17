@@ -67,8 +67,18 @@ export const postData = async (data) => {
   });
 };
 
-export const postCredentials = async (credentials) => {
+export const postAuthentication = async () => {
   return await fetch("/api/admin/auth", {
+    method: "post",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  });
+};
+
+export const postCredentials = async (credentials) => {
+  return await fetch("/api/admin/login", {
     method: "post",
     headers: {
       Accept: "application/json",
@@ -76,6 +86,14 @@ export const postCredentials = async (credentials) => {
     },
     body: JSON.stringify(credentials),
   });
+};
+
+export const checkAuthentication = async () => {
+  const res = await postAuthentication();
+  if (res.status !== 200) {
+    const text = await res.text();
+    throw new FetchError(res.status, text);
+  }
 };
 
 export const submitCredentials = async (credentials, actions) => {

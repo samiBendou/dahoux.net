@@ -16,26 +16,24 @@ import { CardForm, CardTable } from "./cards/CardsForm";
 
 import "./scss/Form.scss";
 import { SkillForm, SkillsTable } from "./skills/SkillsForm";
-import { submitCredentials, submitData } from "./common/core/data";
+import { checkAuthentication, submitCredentials, submitData } from "./common/core/data";
 import { AboutForm, AboutTable } from "./about/AboutForm";
 import { LoginForm } from "./common/forms";
 import { FormButton, LogButton } from "./common/buttons";
 import { EducationTitle, ExperienceTitle, ProjectsTitle, TimelineTitle } from "./common/titles";
 import { useLocation } from "react-router";
+import { Component } from "react";
+
+const Status = {
+  Ready: "ready",
+  Loading: "loading",
+  Error: "error",
+};
 
 export const LoaderPage = () => (
-  <div id="loader-container">
-    <div
-      style={{
-        position: "absolute",
-        left: "50%",
-        top: "50%",
-        transform: "translate(-50%, -50%)",
-      }}
-    >
-      <ReactLoading type="bubbles" color="#000000" />
-    </div>
-  </div>
+  <Page title="loading-page">
+    <ReactLoading type="bubbles" color="#000000" />
+  </Page>
 );
 
 export const ErrorPage = ({ error, status }) => (
@@ -97,6 +95,33 @@ export const ResumePage = (props) => (
   </Page>
 );
 
+export class AdminHelmet extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { status: Status.Loading, error: undefined };
+  }
+
+  async componentDidMount() {
+    try {
+      await checkAuthentication();
+      this.setState({ status: Status.Ready });
+    } catch (error) {
+      this.setState({ status: Status.Error, error: error });
+    }
+  }
+
+  render() {
+    switch (this.state.status) {
+      case Status.Loading:
+        return <LoaderPage />;
+      case Status.Ready:
+        return <AdminPage>{this.props.children}</AdminPage>;
+      case Status.Error:
+        return <Redirect to="/edit/login" />;
+    }
+  }
+}
+
 export const LoginPage = () => (
   <AdminPage>
     <Formik initialValues={{ username: "", password: "" }} onSubmit={submitCredentials}>
@@ -111,7 +136,7 @@ export const LoginPage = () => (
 export const CardEditPage = ({ initial, name, index }) => {
   const [, key] = name.split(".");
   return (
-    <AdminPage>
+    <AdminHelmet>
       <Formik initialValues={initial} onSubmit={submitData}>
         {({ values }) => (
           <Form className="edit-form">
@@ -119,12 +144,12 @@ export const CardEditPage = ({ initial, name, index }) => {
           </Form>
         )}
       </Formik>
-    </AdminPage>
+    </AdminHelmet>
   );
 };
 
 export const SkillEditPage = ({ initial, index }) => (
-  <AdminPage>
+  <AdminHelmet>
     <Formik initialValues={initial} onSubmit={submitData}>
       {({ values }) => (
         <Form className="edit-form">
@@ -132,11 +157,11 @@ export const SkillEditPage = ({ initial, index }) => (
         </Form>
       )}
     </Formik>
-  </AdminPage>
+  </AdminHelmet>
 );
 
 export const AboutEditPage = ({ initial }) => (
-  <AdminPage>
+  <AdminHelmet>
     <Formik initialValues={initial} onSubmit={submitData}>
       {({ values }) => (
         <Form className="edit-form">
@@ -144,42 +169,37 @@ export const AboutEditPage = ({ initial }) => (
         </Form>
       )}
     </Formik>
-  </AdminPage>
+  </AdminHelmet>
 );
 
-export const EditPage = ({ data }) => {
-  if (!document.cookie.includes("AuthToken")) {
-    return <Redirect from="/edit/" to="/edit/login" />;
-  }
-  return (
-    <AdminPage>
-      <Formik initialValues={data} onSubmit={submitData}>
-        {({ values }) => (
-          <Form className="edit-table">
-            <AboutTable />
-            <CardTable
-              id="portfolio-table"
-              name="items.projects"
-              items={values.items.projects}
-              title={<ProjectsTitle />}
-            />
-            <CardTable
-              id="history-table"
-              name="items.experience"
-              items={values.items.experience}
-              title={<ExperienceTitle />}
-            />
-            <CardTable
-              id="history-table"
-              name="items.education"
-              items={values.items.education}
-              title={<EducationTitle />}
-            />
-            <SkillsTable name="items.skills" items={values.items.skills} />
-            <FormButton />
-          </Form>
-        )}
-      </Formik>
-    </AdminPage>
-  );
-};
+export const EditPage = ({ data }) => (
+  <AdminHelmet>
+    <Formik initialValues={data} onSubmit={submitData}>
+      {({ values }) => (
+        <Form className="edit-table">
+          <AboutTable />
+          <CardTable
+            id="portfolio-table"
+            name="items.projects"
+            items={values.items.projects}
+            title={<ProjectsTitle />}
+          />
+          <CardTable
+            id="history-table"
+            name="items.experience"
+            items={values.items.experience}
+            title={<ExperienceTitle />}
+          />
+          <CardTable
+            id="history-table"
+            name="items.education"
+            items={values.items.education}
+            title={<EducationTitle />}
+          />
+          <SkillsTable name="items.skills" items={values.items.skills} />
+          <FormButton />
+        </Form>
+      )}
+    </Formik>
+  </AdminHelmet>
+);
