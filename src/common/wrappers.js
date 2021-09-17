@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { CopyrightText } from "./texts";
 import { AdminNav, Nav } from "../nav/Nav";
 import slugify from "slugify";
-import { Component } from "react";
-import { postAuthentication } from "./core/data";
 
 export const Page = ({ title, children, copyright, className }) => (
   <div>
@@ -14,12 +12,6 @@ export const Page = ({ title, children, copyright, className }) => (
     <footer>{copyright && <CopyrightText />}</footer>
   </div>
 );
-
-const Status = {
-  Ready: "ready",
-  Loading: "loading",
-  Error: "error",
-};
 
 export const AdminPage = ({ children, copyright }) => {
   return (
