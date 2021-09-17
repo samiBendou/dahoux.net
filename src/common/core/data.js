@@ -1,4 +1,3 @@
-import { useHistory } from "react-router-dom";
 import { getDate } from "./date";
 import { joinTags, splitTags } from "./tags";
 

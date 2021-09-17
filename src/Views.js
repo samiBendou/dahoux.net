@@ -1,6 +1,6 @@
 import React from "react";
 import { PDFViewer } from "@react-pdf/renderer";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { Formik, Form } from "formik";
 
 import About from "./about/About";
@@ -13,14 +13,13 @@ import Home from "./home/Home";
 import Pdf from "./pdf/Pdf";
 import { Board } from "./kanban/Kanban";
 import { CardDetailed } from "./kanban/CardItem";
-import { CardForm, CardList, CardTable } from "./kanban/CardForm";
+import { CardForm, CardTable } from "./kanban/CardForm";
 
 import "./scss/Form.scss";
-import { SkillsListForm, SkillsTable } from "./skills/SkillsForm";
+import { SkillsTable } from "./skills/SkillsForm";
 import { submitCredentials, submitData } from "./common/core/data";
 import { AboutForm, AboutTable } from "./about/AboutForm";
-import { FormButton, KeyValueForm, LogButton, LoginForm } from "./common/forms";
-import { Fragment } from "react";
+import { FormButton, LogButton, LoginForm } from "./common/forms";
 
 export const CardDetailedPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>
