@@ -116,7 +116,7 @@ export class AdminHelmet extends Component {
         return <LoaderPage />;
       case Status.Ready:
         return <AdminPage>{this.props.children}</AdminPage>;
-      case Status.Error:
+      default:
         return <Redirect to="/edit/login" />;
     }
   }
