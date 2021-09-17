@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import "../scss/Backlog.scss";
 import "../scss/Tags.scss";
 import { DateText, LocationText, CompanyText, ExternalLinkText } from "../common/texts";
-import CardCategory from "./CardCategory";
+import CardCategory from "./CardsCategory";
 import { titleToLabel } from "../common/core/tags";
 import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
 import { FaTimes } from "react-icons/fa";
 
-const CardHead = ({ item, openModal, closeModal }) => {
+const CardsItemHead = ({ item, openModal, closeModal }) => {
   function handleClick(event) {
     let isLink = event.target.parentNode.nodeName === "A";
     if (event.target.nodeName === "path") {
@@ -19,7 +19,7 @@ const CardHead = ({ item, openModal, closeModal }) => {
   }
 
   const category = CardCategory[item.category] || "";
-  const tags = [...(item.tags || []), ...(category ? [category] : [])];
+  const tags = [...(category ? [category] : []), ...(item.tags || [])];
   return (
     <div onClick={handleClick}>
       <div className="top">
@@ -58,7 +58,7 @@ const CardHead = ({ item, openModal, closeModal }) => {
   );
 };
 
-const CardDetails = ({ item }) => (
+const CardsItemDetails = ({ item }) => (
   <div>
     <h2>Description</h2>
     <p className="item-brief">{item.brief}</p>
@@ -72,7 +72,7 @@ const CardDetails = ({ item }) => (
   </div>
 );
 
-const CardBrief = ({ item }) => {
+export const CardsItemBrief = ({ item }) => {
   const [open, setOpen] = useState(false);
 
   function openModal() {
@@ -85,21 +85,19 @@ const CardBrief = ({ item }) => {
 
   return (
     <div className="item card">
-      <CardHead openModal={openModal} item={item} />
+      <CardsItemHead openModal={openModal} item={item} />
       <Modal className="backlog modal" isOpen={open} onRequestClose={closeModal} shouldCloseOnOverlayClick={true}>
-        <CardDetailed closeModal={closeModal} item={item} />
+        <CardsItemDetailed closeModal={closeModal} item={item} />
       </Modal>
     </div>
   );
 };
 
-const CardDetailed = ({ item, closeModal }) => {
+export const CardsItemDetailed = ({ item, closeModal }) => {
   return (
     <div className="item">
-      <CardHead closeModal={closeModal} item={item} />
-      <CardDetails item={item} />
+      <CardsItemHead closeModal={closeModal} item={item} />
+      <CardsItemDetails item={item} />
     </div>
   );
 };
-
-export { CardDetailed, CardBrief };

@@ -9,9 +9,9 @@ import Skills from "./skills/Skills";
 import { AdminPage, Page } from "./common/wrappers";
 import Home from "./home/Home";
 import Pdf from "./pdf/Pdf";
-import { Board, Listing } from "./kanban/Kanban";
-import { CardDetailed } from "./kanban/CardItem";
-import { CardForm, CardTable } from "./kanban/CardForm";
+import { Board, Listing } from "./cards/Cards";
+import { CardsItemDetailed } from "./cards/CardsItem";
+import { CardForm, CardTable } from "./cards/CardsForm";
 
 import "./scss/Form.scss";
 import { SkillsTable } from "./skills/SkillsForm";
@@ -19,11 +19,11 @@ import { submitCredentials, submitData } from "./common/core/data";
 import { AboutForm, AboutTable } from "./about/AboutForm";
 import { LoginForm } from "./common/forms";
 import { FormButton, LogButton } from "./common/buttons";
-import { HistoryTitle, ProjectsTitle } from "./common/titles";
+import { EducationTitle, ExperienceTitle, HistoryTitle, ProjectsTitle } from "./common/titles";
 
 export const CardDetailedPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>
-    <CardDetailed item={item} />
+    <CardsItemDetailed item={item} />
   </Page>
 );
 
@@ -39,7 +39,15 @@ export const PortfolioPage = (props) => (
     <Skills items={props.data.items.skills} />
     <Listing id="projects" title={<ProjectsTitle />} items={props.data.items.portfolio} />
     <Listing id="history" title={<HistoryTitle />} items={props.data.items.timeline} />
-    <Board data={props.data} />
+    <Board
+      id="kanban"
+      titles={[ExperienceTitle, EducationTitle, ProjectsTitle]}
+      data={{
+        experiences: props.data.items.timeline.filter((item) => item.category === 0),
+        education: props.data.items.timeline.filter((item) => item.category === 1),
+        projects: props.data.items.portfolio,
+      }}
+    />
   </Page>
 );
 
