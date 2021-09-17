@@ -1,5 +1,6 @@
 import { getDate } from "./date";
 import { joinTags, splitTags } from "./tags";
+import Cookies from "js-cookie";
 
 class FetchError extends Error {
   constructor(status, text, ...args) {
@@ -13,6 +14,14 @@ export const joinTimeline = (data) => [...data.items.projects, ...data.items.exp
 
 export const cloneData = (data) => {
   return JSON.parse(JSON.stringify(data));
+};
+
+export const getAuthorizationHeader = () => {
+  let token = Cookies.get("Authorization");
+  if (!token) {
+    return undefined;
+  }
+  return `Bearer ${token}`;
 };
 
 export const preprocessData = (data) => {
@@ -62,6 +71,7 @@ export const postData = async (data) => {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
+      Authorization: getAuthorizationHeader(),
     },
     body: JSON.stringify(data),
   });
@@ -73,6 +83,7 @@ export const postAuthentication = async () => {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
+      Authorization: getAuthorizationHeader(),
     },
   });
 };
@@ -99,10 +110,11 @@ export const checkAuthentication = async () => {
 export const submitCredentials = async (credentials, actions) => {
   try {
     const res = await postCredentials(credentials);
+    const text = await res.text();
     if (res.status !== 200) {
-      const text = await res.text();
       throw new FetchError(res.status, text);
     }
+    Cookies.set("Authorization", `${text}`);
     window.location.href = "/edit";
   } catch (error) {
     console.error(error);

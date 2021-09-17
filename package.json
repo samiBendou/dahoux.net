@@ -7,7 +7,9 @@
   "dependencies": {
     "@react-pdf/renderer": "^2.0.19",
     "a11y-react-emoji": "^1.1.3",
+    "cookie-parser": "^1.4.5",
     "formik": "^2.2.9",
+    "js-cookie": "^3.0.1",
     "node-sass": "^4.13.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
