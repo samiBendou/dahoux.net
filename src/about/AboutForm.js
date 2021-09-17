@@ -1,9 +1,10 @@
 import { FastField } from "formik";
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { ArrayForm, FormButton, KeyValueForm, LocationForm, TextAreaForm } from "../common/forms";
+import { ArrayForm, KeyValueForm, LocationForm, TextAreaForm } from "../common/forms";
 import { AboutTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
+import { FormButton } from "../common/buttons";
 
 const GeneralInfoForm = () => (
   <div>

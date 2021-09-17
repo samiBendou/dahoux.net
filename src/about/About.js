@@ -1,7 +1,7 @@
 import "../scss/About.scss";
 import React from "react";
-import LocationText from "../common/LocationText";
-import LinksBar from "../common/LinksBar";
+import { LocationText } from "../common/texts";
+import { LinksBar } from "../common/buttons";
 import { Section } from "../common/wrappers";
 import { AboutTitle } from "../common/titles";
 

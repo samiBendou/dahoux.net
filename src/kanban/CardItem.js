@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import "../scss/History.scss";
 import "../scss/Projects.scss";
 import "../scss/Backlog.scss";
-import DateText from "../common/DateText";
-import LocationText from "../common/LocationText";
+import { DateText, LocationText, CompanyText, ExternalLinkText } from "../common/texts";
 import CardCategory from "./CardCategory";
-import CompanyText from "../common/CompanyText";
 import { titleToLabel } from "../common/core/tags";
 import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
 import { FaTimes } from "react-icons/fa";
-import ExternalLinkText from "../common/ExternalLInkText";
 
 const CardHead = ({ item, openModal, closeModal }) => {
   function handleClick(event) {

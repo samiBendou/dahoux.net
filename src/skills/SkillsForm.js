@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
-import { ArrayForm, FormButton, KeyValueForm } from "../common/forms";
+import { ArrayForm, KeyValueForm } from "../common/forms";
 import { SkillsTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
+import { FormButton } from "../common/buttons";
 
 const SkillForm = ({ values, name, index }) => {
   return (

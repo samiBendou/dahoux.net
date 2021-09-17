@@ -1,5 +1,5 @@
 import React from "react";
-import Copyright from "./Copyright";
+import { Copyright } from "./texts";
 import { AdminNav, Nav } from "../nav/Nav";
 import slugify from "slugify";
 

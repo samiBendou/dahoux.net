@@ -3,7 +3,23 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 import Pdf from "../pdf/Pdf";
 import React from "react";
 
-const LinkBar = (props) => {
+export const FormButton = () => (
+  <div className="btn-bar">
+    <button className="btn-submit" type="submit">
+      Submit
+    </button>
+  </div>
+);
+
+export const LogButton = () => (
+  <div className="btn-bar">
+    <button className="btn-login" type="submit">
+      Login
+    </button>
+  </div>
+);
+
+export const LinksBar = (props) => {
   return (
     <div className="links-bar">
       <a href={props.data.urls.linkedin}>
@@ -27,5 +43,3 @@ const LinkBar = (props) => {
     </div>
   );
 };
-
-export default LinkBar;

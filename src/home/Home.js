@@ -1,9 +1,9 @@
 import React from "react";
 import "../scss/Home.scss";
-import LinksBar from "../common/LinksBar";
+import { LinksBar } from "../common/buttons";
 import ProfilePicture from "./sami2.jpg"; // gives image path
 import Emoji from "a11y-react-emoji";
-import EmojiText from "../common/EmojiText";
+import { EmojiText } from "../common/texts";
 
 const Home = (props) => {
   const data = props.data;

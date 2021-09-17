@@ -19,7 +19,8 @@ import "./scss/Form.scss";
 import { SkillsTable } from "./skills/SkillsForm";
 import { submitCredentials, submitData } from "./common/core/data";
 import { AboutForm, AboutTable } from "./about/AboutForm";
-import { FormButton, LogButton, LoginForm } from "./common/forms";
+import { LoginForm } from "./common/forms";
+import { FormButton, LogButton } from "./common/buttons";
 
 export const CardDetailedPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>
