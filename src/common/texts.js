@@ -4,7 +4,7 @@ import { FaBirthdayCake, FaExternalLinkAlt, FaMapMarker } from "react-icons/fa";
 import { renderAge, renderDate } from "./core/date";
 import { renderLocationText, renderLocationURL } from "./core/location";
 
-export const Copyright = () => <h2 id="copyright">© Sami Dahoux 2017-2021, All Rights Reserved</h2>;
+export const CopyrightText = () => <h2 id="copyright">© Sami Dahoux 2017-2021, All Rights Reserved</h2>;
 
 export const BirthdayText = (props) => {
   return (

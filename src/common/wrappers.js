@@ -1,5 +1,5 @@
 import React from "react";
-import { Copyright } from "./texts";
+import { CopyrightText } from "./texts";
 import { AdminNav, Nav } from "../nav/Nav";
 import slugify from "slugify";
 
@@ -9,7 +9,7 @@ const Page = ({ title, children, copyright, className }) => (
     <main id={title} className={className}>
       {children}
     </main>
-    <footer>{copyright && <Copyright />}</footer>
+    <footer>{copyright && <CopyrightText />}</footer>
   </div>
 );
 
@@ -17,7 +17,7 @@ const AdminPage = ({ children, copyright }) => (
   <div>
     <AdminNav />
     <main id="edit-page">{children}</main>
-    <footer>{copyright && <Copyright />}</footer>
+    <footer>{copyright && <CopyrightText />}</footer>
   </div>
 );
 
