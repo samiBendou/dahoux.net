@@ -13,7 +13,7 @@ const Nav = () => (
 
 const AdminNav = () => (
   <NavBar title={<PageTitle />} icon={<FaHamburger />}>
-    <NavItem link="/admin/">Home</NavItem>
+    <NavItem link="/edit/">Home</NavItem>
     <NavItem link="/">Quit</NavItem>
   </NavBar>
 );

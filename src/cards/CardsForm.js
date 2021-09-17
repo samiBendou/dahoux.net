@@ -63,7 +63,7 @@ const CardLinkForm = ({ values, index }) => {
   return (
     <Fragment>
       <h3>
-        <Link to={`/admin/timeline/${slugifyString(values[index].title, values[index].start)}`}>
+        <Link to={`/edit/timeline/${slugifyString(values[index].title, values[index].start)}`}>
           {values[index].title}
         </Link>
       </h3>

@@ -24,7 +24,7 @@ const SkillLinkForm = ({ values, index }) => {
   return (
     <Fragment>
       <h3>
-        <Link to={`/admin/skills/${slugifyString(values[index].label)}`}>{values[index].label}</Link>
+        <Link to={`/edit/skills/${slugifyString(values[index].label)}`}>{values[index].label}</Link>
       </h3>
     </Fragment>
   );

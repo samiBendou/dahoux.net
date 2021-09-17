@@ -62,7 +62,7 @@ const AboutForm = ({ values }) => (
 const AboutTable = () => (
   <Section id="about-table" title={<AboutTitle />}>
     <h3>
-      <Link to="/admin/general">Edit infos</Link>
+      <Link to="/edit/general">Edit infos</Link>
     </h3>
   </Section>
 );

@@ -75,7 +75,7 @@ export const submitCredentials = async (credentials, actions) => {
       const text = await res.text();
       throw new Error(`${res.status} - ${text}`);
     }
-    window.location.href = "/admin";
+    window.location.href = "/edit";
   } catch (error) {
     console.error(error);
   }

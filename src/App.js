@@ -47,34 +47,34 @@ const Router = ({ data, preprocessed }) => (
         component={() => <CardDetailedPage item={item} />}
       />
     ))}
-    <Route exact path="/admin/login" component={LoginPage} />
-    <Route exact path="/admin/" component={() => <EditPage data={preprocessed} />} />
-    <Route exact path="/admin/general" component={() => <AboutEditPage initial={preprocessed} />} />
+    <Route exact path="/edit/login" component={LoginPage} />
+    <Route exact path="/edit/" component={() => <EditPage data={preprocessed} />} />
+    <Route exact path="/edit/general" component={() => <AboutEditPage initial={preprocessed} />} />
     {data.items.education.map((item, index) => (
       <Route
-        key={`/admin/education/${slugifyString(item.title, item.start)}`}
-        path={`/admin/education/${slugifyString(item.title, item.start)}`}
+        key={`/edit/education/${slugifyString(item.title, item.start)}`}
+        path={`/edit/education/${slugifyString(item.title, item.start)}`}
         component={() => <CardEditPage initial={preprocessed} name="items.education" index={index} />}
       />
     ))}
     {data.items.experience.map((item, index) => (
       <Route
-        key={`/admin/experience/${slugifyString(item.title, item.start)}`}
-        path={`/admin/experience/${slugifyString(item.title, item.start)}`}
+        key={`/edit/experience/${slugifyString(item.title, item.start)}`}
+        path={`/edit/experience/${slugifyString(item.title, item.start)}`}
         component={() => <CardEditPage initial={preprocessed} name="items.experience" index={index} />}
       />
     ))}
     {data.items.projects.map((item, index) => (
       <Route
-        key={`/admin/projects/${slugifyString(item.title, item.start)}`}
-        path={`/admin/projects/${slugifyString(item.title, item.start)}`}
+        key={`/edit/projects/${slugifyString(item.title, item.start)}`}
+        path={`/edit/projects/${slugifyString(item.title, item.start)}`}
         component={() => <CardEditPage initial={preprocessed} name="items.projects" index={index} />}
       />
     ))}
     {data.items.skills.map((item, index) => (
       <Route
-        key={`/admin/skills/${slugifyString(item.label)}`}
-        path={`/admin/skills/${slugifyString(item.label)}`}
+        key={`/edit/skills/${slugifyString(item.label)}`}
+        path={`/edit/skills/${slugifyString(item.label)}`}
         component={() => <SkillEditPage initial={preprocessed} index={index} />}
       />
     ))}

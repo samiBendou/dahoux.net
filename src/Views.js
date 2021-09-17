@@ -119,7 +119,7 @@ export const AboutEditPage = ({ initial }) => (
 
 export const EditPage = ({ data }) => {
   if (!document.cookie.includes("AuthToken")) {
-    return <Redirect from="/admin/" to="/admin/login" />;
+    return <Redirect from="/edit/" to="/edit/login" />;
   }
   return (
     <AdminPage>
