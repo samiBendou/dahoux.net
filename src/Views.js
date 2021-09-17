@@ -5,13 +5,11 @@ import { Formik, Form } from "formik";
 
 import About from "./about/About";
 import Skills from "./skills/Skills";
-import History from "./kanban/History";
-import Projects from "./kanban/Projects";
 
 import { AdminPage, Page } from "./common/wrappers";
 import Home from "./home/Home";
 import Pdf from "./pdf/Pdf";
-import { Board } from "./kanban/Kanban";
+import { Board, Listing } from "./kanban/Kanban";
 import { CardDetailed } from "./kanban/CardItem";
 import { CardForm, CardTable } from "./kanban/CardForm";
 
@@ -21,10 +19,11 @@ import { submitCredentials, submitData } from "./common/core/data";
 import { AboutForm, AboutTable } from "./about/AboutForm";
 import { LoginForm } from "./common/forms";
 import { FormButton, LogButton } from "./common/buttons";
+import { HistoryTitle, ProjectsTitle } from "./common/titles";
 
 export const CardDetailedPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>
-    <CardDetailed item={item} key={item.title + item.start} id={item.title + item.start} />
+    <CardDetailed item={item} />
   </Page>
 );
 
@@ -38,8 +37,8 @@ export const PortfolioPage = (props) => (
   <Page title="portfolio-page" copyright>
     <About data={props.data} />
     <Skills items={props.data.items.skills} />
-    <Projects items={props.data.items.portfolio} />
-    <History items={props.data.items.timeline} />
+    <Listing id="projects" title={<ProjectsTitle />} items={props.data.items.portfolio} />
+    <Listing id="history" title={<HistoryTitle />} items={props.data.items.timeline} />
     <Board data={props.data} />
   </Page>
 );

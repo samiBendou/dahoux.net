@@ -1,0 +1,100 @@
+@import "colors.scss";
+
+.tag.application,
+.tag.game,
+.tag.web,
+.tag.ip,
+.tag.library,
+.tag.simulator {
+  background-color: $industry-knowledge-color !important;
+}
+
+.tag.computer-vision,
+.tag.machine-learning,
+.tag.side-channel {
+  background-color: $scientific-knowledge-color !important;
+}
+
+.tag.python,
+.tag.rust,
+.tag.typescript,
+.tag.c\+\+,
+.tag.c,
+.tag.javascript {
+  background-color: $software-languages-color !important;
+}
+
+.tag.numpy,
+.tag.scipy,
+.tag.piston,
+.tag.react,
+.tag.npm,
+.tag.fpga {
+  background-color: $tools-technologies-color !important;
+}
+
+.tag.experience {
+  background-color: $theme-tag-red !important;
+}
+
+.tag.education {
+  background-color: $theme-tag-purple !important;
+}
+
+#skills {
+  .stack.scientific-knowledge {
+    background-color: $scientific-knowledge-color;
+  }
+
+  .stack.industry-knowledge {
+    background-color: $industry-knowledge-color;
+  }
+
+  .stack.tools-technologies {
+    background-color: $tools-technologies-color;
+  }
+
+  .stack.software-languages {
+    background-color: $software-languages-color;
+  }
+
+  .stack.hardware-design {
+    background-color: $hardware-design-color;
+  }
+
+  .stack.interpersonal-skills {
+    background-color: $interpersonal-skills-color;
+  }
+
+  .stack.languages {
+    background-color: $languages-color;
+  }
+
+  .name.scientific-knowledge {
+    color: $scientific-knowledge-color;
+  }
+
+  .name.industry-knowledge {
+    color: $industry-knowledge-color;
+  }
+
+  .name.tools-technologies {
+    color: $tools-technologies-color;
+  }
+
+  .name.software-languages {
+    color: $software-languages-color;
+  }
+
+  .name.hardware-design {
+    color: $hardware-design-color;
+  }
+
+  .name.interpersonal-skills {
+    color: $interpersonal-skills-color;
+  }
+
+  .name.languages {
+    color: $languages-color;
+  }
+}

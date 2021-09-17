@@ -94,6 +94,7 @@ $modal-width: 50vw;
     .quit {
       display: none;
     }
+    transition: background-color 200ms ease;
   }
 
   .card:hover {
@@ -150,7 +151,11 @@ $modal-width: 50vw;
 
   @media only screen and (max-width: 1024px) {
     .item {
-      flex-basis: 100%;
+      flex-basis: 80%;
+    }
+
+    .card:hover {
+      background-color: white !important;
     }
   }
 }

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "../scss/History.scss";
-import "../scss/Projects.scss";
 import "../scss/Backlog.scss";
+import "../scss/Tags.scss";
 import { DateText, LocationText, CompanyText, ExternalLinkText } from "../common/texts";
 import CardCategory from "./CardCategory";
 import { titleToLabel } from "../common/core/tags";

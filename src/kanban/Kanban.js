@@ -1,12 +1,13 @@
 import "../scss/Kanban.scss";
+
 import React from "react";
 import { FaBriefcase, FaCalendarAlt, FaDraftingCompass, FaGraduationCap } from "react-icons/fa";
 import CardList from "./CardList";
 import { IconTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
 
-const Listing = ({ icon, id, title, items }) => (
-  <Section id={id} title={<IconTitle icon={icon} title={title} />}>
+const Listing = ({ id, title, items }) => (
+  <Section id={id} title={title}>
     <CardList items={items} />
   </Section>
 );

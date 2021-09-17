@@ -1,6 +1,7 @@
 import React from "react";
 import SkillsList from "./SkillsList";
 import "../scss/Skills.scss";
+import "../scss/Tags.scss";
 import { SkillsTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
 
