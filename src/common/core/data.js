@@ -1,6 +1,14 @@
 import { getDate } from "./date";
 import { joinTags, splitTags } from "./tags";
 
+class FetchError extends Error {
+  constructor(status, text, ...args) {
+    super(args);
+    this.status = status;
+    this.message = text || args.message;
+  }
+}
+
 export const cloneData = (data) => {
   return JSON.parse(JSON.stringify(data));
 };
@@ -38,7 +46,7 @@ export const getData = async (user) => {
     const res = await fetch(`/api/portfolio/${user}`);
     const text = await res.text();
     if (res.status !== 200) {
-      return Promise.reject(new Error(`${res.status} - ${text}`));
+      return Promise.reject(new FetchError(res.status, text));
     }
     return Promise.resolve(JSON.parse(text));
   } catch (error) {
@@ -73,7 +81,7 @@ export const submitCredentials = async (credentials, actions) => {
     const res = await postCredentials(credentials);
     if (res.status !== 200) {
       const text = await res.text();
-      throw new Error(`${res.status} - ${text}`);
+      throw new FetchError(res.status, text);
     }
     window.location.href = "/edit";
   } catch (error) {

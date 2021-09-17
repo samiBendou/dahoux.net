@@ -2,7 +2,6 @@ import "../scss/Cards.scss";
 
 import React from "react";
 import CardsList from "./CardsList";
-import { TimelineTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
 
 const Column = ({ title, items }) => (
@@ -18,11 +17,11 @@ export const Listing = ({ id, title, items }) => (
   </Section>
 );
 
-export const Board = ({ id, titles, data }) => {
+export const Board = ({ id, title, subtitles, data }) => {
   return (
-    <Section id={id} title={<TimelineTitle />}>
+    <Section id={id} title={title}>
       {Object.keys(data).map((key, index) => (
-        <Column key={key} title={titles[index]()} items={data[key]} />
+        <Column key={key} title={subtitles[index]()} items={data[key]} />
       ))}
     </Section>
   );

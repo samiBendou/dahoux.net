@@ -2,6 +2,7 @@ import React from "react";
 import { PDFViewer } from "@react-pdf/renderer";
 import { Redirect } from "react-router-dom";
 import { Formik, Form } from "formik";
+import ReactLoading from "react-loading";
 
 import About from "./about/About";
 import Skills from "./skills/Skills";
@@ -14,14 +15,42 @@ import { CardsItemDetailed } from "./cards/CardsItem";
 import { CardForm, CardTable } from "./cards/CardsForm";
 
 import "./scss/Form.scss";
-import { SkillsTable } from "./skills/SkillsForm";
+import { SkillForm, SkillsTable } from "./skills/SkillsForm";
 import { submitCredentials, submitData } from "./common/core/data";
 import { AboutForm, AboutTable } from "./about/AboutForm";
 import { LoginForm } from "./common/forms";
 import { FormButton, LogButton } from "./common/buttons";
-import { EducationTitle, ExperienceTitle, HistoryTitle, ProjectsTitle } from "./common/titles";
+import { EducationTitle, ExperienceTitle, ProjectsTitle, TimelineTitle } from "./common/titles";
+import { useLocation } from "react-router";
 
-export const CardDetailedPage = ({ item }) => (
+export const LoaderPage = () => (
+  <div id="loader-container">
+    <div
+      style={{
+        position: "absolute",
+        left: "50%",
+        top: "50%",
+        transform: "translate(-50%, -50%)",
+      }}
+    >
+      <ReactLoading type="bubbles" color="#000000" />
+    </div>
+  </div>
+);
+
+export const ErrorPage = ({ error, status }) => (
+  <Page title="error-page" copyright>
+    <h1>Error {status && ` ${status}`}</h1>
+    <h2>{error.message}</h2>
+  </Page>
+);
+
+export const NotFoundPage = () => {
+  const location = useLocation();
+  return <ErrorPage error={new Error(`${location.pathname} does not exist`)} status={404} />;
+};
+
+export const CardsDetailedPage = ({ item }) => (
   <Page title="item-page" className="backlog page" copyright>
     <CardsItemDetailed item={item} />
   </Page>
@@ -42,7 +71,8 @@ export const PortfolioPage = (props) => (
     <Listing id="education" title={<EducationTitle />} items={props.data.items.education} />
     <Board
       id="kanban"
-      titles={[ExperienceTitle, EducationTitle, ProjectsTitle]}
+      title={<TimelineTitle />}
+      subtitles={[ExperienceTitle, EducationTitle, ProjectsTitle]}
       data={{
         experience: props.data.items.experience,
         education: props.data.items.education,
@@ -98,7 +128,7 @@ export const SkillEditPage = ({ initial, index }) => (
     <Formik initialValues={initial} onSubmit={submitData}>
       {({ values }) => (
         <Form className="edit-form">
-          <CardForm name="items.skills" values={values.items.skills} index={index} />
+          <SkillForm name="items.skills" values={values.items.skills} index={index} />
         </Form>
       )}
     </Formik>

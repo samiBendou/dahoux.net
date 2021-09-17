@@ -6,7 +6,7 @@ import { SkillsTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
 import { FormButton } from "../common/buttons";
 
-const SkillForm = ({ values, name, index }) => {
+export const SkillForm = ({ values, name, index }) => {
   return (
     <div className="inner">
       <h3>{values[index].label} </h3>
@@ -40,10 +40,8 @@ const SkillsListForm = ({ name, values }) => (
   />
 );
 
-const SkillsTable = ({ items, name }) => (
+export const SkillsTable = ({ items, name }) => (
   <Section id="skills-table" title={<SkillsTitle />}>
     <SkillsListForm name={name} values={items} />
   </Section>
 );
-
-export { SkillForm, SkillsTable };
