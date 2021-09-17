@@ -8,7 +8,7 @@ export const cloneData = (data) => {
 export const preprocessData = (data) => {
   delete data._id;
   data.birthday = getDate(data.birthday);
-  [...data.items.portfolio, ...data.items.timeline].forEach((item) => {
+  [...data.items.projects, ...data.items.experience, ...data.items.education].forEach((item) => {
     item.tags = joinTags(item.tags);
     item.start = getDate(item.start);
     item.end = getDate(item.end);
@@ -17,7 +17,7 @@ export const preprocessData = (data) => {
 };
 
 export const postprocessData = (data) => {
-  [...data.items.portfolio, ...data.items.timeline].forEach((item) => {
+  [...data.items.projects, ...data.items.experience, ...data.items.education].forEach((item) => {
     item.tags = splitTags(item.tags);
     if (item.category !== undefined) {
       item.category = parseInt(item.category);

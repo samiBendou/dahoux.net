@@ -37,15 +37,16 @@ export const PortfolioPage = (props) => (
   <Page title="portfolio-page" copyright>
     <About data={props.data} />
     <Skills items={props.data.items.skills} />
-    <Listing id="projects" title={<ProjectsTitle />} items={props.data.items.portfolio} />
-    <Listing id="history" title={<HistoryTitle />} items={props.data.items.timeline} />
+    <Listing id="projects" title={<ProjectsTitle />} items={props.data.items.projects} />
+    <Listing id="experience" title={<ExperienceTitle />} items={props.data.items.experience} />
+    <Listing id="education" title={<EducationTitle />} items={props.data.items.education} />
     <Board
       id="kanban"
       titles={[ExperienceTitle, EducationTitle, ProjectsTitle]}
       data={{
-        experiences: props.data.items.timeline.filter((item) => item.category === 0),
-        education: props.data.items.timeline.filter((item) => item.category === 1),
-        projects: props.data.items.portfolio,
+        experience: props.data.items.experience,
+        education: props.data.items.education,
+        projects: props.data.items.projects,
       }}
     />
   </Page>
@@ -128,15 +129,21 @@ export const EditPage = ({ data }) => {
             <AboutTable />
             <CardTable
               id="portfolio-table"
-              name="items.portfolio"
-              items={values.items.portfolio}
+              name="items.projects"
+              items={values.items.projects}
               title={<ProjectsTitle />}
             />
             <CardTable
               id="history-table"
-              name="items.timeline"
-              items={values.items.timeline}
-              title={<HistoryTitle />}
+              name="items.experience"
+              items={values.items.experience}
+              title={<ExperienceTitle />}
+            />
+            <CardTable
+              id="history-table"
+              name="items.education"
+              items={values.items.education}
+              title={<EducationTitle />}
             />
             <SkillsTable name="items.skills" items={values.items.skills} />
             <FormButton />

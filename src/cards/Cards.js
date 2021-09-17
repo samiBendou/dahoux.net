@@ -1,4 +1,4 @@
-import "../scss/Kanban.scss";
+import "../scss/Cards.scss";
 
 import React from "react";
 import CardsList from "./CardsList";

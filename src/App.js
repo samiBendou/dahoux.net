@@ -26,28 +26,49 @@ const Router = ({ data, preprocessed }) => (
     <Route exact path="/" component={() => <HomePage data={data} />} />
     <Route exact path="/portfolio" component={() => <PortfolioPage data={data} />} />
     <Route path="/resume" component={() => <ResumePage data={data} />} />
-    {[...data.items.timeline, ...data.items.portfolio].map((item) => (
+    {data.items.education.map((item) => (
       <Route
-        key={`/timeline/${slugifyString(item.title, item.start)}`}
-        path={`/timeline/${slugifyString(item.title, item.start)}`}
+        key={`/education/${slugifyString(item.title, item.start)}`}
+        path={`/education/${slugifyString(item.title, item.start)}`}
+        component={() => <CardDetailedPage item={item} />}
+      />
+    ))}
+    {data.items.experience.map((item) => (
+      <Route
+        key={`/experience/${slugifyString(item.title, item.start)}`}
+        path={`/experience/${slugifyString(item.title, item.start)}`}
+        component={() => <CardDetailedPage item={item} />}
+      />
+    ))}
+    {data.items.projects.map((item) => (
+      <Route
+        key={`/projects/${slugifyString(item.title, item.start)}`}
+        path={`/projects/${slugifyString(item.title, item.start)}`}
         component={() => <CardDetailedPage item={item} />}
       />
     ))}
     <Route exact path="/admin/login" component={LoginPage} />
     <Route exact path="/admin/" component={() => <EditPage data={preprocessed} />} />
     <Route exact path="/admin/general" component={() => <AboutEditPage initial={preprocessed} />} />
-    {data.items.timeline.map((item, index) => (
+    {data.items.education.map((item, index) => (
       <Route
-        key={`/admin/timeline/${slugifyString(item.title, item.start)}`}
-        path={`/admin/timeline/${slugifyString(item.title, item.start)}`}
-        component={() => <CardEditPage initial={preprocessed} name="items.timeline" index={index} />}
+        key={`/admin/education/${slugifyString(item.title, item.start)}`}
+        path={`/admin/education/${slugifyString(item.title, item.start)}`}
+        component={() => <CardEditPage initial={preprocessed} name="items.education" index={index} />}
       />
     ))}
-    {data.items.portfolio.map((item, index) => (
+    {data.items.experience.map((item, index) => (
       <Route
-        key={`/admin/timeline/${slugifyString(item.title, item.start)}`}
-        path={`/admin/timeline/${slugifyString(item.title, item.start)}`}
-        component={() => <CardEditPage initial={preprocessed} name="items.portfolio" index={index} />}
+        key={`/admin/experience/${slugifyString(item.title, item.start)}`}
+        path={`/admin/experience/${slugifyString(item.title, item.start)}`}
+        component={() => <CardEditPage initial={preprocessed} name="items.experience" index={index} />}
+      />
+    ))}
+    {data.items.projects.map((item, index) => (
+      <Route
+        key={`/admin/projects/${slugifyString(item.title, item.start)}`}
+        path={`/admin/projects/${slugifyString(item.title, item.start)}`}
+        component={() => <CardEditPage initial={preprocessed} name="items.projects" index={index} />}
       />
     ))}
     {data.items.skills.map((item, index) => (
