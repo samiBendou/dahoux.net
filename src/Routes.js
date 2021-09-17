@@ -11,7 +11,6 @@ import {
   AboutEditPage,
   CardEditPage,
   SkillEditPage,
-  NotFoundPage,
 } from "./Views";
 import { slugifyString } from "./common/core/url";
 import { Fragment } from "react";
@@ -22,7 +21,6 @@ const CardsRouter = ({ items }) => (
     {items.map((item) => (
       <Route
         key={`/timeline/${slugifyString(item.title, item.start)}`}
-        exact
         path={`/timeline/${slugifyString(item.title, item.start)}`}
         component={() => <CardsDetailedPage item={item} />}
       />
@@ -84,7 +82,6 @@ const MainRouter = ({ data, initial }) => {
     <BrowserRouter>
       <PublicRouter data={data} />
       <EditRouter data={data} initial={initial} />
-      <Route path="/*" component={NotFoundPage} />
     </BrowserRouter>
   );
 };
