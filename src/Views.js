@@ -73,44 +73,38 @@ export const CardEditPage = ({ initial, name, index }) => {
   const [, key] = name.split(".");
   return (
     <AdminPage>
-      <Formik
-        initialValues={initial}
-        onSubmit={submitData}
-        render={({ values }) => (
+      <Formik initialValues={initial} onSubmit={submitData}>
+        {({ values }) => (
           <Form className="edit-form">
             <CardForm name={name} values={values.items[key]} index={index} />
           </Form>
         )}
-      ></Formik>
+      </Formik>
     </AdminPage>
   );
 };
 
 export const SkillEditPage = ({ initial, index }) => (
   <AdminPage>
-    <Formik
-      initialValues={initial}
-      onSubmit={submitData}
-      render={({ values }) => (
+    <Formik initialValues={initial} onSubmit={submitData}>
+      {({ values }) => (
         <Form className="edit-form">
           <CardForm name="items.skills" values={values.items.skills} index={index} />
         </Form>
       )}
-    ></Formik>
+    </Formik>
   </AdminPage>
 );
 
 export const AboutEditPage = ({ initial }) => (
   <AdminPage>
-    <Formik
-      initialValues={initial}
-      onSubmit={submitData}
-      render={({ values }) => (
+    <Formik initialValues={initial} onSubmit={submitData}>
+      {({ values }) => (
         <Form className="edit-form">
           <AboutForm values={values} />
         </Form>
       )}
-    ></Formik>
+    </Formik>
   </AdminPage>
 );
 
@@ -120,10 +114,8 @@ export const EditPage = ({ data }) => {
   }
   return (
     <AdminPage>
-      <Formik
-        initialValues={data}
-        onSubmit={submitData}
-        render={({ values }) => (
+      <Formik initialValues={data} onSubmit={submitData}>
+        {({ values }) => (
           <Form className="edit-table">
             <AboutTable />
             <CardTable id="portfolio-table" name="items.portfolio" items={values.items.portfolio} title="Projects" />
@@ -132,7 +124,7 @@ export const EditPage = ({ data }) => {
             <FormButton />
           </Form>
         )}
-      ></Formik>
+      </Formik>
     </AdminPage>
   );
 };

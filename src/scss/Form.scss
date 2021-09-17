@@ -27,7 +27,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
 
+  .edit-form,
+  .edit-table {
     .btn-bar {
       position: fixed;
       top: $nav-height;
