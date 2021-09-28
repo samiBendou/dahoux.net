@@ -8,6 +8,7 @@ import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
 import { FaTimes } from "react-icons/fa";
+import ReactMarkdown from "react-markdown";
 
 const CardsItemHead = ({ item, openModal, closeModal }) => {
   function handleClick(event) {
@@ -62,7 +63,7 @@ const CardsItemDetails = ({ item }) => (
   <div>
     <h2>Description</h2>
     <p className="item-brief">{item.brief}</p>
-    {item.description && <p>{item.description}</p>}
+    {item.description && <ReactMarkdown>{item.description}</ReactMarkdown>}
     <h2>Key points</h2>
     <ul className="items-list">
       {item.items.map((item) => (
