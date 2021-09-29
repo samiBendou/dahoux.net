@@ -2,4 +2,8 @@ export const titleToLabel = (title) => title.toLowerCase().replace(" ", "-").rep
 
 export const joinTags = (tags) => (tags || []).join(";");
 
-export const splitTags = (tags) => tags.split(";").filter((item) => !!item);
+export const splitTags = (tags) =>
+  tags
+    .split(";")
+    .map(String.prototype.trim)
+    .filter((item) => !!item);

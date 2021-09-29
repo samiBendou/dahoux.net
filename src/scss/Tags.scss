@@ -5,13 +5,18 @@
 .tag.web,
 .tag.ip,
 .tag.library,
-.tag.simulator {
+.tag.simulator,
+.tag.embedded-software,
+.tag.railway-signalling {
   background-color: $industry-knowledge-color !important;
 }
 
 .tag.computer-vision,
 .tag.machine-learning,
-.tag.side-channel {
+.tag.side-channel,
+.tag.computer-science,
+.tag.embedded-systems,
+.tag.microelectronics {
   background-color: $scientific-knowledge-color !important;
 }
 
@@ -29,16 +34,33 @@
 .tag.piston,
 .tag.react,
 .tag.npm,
-.tag.fpga {
+.tag.fpga,
+.tag.bluetooth,
+.tag.agility,
+.tag.prestashop,
+.tag.magento {
   background-color: $tools-technologies-color !important;
 }
 
-.tag.experience {
+.tag.vhdl {
+  background-color: $hardware-design-color !important;
+}
+
+.tag.experience,
+.tag.self-employed,
+.tag.permanent,
+.tag.internship,
+.tag.freelance {
   background-color: $theme-tag-red !important;
 }
 
-.tag.education {
+.tag.education,
+.tag.diploma {
   background-color: $theme-tag-purple !important;
+}
+
+.tag.project {
+  background-color: $theme-tag-blue !important;
 }
 
 #skills {
