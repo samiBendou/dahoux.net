@@ -1,3 +1,42 @@
+# portfolio
+
+A basic portfolio website oriented for technical/engineering jobs.
+
+## Features
+
+- Introduce myself
+- Overview my skills
+- Professional timeline featuring :
+  - My work experience
+  - My education
+- Provide an up to date resume in pdf
+
+## Purposes
+
+- Provide a template application
+- Learn how to develop using the MERN techs
+
+# Structure
+
+## Architecture
+
+The application was made using _React_, _SaaS_ and _redux_. It communicates with a back-end API that provides an exhaustive description of the portfolio contents in JSON. The back-end can be located [here](https://github.com/samiBendou/portfolio-back).
+
+## Deployment
+
+The website is deployed using an _Express_ server which serves the application build as static content.
+
+## Setup
+
+The application is compatible with _node_ 12 or latter, to run it in local :
+
+- Clone the back-end application [here](https://github.com/samiBendou/portfolio-back)
+- Follow the instructions to run it at http://localhost:5000
+- Clone this application
+- Run the `npm start` command at the root of the project
+
+# Usage
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
