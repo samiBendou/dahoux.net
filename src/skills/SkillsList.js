@@ -1,6 +1,6 @@
 import React from "react";
 import SkillsCategory from "./SkillsCategory";
-import titleToLabel from "../common/core/tags";
+import { titleToLabel } from "../common/core/tags";
 
 const SkillsList = (props) => {
   const sortedItems = props.items.sort((a, b) => b.level - a.level);

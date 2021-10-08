@@ -22,7 +22,7 @@ const Pdf = (props) => (
     <Page size="A4" style={styles.page}>
       <View style={{ flexDirection: "row" }}>
         <PdfLeft items={props.data.items.skills} />
-        <PdfRight items={props.data.items.timeline} data={props.data} />
+        <PdfRight items={[...props.data.items.experience, ...props.data.items.education]} data={props.data} />
       </View>
     </Page>
   </Document>

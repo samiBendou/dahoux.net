@@ -1,0 +1,95 @@
+@import "colors.scss";
+@import "NavBar.scss";
+
+#edit-page {
+  background-color: $theme-gray-300;
+  width: 100vw;
+  height: calc(100vh - #{$nav-height});
+  position: fixed;
+  overflow: scroll;
+  margin-top: $nav-height;
+  padding-top: 0 !important;
+
+  .edit-form,
+  .login-form {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    margin: 1rem;
+
+    .inner {
+      min-width: 50%;
+    }
+  }
+
+  .edit-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .edit-form,
+  .edit-table {
+    .btn-bar {
+      position: fixed;
+      top: $nav-height;
+      right: 0;
+      outline: none;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+  }
+
+  label {
+    width: 6rem;
+  }
+
+  input,
+  textarea {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: none;
+    border-radius: 3rem;
+    flex-grow: 1;
+  }
+  textarea {
+    resize: vertical;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .btn-bar {
+    text-align: center;
+    margin: 1rem;
+
+    button {
+      text-align: center;
+      border-radius: 3rem;
+      padding: 1rem;
+      color: white !important;
+      background-color: $theme-blue;
+      font-size: x-large;
+    }
+    button:hover {
+      background-color: $theme-marine;
+    }
+  }
+
+  .form-row {
+    display: flex;
+    .inner {
+      flex-grow: 1;
+      display: flex;
+      margin-right: 0.5rem;
+    }
+    .action {
+      display: flex;
+    }
+  }
+}

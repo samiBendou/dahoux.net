@@ -11,4 +11,11 @@ const Nav = () => (
   </NavBar>
 );
 
-export default Nav;
+const AdminNav = () => (
+  <NavBar title={<PageTitle />} icon={<FaHamburger />}>
+    <NavItem link="/edit/">Home</NavItem>
+    <NavItem link="/">Quit</NavItem>
+  </NavBar>
+);
+
+export { Nav, AdminNav };

@@ -1,6 +1,11 @@
 import slugify from "slugify";
+import { getDate } from "./date";
 
-export const slugifyString = (str, date) => {
+export const slugifyString = (str, datetime) => {
   const slug = slugify(str);
-  return `${slug}-${date.split("T").slice(0, 1)}`;
+  if (datetime) {
+    return `${slug}-${getDate(datetime)}`;
+  } else {
+    return slug;
+  }
 };

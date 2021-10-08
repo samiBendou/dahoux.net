@@ -1,23 +1,31 @@
 import React from "react";
-import Copyright from "./Copyright";
-import Nav from "../nav/Nav";
+import { CopyrightText } from "./texts";
+import { AdminNav, Nav } from "../nav/Nav";
 import slugify from "slugify";
 
-const Page = ({ title, children, copyright, className }) => (
+export const Page = ({ title, children, copyright, className }) => (
   <div>
     <Nav />
     <main id={title} className={className}>
       {children}
     </main>
-    <footer>{copyright && <Copyright />}</footer>
+    <footer>{copyright && <CopyrightText />}</footer>
   </div>
 );
 
-const Section = ({ id, title, children }) => (
+export const AdminPage = ({ children, copyright }) => {
+  return (
+    <div>
+      <AdminNav />
+      <main id="edit-page">{children}</main>
+      <footer>{copyright && <CopyrightText />}</footer>
+    </div>
+  );
+};
+
+export const Section = ({ id, title, children }) => (
   <section id={id || slugify(title).toLowerCase()}>
     <h1 className="title">{title}</h1>
-    {children}
+    <div className="inner">{children}</div>
   </section>
 );
-
-export { Page, Section };

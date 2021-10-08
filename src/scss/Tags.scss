@@ -1,0 +1,122 @@
+@import "colors.scss";
+
+.tag.application,
+.tag.game,
+.tag.web,
+.tag.ip,
+.tag.library,
+.tag.simulator,
+.tag.embedded-software,
+.tag.railway-signalling {
+  background-color: $industry-knowledge-color !important;
+}
+
+.tag.computer-vision,
+.tag.machine-learning,
+.tag.side-channel,
+.tag.computer-science,
+.tag.embedded-systems,
+.tag.microelectronics {
+  background-color: $scientific-knowledge-color !important;
+}
+
+.tag.python,
+.tag.rust,
+.tag.typescript,
+.tag.c\+\+,
+.tag.c,
+.tag.javascript {
+  background-color: $software-languages-color !important;
+}
+
+.tag.numpy,
+.tag.scipy,
+.tag.piston,
+.tag.react,
+.tag.npm,
+.tag.fpga,
+.tag.bluetooth,
+.tag.agility,
+.tag.prestashop,
+.tag.magento {
+  background-color: $tools-technologies-color !important;
+}
+
+.tag.vhdl {
+  background-color: $hardware-design-color !important;
+}
+
+.tag.experience,
+.tag.self-employed,
+.tag.permanent,
+.tag.internship,
+.tag.freelance {
+  background-color: $theme-tag-red !important;
+}
+
+.tag.education,
+.tag.diploma {
+  background-color: $theme-tag-purple !important;
+}
+
+.tag.project {
+  background-color: $theme-tag-blue !important;
+}
+
+#skills {
+  .stack.scientific-knowledge {
+    background-color: $scientific-knowledge-color;
+  }
+
+  .stack.industry-knowledge {
+    background-color: $industry-knowledge-color;
+  }
+
+  .stack.tools-technologies {
+    background-color: $tools-technologies-color;
+  }
+
+  .stack.software-languages {
+    background-color: $software-languages-color;
+  }
+
+  .stack.hardware-design {
+    background-color: $hardware-design-color;
+  }
+
+  .stack.interpersonal-skills {
+    background-color: $interpersonal-skills-color;
+  }
+
+  .stack.languages {
+    background-color: $languages-color;
+  }
+
+  .name.scientific-knowledge {
+    color: $scientific-knowledge-color;
+  }
+
+  .name.industry-knowledge {
+    color: $industry-knowledge-color;
+  }
+
+  .name.tools-technologies {
+    color: $tools-technologies-color;
+  }
+
+  .name.software-languages {
+    color: $software-languages-color;
+  }
+
+  .name.hardware-design {
+    color: $hardware-design-color;
+  }
+
+  .name.interpersonal-skills {
+    color: $interpersonal-skills-color;
+  }
+
+  .name.languages {
+    color: $languages-color;
+  }
+}

@@ -1,19 +1,16 @@
 import React, { useState } from "react";
-import "../scss/History.scss";
-import "../scss/Projects.scss";
 import "../scss/Backlog.scss";
-import DateText from "../common/DateText";
-import LocationText from "../common/LocationText";
-import CardCategory from "./CardCategory";
-import CompanyText from "../common/CompanyText";
-import titleToLabel from "../common/core/tags";
+import "../scss/Tags.scss";
+import { DateText, LocationText, CompanyText, ExternalLinkText } from "../common/texts";
+import CardCategory from "./CardsCategory";
+import { titleToLabel } from "../common/core/tags";
 import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
 import { slugifyString } from "../common/core/url";
 import { FaTimes } from "react-icons/fa";
-import ExternalLinkText from "../common/ExternalLInkText";
+import ReactMarkdown from "react-markdown";
 
-const CardHead = ({ item, openModal, closeModal }) => {
+const CardsItemHead = ({ item, openModal, closeModal }) => {
   function handleClick(event) {
     let isLink = event.target.parentNode.nodeName === "A";
     if (event.target.nodeName === "path") {
@@ -23,7 +20,7 @@ const CardHead = ({ item, openModal, closeModal }) => {
   }
 
   const category = CardCategory[item.category] || "";
-  const tags = [...(item.tags || []), ...(category ? [category] : [])];
+  const tags = [...(category ? [category] : []), ...(item.tags || [])];
   return (
     <div onClick={handleClick}>
       <div className="top">
@@ -50,7 +47,7 @@ const CardHead = ({ item, openModal, closeModal }) => {
       )}
       {item.location && (
         <h3>
-          <LocationText location={item.location} county={false} />
+          <LocationText location={item.location.resolved} county={false} />
         </h3>
       )}
 
@@ -62,11 +59,11 @@ const CardHead = ({ item, openModal, closeModal }) => {
   );
 };
 
-const CardDetails = ({ item }) => (
+const CardsItemDetails = ({ item }) => (
   <div>
     <h2>Description</h2>
     <p className="item-brief">{item.brief}</p>
-    {item.description && <p>{item.description}</p>}
+    {item.description && <ReactMarkdown>{item.description}</ReactMarkdown>}
     <h2>Key points</h2>
     <ul className="items-list">
       {item.items.map((item) => (
@@ -76,7 +73,7 @@ const CardDetails = ({ item }) => (
   </div>
 );
 
-const CardBrief = ({ item }) => {
+export const CardsItemBrief = ({ item }) => {
   const [open, setOpen] = useState(false);
 
   function openModal() {
@@ -89,21 +86,19 @@ const CardBrief = ({ item }) => {
 
   return (
     <div className="item card">
-      <CardHead openModal={openModal} item={item} />
+      <CardsItemHead openModal={openModal} item={item} />
       <Modal className="backlog modal" isOpen={open} onRequestClose={closeModal} shouldCloseOnOverlayClick={true}>
-        <CardDetailed closeModal={closeModal} item={item} />
+        <CardsItemDetailed closeModal={closeModal} item={item} />
       </Modal>
     </div>
   );
 };
 
-const CardDetailed = ({ item, closeModal }) => {
+export const CardsItemDetailed = ({ item, closeModal }) => {
   return (
     <div className="item">
-      <CardHead closeModal={closeModal} item={item} />
-      <CardDetails item={item} />
+      <CardsItemHead closeModal={closeModal} item={item} />
+      <CardsItemDetails item={item} />
     </div>
   );
 };
-
-export { CardDetailed, CardBrief };

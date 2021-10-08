@@ -2,6 +2,16 @@
 
 $element-radius: 3rem;
 
+#education,
+#experience,
+#projects {
+  display: none;
+  @media only screen and (max-width: 1024px) {
+    display: block;
+    text-align: center;
+  }
+}
+
 #kanban {
   @media only screen and (max-width: 1023px) {
     display: none;

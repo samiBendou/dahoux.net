@@ -16,6 +16,7 @@ const PdfTimelineList = ({ items }) => {
           location={item.location}
           key={item.title + "&" + item.start}
           company={item.company}
+          category={item.category}
         />
       ))}
     </View>

@@ -1,4 +1,4 @@
-const ms = {
+export const ms = {
   second: 1000,
   minute: 60000,
   hour: 3.6e6,
@@ -7,7 +7,7 @@ const ms = {
   year: 3.154e10,
 };
 
-const day = {
+export const day = {
   second: 1.1574e-5,
   minute: 0.000694444,
   hour: 0.0416667,
@@ -16,13 +16,15 @@ const day = {
   year: 365,
 };
 
-const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+export const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-const renderMonth = (month) => {
+export const getDate = (datetime) => (datetime ? datetime.split("T")[0] : datetime);
+
+export const renderMonth = (month) => {
   return months[month];
 };
 
-const renderDate = (start, end) => {
+export const renderDate = (start, end) => {
   if (end === undefined) {
     return `${start.getFullYear()} ${renderMonth(start.getMonth())}, to date`;
   }
@@ -40,6 +42,4 @@ const renderDate = (start, end) => {
   }
 };
 
-const renderAge = (birthday) => Math.floor((new Date() - birthday) / ms.year);
-
-export { ms, day, renderDate, renderAge };
+export const renderAge = (birthday) => Math.floor((new Date() - birthday) / ms.year);

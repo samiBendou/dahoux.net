@@ -1,12 +1,9 @@
 import "./scss/App.scss";
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
-import { Switch } from "react-router";
 import Modal from "react-modal";
-
-import Loader from "./Loader";
-import { HomePage, PortfolioPage, ResumePage, CardDetailedPage } from "./Views";
-import { slugifyString } from "./common/core/url";
+import { ErrorPage, LoaderPage } from "./Views";
+import { cloneData, getData, preprocessData } from "./common/core/data";
+import MainRouter from "./Routes";
 
 Modal.setAppElement("#root");
 
@@ -24,51 +21,24 @@ export default class App extends Component {
 
   async componentDidMount() {
     try {
-      const res = await fetch("/api/portfolio/bendou");
-      const text = await res.text();
-      if (res.status !== 200) {
-        this.setState({ status: Status.Error, error: new Error(`${res.status} - ${text}`) });
-        return Promise.reject(text);
-      }
-      const object = JSON.parse(text);
-      this.setState({ status: Status.Ready, data: object });
-      return Promise.resolve();
+      const data = await getData("bendou");
+      const preprocessed = preprocessData(cloneData(data));
+      this.setState({ status: Status.Ready, data: data, preprocessed: preprocessed });
     } catch (error) {
-      return Promise.reject(error);
+      this.setState({ status: Status.Error, error: error });
     }
   }
 
   render() {
-    const data = this.state.data;
     switch (this.state.status) {
       case Status.Loading:
-        return <Route path="/" component={Loader} />;
+        return <LoaderPage />;
       case Status.Ready:
-        return (
-          <Switch>
-            <Route exact path="/" component={() => <HomePage data={data} />} />
-            <Route exact path="/portfolio" component={() => <PortfolioPage data={data} />} />
-            <Route path="/resume" component={() => <ResumePage data={data} />} />
-            {[...data.items.timeline, ...data.items.portfolio].map((item) => (
-              <Route
-                key={`/timeline/${slugifyString(item.title, item.start)}`}
-                path={`/timeline/${slugifyString(item.title, item.start)}`}
-                component={() => <CardDetailedPage item={item} />}
-              />
-            ))}
-          </Switch>
-        );
+        return <MainRouter data={this.state.data} initial={this.state.preprocessed} />;
       case Status.Error:
-        console.error(this.state.error);
-        return (
-          <div>
-            Something went wrong!
-            <br />
-            {this.state.error.toString()}
-          </div>
-        );
+        return <ErrorPage error={this.state.error} status={this.state.error.status} />;
       default:
-        return <div>Unexpected application status! {this.state.status}</div>;
+        return <ErrorPage error={new Error(`Unexpected status ${this.state.status}`)} />;
     }
   }
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import SkillsList from "./SkillsList";
 import "../scss/Skills.scss";
-import { FaWrench } from "react-icons/fa";
-import { IconTitle } from "../common/titles";
+import "../scss/Tags.scss";
+import { SkillsTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
 
 const Skills = (props) => {
@@ -11,12 +11,10 @@ const Skills = (props) => {
   const itemsByCategory = new Map(categories.map((category) => [category, []]));
   items.forEach((item) => itemsByCategory.get(item.category).push(item));
   return (
-    <Section id="skills" title={<IconTitle icon={<FaWrench className="icon" />} title="Skills" />}>
-      <div className="inner">
-        {categories.map((category) => (
-          <SkillsList key={category} items={itemsByCategory.get(category)} category={category} />
-        ))}
-      </div>
+    <Section id="skills" title={<SkillsTitle />}>
+      {categories.map((category) => (
+        <SkillsList key={category} items={itemsByCategory.get(category)} category={category} />
+      ))}
     </Section>
   );
 };
