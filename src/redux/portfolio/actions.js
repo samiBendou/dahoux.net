@@ -1,33 +1,35 @@
 import { cloneData, getData, preprocessData } from "../../common/core/data";
 import { FETCH_PORTFOLIO_REQUEST, FETCH_PORTFOLIO_SUCCESS, FETCH_PORTFOLIO_FAILURE } from "./types";
 
-export const fetchPortfolio = () => async (dispatch) => {
-  dispatch(fetchPortfolioRequest());
+const fetch = () => async (dispatch) => {
+  dispatch(fetchRequest());
   try {
     const data = await getData("bendou");
     const preprocessed = preprocessData(cloneData(data));
-    dispatch(fetchPortfolioSuccess(data, preprocessed));
+    dispatch(fetchSuccess(data, preprocessed));
   } catch (error) {
-    dispatch(fetchPortfolioFailure(error));
+    dispatch(fetchFailure(error));
   }
 };
 
-export const fetchPortfolioRequest = () => {
+const fetchRequest = () => {
   return {
     type: FETCH_PORTFOLIO_REQUEST,
   };
 };
 
-export const fetchPortfolioSuccess = (data, preprocessed) => {
+const fetchSuccess = (data, preprocessed) => {
   return {
     type: FETCH_PORTFOLIO_SUCCESS,
     payload: { data, preprocessed },
   };
 };
 
-export const fetchPortfolioFailure = (error) => {
+const fetchFailure = (error) => {
   return {
     type: FETCH_PORTFOLIO_FAILURE,
     payload: error,
   };
 };
+
+export default fetch;

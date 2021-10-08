@@ -4,7 +4,7 @@ import Modal from "react-modal";
 import { ErrorPage, LoaderPage } from "./Pages";
 import MainRouter from "./Routes";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPortfolio } from "./redux/portfolio/actions";
+import fetchPortfolio from "./redux/portfolio/actions";
 
 Modal.setAppElement("#root");
 

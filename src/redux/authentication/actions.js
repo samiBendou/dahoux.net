@@ -1,31 +1,33 @@
 import { checkAuthentication } from "../../common/core/data";
 import { FETCH_AUTHENTICATION_REQUEST, FETCH_AUTHENTICATION_SUCCESS, FETCH_AUTHENTICATION_FAILURE } from "./types";
 
-export const fetchAuthentication = () => async (dispatch) => {
-  dispatch(fetchAuthenticationRequest());
+export const fetch = () => async (dispatch) => {
+  dispatch(fetchRequest());
   try {
     await checkAuthentication();
-    dispatch(fetchAuthenticationSuccess());
+    dispatch(fetchSuccess());
   } catch (error) {
-    dispatch(fetchAuthenticationFailure(error));
+    dispatch(fetchFailure(error));
   }
 };
 
-export const fetchAuthenticationRequest = () => {
+const fetchRequest = () => {
   return {
     type: FETCH_AUTHENTICATION_REQUEST,
   };
 };
 
-export const fetchAuthenticationSuccess = () => {
+const fetchSuccess = () => {
   return {
     type: FETCH_AUTHENTICATION_SUCCESS,
   };
 };
 
-export const fetchAuthenticationFailure = (error) => {
+const fetchFailure = (error) => {
   return {
     type: FETCH_AUTHENTICATION_FAILURE,
     payload: error,
   };
 };
+
+export default fetch;

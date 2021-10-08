@@ -22,7 +22,7 @@ import { LoginForm } from "./common/forms";
 import { FormButton, LogButton } from "./common/buttons";
 import { EducationTitle, ExperienceTitle, ProjectsTitle, TimelineTitle } from "./common/titles";
 import { useLocation } from "react-router";
-import { fetchAuthentication } from "./redux/authentication/actions";
+import fetchAuthentication from "./redux/authentication/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 export const LoaderPage = () => (
