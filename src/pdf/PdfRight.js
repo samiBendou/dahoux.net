@@ -63,7 +63,7 @@ const PdfRight = (props) => {
   const experiences = [
     ...props.items
       .sort((a, b) => new Date(b.start) - new Date(a.start))
-      .filter((item) => item.category != 2)
+      .filter((item) => item.category !== 2)
       .slice(0, 4),
   ];
 
