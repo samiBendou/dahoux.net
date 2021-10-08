@@ -2,11 +2,12 @@ import React from "react";
 import { StyleSheet, Text, View } from "@react-pdf/renderer";
 import { renderDate } from "../../common/core/date";
 import { renderLocationText } from "../../common/core/location";
+import CardsCategory from "../../cards/CardsCategory";
 
 const styles = StyleSheet.create({
   title: {
     marginTop: 4,
-    fontSize: "16pt",
+    fontSize: "14pt",
     fontFamily: "Helvetica-Bold",
   },
 
@@ -23,6 +24,9 @@ const styles = StyleSheet.create({
   },
 
   location: {
+    fontSize: "12pt",
+  },
+  category: {
     fontSize: "12pt",
   },
   brief: {
@@ -42,7 +46,8 @@ const PdfTimelineItem = (props) => (
     <Text style={styles.date}>{renderDate(new Date(props.start), props.end ? new Date(props.end) : undefined)}</Text>
     <View style={{ flexDirection: "row" }}>
       <Text style={styles.company}>{props.company.name || ""} </Text>
-      {props.location && <Text style={styles.location}>- {renderLocationText(props.location.resolved, false)}</Text>}
+      <Text style={styles.category}> - {CardsCategory[props.category]}</Text>
+      {props.location && <Text style={styles.location}> - {renderLocationText(props.location.resolved, false)}</Text>}
     </View>
     <Text style={styles.brief}>{props.brief}</Text>
     {props.items.map((item) => (
