@@ -1,16 +1,16 @@
 import "./scss/App.scss";
 import React, { useEffect } from "react";
 import Modal from "react-modal";
-import { ErrorPage, LoaderPage } from "./Views";
+import { ErrorPage, LoaderPage } from "./Pages";
 import MainRouter from "./Routes";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPortfolio } from "./redux/actions";
+import { fetchPortfolio } from "./redux/portfolio/actions";
 
 Modal.setAppElement("#root");
 
 const App = () => {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state);
+  const state = useSelector((state) => state.portfolio);
   useEffect(() => {
     dispatch(fetchPortfolio());
   }, [dispatch]);

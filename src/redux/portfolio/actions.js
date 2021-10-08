@@ -1,4 +1,4 @@
-import { cloneData, getData, preprocessData } from "../common/core/data";
+import { cloneData, getData, preprocessData } from "../../common/core/data";
 import { FETCH_PORTFOLIO_REQUEST, FETCH_PORTFOLIO_SUCCESS, FETCH_PORTFOLIO_FAILURE } from "./types";
 
 export const fetchPortfolio = () => async (dispatch) => {
