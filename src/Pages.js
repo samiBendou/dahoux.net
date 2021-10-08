@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PDFViewer } from "@react-pdf/renderer";
 import { Redirect } from "react-router-dom";
 import { Formik, Form } from "formik";
@@ -16,19 +16,14 @@ import { CardForm, CardTable } from "./cards/CardsForm";
 
 import "./scss/Form.scss";
 import { SkillForm, SkillsTable } from "./skills/SkillsForm";
-import { checkAuthentication, submitCredentials, submitData } from "./common/core/data";
+import { submitCredentials, submitData } from "./common/core/data";
 import { AboutForm, AboutTable } from "./about/AboutForm";
 import { LoginForm } from "./common/forms";
 import { FormButton, LogButton } from "./common/buttons";
 import { EducationTitle, ExperienceTitle, ProjectsTitle, TimelineTitle } from "./common/titles";
 import { useLocation } from "react-router";
-import { Component } from "react";
-
-const Status = {
-  Ready: "ready",
-  Loading: "loading",
-  Error: "error",
-};
+import fetchAuthentication from "./redux/authentication/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 export const LoaderPage = () => (
   <Page title="loading-page">
@@ -95,32 +90,21 @@ export const ResumePage = (props) => (
   </Page>
 );
 
-export class AdminHelmet extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { status: Status.Loading, error: undefined };
-  }
+const AdminHelmet = (props) => {
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.authentication);
+  useEffect(() => {
+    dispatch(fetchAuthentication());
+  }, [dispatch]);
 
-  async componentDidMount() {
-    try {
-      await checkAuthentication();
-      this.setState({ status: Status.Ready });
-    } catch (error) {
-      this.setState({ status: Status.Error, error: error });
-    }
+  if (state.loading) {
+    return <LoaderPage />;
   }
-
-  render() {
-    switch (this.state.status) {
-      case Status.Loading:
-        return <LoaderPage />;
-      case Status.Ready:
-        return <AdminPage>{this.props.children}</AdminPage>;
-      default:
-        return <Redirect to="/edit/login" />;
-    }
+  if (state.error) {
+    return <Redirect to="/edit/login" />;
   }
-}
+  return <AdminPage>{props.children}</AdminPage>;
+};
 
 export const LoginPage = () => (
   <AdminPage>

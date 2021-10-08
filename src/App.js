@@ -1,44 +1,27 @@
 import "./scss/App.scss";
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import Modal from "react-modal";
-import { ErrorPage, LoaderPage } from "./Views";
-import { cloneData, getData, preprocessData } from "./common/core/data";
+import { ErrorPage, LoaderPage } from "./Pages";
 import MainRouter from "./Routes";
+import { useDispatch, useSelector } from "react-redux";
+import fetchPortfolio from "./redux/portfolio/actions";
 
 Modal.setAppElement("#root");
 
-const Status = {
-  Ready: "ready",
-  Loading: "loading",
-  Error: "error",
+const App = () => {
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.portfolio);
+  useEffect(() => {
+    dispatch(fetchPortfolio());
+  }, [dispatch]);
+
+  if (state.loading) {
+    return <LoaderPage />;
+  }
+  if (state.error) {
+    return <ErrorPage error={state.error} status={state.error.status} />;
+  }
+  return <MainRouter data={state.data} initial={state.preprocessed} />;
 };
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { status: Status.Loading, error: undefined, data: undefined };
-  }
-
-  async componentDidMount() {
-    try {
-      const data = await getData("bendou");
-      const preprocessed = preprocessData(cloneData(data));
-      this.setState({ status: Status.Ready, data: data, preprocessed: preprocessed });
-    } catch (error) {
-      this.setState({ status: Status.Error, error: error });
-    }
-  }
-
-  render() {
-    switch (this.state.status) {
-      case Status.Loading:
-        return <LoaderPage />;
-      case Status.Ready:
-        return <MainRouter data={this.state.data} initial={this.state.preprocessed} />;
-      case Status.Error:
-        return <ErrorPage error={this.state.error} status={this.state.error.status} />;
-      default:
-        return <ErrorPage error={new Error(`Unexpected status ${this.state.status}`)} />;
-    }
-  }
-}
+export default App;
