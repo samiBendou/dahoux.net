@@ -12,24 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      -
-        name: Node setup
+      - name: Node setup
         uses: actions/setup-node@v2
         with:
-          node-version: '10'
-      -
-        name: Dependencies fetch
+          node-version: "10"
+      - name: Dependencies fetch
         uses: bahmutov/npm-install@v1.6.0
-      -
-        name: Output build
+      - name: Output build
         run: npm run build
-      -
-        name: Pages deployment
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          target_branch: gh-pages
-          build_dir: build
-          jekyll: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
