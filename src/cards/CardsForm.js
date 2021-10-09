@@ -1,7 +1,6 @@
 import { FastField } from "formik";
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { slugifyString } from "../common/core/url";
 import {
   ArrayForm,
   CompanyForm,
@@ -59,13 +58,12 @@ const CardForm = ({ name, values, index }) => {
   );
 };
 
-const CardLinkForm = ({ values, index }) => {
+const CardLinkForm = ({ values, index, name }) => {
+  const [, key] = name.split(".");
   return (
     <Fragment>
       <h3>
-        <Link to={`/edit/timeline/${slugifyString(values[index].title, values[index].start)}`}>
-          {values[index].title}
-        </Link>
+        <Link to={`/edit/${key}/${values[index].id}`}>{values[index].title}</Link>
       </h3>
     </Fragment>
   );

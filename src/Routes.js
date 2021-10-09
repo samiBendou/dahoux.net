@@ -13,7 +13,6 @@ import {
   SkillEditPage,
   NotFoundPage,
 } from "./Pages";
-import { slugifyString } from "./common/core/url";
 import { BrowserRouter } from "react-router-dom";
 import { Switch } from "react-router-dom";
 
