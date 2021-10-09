@@ -87,16 +87,16 @@ export const CardsItemBrief = ({ item, kind }) => {
     <div className="item card">
       <CardsItemHead openModal={openModal} kind={kind} item={item} />
       <Modal className="backlog modal" isOpen={open} onRequestClose={closeModal} shouldCloseOnOverlayClick={true}>
-        <CardsItemDetailed closeModal={closeModal} item={item} />
+        <CardsItemDetailed kind={kind} closeModal={closeModal} item={item} />
       </Modal>
     </div>
   );
 };
 
-export const CardsItemDetailed = ({ item, closeModal }) => {
+export const CardsItemDetailed = ({ item, kind, closeModal }) => {
   return (
     <div className="item">
-      <CardsItemHead closeModal={closeModal} item={item} />
+      <CardsItemHead kind={kind} closeModal={closeModal} item={item} />
       <CardsItemDetails item={item} />
     </div>
   );
