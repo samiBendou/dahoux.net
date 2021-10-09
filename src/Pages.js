@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { PDFViewer } from "@react-pdf/renderer";
-import { Redirect } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
 import { Formik, Form } from "formik";
 import ReactLoading from "react-loading";
 
@@ -43,11 +43,18 @@ export const NotFoundPage = () => {
   return <ErrorPage error={new Error(`${location.pathname} does not exist`)} status={404} />;
 };
 
-export const CardsDetailedPage = ({ item }) => (
-  <Page title="item-page" className="backlog page" copyright>
-    <CardsItemDetailed item={item} />
-  </Page>
-);
+export const CardsDetailedPage = ({ items }) => {
+  const id = parseInt(useParams().id);
+  const item = items.find((item) => item.id === id);
+  if (!item || isNaN(id)) {
+    return <NotFoundPage />;
+  }
+  return (
+    <Page title="item-page" className="backlog page" copyright>
+      <CardsItemDetailed item={item} />
+    </Page>
+  );
+};
 
 export const HomePage = (props) => (
   <Page title="home-page" copyright>
@@ -114,8 +121,13 @@ export const LoginPage = () => (
   </AdminPage>
 );
 
-export const CardEditPage = ({ initial, name, index }) => {
+export const CardEditPage = ({ items, initial, name }) => {
   const [, key] = name.split(".");
+  const id = parseInt(useParams().id);
+  const index = items.findIndex((item) => item.id === id);
+  if (index < 0 || isNaN(id)) {
+    return <NotFoundPage />;
+  }
   return (
     <AdminHelmet>
       <Formik initialValues={initial} onSubmit={submitData}>
@@ -129,17 +141,25 @@ export const CardEditPage = ({ initial, name, index }) => {
   );
 };
 
-export const SkillEditPage = ({ initial, index }) => (
-  <AdminHelmet>
-    <Formik initialValues={initial} onSubmit={submitData}>
-      {({ values }) => (
-        <Form className="edit-form">
-          <SkillForm name="items.skills" values={values.items.skills} index={index} />
-        </Form>
-      )}
-    </Formik>
-  </AdminHelmet>
-);
+export const SkillEditPage = ({ initial, items }) => {
+  const id = parseInt(useParams().id);
+  const index = items.findIndex((item) => item.id === id);
+  console.log(items);
+  if (index < 0 || isNaN(id)) {
+    return <NotFoundPage />;
+  }
+  return (
+    <AdminHelmet>
+      <Formik initialValues={initial} onSubmit={submitData}>
+        {({ values }) => (
+          <Form className="edit-form">
+            <SkillForm name="items.skills" values={values.items.skills} index={index} />
+          </Form>
+        )}
+      </Formik>
+    </AdminHelmet>
+  );
+};
 
 export const AboutEditPage = ({ initial }) => (
   <AdminHelmet>
