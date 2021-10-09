@@ -1,6 +1,8 @@
 import { getDate } from "./date";
 import { joinTags, splitTags } from "./tags";
 import Cookies from "js-cookie";
+import store from "../../redux/store";
+import * as portfolio from "../../redux/portfolio/actions";
 
 class FetchError extends Error {
   constructor(status, text, ...args) {
@@ -66,15 +68,24 @@ export const getData = async (user) => {
 };
 
 export const postData = async (data) => {
-  return await fetch("/api/admin/edit", {
-    method: "post",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: getAuthorizationHeader(),
-    },
-    body: JSON.stringify(data),
-  });
+  try {
+    const res = await fetch("/api/admin/edit", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: getAuthorizationHeader(),
+      },
+      body: JSON.stringify(data),
+    });
+    const text = await res.text();
+    if (res.status !== 200) {
+      return Promise.reject(new FetchError(res.status, text));
+    }
+  } catch (error) {
+    return Promise.reject(error);
+  }
+  return Promise.resolve();
 };
 
 export const postAuthentication = async () => {
@@ -123,22 +134,6 @@ export const submitCredentials = async (credentials, actions) => {
 };
 
 export const submitData = async (data, actions) => {
-  if (!window.confirm("Are you sure you want to send the modifications ?")) {
-    return;
-  }
-
-  data = postprocessData(cloneData(data));
-
-  try {
-    const res = await postData(data);
-    if (res.status !== 200) {
-      const text = await res.text();
-      throw new Error(`${res.status} - ${text}`);
-    }
-    window.alert("Modifications successfully sent!");
-  } catch (error) {
-    console.error(error);
-    window.alert("An error has occurred");
-  }
+  store.dispatch(portfolio.update(data));
   actions.setSubmitting(false);
 };
