@@ -40,17 +40,12 @@ const fetchFailure = (error) => {
 };
 
 const update = (data) => async (dispatch) => {
-  if (!window.confirm("Are you sure you want to send the modifications ?")) {
-    return;
-  }
   dispatch(updateRequest());
   try {
     const postprocessed = postprocessData(cloneData(data));
     await postData(postprocessed);
-    window.alert("Modifications successfully sent!");
     dispatch(updateSuccess(data, postprocessed));
   } catch (error) {
-    window.alert("An error has occurred");
     dispatch(updateFailure(error));
   }
 };
