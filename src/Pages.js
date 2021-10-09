@@ -73,6 +73,7 @@ export const PortfolioPage = (props) => (
       id="kanban"
       title={<TimelineTitle />}
       subtitles={[ExperienceTitle, EducationTitle, ProjectsTitle]}
+      kinds={["experience", "education", "projects"]}
       data={{
         experience: props.data.items.experience,
         education: props.data.items.education,
