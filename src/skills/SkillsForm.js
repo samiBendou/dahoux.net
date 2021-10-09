@@ -34,7 +34,7 @@ const SkillsListForm = ({ name, values }) => (
     className="skills-list"
     name={name}
     array={values}
-    initial={{ label: "New Skill", level: 0, category: 0 }}
+    initial={{ id: values.length, label: "New Skill", level: 0, category: 0 }}
     render={(index) => <SkillLinkForm index={index} values={values} />}
   />
 );

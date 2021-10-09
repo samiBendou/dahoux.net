@@ -75,6 +75,7 @@ const CardsListForm = ({ name, values }) => (
     name={name}
     array={values}
     initial={{
+      id: values.length,
       category: name.indexOf("portfolio") === -1 ? 0 : undefined,
       title: "New Item",
       tags: "",
