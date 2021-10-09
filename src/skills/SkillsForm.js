@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { slugifyString } from "../common/core/url";
 import { ArrayForm, KeyValueForm } from "../common/forms";
 import { SkillsTitle } from "../common/titles";
 import { Section } from "../common/wrappers";
@@ -24,7 +23,7 @@ const SkillLinkForm = ({ values, index }) => {
   return (
     <Fragment>
       <h3>
-        <Link to={`/edit/skills/${slugifyString(values[index].label)}`}>{values[index].label}</Link>
+        <Link to={`/edit/skills/${values[index].id}`}>{values[index].label}</Link>
       </h3>
     </Fragment>
   );

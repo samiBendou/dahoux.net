@@ -6,11 +6,10 @@ import CardCategory from "./CardsCategory";
 import { titleToLabel } from "../common/core/tags";
 import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
-import { slugifyString } from "../common/core/url";
 import { FaTimes } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 
-const CardsItemHead = ({ item, openModal, closeModal }) => {
+const CardsItemHead = ({ item, kind, openModal, closeModal }) => {
   function handleClick(event) {
     let isLink = event.target.parentNode.nodeName === "A";
     if (event.target.nodeName === "path") {
@@ -53,7 +52,7 @@ const CardsItemHead = ({ item, openModal, closeModal }) => {
 
       <h4>
         {item.url && <ExternalLinkText url={item.url} title="View More" />}
-        {!item.url && <NavLink to={`/timeline/${slugifyString(item.title, item.start)}`}>View More</NavLink>}
+        {!item.url && <NavLink to={`/${kind}/${item.id}`}>View More</NavLink>}
       </h4>
     </div>
   );
@@ -73,7 +72,7 @@ const CardsItemDetails = ({ item }) => (
   </div>
 );
 
-export const CardsItemBrief = ({ item }) => {
+export const CardsItemBrief = ({ item, kind }) => {
   const [open, setOpen] = useState(false);
 
   function openModal() {
@@ -86,18 +85,18 @@ export const CardsItemBrief = ({ item }) => {
 
   return (
     <div className="item card">
-      <CardsItemHead openModal={openModal} item={item} />
+      <CardsItemHead openModal={openModal} kind={kind} item={item} />
       <Modal className="backlog modal" isOpen={open} onRequestClose={closeModal} shouldCloseOnOverlayClick={true}>
-        <CardsItemDetailed closeModal={closeModal} item={item} />
+        <CardsItemDetailed kind={kind} closeModal={closeModal} item={item} />
       </Modal>
     </div>
   );
 };
 
-export const CardsItemDetailed = ({ item, closeModal }) => {
+export const CardsItemDetailed = ({ item, kind, closeModal }) => {
   return (
     <div className="item">
-      <CardsItemHead closeModal={closeModal} item={item} />
+      <CardsItemHead kind={kind} closeModal={closeModal} item={item} />
       <CardsItemDetails item={item} />
     </div>
   );
