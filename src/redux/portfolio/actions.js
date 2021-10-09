@@ -1,5 +1,12 @@
-import { cloneData, getData, preprocessData } from "../../common/core/data";
-import { FETCH_PORTFOLIO_REQUEST, FETCH_PORTFOLIO_SUCCESS, FETCH_PORTFOLIO_FAILURE } from "./types";
+import { cloneData, getData, postData, postprocessData, preprocessData } from "../../common/core/data";
+import {
+  FETCH_PORTFOLIO_REQUEST,
+  FETCH_PORTFOLIO_SUCCESS,
+  FETCH_PORTFOLIO_FAILURE,
+  UPDATE_PORTFOLIO_REQUEST,
+  UPDATE_PORTFOLIO_SUCCESS,
+  UPDATE_PORTFOLIO_FAILURE,
+} from "./types";
 
 const fetch = () => async (dispatch) => {
   dispatch(fetchRequest());
@@ -32,4 +39,40 @@ const fetchFailure = (error) => {
   };
 };
 
-export default fetch;
+const update = (data) => async (dispatch) => {
+  if (!window.confirm("Are you sure you want to send the modifications ?")) {
+    return;
+  }
+  dispatch(updateRequest());
+  try {
+    const postprocessed = postprocessData(cloneData(data));
+    await postData(postprocessed);
+    window.alert("Modifications successfully sent!");
+    dispatch(updateSuccess(data, postprocessed));
+  } catch (error) {
+    window.alert("An error has occurred");
+    dispatch(updateFailure(error));
+  }
+};
+
+const updateRequest = () => {
+  return {
+    type: UPDATE_PORTFOLIO_REQUEST,
+  };
+};
+
+const updateSuccess = (data, postprocessed) => {
+  return {
+    type: UPDATE_PORTFOLIO_SUCCESS,
+    payload: { data: postprocessed, preprocessed: data },
+  };
+};
+
+const updateFailure = (error) => {
+  return {
+    type: UPDATE_PORTFOLIO_FAILURE,
+    payload: error,
+  };
+};
+
+export { fetch, update };

@@ -97,9 +97,6 @@ const AdminHelmet = (props) => {
     dispatch(fetchAuthentication());
   }, [dispatch]);
 
-  if (state.loading) {
-    return <LoaderPage />;
-  }
   if (state.error) {
     return <Redirect to="/edit/login" />;
   }
