@@ -17,12 +17,12 @@ const styles = StyleSheet.create({
 });
 
 // Create Document Component
-const Pdf = (props) => (
+const Pdf = ({ data }) => (
   <Document style={styles.document}>
     <Page size="A4" style={styles.page}>
       <View style={{ flexDirection: "row" }}>
-        <PdfLeft items={props.data.items.skills} />
-        <PdfRight items={[...props.data.items.experience, ...props.data.items.education]} data={props.data} />
+        <PdfLeft skills={data.items.skills} />
+        <PdfRight data={data} />
       </View>
     </Page>
   </Document>

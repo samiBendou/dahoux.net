@@ -56,30 +56,28 @@ const styles = StyleSheet.create({
   },
 });
 
-const PdfRight = (props) => {
-  const categories = new Array(...new Set(props.items.map((item) => item.category)));
-  const items = new Map(categories.map((category) => [category, []]));
-  props.items.forEach((item) => items.get(item.category).push(item));
-  const experiences = [
-    ...props.items
-      .sort((a, b) => new Date(b.start) - new Date(a.start))
-      .filter((item) => item.category !== 2)
-      .slice(0, 4),
-  ];
+const PdfRight = ({ data }) => {
+  const experiences = data.items.experience
+    .sort((a, b) => new Date(b.start) - new Date(a.start))
+    .filter((item) => item.category !== 2)
+    .slice(0, 4);
 
-  const formations = [...items.get(5).slice(0, 1)];
+  const formations = data.items.education
+    .sort((a, b) => new Date(b.start) - new Date(a.start))
+    .filter((item) => item.category === 5)
+    .slice(0, 4);
 
   return (
     <View style={styles.pdfRight}>
       <View style={{ margin: 0, padding: 8 }}>
         <Text style={styles.name}>
-          {props.data.firstName} {props.data.lastName}
+          {data.firstName} {data.lastName}
         </Text>
-        <Text style={styles.quote}>{props.data.quote}</Text>
-        <Text style={styles.other}> {renderLocationText(props.data.location.resolved, true)}</Text>
-        <Text style={styles.other}>{props.data.mail}</Text>
-        <Link style={styles.link} src={props.data.urls.portfolio}>
-          {props.data.urls.portfolio.split("://")[1]}
+        <Text style={styles.quote}>{data.quote}</Text>
+        <Text style={styles.other}> {renderLocationText(data.location.resolved, true)}</Text>
+        <Text style={styles.other}>{data.mail}</Text>
+        <Link style={styles.link} src={data.urls.portfolio}>
+          {data.urls.portfolio.split("://")[1]}
         </Link>
       </View>
 

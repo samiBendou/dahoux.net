@@ -66,9 +66,9 @@ export const PortfolioPage = (props) => (
   <Page title="portfolio-page" copyright>
     <About data={props.data} />
     <Skills items={props.data.items.skills} />
-    <Listing id="projects" title={<ProjectsTitle />} items={props.data.items.projects} />
-    <Listing id="experience" title={<ExperienceTitle />} items={props.data.items.experience} />
-    <Listing id="education" title={<EducationTitle />} items={props.data.items.education} />
+    <Listing id="projects" kind="projects" title={<ProjectsTitle />} items={props.data.items.projects} />
+    <Listing id="experience" kind="experience" title={<ExperienceTitle />} items={props.data.items.experience} />
+    <Listing id="education" kind="education" title={<EducationTitle />} items={props.data.items.education} />
     <Board
       id="kanban"
       title={<TimelineTitle />}

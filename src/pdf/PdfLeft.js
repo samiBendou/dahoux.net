@@ -22,10 +22,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const PdfLeft = (props) => {
-  const categories = new Array(...new Set(props.items.map((item) => item.category)));
+const PdfLeft = ({ skills }) => {
+  const categories = new Array(...new Set(skills.map((item) => item.category)));
   const items = new Map(categories.map((category) => [category, []]));
-  props.items.forEach((item) => items.get(item.category).push(item));
+  skills.forEach((item) => items.get(item.category).push(item));
   return (
     <View style={styles.pdfLeft}>
       {categories
